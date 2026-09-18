@@ -1,0 +1,172 @@
+{
+  "_comment": "Source register. Add every document the architecture cites. 'id' is used in <Cite id=\"...\"/>. Status: adopted | published | draft | candidate (not yet checked by the taskforce).",
+  "sources": [
+    {
+      "id": "dg",
+      "short": "DG",
+      "title": "1+MG Data Governance Master Document (Genome EDIC Secondary Use Framework)",
+      "publisher": "1+MG / GDI Pillar I",
+      "date": "2025-12-22",
+      "status": "draft (for voting)",
+      "note": "Cited by section number with <GovRef id=\"…\"/>. Public link or DOI to be added (open question Q-003)."
+    },
+    {
+      "id": "ehds",
+      "short": "EHDS",
+      "title": "Regulation (EU) 2025/327 on the European Health Data Space",
+      "publisher": "European Parliament and Council",
+      "date": "2025-02-11",
+      "url": "http://data.europa.eu/eli/reg/2025/327/oj",
+      "status": "adopted"
+    },
+    {
+      "id": "gdpr",
+      "short": "GDPR",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "publisher": "European Parliament and Council",
+      "date": "2016-04-27",
+      "url": "http://data.europa.eu/eli/reg/2016/679/oj",
+      "status": "adopted"
+    },
+    {
+      "id": "hdeu-ia-draft",
+      "short": "HDEU-IA draft",
+      "title": "Draft Commission Implementing Regulation on HealthData@EU (Ref. Ares(2026)8339104)",
+      "publisher": "European Commission",
+      "date": "2026-09-01",
+      "status": "draft",
+      "note": "Draft, not adopted or endorsed by the Commission. Cited as a draft (decision D-008). Do not reproduce its text in this repository."
+    },
+    {
+      "id": "nis2",
+      "short": "NIS2",
+      "title": "Directive (EU) 2022/2555 (NIS2 Directive)",
+      "publisher": "European Parliament and Council",
+      "date": "2022-12-14",
+      "url": "http://data.europa.eu/eli/dir/2022/2555/oj",
+      "status": "adopted"
+    },
+    {
+      "id": "gdi-d2.4",
+      "short": "GDI D2.4",
+      "title": "GDI D2.4 Framework for data governance",
+      "publisher": "GDI project",
+      "url": "https://zenodo.org/records/19096953",
+      "status": "candidate"
+    },
+    {
+      "id": "gdi-d3.4",
+      "short": "GDI D3.4",
+      "title": "GDI D3.4 Updated infrastructure status report and updated roadmap",
+      "publisher": "GDI project",
+      "date": "2025-12-19",
+      "doi": "10.5281/zenodo.17990533",
+      "url": "https://zenodo.org/records/17990533",
+      "status": "candidate"
+    },
+    {
+      "id": "gdi-d6.3",
+      "short": "GDI D6.3",
+      "title": "GDI D6.3 Report on requirements for data quality and distributed analysis, as well as external resource interoperability",
+      "publisher": "GDI project",
+      "url": "https://zenodo.org/records/13920170",
+      "status": "candidate"
+    },
+    {
+      "id": "gdi-d6.6",
+      "short": "GDI D6.6",
+      "title": "GDI D6.6 Report outlining the recommendations on data curation and ELSI compliance",
+      "publisher": "GDI project",
+      "url": "https://zenodo.org/records/10723494",
+      "status": "candidate"
+    },
+    {
+      "id": "gdi-d8.2",
+      "short": "GDI D8.2",
+      "title": "GDI D8.2 Integration of genomics and phenotypic data",
+      "publisher": "GDI project",
+      "url": "https://zenodo.org/records/19131159",
+      "status": "candidate"
+    },
+    {
+      "id": "gdi-d8.7",
+      "short": "GDI D8.7",
+      "title": "GDI D8.7 Report on semantic interoperability scenarios",
+      "publisher": "GDI project",
+      "url": "https://zenodo.org/records/11550316",
+      "status": "candidate"
+    },
+    {
+      "id": "gdi-starter-kit",
+      "short": "GDI Starter Kit",
+      "title": "GDI Starter Kit (reference implementation of a national node)",
+      "publisher": "GDI project",
+      "url": "https://github.com/GenomicDataInfrastructure/starter-kit",
+      "status": "candidate"
+    },
+    {
+      "id": "b1mg-d4.2",
+      "short": "B1MG D4.2",
+      "title": "B1MG D4.2 Secure data access demonstrator",
+      "publisher": "B1MG project",
+      "url": "https://zenodo.org/records/7590822",
+      "status": "candidate"
+    },
+    {
+      "id": "b1mg-m4.1",
+      "short": "B1MG M4.1",
+      "title": "B1MG M4.1 Technology and ELSI compliance check",
+      "publisher": "B1MG project",
+      "url": "https://zenodo.org/records/8427449",
+      "status": "candidate"
+    },
+    {
+      "id": "b1mg-d3.5",
+      "short": "B1MG D3.5",
+      "title": "B1MG D3.5 Phenotypic and clinical metadata framework (2v0)",
+      "publisher": "B1MG project",
+      "url": "https://zenodo.org/records/7554481",
+      "status": "candidate"
+    },
+    {
+      "id": "b1mg-d5.1",
+      "short": "B1MG D5.1",
+      "title": "B1MG D5.1 Maturity level model and country-specific alignment within the model",
+      "publisher": "B1MG project",
+      "url": "https://zenodo.org/records/8383706",
+      "status": "candidate"
+    },
+    {
+      "id": "b1mgplus-d2.8",
+      "short": "B1MG+ D2.8",
+      "title": "B1MGplus D2.8 Cybersecurity compliance report",
+      "publisher": "B1MG+ project",
+      "url": "https://zenodo.org/records/17207301",
+      "status": "candidate"
+    },
+    {
+      "id": "b1mgplus-m2.1",
+      "short": "B1MG+ M2.1",
+      "title": "B1MGplus M2.1 Overview of policies",
+      "publisher": "B1MG+ project",
+      "url": "https://zenodo.org/records/17639018",
+      "status": "candidate"
+    },
+    {
+      "id": "b1mgplus-d2.6",
+      "short": "B1MG+ D2.6",
+      "title": "B1MGplus D2.6 Use case report",
+      "publisher": "B1MG+ project",
+      "url": "https://zenodo.org/records/20055661",
+      "status": "candidate"
+    },
+    {
+      "id": "arc42",
+      "short": "arc42",
+      "title": "arc42 template and FAQ J-1 (documenting large systems)",
+      "publisher": "arc42",
+      "url": "https://faq.arc42.org/questions/J-1/",
+      "status": "published"
+    }
+  ]
+}

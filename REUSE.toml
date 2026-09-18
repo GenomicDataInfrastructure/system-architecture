@@ -1,0 +1,16 @@
+# License information for every file in this repository (https://reuse.software/).
+# When several annotations match a file, the last one wins.
+# TODO: confirm the copyright holder with the GDI project before the first release.
+version = 1
+
+[[annotations]]
+path = ["**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 GDI system architecture taskforce contributors"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = ["**/*.md", "**/*.mdx", "docs/**", "planning/**", "static/**", "src/data/**", ".github/ISSUE_TEMPLATE/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 GDI system architecture taskforce contributors"
+SPDX-License-Identifier = "CC-BY-4.0"

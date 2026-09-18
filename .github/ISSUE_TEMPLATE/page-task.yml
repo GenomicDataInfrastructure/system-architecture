@@ -1,0 +1,24 @@
+name: Page task
+description: Write, review or update a page of the architecture
+title: "[page] "
+labels: ["documentation"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Path of the page, e.g. docs/arc42/08-crosscutting-concepts/output-control.md
+    validations:
+      required: true
+  - type: dropdown
+    id: task
+    attributes:
+      label: Task
+      options: [Write, Review, Update after governance change, Fix]
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What needs to be done, and by when.

@@ -1,0 +1,90 @@
+:root {
+  --ifm-color-primary: #1f5f8b;
+  --ifm-color-primary-dark: #1c567d;
+  --ifm-color-primary-darker: #1a5176;
+  --ifm-color-primary-darkest: #154261;
+  --ifm-color-primary-light: #226899;
+  --ifm-color-primary-lighter: #246da0;
+  --ifm-color-primary-lightest: #2a7cb5;
+  --ifm-code-font-size: 95%;
+  --inshort-bg: #eef5fb;
+  --inshort-border: #1f5f8b;
+  --meta-bg: #f6f7f9;
+  --gap: #b3261e;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #6fb3e0;
+  --ifm-color-primary-dark: #54a5da;
+  --ifm-color-primary-darker: #469ed7;
+  --ifm-color-primary-darkest: #2987c6;
+  --ifm-color-primary-light: #8ac1e6;
+  --ifm-color-primary-lighter: #98c8e9;
+  --ifm-color-primary-lightest: #c1def1;
+  --inshort-bg: #1b2a36;
+  --inshort-border: #6fb3e0;
+  --meta-bg: #1e2126;
+  --gap: #ff8a80;
+}
+
+/* Plain-language summary box */
+.in-short {
+  background: var(--inshort-bg);
+  border-left: 4px solid var(--inshort-border);
+  border-radius: 4px;
+  padding: 0.75rem 1rem 0.25rem;
+  margin-bottom: 1.5rem;
+}
+.in-short__title {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+/* Metadata header on every page */
+.page-meta {
+  background: var(--meta-bg);
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+}
+.page-meta__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  align-items: center;
+  margin: 0.15rem 0;
+}
+.audience-badge {
+  border: 1px solid var(--ifm-color-emphasis-400);
+  border-radius: 999px;
+  padding: 0 0.55rem;
+  font-size: 0.8rem;
+}
+
+.govref,
+.cite {
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+.govref--unknown,
+.cite--unknown,
+.gap {
+  color: var(--gap);
+  font-weight: 600;
+}
+.muted {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9em;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.trace-table .trace-level-1 td,
+.trace-table .trace-level-2 td {
+  font-weight: 700;
+  background: var(--meta-bg);
+}
+.status-count {
+  margin-right: 1rem;
+}

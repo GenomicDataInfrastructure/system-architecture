@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2024 PNED G.I.E.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+name: Run Tests
+
+on: push
+
+jobs:
+  reuse:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check licensing (REUSE)
+        uses: fsfe/reuse-action@v5
