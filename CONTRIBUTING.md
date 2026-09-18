@@ -59,8 +59,4 @@ When a set of pages is approved, the architecture lead tags a release (`git tag 
 
 ## One-time GitHub set-up (repository admin)
 
-1. Replace the `@CHANGE-ME-…` placeholders in `.github/CODEOWNERS` and `organizationName` in `docusaurus.config.ts`.
-2. *Settings → Branches*: protect `main`. Require a pull request, one approval, review from Code Owners, and the *Check* workflow to pass.
-3. *Settings → Pages*: set the source to *GitHub Actions*.
-4. Create a GitHub Project (table view) with the fields *Page*, *Owner*, *Reviewer*, *Status*, *Due date*, and add one issue per page.
-5. Optional: enable the Zenodo–GitHub integration to get a DOI for each release.
+See [planning/github-setup.md](planning/github-setup.md): review teams, labels, Project board, one issue per page, branch protection and the first release.

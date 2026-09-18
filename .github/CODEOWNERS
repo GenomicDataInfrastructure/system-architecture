@@ -1,31 +1,34 @@
 # Who must review changes to each part of the documentation.
-# GitHub requests these reviewers automatically on every pull request, and branch protection
-# ("Require review from Code Owners") blocks merging without their approval.
-# Replace the @placeholders with GitHub user names or teams, e.g. @org/legal-reviewers.
+# GitHub requests these teams automatically on every pull request, and the branch rule on `main`
+# ("Require review from Code Owners") blocks merging until one member of each listed team approves.
+# Teams are managed by the GenomicDataInfrastructure org owners; see planning/github-setup.md.
 # The last matching line wins.
 
-*                                             @CHANGE-ME-architecture-lead
+*                                             @GenomicDataInfrastructure/sysarch-leads
 
-/docs/arc42/01-introduction-and-goals/        @CHANGE-ME-architecture-lead
-/docs/arc42/02-constraints/                   @CHANGE-ME-legal @CHANGE-ME-architecture-lead
-/docs/arc42/03-context-and-scope/             @CHANGE-ME-architecture-lead
-/docs/arc42/04-solution-strategy/             @CHANGE-ME-architecture-lead
-/docs/arc42/05-building-block-view/european/  @CHANGE-ME-european-scope
-/docs/arc42/05-building-block-view/national/  @CHANGE-ME-national-scope
-/docs/arc42/05-building-block-view/local/     @CHANGE-ME-local-scope
-/docs/arc42/06-runtime-view/                  @CHANGE-ME-architecture-lead @CHANGE-ME-elsi
-/docs/arc42/07-deployment-view/               @CHANGE-ME-security
-/docs/arc42/08-crosscutting-concepts/         @CHANGE-ME-dpo @CHANGE-ME-security
-/docs/arc42/09-architecture-decisions/        @CHANGE-ME-architecture-lead
-/docs/arc42/10-quality-requirements/          @CHANGE-ME-security
-/docs/arc42/11-risks-and-technical-debt/      @CHANGE-ME-architecture-lead
-/docs/readers/                                @CHANGE-ME-architecture-lead
+/docs/arc42/01-introduction-and-goals/        @GenomicDataInfrastructure/sysarch-leads
+/docs/arc42/02-constraints/                   @GenomicDataInfrastructure/sysarch-legal @GenomicDataInfrastructure/sysarch-leads
+/docs/arc42/03-context-and-scope/             @GenomicDataInfrastructure/sysarch-leads
+/docs/arc42/04-solution-strategy/             @GenomicDataInfrastructure/sysarch-leads
+/docs/arc42/05-building-block-view/european/  @GenomicDataInfrastructure/sysarch-european
+/docs/arc42/05-building-block-view/national/  @GenomicDataInfrastructure/sysarch-national
+/docs/arc42/05-building-block-view/local/     @GenomicDataInfrastructure/sysarch-local
+/docs/arc42/06-runtime-view/                  @GenomicDataInfrastructure/sysarch-leads @GenomicDataInfrastructure/sysarch-elsi
+/docs/arc42/07-deployment-view/               @GenomicDataInfrastructure/sysarch-security
+/docs/arc42/08-crosscutting-concepts/         @GenomicDataInfrastructure/sysarch-dpo @GenomicDataInfrastructure/sysarch-security
+/docs/arc42/09-architecture-decisions/        @GenomicDataInfrastructure/sysarch-leads
+/docs/arc42/10-quality-requirements/          @GenomicDataInfrastructure/sysarch-security
+/docs/arc42/11-risks-and-technical-debt/      @GenomicDataInfrastructure/sysarch-leads
+/docs/readers/                                @GenomicDataInfrastructure/sysarch-leads
 
 # Data that drive traceability and sources
-/src/data/governance.json                     @CHANGE-ME-legal @CHANGE-ME-architecture-lead
-/src/data/sources.json                        @CHANGE-ME-architecture-lead
+/src/data/governance.json                     @GenomicDataInfrastructure/sysarch-legal @GenomicDataInfrastructure/sysarch-leads
+/src/data/sources.json                        @GenomicDataInfrastructure/sysarch-leads
 
-# Planning context and tooling
-/planning/                                    @CHANGE-ME-architecture-lead
-/AGENTS.md                                    @CHANGE-ME-architecture-lead
-/.github/                                     @CHANGE-ME-architecture-lead
+# Planning context, licensing and tooling
+/planning/                                    @GenomicDataInfrastructure/sysarch-leads
+/AGENTS.md                                    @GenomicDataInfrastructure/sysarch-leads
+/REUSE.toml                                   @GenomicDataInfrastructure/sysarch-leads
+/LICENSES/                                    @GenomicDataInfrastructure/sysarch-leads
+/.github/                                     @GenomicDataInfrastructure/sysarch-leads
+/scripts/                                     @GenomicDataInfrastructure/sysarch-leads

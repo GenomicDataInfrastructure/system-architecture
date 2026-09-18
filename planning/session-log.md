@@ -2,6 +2,11 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-09-18 — GitHub set-up prepared (B. Pacheco with Claude)
+- Site published at https://genomicdatainfrastructure.github.io/system-architecture/.
+- Done: CODEOWNERS switched to GitHub teams (`sysarch-*`); `scripts/github/setup.mjs` creates labels, the "System architecture" Project, one issue per page and the branch rule on `main`; step-by-step guide and request to org owners in `planning/github-setup.md`.
+- Next: send the team request to the org owners; run the set-up script; tag v0.1; then start writing chapter 3.3.
+
 ## 2026-09-18 — Preparing publication on GitHub (B. Pacheco with Claude)
 - Done: target set to GenomicDataInfrastructure/system-architecture (D-010); site config, README, CHANGELOG, REUSE.toml, LICENSES, code of conduct and REUSE check workflow added. Merge with the template repository simulated: REUSE compliant, build passes.
 - Next: first commit, merge with the remote template (`-X ours`), remove template Docker files, push; enable GitHub Pages (source: GitHub Actions) and branch protection; confirm copyright holder in REUSE.toml.
