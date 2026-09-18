@@ -5,6 +5,7 @@ slug: /runtime/use/healthcare-reuse
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [legal, elsi, dpo, implementer]
 governance_refs: ["VIII.4.1", "VIII.4.2", "VIII.4.3", "VIII.4.4", "VIII.4.5", "VIII.10.1", "VIII.10.2"]
 last_reviewed:

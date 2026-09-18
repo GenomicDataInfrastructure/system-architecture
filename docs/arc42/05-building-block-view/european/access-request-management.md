@@ -5,6 +5,7 @@ slug: /building-blocks/european/access-request-management
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [legal, elsi, implementer]
 governance_refs: ["VII.3.1", "VII.4.1", "VII.4.2", "VII.4.3", "VII.5.1", "VII.5.5"]
 last_reviewed:

@@ -5,6 +5,7 @@ slug: /building-blocks/european/ehds-connector
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [legal, security, implementer]
 governance_refs: []
 last_reviewed:

@@ -2,6 +2,11 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-09-18 — Writing order and taskforce handbook (B. Pacheco with Claude)
+- Decided D-015: six writing waves; handbook for authors and reviewers.
+- Done: `wave` field on all 76 pages (wave 1: 3.3, 3.1, 1.3, 2.2, 12); `src/data/waves.json`; handbook (`docs/handbook/`: writing order with generated progress, 11-step page choreography, recipes per kind of page, sources and examples, review checklists); issues now carry `wave-N` labels and link to the choreography and the matching recipe.
+- Next: run `labels` and `issues` again (adds wave labels); assign owners for wave 1; start writing 3.3.
+
 ## 2026-09-18 — Open questions closed (B. Pacheco with Claude)
 - Decided D-012 (governance document not public, cite by section and summarise), D-013 (authors use Git/PRs), D-014 (sources chosen per chapter). No open questions left.
 - Next: run the GitHub set-up script; start writing chapter 3.3.

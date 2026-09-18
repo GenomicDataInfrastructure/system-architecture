@@ -5,6 +5,7 @@ slug: /appendix/national-profile-template
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 6
 audience: [policy, implementer]
 governance_refs: []
 last_reviewed:

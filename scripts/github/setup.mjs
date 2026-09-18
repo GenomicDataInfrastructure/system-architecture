@@ -8,6 +8,7 @@
 //   node scripts/github/setup.mjs all       all of the above, in this order
 //
 // Add DRY_RUN=1 in front to print the gh commands without running them.
+// Add UPDATE_BODIES=1 to `issues` to rewrite the text of existing issues (resets their checkboxes).
 // All commands are safe to run again: existing labels and issues are reused, not duplicated.
 //
 // Roles are tracked with issue assignees (owner) and the page front matter (owner, reviewers).
@@ -24,6 +25,7 @@ const DRY_RUN = process.env.DRY_RUN === '1';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '../..');
 const DOCS = path.join(ROOT, 'docs');
+const WAVES = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/waves.json'), 'utf8')).waves;
 
 // ---------------------------------------------------------------- helpers
 
@@ -81,6 +83,36 @@ function scopeKey(rel) {
   return m ? m[1] : null;
 }
 
+/** Anchor of the page recipe in docs/handbook/recipes.md that fits this page. */
+function recipeFor(rel, slug) {
+  // Single-page chapters have their own recipe, even though their file is an index.md.
+  const singlePage = {
+    '/solution-strategy': 'solution-strategy',
+    '/quality': 'quality-goals-and-quality-scenarios',
+    '/risks': 'risks-and-technical-debt',
+    '/glossary': 'reference-pages',
+  };
+  if (singlePage[slug]) return singlePage[slug];
+  if (/\/index\.mdx?$/.test(rel)) return 'chapter-overview';
+  const byPrefix = [
+    ['/introduction/requirements', 'requirements-and-stakeholders'],
+    ['/introduction/stakeholders', 'requirements-and-stakeholders'],
+    ['/introduction/quality-goals', 'quality-goals-and-quality-scenarios'],
+    ['/quality', 'quality-goals-and-quality-scenarios'],
+    ['/constraints', 'constraints'],
+    ['/context', 'context'],
+    ['/solution-strategy', 'solution-strategy'],
+    ['/building-blocks', 'building-block'],
+    ['/runtime', 'runtime-scenario'],
+    ['/deployment', 'deployment'],
+    ['/concepts', 'crosscutting-concept'],
+    ['/decisions', 'architecture-decision-record'],
+    ['/risks', 'risks-and-technical-debt'],
+  ];
+  const hit = byPrefix.find(([prefix]) => slug.startsWith(prefix));
+  return hit ? hit[1] : 'reference-pages';
+}
+
 /** Pages whose ownership is tracked (every page except landing and generated pages). */
 function trackedPages() {
   // Chapters first, then reader guides, then appendices; inside a folder, the index page first,
@@ -128,6 +160,9 @@ function labels() {
   for (const [key, name] of CHAPTERS) {
     defs.push([`chapter-${key}`, 'ededed', name]);
   }
+  for (const w of WAVES) {
+    defs.push([`wave-${w.id}`, '5319e7', `Writing wave ${w.id}: ${w.name}`]);
+  }
   for (const [name, color, description] of defs) {
     gh(['label', 'create', name, '--repo', REPO, '--color', color, '--description', description, '--force']);
   }
@@ -142,11 +177,14 @@ function issueBody(page) {
     .split(/\n## |\n:::/)[0]
     .trim();
   const refs = (d.governance_refs ?? []).map(String);
+  const wave = WAVES.find((w) => w.id === Number(d.wave));
   return [
     `**Page file:** \`${page.rel}\``,
     `**Live page:** ${SITE}${d.slug}`,
     `**Audience:** ${(d.audience ?? []).join(', ') || '—'}`,
     `**Governance sections:** ${refs.length ? refs.join(', ') : '—'}`,
+    `**Writing wave:** ${wave ? `${wave.id} — ${wave.name} ([writing order](${SITE}/handbook/writing-order#wave-${wave.id}))` : '—'}`,
+    `**How to write it:** follow the [page choreography](${SITE}/handbook/choreography) and the [recipe for this kind of page](${SITE}/handbook/recipes#${recipeFor(page.rel, d.slug)}).`,
     '',
     '### What the page must answer',
     '',
@@ -154,11 +192,16 @@ function issueBody(page) {
     '',
     '### Steps',
     '',
-    '- [ ] Owner assigned: assign this issue to the owner and set `owner` in the page front matter',
-    '- [ ] Reviewers agreed: mention them in a comment here and set `reviewers` in the front matter',
-    '- [ ] Draft written (`status: draft`)',
-    '- [ ] Pull request opened, linked to this issue (`status: in-review`)',
-    '- [ ] Approved and merged (`status: approved`, `last_reviewed` set) — this closes the issue',
+    '- [ ] 1. Claim: assign this issue to the owner; set `owner` in the front matter',
+    '- [ ] 2. Reviewers agreed in a comment here; `reviewers` set; `needs-…` labels added if a specialist must review',
+    '- [ ] 3. Kick-off: scope note posted here (in scope, out of scope, key messages, open points)',
+    '- [ ] 4. Sources listed here and added to `src/data/sources.json`',
+    '- [ ] 5. Examples and best practices noted here',
+    '- [ ] 6. Outline in a draft pull request (`status: draft`)',
+    '- [ ] 7–8. Page written and self-checked',
+    '- [ ] 9. Review: `status: in-review`, reviewers requested on the pull request',
+    '- [ ] 10. Approved and merged (`status: approved`, `last_reviewed` set) — this closes the issue',
+    '- [ ] 11. Follow-up issues opened for gaps; ADRs for decisions',
     '',
     `See [CONTRIBUTING.md](https://github.com/${REPO}/blob/main/CONTRIBUTING.md) for the workflow and writing rules.`,
   ].join('\n');
@@ -169,22 +212,30 @@ function issues() {
     ['issue', 'list', '--repo', REPO, '--label', 'page', '--state', 'all', '--limit', '500', '--json', 'title,url'],
     {json: true},
   ) ?? [];
-  const existingTitles = new Set(existing.map((i) => i.title));
+  const existingByTitle = new Map(existing.map((i) => [i.title, i.url]));
 
   let created = 0;
   for (const page of trackedPages()) {
     const title = `[page] ${page.data.title}`;
-    if (existingTitles.has(title)) continue;
     const chapter = chapterKey(page.rel);
     const scope = scopeKey(page.rel);
-    const labelList = ['page', chapter && `chapter-${chapter}`, scope && `scope-${scope}`].filter(Boolean).join(',');
+    const waveLabel = page.data.wave ? `wave-${page.data.wave}` : null;
+    if (existingByTitle.has(title)) {
+      // Existing issue: make sure it has its wave label (added after the first run).
+      const url = existingByTitle.get(title) || title;
+      if (waveLabel) gh(['issue', 'edit', url, '--repo', REPO, '--add-label', waveLabel]);
+      // UPDATE_BODIES=1 rewrites the issue text. It resets the step checkboxes, so use it only before work starts.
+      if (process.env.UPDATE_BODIES === '1') gh(['issue', 'edit', url, '--repo', REPO, '--body-file', '-'], {input: issueBody(page)});
+      continue;
+    }
+    const labelList = ['page', chapter && `chapter-${chapter}`, scope && `scope-${scope}`, waveLabel].filter(Boolean).join(',');
     const url = gh(['issue', 'create', '--repo', REPO, '--title', title, '--label', labelList, '--body-file', '-'], {
       input: issueBody(page),
     });
     created++;
     console.log(`issue: ${title}${url ? ` → ${url}` : ''}`);
   }
-  console.log(`issues: ${created} created, ${existingTitles.size} already existed`);
+  console.log(`issues: ${created} created, ${existingByTitle.size} already existed (wave labels updated)`);
 }
 
 // ---------------------------------------------------------------- branch protection

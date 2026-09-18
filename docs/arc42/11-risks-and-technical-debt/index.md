@@ -6,6 +6,7 @@ slug: /risks
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 6
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs: []
 last_reviewed:

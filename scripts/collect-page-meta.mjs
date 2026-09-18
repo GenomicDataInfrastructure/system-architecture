@@ -13,11 +13,12 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const DOCS = path.join(ROOT, 'docs');
 const OUT = path.join(ROOT, 'src/data/pages.json');
 const governance = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/governance.json'), 'utf8'));
+const WAVES = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/waves.json'), 'utf8')).waves.map((w) => w.id);
 
 // Keep in sync with src/components/vocab.ts
 const AUDIENCES = ['policy', 'legal', 'elsi', 'security', 'dpo', 'implementer'];
 const STATUSES = ['placeholder', 'draft', 'in-review', 'approved'];
-const REQUIRED = ['title', 'slug', 'owner', 'reviewers', 'status', 'audience'];
+const REQUIRED = ['title', 'slug', 'owner', 'reviewers', 'status', 'audience', 'wave'];
 const REVIEW_MAX_AGE_DAYS = 180;
 
 const govIds = new Set(governance.sections.map((s) => s.id));
@@ -46,6 +47,9 @@ for (const file of walk(DOCS).sort()) {
   if (data.status && !STATUSES.includes(data.status)) {
     errors.push(`${rel}: status "${data.status}" is not one of ${STATUSES.join(', ')}`);
   }
+  if (data.wave !== undefined && !WAVES.includes(Number(data.wave))) {
+    errors.push(`${rel}: wave "${data.wave}" is not one of ${WAVES.join(', ')} (see src/data/waves.json)`);
+  }
   for (const a of data.audience ?? []) {
     if (!AUDIENCES.includes(a)) errors.push(`${rel}: audience "${a}" is not one of ${AUDIENCES.join(', ')}`);
   }
@@ -72,6 +76,7 @@ for (const file of walk(DOCS).sort()) {
     owner: data.owner ?? '',
     reviewers: data.reviewers ?? [],
     status: data.status ?? 'placeholder',
+    wave: Number(data.wave ?? 0),
     audience: data.audience ?? [],
     governance_refs: (data.governance_refs ?? []).map(String),
     last_reviewed: data.last_reviewed ? new Date(data.last_reviewed).toISOString().slice(0, 10) : '',

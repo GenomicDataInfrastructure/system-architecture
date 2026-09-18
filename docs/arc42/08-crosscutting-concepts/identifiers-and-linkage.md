@@ -5,6 +5,7 @@ slug: /concepts/identifiers-and-linkage
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 5
 audience: [security, dpo, implementer]
 governance_refs: ["VIII.3.3"]
 last_reviewed:

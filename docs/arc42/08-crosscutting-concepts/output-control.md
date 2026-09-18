@@ -5,6 +5,7 @@ slug: /concepts/output-control
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 5
 audience: [elsi, security, dpo, implementer]
 governance_refs: ["VIII.3.1", "VIII.3.2"]
 last_reviewed:

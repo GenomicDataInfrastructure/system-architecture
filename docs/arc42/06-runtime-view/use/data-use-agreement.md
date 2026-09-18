@@ -5,6 +5,7 @@ slug: /runtime/use/data-use-agreement
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [legal, implementer]
 governance_refs: ["VIII.2.1", "VIII.2.2"]
 last_reviewed:

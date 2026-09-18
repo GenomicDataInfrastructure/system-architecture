@@ -6,6 +6,7 @@ slug: /solution-strategy
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 2
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs: ["II.2", "VI.4.6", "VIII.3.3"]
 last_reviewed:

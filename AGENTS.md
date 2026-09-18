@@ -17,6 +17,8 @@ Primary audience: implementers. Also read by ministries, legal experts, ELSI spe
 | `planning/decisions.md` | Decisions about the documentation itself, and open questions | A decision is taken or a question is raised |
 | `planning/session-log.md` | Short handover notes: what was done, what is next | At the end of every working session |
 | `CONTRIBUTING.md` | Review workflow, front matter, writing rules, GitHub set-up | The workflow changes |
+| `docs/handbook/` | Taskforce handbook: writing order (waves), page choreography, page recipes, sources, review checklists | The way we write changes |
+| `src/data/waves.json` | The six writing waves (the `wave` field of each page refers to them) | The writing order changes |
 | `docs/` | The published architecture (arc42 chapters, reader guides, appendices) | Normal writing work |
 | `src/data/governance.json` | Catalogue of governance sections (IDs for `governance_refs` and `<GovRef>`) | The governance document changes |
 | `src/data/sources.json` | Source register (IDs for `<Cite>`) | A new source is cited |
@@ -29,7 +31,10 @@ Files outside `docs/` are not published on the site.
 - `npm run build` — build the site; fails on broken links or anchors.
 
 ## Rules for writing
-1. Every page has front matter: `title`, `slug`, `owner`, `reviewers`, `status`, `audience`, `governance_refs`, `last_reviewed`. The metadata box at the top of the page is generated from it; do not write it by hand.
+
+When you help write a page, follow the steps in `docs/handbook/choreography.md` and the matching recipe in `docs/handbook/recipes.md`.
+
+1. Every page has front matter: `title`, `slug`, `owner`, `reviewers`, `status`, `wave`, `audience`, `governance_refs`, `last_reviewed`. The metadata box at the top of the page is generated from it; do not write it by hand.
 2. Every page opens with `<InShort>` (at most three plain-language bullets).
 3. Cite governance sections as `<GovRef id="VII.2.3" />` (Roman section numbers from the governance master document) and list them in `governance_refs`. This feeds the traceability page.
 4. Cite other sources as `<Cite id="gdi-d3.4" />` and add new ones to `src/data/sources.json`.

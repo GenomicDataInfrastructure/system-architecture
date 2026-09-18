@@ -28,22 +28,29 @@ Run from the repository root, after `npm install`. Preview first with `DRY_RUN=1
 
 ```bash
 DRY_RUN=1 node scripts/github/setup.mjs issues | less   # preview
-node scripts/github/setup.mjs labels                    # about 24 labels
+node scripts/github/setup.mjs labels                    # about 30 labels
 node scripts/github/setup.mjs issues                    # one issue per page (about 76)
 ```
 
 This creates:
 
-- **Labels:** `page`; `chapter-01` … `chapter-12`, `chapter-readers`, `chapter-appendix`; `scope-european`, `scope-national`, `scope-local`; `needs-dpo`, `needs-security`, `needs-legal`, `needs-elsi`; `reader-question`.
+- **Labels:** `page`; `chapter-01` … `chapter-12`, `chapter-readers`, `chapter-appendix`; `wave-1` … `wave-6`; `scope-european`, `scope-national`, `scope-local`; `needs-dpo`, `needs-security`, `needs-legal`, `needs-elsi`; `reader-question`.
 - **One issue per page**, titled `[page] <page title>`. Each issue lists the page file, the live link, the audience, the governance sections, the questions the page must answer, and a checklist of the steps from owner to approval.
 
-The script is safe to run again. It skips issues that already exist, so run it again whenever new pages are added.
+The script is safe to run again. It skips issues that already exist (but adds their `wave-N` label), so run it again whenever new pages are added.
+
+If you created the issues **before the handbook existed** and no work has started yet, refresh their text so that they link to the choreography and recipes:
+
+```bash
+UPDATE_BODIES=1 node scripts/github/setup.mjs issues   # rewrites issue text; resets the step checkboxes
+```
 
 **Useful issue views** (bookmark them):
 
 - Pages without an owner: `is:issue is:open label:page no:assignee`
 - One chapter: `is:issue label:page label:chapter-06`
 - One scope: `is:issue label:page label:scope-national`
+- The current wave: `is:issue is:open label:page label:wave-1`
 - Pages waiting for a DPO review: `is:issue is:open label:needs-dpo`
 
 ## 3. Protect `main`

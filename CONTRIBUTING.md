@@ -2,6 +2,8 @@
 
 This architecture is written by a taskforce. Every change goes through a pull request, so that we always know **who wrote what, who reviewed it, and when**.
 
+**New to the taskforce? Start with the [Taskforce handbook](https://genomicdatainfrastructure.github.io/system-architecture/handbook)** (`docs/handbook/`): the writing order, a step-by-step choreography for each page, recipes per kind of page, where to find sources, and the review checklists. This file is the short version.
+
 ## How ownership and review are tracked
 
 | What | Where it is recorded |
@@ -26,6 +28,7 @@ sidebar_position: 2
 owner: "@github-handle"
 reviewers: ["@github-handle", "@github-handle"]
 status: draft                     # placeholder | draft | in-review | approved
+wave: 4                           # writing wave 1–6 (see docs/handbook/writing-order.md)
 audience: [elsi, dpo, implementer] # policy | legal | elsi | security | dpo | implementer
 governance_refs: ["VII.2.1", "VII.2.3"]  # section IDs from src/data/governance.json
 last_reviewed: 2026-10-15         # set when approved
@@ -35,6 +38,8 @@ last_reviewed: 2026-10-15         # set when approved
 `npm run check` validates these fields. CI runs it on every pull request.
 
 ## Workflow for a page
+
+The full step-by-step version, with who does what and when each step is done, is the [page choreography](https://genomicdatainfrastructure.github.io/system-architecture/handbook/choreography).
 
 1. **Pick up the page.** Assign yourself the page's GitHub issue (titled `[page] <page title>`), or open one with the *Page task* template. Set `owner` and `status: draft` in the front matter, and name the reviewers in the issue.
 2. **Write** on a branch. Keep the structure of every page:

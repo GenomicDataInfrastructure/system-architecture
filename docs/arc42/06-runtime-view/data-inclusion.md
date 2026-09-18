@@ -5,6 +5,7 @@ slug: /runtime/data-inclusion
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs: ["VI.1.1", "VI.1.2", "VI.1.3", "VI.1.4", "VI.1.5", "VI.2.1", "VI.2.2", "VI.2.3", "VI.3.1", "VI.3.2", "VI.3.3", "VI.3.4", "VI.4.1", "VI.4.2", "VI.4.3", "VI.4.4", "VI.4.5", "VI.4.6"]
 last_reviewed:

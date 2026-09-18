@@ -5,6 +5,7 @@ slug: /building-blocks/local/data-host
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [security, dpo, implementer]
 governance_refs: ["VI.4.3", "VI.4.6"]
 last_reviewed:

@@ -5,6 +5,7 @@ slug: /runtime/use/processing-in-spe
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [security, dpo, implementer]
 governance_refs: ["VIII.3.1", "VIII.3.2", "VIII.3.3", "VIII.3.4"]
 last_reviewed:

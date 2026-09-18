@@ -5,6 +5,7 @@ slug: /concepts/roles
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 2
 audience: [legal, dpo]
 governance_refs: ["II.1", "VI.4.6", "VII.2.2"]
 last_reviewed:

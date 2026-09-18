@@ -5,6 +5,7 @@ slug: /concepts/ehds-integration
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 5
 audience: [policy, legal, implementer]
 governance_refs: []
 last_reviewed:

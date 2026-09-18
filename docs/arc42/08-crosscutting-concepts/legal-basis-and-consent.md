@@ -5,6 +5,7 @@ slug: /concepts/legal-basis-and-consent
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 5
 audience: [legal, elsi, dpo, implementer]
 governance_refs: ["VI.1.5", "V.2.3"]
 last_reviewed:

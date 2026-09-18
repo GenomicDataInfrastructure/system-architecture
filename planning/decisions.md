@@ -19,6 +19,7 @@ Format: `D-NNN | date | decision | decided by | reason`
 - D-012 | 2026-09-18 | The governance master document (2025-12-22, "for voting") is not public but may be cited: section numbers (`<GovRef>`), short summaries in our own words, and short attributed quotes. No long passages. The glossary keeps the governance definitions (section III) word for word, as short attributed quotes | B. Pacheco | Answers Q-003.
 - D-013 | 2026-09-18 | Taskforce authors are comfortable with Git and GitHub: everyone works with branches and pull requests; no extra editing tool | B. Pacheco | Answers Q-006.
 - D-014 | 2026-09-18 | No global list of priority sources: each chapter owner chooses sources when the chapter starts, and candidates are searched then | B. Pacheco | Answers Q-008.
+- D-015 | 2026-09-18 | Pages are written in six waves (Frame; Direction and legal frame; Structure; Behaviour and components; Crosscutting details; Deployment, quality and consolidation), recorded in each page's `wave` field; a wave starts when the waves it depends on are at least in review. Authors follow the taskforce handbook (choreography, recipes, sources, review checklists) | B. Pacheco | Gives the taskforce a shared order and a repeatable way to write and review each page.
 
 ## Open questions
 

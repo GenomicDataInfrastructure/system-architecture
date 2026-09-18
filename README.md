@@ -27,6 +27,7 @@ The site shows each page's last author and date from Git history, so it needs at
 |---|---|
 | `docs/arc42/` | The twelve arc42 chapters. Chapters 5 and 7 are split into European, national and local scopes. |
 | `docs/readers/` | Reader guides: questions per audience, linked to the answering sections. |
+| `docs/handbook/` | Taskforce handbook: writing order, page choreography, recipes, sources, review checklists. |
 | `docs/appendix/` | Governance traceability, sources, document status, national profile template. |
 | `src/data/governance.json` | Catalogue of the governance document's sections (IDs used in `governance_refs` and `<GovRef>`). |
 | `src/data/sources.json` | Source register (cited with `<Cite>`). |

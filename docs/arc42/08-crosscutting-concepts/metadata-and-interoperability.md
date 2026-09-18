@@ -5,6 +5,7 @@ slug: /concepts/metadata-and-interoperability
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 5
 audience: [implementer]
 governance_refs: ["VI.3.1", "VI.3.2"]
 last_reviewed:

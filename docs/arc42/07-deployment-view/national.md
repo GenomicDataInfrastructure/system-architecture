@@ -5,6 +5,7 @@ slug: /deployment/national
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 6
 audience: [policy, security, implementer]
 governance_refs: ["V.1.3", "V.1.4"]
 last_reviewed:

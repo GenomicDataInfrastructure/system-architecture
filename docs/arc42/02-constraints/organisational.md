@@ -5,6 +5,7 @@ slug: /constraints/organisational
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 2
 audience: [policy, legal, implementer]
 governance_refs: ["V.1.2", "V.1.4", "VI.1.3"]
 last_reviewed:

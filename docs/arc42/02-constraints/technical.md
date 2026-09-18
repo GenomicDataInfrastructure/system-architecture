@@ -5,6 +5,7 @@ slug: /constraints/technical
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 3
 audience: [security, implementer]
 governance_refs: ["V.1.3"]
 last_reviewed:

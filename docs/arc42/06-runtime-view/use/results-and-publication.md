@@ -5,6 +5,7 @@ slug: /runtime/use/results-and-publication
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [legal, elsi, implementer]
 governance_refs: ["VIII.6.1", "VIII.6.2", "VIII.6.3", "VIII.7.1", "VIII.7.2", "VIII.7.3", "VIII.7.4", "VIII.9.1", "VIII.9.2"]
 last_reviewed:

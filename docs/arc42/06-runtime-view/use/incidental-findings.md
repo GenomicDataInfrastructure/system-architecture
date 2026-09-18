@@ -5,6 +5,7 @@ slug: /runtime/use/incidental-findings
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [legal, elsi, implementer]
 governance_refs: ["VIII.11.1", "VIII.11.2", "VIII.11.3", "VIII.11.4"]
 last_reviewed:

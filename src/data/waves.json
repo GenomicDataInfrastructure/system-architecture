@@ -1,0 +1,41 @@
+{
+  "_comment": "Writing waves. Each page has `wave: N` in its front matter. A wave starts when the pages it depends on are at least in review. See docs/handbook/writing-order.md.",
+  "waves": [
+    {
+      "id": 1,
+      "name": "Frame",
+      "goal": "Agree on the words and the boundaries: scopes, actors, governance principles, glossary.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "name": "Direction and legal frame",
+      "goal": "Say what the system must achieve, under which laws, with which fundamental choices, and who is controller or processor.",
+      "depends_on": [1]
+    },
+    {
+      "id": 3,
+      "name": "Structure",
+      "goal": "Draw the outline: technical context, technical constraints, level-1 building blocks and the scope overviews.",
+      "depends_on": [1, 2]
+    },
+    {
+      "id": 4,
+      "name": "Behaviour and components",
+      "goal": "Describe each lifecycle scenario and each level-2 building block. Scope teams work in parallel.",
+      "depends_on": [3]
+    },
+    {
+      "id": 5,
+      "name": "Crosscutting details",
+      "goal": "Detail the concepts that the scenarios and components rely on: security, identity, logging, consent, identifiers, output control, versioning, metadata, EHDS.",
+      "depends_on": [4]
+    },
+    {
+      "id": 6,
+      "name": "Deployment, quality and consolidation",
+      "goal": "Deployment per scope, quality scenarios, risks, national profile template, and a final check of the reader guides.",
+      "depends_on": [4, 5]
+    }
+  ]
+}

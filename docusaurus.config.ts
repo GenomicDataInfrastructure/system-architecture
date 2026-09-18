@@ -53,6 +53,7 @@ const config: Config = {
         {type: 'docSidebar', sidebarId: 'architecture', position: 'left', label: 'Architecture'},
         {type: 'docSidebar', sidebarId: 'readers', position: 'left', label: 'Reader guides'},
         {to: '/appendix/traceability', label: 'Governance traceability', position: 'left'},
+        {type: 'docSidebar', sidebarId: 'handbook', position: 'right', label: 'Taskforce handbook'},
         {to: '/appendix/document-status', label: 'Document status', position: 'right'},
         {href: `https://github.com/${organizationName}/${projectName}`, label: 'GitHub', position: 'right'},
       ],

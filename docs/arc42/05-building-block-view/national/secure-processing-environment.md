@@ -5,6 +5,7 @@ slug: /building-blocks/national/spe
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [security, dpo, implementer]
 governance_refs: ["VIII.3.2", "VIII.3.3", "VIII.4.5"]
 last_reviewed:

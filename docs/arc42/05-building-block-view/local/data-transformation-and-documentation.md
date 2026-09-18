@@ -5,6 +5,7 @@ slug: /building-blocks/local/data-transformation
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [implementer]
 governance_refs: ["VI.2.2", "VI.2.3", "VI.3.2"]
 last_reviewed:

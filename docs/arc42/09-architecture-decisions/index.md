@@ -6,6 +6,7 @@ slug: /decisions
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 3
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs: []
 last_reviewed:

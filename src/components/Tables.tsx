@@ -4,6 +4,7 @@ import useBrokenLinks from '@docusaurus/useBrokenLinks';
 import governance from '@site/src/data/governance.json';
 import sources from '@site/src/data/sources.json';
 import pages from '@site/src/data/pages.json';
+import waves from '@site/src/data/waves.json';
 import {AUDIENCES, STATUSES, govAnchor} from './vocab';
 
 type Page = {
@@ -13,6 +14,7 @@ type Page = {
   owner?: string;
   reviewers?: string[];
   status?: string;
+  wave?: number;
   audience?: string[];
   governance_refs?: string[];
   last_reviewed?: string;
@@ -135,6 +137,7 @@ export function DocumentStatus() {
         <thead>
           <tr>
             <th>Page</th>
+            <th>Wave</th>
             <th>Status</th>
             <th>Owner</th>
             <th>Reviewers</th>
@@ -148,6 +151,7 @@ export function DocumentStatus() {
               <td>
                 <Link to={p.slug}>{p.title}</Link>
               </td>
+              <td>{p.wave || '—'}</td>
               <td>
                 <StatusBadge status={p.status} />
               </td>
@@ -205,5 +209,64 @@ export function SourceRegister() {
         ))}
       </tbody>
     </table>
+  );
+}
+
+type Wave = {id: number; name: string; goal: string; depends_on: number[]};
+
+/** Pages grouped by writing wave, with progress per wave. Built from the `wave` front matter field. */
+export function WritingOrder() {
+  const brokenLinks = useBrokenLinks();
+  return (
+    <>
+      {(waves.waves as Wave[]).map((w) => {
+        brokenLinks.collectAnchor(`wave-${w.id}`);
+        const inWave = PAGES.filter((p) => p.wave === w.id);
+        const done = inWave.filter((p) => p.status === 'approved').length;
+        const inReview = inWave.filter((p) => p.status === 'in-review').length;
+        return (
+          <section key={w.id} id={`wave-${w.id}`} className="wave">
+            <h3>
+              Wave {w.id} — {w.name}
+            </h3>
+            <p>
+              {w.goal}{' '}
+              {w.depends_on.length > 0 && (
+                <span className="muted">Starts when wave {w.depends_on.join(' and ')} pages are at least in review.</span>
+              )}
+            </p>
+            <p>
+              <span className="badge badge--success">Approved {done}</span>{' '}
+              <span className="badge badge--info">In review {inReview}</span>{' '}
+              <span className="muted">of {inWave.length} pages</span>
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Page</th>
+                  <th>Status</th>
+                  <th>Owner</th>
+                  <th>Reviewers</th>
+                </tr>
+              </thead>
+              <tbody>
+                {inWave.map((p) => (
+                  <tr key={p.slug}>
+                    <td>
+                      <Link to={p.slug}>{p.title}</Link>
+                    </td>
+                    <td>
+                      <StatusBadge status={p.status} />
+                    </td>
+                    <td>{p.owner && p.owner !== 'TBD' ? p.owner : 'unassigned'}</td>
+                    <td>{p.reviewers?.length ? p.reviewers.join(', ') : 'unassigned'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+        );
+      })}
+    </>
   );
 }

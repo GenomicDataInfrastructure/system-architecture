@@ -5,6 +5,7 @@ slug: /runtime/use/transparency
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [elsi, dpo, implementer]
 governance_refs: ["VIII.1.1", "VIII.1.2", "VIII.1.3"]
 last_reviewed:

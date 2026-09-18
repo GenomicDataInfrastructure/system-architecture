@@ -5,6 +5,7 @@ slug: /building-blocks/national/access-decision-support
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [legal, elsi, implementer]
 governance_refs: ["VII.4.6", "VII.4.7", "VII.5.2", "VII.5.4"]
 last_reviewed:

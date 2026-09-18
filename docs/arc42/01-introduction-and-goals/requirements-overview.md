@@ -5,6 +5,7 @@ slug: /introduction/requirements
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 2
 audience: [policy, legal, elsi, implementer]
 governance_refs: ["II.3", "II.4"]
 last_reviewed:

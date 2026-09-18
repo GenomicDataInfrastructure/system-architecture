@@ -5,6 +5,7 @@ slug: /constraints/legal
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 2
 audience: [policy, legal, security, dpo]
 governance_refs: ["II.4", "V.1.1"]
 last_reviewed:

@@ -5,6 +5,7 @@ slug: /context/business
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs: ["I", "III"]
 last_reviewed:

@@ -6,6 +6,7 @@ sidebar_position: 12
 owner: TBD
 reviewers: []
 status: draft
+wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs: ["III"]
 last_reviewed:

@@ -5,6 +5,7 @@ slug: /deployment/european
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 6
 audience: [security, implementer]
 governance_refs: ["V.1.2"]
 last_reviewed:

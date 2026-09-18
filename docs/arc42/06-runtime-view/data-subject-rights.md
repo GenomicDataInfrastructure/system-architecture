@@ -5,6 +5,7 @@ slug: /runtime/data-subject-rights
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [legal, elsi, dpo, implementer]
 governance_refs: ["V.2.1", "V.2.2", "V.2.3", "V.2.4", "V.2.5", "V.2.6", "V.2.7"]
 last_reviewed:

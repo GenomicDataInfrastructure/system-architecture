@@ -5,6 +5,7 @@ slug: /building-blocks/national/ncp-node
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [policy, implementer]
 governance_refs: ["VI.1.4", "VI.3.4", "VI.4.4", "VII.2.5", "VII.3.2", "VII.4.4", "VII.5.3"]
 last_reviewed:

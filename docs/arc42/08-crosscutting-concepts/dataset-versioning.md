@@ -5,6 +5,7 @@ slug: /concepts/dataset-versioning
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 5
 audience: [dpo, implementer]
 governance_refs: ["V.2.6"]
 last_reviewed:

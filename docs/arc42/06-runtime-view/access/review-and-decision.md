@@ -5,6 +5,7 @@ slug: /runtime/access/review-and-decision
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [legal, elsi, implementer]
 governance_refs: ["VII.4.1", "VII.4.2", "VII.4.3", "VII.4.4", "VII.4.5", "VII.4.6", "VII.4.7", "VII.4.8", "VII.5.1", "VII.5.2", "VII.5.3", "VII.5.4", "VII.5.5", "VII.5.6"]
 last_reviewed:

@@ -5,6 +5,7 @@ slug: /building-blocks/european/user-portal-and-catalogue
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [elsi, implementer]
 governance_refs: ["VII.2.1", "VII.3.1"]
 last_reviewed:

@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Governance section catalogue, generated traceability matrix, document status page and source register.
 - Review tooling: page front matter validation, pull request and issue templates, CI and GitHub Pages deployment.
 - GitHub set-up script (`scripts/github/setup.mjs`): labels, one issue per page, branch protection.
+- Taskforce handbook: writing order in six waves (with generated progress per wave), page choreography, page recipes, sources and examples, review checklists.
+- `wave` field on every page, shown in the page header and the document status table.
 
 ### Removed
 

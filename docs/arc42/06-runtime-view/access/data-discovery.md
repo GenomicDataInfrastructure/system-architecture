@@ -5,6 +5,7 @@ slug: /runtime/access/discovery
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [elsi, dpo, implementer]
 governance_refs: ["VII.2.1", "VII.2.2", "VII.2.3", "VII.2.4", "VII.2.5", "VII.2.6"]
 last_reviewed:

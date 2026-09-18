@@ -5,6 +5,7 @@ slug: /runtime/access/request
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [legal, elsi, implementer]
 governance_refs: ["VII.3.1", "VII.3.2", "VII.3.3", "VII.3.4", "VII.3.5"]
 last_reviewed:

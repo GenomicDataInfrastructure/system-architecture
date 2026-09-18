@@ -5,6 +5,7 @@ slug: /concepts/data-protection-by-design
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 2
 audience: [legal, elsi, security, dpo, implementer]
 governance_refs: ["V.1.2", "V.1.3", "VI.4.6"]
 last_reviewed:

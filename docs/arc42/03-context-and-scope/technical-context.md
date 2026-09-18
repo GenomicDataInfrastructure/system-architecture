@@ -5,6 +5,7 @@ slug: /context/technical
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 3
 audience: [security, implementer]
 governance_refs: ["VII.2.1"]
 last_reviewed:

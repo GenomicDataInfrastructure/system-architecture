@@ -5,6 +5,7 @@ slug: /concepts/logging-and-audit
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 5
 audience: [security, dpo, implementer]
 governance_refs: ["VII.2.3"]
 last_reviewed:

@@ -5,6 +5,7 @@ slug: /runtime/security-incident
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [security, dpo, implementer]
 governance_refs: ["V.1.2", "V.1.3"]
 last_reviewed:

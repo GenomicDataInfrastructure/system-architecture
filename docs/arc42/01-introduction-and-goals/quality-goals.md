@@ -5,6 +5,7 @@ slug: /introduction/quality-goals
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 2
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs: ["II.2"]
 last_reviewed:

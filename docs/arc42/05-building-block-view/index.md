@@ -6,6 +6,7 @@ slug: /building-blocks
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 3
 audience: [policy, security, implementer]
 governance_refs: ["III"]
 last_reviewed:

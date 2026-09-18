@@ -5,6 +5,7 @@ slug: /concepts/identity-and-access
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 5
 audience: [security, dpo, implementer]
 governance_refs: ["VII.1.3", "VIII.3.1"]
 last_reviewed:

@@ -5,6 +5,7 @@ slug: /constraints/governance-principles
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs: ["II.2"]
 last_reviewed:

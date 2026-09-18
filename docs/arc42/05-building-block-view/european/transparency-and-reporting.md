@@ -5,6 +5,7 @@ slug: /building-blocks/european/transparency-and-reporting
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [elsi, dpo, implementer]
 governance_refs: ["VIII.1.2", "VIII.7.3", "V.2.2"]
 last_reviewed:

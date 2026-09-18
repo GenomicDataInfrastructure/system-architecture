@@ -6,6 +6,7 @@ slug: /building-blocks/european
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 3
 audience: [policy, security, implementer]
 governance_refs: []
 last_reviewed:

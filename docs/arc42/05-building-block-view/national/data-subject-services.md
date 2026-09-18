@@ -5,6 +5,7 @@ slug: /building-blocks/national/data-subject-services
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [elsi, dpo, implementer]
 governance_refs: ["V.2.4", "V.2.5", "VIII.5.2"]
 last_reviewed:

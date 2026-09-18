@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from '@docusaurus/Link';
 import GovRef from './GovRef';
 import {AUDIENCES, STATUSES} from './vocab';
 
@@ -6,6 +7,7 @@ export type PageFrontMatter = {
   owner?: string;
   reviewers?: string[];
   status?: string;
+  wave?: number;
   audience?: string[];
   governance_refs?: string[];
   last_reviewed?: string;
@@ -26,6 +28,11 @@ export default function PageMeta({fm}: {fm: PageFrontMatter}) {
     <div className="page-meta">
       <div className="page-meta__row">
         <span className={`badge ${status.className}`}>{status.label}</span>
+        {fm.wave ? (
+          <Link to={`/handbook/writing-order#wave-${fm.wave}`} title="Writing wave: the order in which pages are written">
+            Wave {fm.wave}
+          </Link>
+        ) : null}
         <span>
           <strong>Owner:</strong> {fm.owner || 'unassigned'}
         </span>

@@ -5,6 +5,7 @@ slug: /concepts/security
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 5
 audience: [policy, security, implementer]
 governance_refs: ["V.1.1", "V.1.2", "V.1.3"]
 last_reviewed:

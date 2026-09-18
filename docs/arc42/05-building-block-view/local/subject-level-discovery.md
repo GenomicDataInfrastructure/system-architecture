@@ -5,6 +5,7 @@ slug: /building-blocks/local/subject-level-discovery
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 4
 audience: [security, dpo, implementer]
 governance_refs: ["VII.2.2", "VII.2.3"]
 last_reviewed:

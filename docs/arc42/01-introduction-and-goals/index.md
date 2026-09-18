@@ -6,6 +6,7 @@ slug: /introduction
 owner: TBD
 reviewers: []
 status: placeholder
+wave: 2
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs: ["II.1", "II.3"]
 last_reviewed:
