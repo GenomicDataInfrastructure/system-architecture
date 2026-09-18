@@ -2,6 +2,11 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-09-18 — GitHub set-up simplified (B. Pacheco with Claude)
+- Decided D-011: roles tracked only in GitHub issues (assignee = owner) and page front matter; CODEOWNERS, teams and Project board dropped.
+- Done: removed `.github/CODEOWNERS`; `scripts/github/setup.mjs` now only creates labels, one issue per page, and the branch rule (one approval + CI); guide, CONTRIBUTING, CHANGELOG and plan updated.
+- Next: run `labels`, `issues`, `protect`; tag v0.1; start writing chapter 3.3.
+
 ## 2026-09-18 — GitHub set-up prepared (B. Pacheco with Claude)
 - Site published at https://genomicdatainfrastructure.github.io/system-architecture/.
 - Done: CODEOWNERS switched to GitHub teams (`sysarch-*`); `scripts/github/setup.mjs` creates labels, the "System architecture" Project, one issue per page and the branch rule on `main`; step-by-step guide and request to org owners in `planning/github-setup.md`.

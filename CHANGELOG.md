@@ -19,7 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Reader guides for policy makers, legal experts, ELSI specialists, security advisors, data protection officers and implementers.
 - Glossary based on the definitions of the 1+MG Data Governance.
 - Governance section catalogue, generated traceability matrix, document status page and source register.
-- Review tooling: page front matter validation, CODEOWNERS, pull request and issue templates, CI and GitHub Pages deployment.
+- Review tooling: page front matter validation, pull request and issue templates, CI and GitHub Pages deployment.
+- GitHub set-up script (`scripts/github/setup.mjs`): labels, one issue per page, branch protection.
 
 ### Removed
 

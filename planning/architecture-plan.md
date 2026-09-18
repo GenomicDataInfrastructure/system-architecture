@@ -78,11 +78,11 @@ Why this works for the governance: the governance assigns rights and duties per 
 Use GitHub itself — no extra tool.
 
 1. Front matter on each page: owner, reviewers, status (draft / in review / approved), last_reviewed.
-2. `CODEOWNERS`: maps each chapter folder to its responsible authors; GitHub then requests their review automatically.
-3. Branch protection on `main`: changes only via pull request, at least one code-owner approval. Each approval is recorded with name and timestamp.
+2. One GitHub issue per page: the assignee is the page owner; reviewers are named in the issue and requested on the pull request (decision D-011 — no CODEOWNERS or teams for now).
+3. Branch protection on `main`: changes only via pull request, at least one approval, CI must pass. Each approval is recorded with name and timestamp.
 4. Pull request template: checklist (governance refs checked, plain-language check, DPO/security sign-off where relevant).
 5. Docusaurus `showLastUpdateAuthor` and `showLastUpdateTime`: every page shows who last changed it and when, from git history.
-6. GitHub Project board (table view): one item per page with Author, Reviewer, Status, Due date.
+6. Issue labels (`chapter-NN`, `scope-*`, `needs-*`) give the views per chapter, scope and specialist review; a Project board can be added later.
 7. Releases: tag document versions (v0.1, v0.2, v1.0), snapshot with Docusaurus versioning, CHANGELOG; optional Zenodo–GitHub integration to mint a DOI per release.
 8. CI check: validates front matter and flags pages whose `last_reviewed` is older than a set period.
 

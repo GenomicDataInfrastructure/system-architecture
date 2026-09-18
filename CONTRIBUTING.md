@@ -6,8 +6,8 @@ This architecture is written by a taskforce. Every change goes through a pull re
 
 | What | Where it is recorded |
 |---|---|
-| Who is responsible for a page | `owner` in the page's front matter |
-| Who must review it | `reviewers` in the front matter, and `.github/CODEOWNERS` (GitHub requests them automatically) |
+| Who is responsible for a page | The **assignee** of the page's GitHub issue, and `owner` in the page's front matter |
+| Who must review it | `reviewers` in the front matter; the owner requests them on the pull request |
 | Where the page stands | `status` in the front matter: `placeholder` → `draft` → `in-review` → `approved` |
 | When it was last reviewed | `last_reviewed` in the front matter (set by the reviewer on approval) |
 | Who changed what, and when | Git history; each page shows its last author and date at the bottom |
@@ -36,13 +36,13 @@ last_reviewed: 2026-10-15         # set when approved
 
 ## Workflow for a page
 
-1. **Pick up the page.** Assign yourself the GitHub issue for the page (or open one with the *Page task* template). Set `owner` and `status: draft`.
+1. **Pick up the page.** Assign yourself the page's GitHub issue (titled `[page] <page title>`), or open one with the *Page task* template. Set `owner` and `status: draft` in the front matter, and name the reviewers in the issue.
 2. **Write** on a branch. Keep the structure of every page:
    - the `<InShort>` box: at most three plain-language bullets;
    - the content, citing governance sections with `<GovRef id="VII.2.3" />` and other sources with `<Cite id="gdi-d3.4" />`.
-3. **Ask for review.** Set `status: in-review`, open a pull request and fill in the checklist. Request specialist reviewers (DPO, security, legal, ELSI) where the checklist says so.
+3. **Ask for review.** Set `status: in-review`, open a pull request that says `Closes #<issue number>`, and fill in the checklist. Request the reviewers listed in `reviewers` on the pull request. Add a `needs-dpo`, `needs-security`, `needs-legal` or `needs-elsi` label to the issue when a specialist must review.
 4. **Review.** Reviewers comment in the pull request. When satisfied, the reviewer sets `status: approved` and `last_reviewed` to today, and approves the pull request.
-5. **Merge.** Branch protection requires a code-owner approval and passing CI.
+5. **Merge.** `main` accepts a pull request once it has at least one approval and CI passes. Merging closes the issue.
 
 ## Writing rules
 
@@ -59,4 +59,4 @@ When a set of pages is approved, the architecture lead tags a release (`git tag 
 
 ## One-time GitHub set-up (repository admin)
 
-See [planning/github-setup.md](planning/github-setup.md): review teams, labels, Project board, one issue per page, branch protection and the first release.
+See [planning/github-setup.md](planning/github-setup.md): labels, one issue per page, branch protection and the first release.

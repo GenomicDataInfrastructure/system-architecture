@@ -3,13 +3,14 @@
 // See planning/github-setup.md for the full procedure.
 //
 //   node scripts/github/setup.mjs labels    create or update the issue labels
-//   node scripts/github/setup.mjs project   create the "System architecture" Project with its fields
-//   node scripts/github/setup.mjs issues    create one issue per page and add it to the Project
+//   node scripts/github/setup.mjs issues    create one issue per page
 //   node scripts/github/setup.mjs protect   protect the main branch
 //   node scripts/github/setup.mjs all       all of the above, in this order
 //
 // Add DRY_RUN=1 in front to print the gh commands without running them.
-// All commands are safe to run again: existing labels, fields and issues are reused, not duplicated.
+// All commands are safe to run again: existing labels and issues are reused, not duplicated.
+//
+// Roles are tracked with issue assignees (owner) and the page front matter (owner, reviewers).
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -19,8 +20,6 @@ import matter from 'gray-matter';
 const OWNER = 'GenomicDataInfrastructure';
 const REPO = `${OWNER}/system-architecture`;
 const SITE = 'https://genomicdatainfrastructure.github.io/system-architecture';
-const PROJECT_TITLE = 'System architecture';
-const TEAM_PREFIX = 'sysarch-';
 const DRY_RUN = process.env.DRY_RUN === '1';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '../..');
@@ -69,8 +68,6 @@ const CHAPTERS = new Map([
   ['readers', 'Reader guides'],
   ['appendix', 'Appendices'],
 ]);
-const SCOPES = {european: 'European', national: 'National', local: 'Local'};
-const STATUS_OPTIONS = {placeholder: 'Placeholder', draft: 'Draft', 'in-review': 'In review', approved: 'Approved'};
 
 function chapterKey(rel) {
   const m = rel.match(/^docs\/arc42\/(\d\d)-/);
@@ -137,47 +134,6 @@ function labels() {
   console.log(`labels: ${defs.length} labels created or updated`);
 }
 
-// ---------------------------------------------------------------- project
-
-function findProject() {
-  const list = gh(['project', 'list', '--owner', OWNER, '--format', 'json', '--limit', '200'], {json: true});
-  return list?.projects?.find((p) => p.title === PROJECT_TITLE) ?? null;
-}
-
-function fieldList(number) {
-  return gh(['project', 'field-list', String(number), '--owner', OWNER, '--format', 'json', '--limit', '50'], {json: true})
-    ?.fields ?? [];
-}
-
-function project() {
-  let p = findProject();
-  if (!p) {
-    p = gh(['project', 'create', '--owner', OWNER, '--title', PROJECT_TITLE, '--format', 'json'], {json: true});
-    console.log(`project: created "${PROJECT_TITLE}"`);
-  } else {
-    console.log(`project: "${PROJECT_TITLE}" already exists (#${p.number})`);
-  }
-  if (DRY_RUN && !p) p = {number: 'N'};
-  const existing = new Set(fieldList(p.number).map((f) => f.name));
-  const fields = [
-    ['Page status', 'SINGLE_SELECT', Object.values(STATUS_OPTIONS)],
-    ['Chapter', 'SINGLE_SELECT', [...CHAPTERS.values()]],
-    ['Scope', 'SINGLE_SELECT', ['European', 'National', 'Local', 'All scopes']],
-    ['Reviewers', 'TEXT'],
-    ['Due date', 'DATE'],
-    ['Page file', 'TEXT'],
-  ];
-  for (const [name, type, options] of fields) {
-    if (existing.has(name)) continue;
-    const args = ['project', 'field-create', String(p.number), '--owner', OWNER, '--name', name, '--data-type', type];
-    if (options) args.push('--single-select-options', options.join(','));
-    gh(args);
-    console.log(`project: field "${name}" created`);
-  }
-  gh(['project', 'link', String(p.number), '--owner', OWNER, '--repo', REPO], {allowFail: true});
-  return p;
-}
-
 // ---------------------------------------------------------------- issues
 
 function issueBody(page) {
@@ -198,8 +154,8 @@ function issueBody(page) {
     '',
     '### Steps',
     '',
-    '- [ ] Owner assigned: assign this issue and set `owner` in the page front matter',
-    '- [ ] Reviewers agreed: set `reviewers` in the front matter and the *Reviewers* field on the board',
+    '- [ ] Owner assigned: assign this issue to the owner and set `owner` in the page front matter',
+    '- [ ] Reviewers agreed: mention them in a comment here and set `reviewers` in the front matter',
     '- [ ] Draft written (`status: draft`)',
     '- [ ] Pull request opened, linked to this issue (`status: in-review`)',
     '- [ ] Approved and merged (`status: approved`, `last_reviewed` set) — this closes the issue',
@@ -209,16 +165,11 @@ function issueBody(page) {
 }
 
 function issues() {
-  const proj = project();
-  const projectId = DRY_RUN ? 'PROJECT_ID' : gh(['project', 'view', String(proj.number), '--owner', OWNER, '--format', 'json'], {json: true}).id;
-  const fields = Object.fromEntries(fieldList(proj.number).map((f) => [f.name, f]));
-  const optionId = (field, name) => fields[field]?.options?.find((o) => o.name === name)?.id;
-
   const existing = gh(
     ['issue', 'list', '--repo', REPO, '--label', 'page', '--state', 'all', '--limit', '500', '--json', 'title,url'],
     {json: true},
   ) ?? [];
-  const existingTitles = new Map(existing.map((i) => [i.title, i.url]));
+  const existingTitles = new Set(existing.map((i) => i.title));
 
   let created = 0;
   for (const page of trackedPages()) {
@@ -227,23 +178,11 @@ function issues() {
     const chapter = chapterKey(page.rel);
     const scope = scopeKey(page.rel);
     const labelList = ['page', chapter && `chapter-${chapter}`, scope && `scope-${scope}`].filter(Boolean).join(',');
-
     const url = gh(['issue', 'create', '--repo', REPO, '--title', title, '--label', labelList, '--body-file', '-'], {
       input: issueBody(page),
     });
     created++;
     console.log(`issue: ${title}${url ? ` → ${url}` : ''}`);
-
-    const item = gh(['project', 'item-add', String(proj.number), '--owner', OWNER, '--url', url || 'ISSUE_URL', '--format', 'json'], {json: true});
-    const itemId = item?.id ?? 'ITEM_ID';
-    const set = (field, args) => {
-      if (!fields[field] && !DRY_RUN) return;
-      gh(['project', 'item-edit', '--id', itemId, '--project-id', projectId, '--field-id', fields[field]?.id ?? 'FIELD_ID', ...args]);
-    };
-    set('Page status', ['--single-select-option-id', optionId('Page status', STATUS_OPTIONS[page.data.status ?? 'placeholder']) ?? 'OPTION_ID']);
-    if (chapter) set('Chapter', ['--single-select-option-id', optionId('Chapter', CHAPTERS.get(chapter)) ?? 'OPTION_ID']);
-    set('Scope', ['--single-select-option-id', optionId('Scope', scope ? SCOPES[scope] : 'All scopes') ?? 'OPTION_ID']);
-    set('Page file', ['--text', page.rel]);
   }
   console.log(`issues: ${created} created, ${existingTitles.size} already existed`);
 }
@@ -251,19 +190,12 @@ function issues() {
 // ---------------------------------------------------------------- branch protection
 
 function protect() {
-  const teamsExist = !!gh(['api', `orgs/${OWNER}/teams/${TEAM_PREFIX}leads`], {allowFail: true}) || DRY_RUN;
-  if (!teamsExist) {
-    console.warn(
-      `protect: team ${OWNER}/${TEAM_PREFIX}leads not found. Code-owner review is left OFF so that pull requests ` +
-        'are not blocked. Run this command again once the org owners have created the teams.',
-    );
-  }
   const rules = {
     required_status_checks: {strict: true, contexts: ['check', 'reuse']},
     enforce_admins: false,
     required_pull_request_reviews: {
       required_approving_review_count: 1,
-      require_code_owner_reviews: teamsExist,
+      require_code_owner_reviews: false,
       dismiss_stale_reviews: true,
     },
     restrictions: null,
@@ -272,20 +204,20 @@ function protect() {
     allow_deletions: false,
   };
   gh(['api', '-X', 'PUT', `repos/${REPO}/branches/main/protection`, '--input', '-'], {input: JSON.stringify(rules)});
-  console.log(`protect: main protected (code-owner review ${teamsExist ? 'ON' : 'OFF'})`);
+  console.log('protect: main protected (pull request with one approval, checks must pass)');
 }
 
 // ---------------------------------------------------------------- main
 
-const commands = {labels, project, issues, protect};
+const commands = {labels, issues, protect};
 const cmd = process.argv[2];
 if (cmd === 'all') {
   labels();
-  issues(); // also creates the project
+  issues();
   protect();
 } else if (commands[cmd]) {
   commands[cmd]();
 } else {
-  console.log('Usage: node scripts/github/setup.mjs <labels|project|issues|protect|all>   (DRY_RUN=1 to preview)');
+  console.log('Usage: node scripts/github/setup.mjs <labels|issues|protect|all>   (DRY_RUN=1 to preview)');
   process.exit(cmd ? 1 : 0);
 }
