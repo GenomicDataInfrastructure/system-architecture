@@ -21,7 +21,7 @@ last_reviewed:
 
 ## Terms from the governance
 
-Definitions taken from <GovRef id="III" long />. If the governance changes a definition, update it here.
+The definitions below are quoted word for word from the 1+MG Data Governance master document (version 2025-12-22, not public), <GovRef id="III" long />. If the governance changes a definition, update it here.
 
 ### Genome EDIC Assembly of Members
 

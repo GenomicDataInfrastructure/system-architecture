@@ -16,8 +16,10 @@ Format: `D-NNN | date | decision | decided by | reason`
 - D-009 | 2026-09-18 | Traceability is generated: pages list governance section IDs in `governance_refs`; the site builds the traceability matrix and document status page from front matter; `npm run check` validates it in CI | B. Pacheco (Phase 0) | One source of truth; no hand-maintained matrix.
 - D-010 | 2026-09-18 | Publish in the public repository GenomicDataInfrastructure/system-architecture (GitHub Pages: genomicdatainfrastructure.github.io/system-architecture); keep the GDI OSS template's REUSE licensing (docs CC-BY-4.0, code Apache-2.0) and code of conduct; drop its Docker files and workflows | B. Pacheco | Answers Q-005. Follows GDI open-source practice.
 - D-011 | 2026-09-18 | Track roles and responsibilities only with GitHub issues (one per page; assignee = owner; reviewers named in the issue and requested on the pull request) and the page front matter (`owner`, `reviewers`, `status`, `last_reviewed`). No CODEOWNERS, review teams or Project board for now; `main` requires one approval and passing CI | B. Pacheco | Replaces the CODEOWNERS and Project board parts of D-003; simpler for a small taskforce. Can be revisited when the taskforce grows.
+- D-012 | 2026-09-18 | The governance master document (2025-12-22, "for voting") is not public but may be cited: section numbers (`<GovRef>`), short summaries in our own words, and short attributed quotes. No long passages. The glossary keeps the governance definitions (section III) word for word, as short attributed quotes | B. Pacheco | Answers Q-003.
+- D-013 | 2026-09-18 | Taskforce authors are comfortable with Git and GitHub: everyone works with branches and pull requests; no extra editing tool | B. Pacheco | Answers Q-006.
+- D-014 | 2026-09-18 | No global list of priority sources: each chapter owner chooses sources when the chapter starts, and candidates are searched then | B. Pacheco | Answers Q-008.
 
 ## Open questions
-- Q-003: Is the governance master document (2025-12-22, "for voting") final, and is there a public URL or DOI to link to?
-- Q-006: How familiar are taskforce authors with Git and GitHub?
-- Q-008: Which GDI / B1MG / B1MG+ deliverables are priority sources (Zenodo community listings cannot be fetched automatically)?
+
+_None at the moment._

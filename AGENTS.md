@@ -40,5 +40,6 @@ Files outside `docs/` are not published on the site.
 
 ## Things to be careful with
 - The HealthData@EU implementing regulation is a Commission **draft** (Ref. Ares(2026)8339104). Cite it as a draft with `<Cite id="hdeu-ia-draft" />` (decision D-008). Do not copy its text into this repository.
+- The governance master document is **not public** (decision D-012). Cite it by section number with `<GovRef>`, summarise in your own words, and quote only short passages with attribution (e.g. glossary definitions). Never copy long passages.
 - Governance items marked "under discussion" (cyan) in the master document are open. Flag them in chapter 11 (Risks) and do not present them as settled.
 - Do not change a page's `status` to `approved` yourself; only a reviewer does that, in a pull request.

@@ -2,6 +2,10 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-09-18 — Open questions closed (B. Pacheco with Claude)
+- Decided D-012 (governance document not public, cite by section and summarise), D-013 (authors use Git/PRs), D-014 (sources chosen per chapter). No open questions left.
+- Next: run the GitHub set-up script; start writing chapter 3.3.
+
 ## 2026-09-18 — GitHub set-up simplified (B. Pacheco with Claude)
 - Decided D-011: roles tracked only in GitHub issues (assignee = owner) and page front matter; CODEOWNERS, teams and Project board dropped.
 - Done: removed `.github/CODEOWNERS`; `scripts/github/setup.mjs` now only creates labels, one issue per page, and the branch rule (one approval + CI); guide, CONTRIBUTING, CHANGELOG and plan updated.
