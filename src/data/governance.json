@@ -1,235 +1,93 @@
 {
- "document": "1+MG Data Governance Master Document",
- "version": "2025-12-22",
- "status": "for voting",
+ "_comment": "Sections of the 1+MG Data Governance master document, as published in the annex (section 7) of GDI D2.4. 'id' is the section number used in <GovRef id=\"…\" /> and in governance_refs. Always cross-reference the governance by section number, never by page number. Section IV (overview tables) and its subsections IV.1–IV.4 are numbered 'I.' and 'I.1'–'I.4' in the published document; 'printed_as' gives that number. The topic headings inside the overview tables are not numbered and are not listed: cite the matching sections in chapters V–VIII. Titles follow the published document; two obvious slips are corrected (VII.1.4 'Responsivity', VIII.4 missing 'the SPE').",
+ "document": "1+MG Data Governance master document (Genome EDIC Secondary Use Framework)",
+ "version": "2025-12",
+ "status": "published",
+ "published_in": "GDI D2.4 Framework for data governance, section 7 (Annex: Data Governance master document)",
+ "published": "2026-02-04",
+ "doi": "10.5281/zenodo.19096953",
+ "url": "https://zenodo.org/records/19096953",
+ "license": "CC-BY-4.0",
  "sections": [
   {
    "id": "I",
    "title": "Reading Guide",
-   "level": 1,
-   "page": 5
+   "level": 1
   },
   {
    "id": "II",
    "title": "Introduction",
-   "level": 1,
-   "page": 7
+   "level": 1
   },
   {
    "id": "II.1",
    "title": "Context",
-   "level": 2,
-   "page": 7
+   "level": 2
   },
   {
    "id": "II.2",
    "title": "Principles guiding the data governance",
-   "level": 2,
-   "page": 8
+   "level": 2
   },
   {
    "id": "II.3",
    "title": "Scope of secondary use",
-   "level": 2,
-   "page": 8
+   "level": 2
   },
   {
    "id": "II.4",
    "title": "Elements not covered in the data governance",
-   "level": 2,
-   "page": 10
+   "level": 2
   },
   {
    "id": "III",
    "title": "Definitions and Qualification of Stakeholders",
-   "level": 1,
-   "page": 11
+   "level": 1
   },
   {
    "id": "IV",
    "title": "Overview/summary",
    "level": 1,
-   "page": 13
+   "printed_as": "I"
   },
   {
    "id": "IV.1",
    "title": "Aspects relevant for all processes",
    "level": 2,
-   "page": 13
-  },
-  {
-   "id": "IV.1.1",
-   "title": "Data protection, risk and quality management",
-   "level": 3,
-   "page": 13
-  },
-  {
-   "id": "IV.1.2",
-   "title": "Data Subjects’ Rights",
-   "level": 3,
-   "page": 15
+   "printed_as": "I.1"
   },
   {
    "id": "IV.2",
    "title": "Data Inclusion Governance",
    "level": 2,
-   "page": 17
-  },
-  {
-   "id": "IV.2.1",
-   "title": "Establish Principal Availability",
-   "level": 3,
-   "page": 18
-  },
-  {
-   "id": "IV.2.2",
-   "title": "Data Transformation",
-   "level": 3,
-   "page": 21
-  },
-  {
-   "id": "IV.2.3",
-   "title": "Data Documentation",
-   "level": 3,
-   "page": 22
-  },
-  {
-   "id": "IV.2.4",
-   "title": "Establish Formal Availability",
-   "level": 3,
-   "page": 24
+   "printed_as": "I.2"
   },
   {
    "id": "IV.3",
    "title": "Data Access Governance",
    "level": 2,
-   "page": 25
-  },
-  {
-   "id": "IV.3.1",
-   "title": "Prior Registration of the User Organisation",
-   "level": 3,
-   "page": 26
-  },
-  {
-   "id": "IV.3.2",
-   "title": "Data Discovery",
-   "level": 3,
-   "page": 28
-  },
-  {
-   "id": "IV.3.3",
-   "title": "Data Access Request",
-   "level": 3,
-   "page": 30
-  },
-  {
-   "id": "IV.3.4",
-   "title": "Data Access Review",
-   "level": 3,
-   "page": 35
-  },
-  {
-   "id": "IV.3.5",
-   "title": "Data Access Decision",
-   "level": 3,
-   "page": 39
+   "printed_as": "I.3"
   },
   {
    "id": "IV.4",
    "title": "Data Use Governance",
    "level": 2,
-   "page": 42
-  },
-  {
-   "id": "IV.4.1",
-   "title": "Transparency and Communication",
-   "level": 3,
-   "page": 43
-  },
-  {
-   "id": "IV.4.2",
-   "title": "Data use agreement",
-   "level": 3,
-   "page": 46
-  },
-  {
-   "id": "IV.4.3",
-   "title": "Processing in the SPE",
-   "level": 3,
-   "page": 48
-  },
-  {
-   "id": "IV.4.4",
-   "title": "Special Processing in the SPE [healthcare reuse only]",
-   "level": 3,
-   "page": 51,
-   "applies_to": [
-    "healthcare reuse only"
-   ]
-  },
-  {
-   "id": "IV.4.5",
-   "title": "Reaching Back To Data Subjects",
-   "level": 3,
-   "page": 53
-  },
-  {
-   "id": "IV.4.6",
-   "title": "IP and Commercialisation",
-   "level": 3,
-   "page": 55
-  },
-  {
-   "id": "IV.4.7",
-   "title": "Publications",
-   "level": 3,
-   "page": 56
-  },
-  {
-   "id": "IV.4.8",
-   "title": "Archiving",
-   "level": 3,
-   "page": 58
-  },
-  {
-   "id": "IV.4.9",
-   "title": "Enriched and Improved Data",
-   "level": 3,
-   "page": 59
-  },
-  {
-   "id": "IV.4.10",
-   "title": "Data Subject Related Data [healthcare only]",
-   "level": 3,
-   "page": 61,
-   "applies_to": [
-    "healthcare only"
-   ]
-  },
-  {
-   "id": "IV.4.11",
-   "title": "Incidental Findings",
-   "level": 3,
-   "page": 62
+   "printed_as": "I.4"
   },
   {
    "id": "V",
    "title": "General Aspects",
-   "level": 1,
-   "page": 63
+   "level": 1
   },
   {
    "id": "V.1",
    "title": "Measures for data protection, risk and quality management",
-   "level": 2,
-   "page": 63
+   "level": 2
   },
   {
    "id": "V.1.1",
    "title": "Data protection, risk and quality management – Responsibility: Genome EDIC Assembly of Members",
    "level": 3,
-   "page": 63,
    "actor": "Genome EDIC Assembly of Members",
    "scopes": [
     "european"
@@ -239,7 +97,6 @@
    "id": "V.1.2",
    "title": "Data protection, risk and quality management – Responsibility: Genome EDIC CC",
    "level": 3,
-   "page": 64,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -249,7 +106,6 @@
    "id": "V.1.3",
    "title": "Data protection, risk and quality management – Responsibility: 1+MG IT Infrastructure Provider",
    "level": 3,
-   "page": 64,
    "actor": "1+MG IT Infrastructure Provider",
    "scopes": [
     "national"
@@ -259,7 +115,6 @@
    "id": "V.1.4",
    "title": "Data protection, risk and quality management – Responsibility: 1+MG Member Countries",
    "level": 3,
-   "page": 65,
    "actor": "1+MG Member Countries",
    "scopes": [
     "national"
@@ -268,14 +123,12 @@
   {
    "id": "V.2",
    "title": "Data Subjects’ Rights",
-   "level": 2,
-   "page": 66
+   "level": 2
   },
   {
    "id": "V.2.1",
    "title": "Data Subjects’ Rights – Responsibility: Genome EDIC Assembly of Members",
    "level": 3,
-   "page": 66,
    "actor": "Genome EDIC Assembly of Members",
    "scopes": [
     "european"
@@ -285,7 +138,6 @@
    "id": "V.2.2",
    "title": "Data Subjects’ Rights – Responsibility: Genome EDIC CC",
    "level": 3,
-   "page": 66,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -295,7 +147,6 @@
    "id": "V.2.3",
    "title": "Data Subjects’ Rights – Responsibility: 1+MG Data Provider",
    "level": 3,
-   "page": 67,
    "actor": "1+MG Data Provider",
    "scopes": [
     "local"
@@ -305,7 +156,6 @@
    "id": "V.2.4",
    "title": "Data Subjects’ Rights – Responsibility: Genome EDIC Member Country",
    "level": 3,
-   "page": 67,
    "actor": "Genome EDIC Member Country",
    "scopes": [
     "national"
@@ -315,7 +165,6 @@
    "id": "V.2.5",
    "title": "Data Subjects’ Rights – Responsibility: 1+MG NCP",
    "level": 3,
-   "page": 68,
    "actor": "1+MG NCP",
    "scopes": [
     "national"
@@ -325,7 +174,6 @@
    "id": "V.2.6",
    "title": "Data Subjects’ Rights – Responsibility: 1+MG IT Infrastructure Provider",
    "level": 3,
-   "page": 69,
    "actor": "1+MG IT Infrastructure Provider",
    "scopes": [
     "national"
@@ -335,7 +183,6 @@
    "id": "V.2.7",
    "title": "Data Subjects’ Rights – Responsibility: User",
    "level": 3,
-   "page": 69,
    "actor": "User",
    "scopes": [
     "user"
@@ -344,20 +191,17 @@
   {
    "id": "VI",
    "title": "Data Inclusion Governance",
-   "level": 1,
-   "page": 70
+   "level": 1
   },
   {
    "id": "VI.1",
    "title": "Establish Principal Availability",
-   "level": 2,
-   "page": 70
+   "level": 2
   },
   {
    "id": "VI.1.1",
    "title": "Establish Principal Availability – Responsibility Genome EDIC General Assembly",
    "level": 3,
-   "page": 70,
    "actor": "Genome EDIC General Assembly",
    "scopes": [
     "european"
@@ -367,7 +211,6 @@
    "id": "VI.1.2",
    "title": "Establish Principal Availability – Responsibility Genome EDIC CC",
    "level": 3,
-   "page": 70,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -377,7 +220,6 @@
    "id": "VI.1.3",
    "title": "Establish Principal Availability – Responsibility Genome EDIC Member Country",
    "level": 3,
-   "page": 71,
    "actor": "Genome EDIC Member Country",
    "scopes": [
     "national"
@@ -387,7 +229,6 @@
    "id": "VI.1.4",
    "title": "Establish Principal Availability – Responsibility 1+MG NCP",
    "level": 3,
-   "page": 72,
    "actor": "1+MG NCP",
    "scopes": [
     "national"
@@ -397,7 +238,6 @@
    "id": "VI.1.5",
    "title": "Establish Principal Availability – Responsibility 1+MG Data Provider",
    "level": 3,
-   "page": 72,
    "actor": "1+MG Data Provider",
    "scopes": [
     "local"
@@ -406,14 +246,12 @@
   {
    "id": "VI.2",
    "title": "Data Transformation",
-   "level": 2,
-   "page": 74
+   "level": 2
   },
   {
    "id": "VI.2.1",
    "title": "Data Transformation – Responsibility Genome EDIC CC",
    "level": 3,
-   "page": 74,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -423,7 +261,6 @@
    "id": "VI.2.2",
    "title": "Data Transformation – Responsibility 1+MG Data Provider",
    "level": 3,
-   "page": 74,
    "actor": "1+MG Data Provider",
    "scopes": [
     "local"
@@ -433,7 +270,6 @@
    "id": "VI.2.3",
    "title": "Data Transformation - Responsibility 1+MG NCP or 1+MG IT Infrastructure Provider or other Genome EDIC national entity",
    "level": 3,
-   "page": 74,
    "actor": "1+MG NCP or 1+MG IT Infrastructure Provider or other Genome EDIC national entity",
    "scopes": [
     "national"
@@ -442,14 +278,12 @@
   {
    "id": "VI.3",
    "title": "Data Documentation",
-   "level": 2,
-   "page": 75
+   "level": 2
   },
   {
    "id": "VI.3.1",
    "title": "Data Documentation – Responsibility Genome EDIC CC",
    "level": 3,
-   "page": 75,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -459,7 +293,6 @@
    "id": "VI.3.2",
    "title": "Data Documentation – Responsibility 1+MG Data Provider",
    "level": 3,
-   "page": 75,
    "actor": "1+MG Data Provider",
    "scopes": [
     "local"
@@ -469,7 +302,6 @@
    "id": "VI.3.3",
    "title": "Data Documentation – Responsibility Genome EDIC Member Country",
    "level": 3,
-   "page": 76,
    "actor": "Genome EDIC Member Country",
    "scopes": [
     "national"
@@ -479,7 +311,6 @@
    "id": "VI.3.4",
    "title": "Data Documentation – Responsibility 1+MG NCP",
    "level": 3,
-   "page": 77,
    "actor": "1+MG NCP",
    "scopes": [
     "national"
@@ -488,14 +319,12 @@
   {
    "id": "VI.4",
    "title": "Establish Formal Availability",
-   "level": 2,
-   "page": 77
+   "level": 2
   },
   {
    "id": "VI.4.1",
    "title": "Establish Formal Availability – Responsibility Genome EDIC Member Countries",
    "level": 3,
-   "page": 77,
    "actor": "Genome EDIC Member Countries",
    "scopes": [
     "national"
@@ -505,7 +334,6 @@
    "id": "VI.4.2",
    "title": "Establish Formal Availability – Responsibility Genome EDIC CC",
    "level": 3,
-   "page": 78,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -515,7 +343,6 @@
    "id": "VI.4.3",
    "title": "Establish Formal Availability – Responsibility 1+MG Data Providers",
    "level": 3,
-   "page": 78,
    "actor": "1+MG Data Providers",
    "scopes": [
     "local"
@@ -525,7 +352,6 @@
    "id": "VI.4.4",
    "title": "Establish Formal Availability – Responsibility 1+MG NCP",
    "level": 3,
-   "page": 79,
    "actor": "1+MG NCP",
    "scopes": [
     "national"
@@ -535,20 +361,18 @@
    "id": "VI.4.5",
    "title": "Establish Formal Availability – Responsibility 1+MG Data Holders [1+MG compliant datasets]",
    "level": 3,
-   "page": 80,
    "actor": "1+MG Data Holders",
-   "scopes": [
-    "national"
-   ],
    "applies_to": [
     "1+MG compliant datasets"
+   ],
+   "scopes": [
+    "national"
    ]
   },
   {
    "id": "VI.4.6",
    "title": "Establish Formal Availability – Responsibility 1+MG IT Infrastructure Provider",
    "level": 3,
-   "page": 80,
    "actor": "1+MG IT Infrastructure Provider",
    "scopes": [
     "national"
@@ -557,33 +381,29 @@
   {
    "id": "VII",
    "title": "Data Access Governance",
-   "level": 1,
-   "page": 81
+   "level": 1
   },
   {
    "id": "VII.1",
    "title": "Prior Registration of the User Organisation",
-   "level": 2,
-   "page": 81
+   "level": 2
   },
   {
    "id": "VII.1.1",
    "title": "Prior Registration of the User Organisation – Responsibility: 1+MG Data Holders [1+MG compliant datasets]",
    "level": 3,
-   "page": 81,
    "actor": "1+MG Data Holders",
-   "scopes": [
-    "national"
-   ],
    "applies_to": [
     "1+MG compliant datasets"
+   ],
+   "scopes": [
+    "national"
    ]
   },
   {
    "id": "VII.1.2",
    "title": "Prior Registration of the User Organisation – Responsibility: Genome EDIC CC",
    "level": 3,
-   "page": 82,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -593,7 +413,6 @@
    "id": "VII.1.3",
    "title": "Prior Registration of the User Organisation – Responsibility: User Organisation",
    "level": 3,
-   "page": 82,
    "actor": "User Organisation",
    "scopes": [
     "user"
@@ -601,9 +420,8 @@
   },
   {
    "id": "VII.1.4",
-   "title": "Prior Registration of the User Organisation – Responsibity: Genome EDIC Member Country",
+   "title": "Prior Registration of the User Organisation – Responsibility: Genome EDIC Member Country",
    "level": 3,
-   "page": 83,
    "actor": "Genome EDIC Member Country",
    "scopes": [
     "national"
@@ -612,14 +430,12 @@
   {
    "id": "VII.2",
    "title": "Data Discovery",
-   "level": 2,
-   "page": 83
+   "level": 2
   },
   {
    "id": "VII.2.1",
    "title": "Data Discovery – Responsibility: Genome EDIC CC",
    "level": 3,
-   "page": 83,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -629,47 +445,43 @@
    "id": "VII.2.2",
    "title": "Data Discovery Responsibility: 1+MG Data Holder/Genome EDIC CC [Research, Policy Development, QM in Healthcare]",
    "level": 3,
-   "page": 85,
    "actor": "1+MG Data Holder/Genome EDIC CC",
+   "applies_to": [
+    "Research, Policy Development, QM in Healthcare"
+   ],
    "scopes": [
     "european",
     "national"
-   ],
-   "applies_to": [
-    "Research, Policy Development, QM in Healthcare"
    ]
   },
   {
    "id": "VII.2.3",
    "title": "Data Discovery Responsibility: 1+MG IT Infrastructure Provider [Research, Policy Development, QM in Healthcare]",
    "level": 3,
-   "page": 85,
    "actor": "1+MG IT Infrastructure Provider",
-   "scopes": [
-    "national"
-   ],
    "applies_to": [
     "Research, Policy Development, QM in Healthcare"
+   ],
+   "scopes": [
+    "national"
    ]
   },
   {
    "id": "VII.2.4",
    "title": "Data Discovery Responsibility: Users [Research, Policy Development, QM in Healthcare]",
    "level": 3,
-   "page": 86,
    "actor": "Users",
-   "scopes": [
-    "user"
-   ],
    "applies_to": [
     "Research, Policy Development, QM in Healthcare"
+   ],
+   "scopes": [
+    "user"
    ]
   },
   {
    "id": "VII.2.5",
    "title": "Data Discovery Responsibility: 1+MG NCPs",
    "level": 3,
-   "page": 87,
    "actor": "1+MG NCPs",
    "scopes": [
     "national"
@@ -679,7 +491,6 @@
    "id": "VII.2.6",
    "title": "Data Discovery Responsibility: 1+MG Data Providers",
    "level": 3,
-   "page": 87,
    "actor": "1+MG Data Providers",
    "scopes": [
     "local"
@@ -688,14 +499,12 @@
   {
    "id": "VII.3",
    "title": "Data Access Request",
-   "level": 2,
-   "page": 88
+   "level": 2
   },
   {
    "id": "VII.3.1",
    "title": "Data Access Request Responsibility: Genome EDIC CC",
    "level": 3,
-   "page": 88,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -705,86 +514,87 @@
    "id": "VII.3.2",
    "title": "Data Access Request Responsibility: 1+MG NCP [Research, Policy Development, QM in Healthcare]",
    "level": 3,
-   "page": 90,
    "actor": "1+MG NCP",
-   "scopes": [
-    "national"
-   ],
    "applies_to": [
     "Research, Policy Development, QM in Healthcare"
+   ],
+   "scopes": [
+    "national"
    ]
   },
   {
    "id": "VII.3.3",
    "title": "Data Access Request Responsibility: Users [Research, Policy Development, QM in Healthcare]",
    "level": 3,
-   "page": 91,
    "actor": "Users",
-   "scopes": [
-    "user"
-   ],
    "applies_to": [
     "Research, Policy Development, QM in Healthcare"
+   ],
+   "scopes": [
+    "user"
    ]
   },
   {
    "id": "VII.3.4",
    "title": "Data Access Request Responsibility: Users [Healthcare reuse]",
    "level": 3,
-   "page": 92,
    "actor": "Users",
-   "scopes": [
-    "user"
-   ],
    "applies_to": [
     "Healthcare reuse"
+   ],
+   "scopes": [
+    "user"
    ]
   },
   {
    "id": "VII.3.5",
    "title": "Data Access Request Responsibility: User Organisation [Research, Policy Development, QM in Healthcare]",
    "level": 3,
-   "page": 93,
    "actor": "User Organisation",
-   "scopes": [
-    "user"
-   ],
    "applies_to": [
     "Research, Policy Development, QM in Healthcare"
+   ],
+   "scopes": [
+    "user"
    ]
   },
   {
    "id": "VII.4",
    "title": "Data Access Review",
-   "level": 2,
-   "page": 93
+   "level": 2
   },
   {
    "id": "VII.4.1",
-   "title": "Data Access Review Responsibility: Genome EDIC CC",
+   "title": "Data Access Review Responsibility: Genome EDIC CC [Research, Policy Development, QM in Healthcare]",
    "level": 3,
-   "page": 93,
    "actor": "Genome EDIC CC",
+   "applies_to": [
+    "Research, Policy Development, QM in Healthcare"
+   ],
    "scopes": [
     "european"
    ]
   },
   {
    "id": "VII.4.2",
-   "title": "Data Access Review Responsibility: Genome EDIC CC",
+   "title": "Data Access Review Responsibility: Genome EDIC CC [additional for Research, Policy Development]",
    "level": 3,
-   "page": 95,
    "actor": "Genome EDIC CC",
+   "applies_to": [
+    "additional for Research, Policy Development"
+   ],
    "scopes": [
     "european"
    ]
   },
   {
    "id": "VII.4.3",
-   "title": "Data Access Review Responsibility: Genome EDIC CC",
+   "title": "Data Access Review Responsibility: Genome EDIC CC [Healthcare reuse]",
    "level": 3,
-   "page": 95,
    "actor": "Genome EDIC CC",
+   "applies_to": [
+    "Healthcare reuse"
+   ],
    "scopes": [
     "european"
    ]
@@ -793,34 +603,35 @@
    "id": "VII.4.4",
    "title": "Data Access Review Responsibility: 1+MG NCP [Research, Policy Development, QM in Healthcare]",
    "level": 3,
-   "page": 97,
    "actor": "1+MG NCP",
-   "scopes": [
-    "national"
-   ],
    "applies_to": [
     "Research, Policy Development, QM in Healthcare"
+   ],
+   "scopes": [
+    "national"
    ]
   },
   {
    "id": "VII.4.5",
    "title": "Data Access Review Responsibility: 1+MG NCP [Healthcare reuse]",
    "level": 3,
-   "page": 97,
    "actor": "1+MG NCP",
-   "scopes": [
-    "national"
-   ],
    "applies_to": [
     "Healthcare reuse"
+   ],
+   "scopes": [
+    "national"
    ]
   },
   {
    "id": "VII.4.6",
-   "title": "Data Access Review Responsibility: 1+MG Data Holder",
+   "title": "Data Access Review Responsibility: 1+MG Data Holder [1+MG Compliant Data] [Research, Policy Development, QM in Healthcare]",
    "level": 3,
-   "page": 98,
    "actor": "1+MG Data Holder",
+   "applies_to": [
+    "1+MG Compliant Data",
+    "Research, Policy Development, QM in Healthcare"
+   ],
    "scopes": [
     "national"
    ]
@@ -829,93 +640,85 @@
    "id": "VII.4.7",
    "title": "Data Access Review Responsibility: 1+MG Data Providers and/or Local DACs [1+MG Cohort Data only] [Research, Policy Development, QM in Healthcare]",
    "level": 3,
-   "page": 99,
    "actor": "1+MG Data Providers and/or Local DACs",
-   "scopes": [
-    "local",
-    "national"
-   ],
    "applies_to": [
     "1+MG Cohort Data only",
     "Research, Policy Development, QM in Healthcare"
+   ],
+   "scopes": [
+    "local",
+    "national"
    ]
   },
   {
    "id": "VII.4.8",
    "title": "Data Access Review Responsibility: User Organisations (where applicable) [Healthcare reuse]",
    "level": 3,
-   "page": 99,
    "actor": "User Organisations (where applicable)",
-   "scopes": [
-    "user"
-   ],
    "applies_to": [
     "Healthcare reuse"
+   ],
+   "scopes": [
+    "user"
    ]
   },
   {
    "id": "VII.5",
    "title": "Data Access Decision",
-   "level": 2,
-   "page": 100
+   "level": 2
   },
   {
    "id": "VII.5.1",
    "title": "Data Access Review Responsibility: 1+MG DAC [Research, Policy Development, QM in Healthcare]",
    "level": 3,
-   "page": 100,
    "actor": "1+MG DAC",
-   "scopes": [
-    "european"
-   ],
    "applies_to": [
     "Research, Policy Development, QM in Healthcare"
+   ],
+   "scopes": [
+    "european"
    ]
   },
   {
    "id": "VII.5.2",
    "title": "Data Access Review Responsibility: Genome EDIC Member Country [Research, Policy Development, QM in Healthcare]",
    "level": 3,
-   "page": 100,
    "actor": "Genome EDIC Member Country",
-   "scopes": [
-    "national"
-   ],
    "applies_to": [
     "Research, Policy Development, QM in Healthcare"
+   ],
+   "scopes": [
+    "national"
    ]
   },
   {
    "id": "VII.5.3",
    "title": "Data Access Review Responsibility: 1+MG NCP [Research (except for recruitment into clinical studies), Policy Development, QM in Healthcare]",
    "level": 3,
-   "page": 102,
    "actor": "1+MG NCP",
-   "scopes": [
-    "national"
-   ],
    "applies_to": [
     "Research (except for recruitment into clinical studies), Policy Development, QM in Healthcare"
+   ],
+   "scopes": [
+    "national"
    ]
   },
   {
    "id": "VII.5.4",
    "title": "Data Access Review Responsibility: 1+MG Data Holder [1+MG Compliant Data]",
    "level": 3,
-   "page": 103,
    "actor": "1+MG Data Holder",
-   "scopes": [
-    "national"
-   ],
    "applies_to": [
     "1+MG Compliant Data"
+   ],
+   "scopes": [
+    "national"
    ]
   },
   {
    "id": "VII.5.5",
    "title": "Data Access Review Responsibility: Genome EDIC CC",
    "level": 3,
-   "page": 103,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -925,7 +728,6 @@
    "id": "VII.5.6",
    "title": "Data Access Review Responsibility: Genome EDIC General Assembly",
    "level": 3,
-   "page": 105,
    "actor": "Genome EDIC General Assembly",
    "scopes": [
     "european"
@@ -934,20 +736,17 @@
   {
    "id": "VIII",
    "title": "Data Use",
-   "level": 1,
-   "page": 106
+   "level": 1
   },
   {
    "id": "VIII.1",
    "title": "Transparency and Communication Data Use",
-   "level": 2,
-   "page": 106
+   "level": 2
   },
   {
    "id": "VIII.1.1",
    "title": "Transparency and Communication on Data Use: Users",
    "level": 3,
-   "page": 106,
    "actor": "Users",
    "scopes": [
     "user"
@@ -957,7 +756,6 @@
    "id": "VIII.1.2",
    "title": "Transparency and Communication on Data Use: Genome EDIC CC",
    "level": 3,
-   "page": 107,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -967,7 +765,6 @@
    "id": "VIII.1.3",
    "title": "Transparency and Communication on Data Use: 1+MG NCP",
    "level": 3,
-   "page": 108,
    "actor": "1+MG NCP",
    "scopes": [
     "national"
@@ -976,14 +773,12 @@
   {
    "id": "VIII.2",
    "title": "Data use agreement",
-   "level": 2,
-   "page": 109
+   "level": 2
   },
   {
    "id": "VIII.2.1",
    "title": "Data use agreement - rights and responsibilities of Genome EDIC CC",
    "level": 3,
-   "page": 109,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -993,7 +788,6 @@
    "id": "VIII.2.2",
    "title": "Data use agreement - rights and responsibilities of Users",
    "level": 3,
-   "page": 109,
    "actor": "Users",
    "scopes": [
     "user"
@@ -1002,14 +796,12 @@
   {
    "id": "VIII.3",
    "title": "Processing in the SPE",
-   "level": 2,
-   "page": 110
+   "level": 2
   },
   {
    "id": "VIII.3.1",
    "title": "Processing in the SPE – rights and responsibilities of Users",
    "level": 3,
-   "page": 110,
    "actor": "Users",
    "scopes": [
     "user"
@@ -1019,7 +811,6 @@
    "id": "VIII.3.2",
    "title": "Processing in the SPE – rights and responsibilities of Genome EDIC CC",
    "level": 3,
-   "page": 111,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -1029,7 +820,6 @@
    "id": "VIII.3.3",
    "title": "Processing in the SPE – responsibilities of 1+MG IT Infrastructure Providers",
    "level": 3,
-   "page": 112,
    "actor": "1+MG IT Infrastructure Providers",
    "scopes": [
     "national"
@@ -1039,20 +829,18 @@
    "id": "VIII.3.4",
    "title": "Processing in the SPE – rights and responsibilities of Genome EDIC Member Countries [Research only]",
    "level": 3,
-   "page": 114,
    "actor": "Genome EDIC Member Countries",
-   "scopes": [
-    "national"
-   ],
    "applies_to": [
     "Research only"
+   ],
+   "scopes": [
+    "national"
    ]
   },
   {
    "id": "VIII.4",
    "title": "Special Processing in the SPE [healthcare reuse only]",
    "level": 2,
-   "page": 115,
    "applies_to": [
     "healthcare reuse only"
    ]
@@ -1061,7 +849,6 @@
    "id": "VIII.4.1",
    "title": "Processing in the SPE – rights and responsibilities of Genome EDIC CC",
    "level": 3,
-   "page": 115,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -1071,7 +858,6 @@
    "id": "VIII.4.2",
    "title": "Processing in the SPE – rights and responsibilities of Users",
    "level": 3,
-   "page": 115,
    "actor": "Users",
    "scopes": [
     "user"
@@ -1081,7 +867,6 @@
    "id": "VIII.4.3",
    "title": "Processing in the SPE – rights and responsibilities of 1+MG Data Holders / Genome EDIC CC",
    "level": 3,
-   "page": 115,
    "actor": "1+MG Data Holders / Genome EDIC CC",
    "scopes": [
     "european",
@@ -1092,7 +877,6 @@
    "id": "VIII.4.4",
    "title": "Processing in the SPE – rights and responsibilities of treating healthcare professionals",
    "level": 3,
-   "page": 116,
    "actor": "treating healthcare professionals",
    "scopes": [
     "user"
@@ -1102,26 +886,23 @@
    "id": "VIII.4.5",
    "title": "Processing in the SPE – rights and responsibilities of 1+MG NCPs [healthcare reuse only]",
    "level": 3,
-   "page": 116,
    "actor": "1+MG NCPs",
-   "scopes": [
-    "national"
-   ],
    "applies_to": [
     "healthcare reuse only"
+   ],
+   "scopes": [
+    "national"
    ]
   },
   {
    "id": "VIII.5",
    "title": "Reaching Back to Data Subjects",
-   "level": 2,
-   "page": 117
+   "level": 2
   },
   {
    "id": "VIII.5.1",
-   "title": "Reaching Back To Data Subjects – Rights and Obligations: Users",
+   "title": "Reaching Back to Data Subjects – Rights and Obligations: Users",
    "level": 3,
-   "page": 117,
    "actor": "Users",
    "scopes": [
     "user"
@@ -1129,9 +910,8 @@
   },
   {
    "id": "VIII.5.2",
-   "title": "Reaching Back To Data Subjects – Rights and Obligations: 1+MG NCP/1+MG Data Providers",
+   "title": "Reaching Back to Data Subjects – Rights and Obligations: 1+MG NCP/1+MG Data Providers",
    "level": 3,
-   "page": 118,
    "actor": "1+MG NCP/1+MG Data Providers",
    "scopes": [
     "local",
@@ -1140,9 +920,8 @@
   },
   {
    "id": "VIII.5.3",
-   "title": "Reaching Back To Data Subjects – Rights and Obligations: Genome EDIC CC",
+   "title": "Reaching Back to Data Subjects – Rights and Obligations: Genome EDIC CC",
    "level": 3,
-   "page": 119,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -1150,9 +929,8 @@
   },
   {
    "id": "VIII.5.4",
-   "title": "Reaching Back To Data Subjects – Rights and Obligations: Genome EDIC Member Countries",
+   "title": "Reaching Back to Data Subjects – Rights and Obligations: Genome EDIC Member Countries",
    "level": 3,
-   "page": 119,
    "actor": "Genome EDIC Member Countries",
    "scopes": [
     "national"
@@ -1161,27 +939,24 @@
   {
    "id": "VIII.6",
    "title": "IP and Commercialisation",
-   "level": 2,
-   "page": 120
+   "level": 2
   },
   {
    "id": "VIII.6.1",
    "title": "IP and Commercialisation – Rights and Obligations: User Organisations [research only]",
    "level": 3,
-   "page": 120,
    "actor": "User Organisations",
-   "scopes": [
-    "user"
-   ],
    "applies_to": [
     "research only"
+   ],
+   "scopes": [
+    "user"
    ]
   },
   {
    "id": "VIII.6.2",
    "title": "IP and Commercialisation – Rights and Obligations: 1+MG Data Providers",
    "level": 3,
-   "page": 120,
    "actor": "1+MG Data Providers",
    "scopes": [
     "local"
@@ -1191,26 +966,23 @@
    "id": "VIII.6.3",
    "title": "IP and Commercialisation – Rights and Obligations: Genome EDIC CC [research only]",
    "level": 3,
-   "page": 120,
    "actor": "Genome EDIC CC",
-   "scopes": [
-    "european"
-   ],
    "applies_to": [
     "research only"
+   ],
+   "scopes": [
+    "european"
    ]
   },
   {
    "id": "VIII.7",
    "title": "Publications",
-   "level": 2,
-   "page": 121
+   "level": 2
   },
   {
    "id": "VIII.7.1",
    "title": "Publications – Rights and Obligations: Users",
    "level": 3,
-   "page": 121,
    "actor": "Users",
    "scopes": [
     "user"
@@ -1220,7 +992,6 @@
    "id": "VIII.7.2",
    "title": "Publications – Rights and Obligations: Genome EDIC Assembly of Members",
    "level": 3,
-   "page": 122,
    "actor": "Genome EDIC Assembly of Members",
    "scopes": [
     "european"
@@ -1230,7 +1001,6 @@
    "id": "VIII.7.3",
    "title": "Publications – Rights and Obligations: Genome EDIC CC",
    "level": 3,
-   "page": 122,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -1240,7 +1010,6 @@
    "id": "VIII.7.4",
    "title": "Publications – Rights and Obligations: 1+MG NCP",
    "level": 3,
-   "page": 123,
    "actor": "1+MG NCP",
    "scopes": [
     "national"
@@ -1250,7 +1019,6 @@
    "id": "VIII.8",
    "title": "Archiving [research and healthcare reuse only]",
    "level": 2,
-   "page": 123,
    "applies_to": [
     "research and healthcare reuse only"
    ]
@@ -1259,7 +1027,6 @@
    "id": "VIII.8.1",
    "title": "Archiving – Rights and Obligations: Users",
    "level": 3,
-   "page": 123,
    "actor": "Users",
    "scopes": [
     "user"
@@ -1269,7 +1036,6 @@
    "id": "VIII.8.2",
    "title": "Archiving – Rights and Obligations: Genome EDIC CC",
    "level": 3,
-   "page": 124,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -1279,7 +1045,6 @@
    "id": "VIII.8.3",
    "title": "Archiving – Rights and Obligations: Genome EDIC Member Countries",
    "level": 3,
-   "page": 124,
    "actor": "Genome EDIC Member Countries",
    "scopes": [
     "national"
@@ -1289,7 +1054,6 @@
    "id": "VIII.8.4",
    "title": "Archiving – Rights and Obligations: 1+MG IT Infrastructure providers",
    "level": 3,
-   "page": 124,
    "actor": "1+MG IT Infrastructure providers",
    "scopes": [
     "national"
@@ -1298,14 +1062,12 @@
   {
    "id": "VIII.9",
    "title": "Enriched and Improved Data",
-   "level": 2,
-   "page": 125
+   "level": 2
   },
   {
    "id": "VIII.9.1",
    "title": "Enriched and Improved Data – Obligations: Users",
    "level": 3,
-   "page": 125,
    "actor": "Users",
    "scopes": [
     "user"
@@ -1315,7 +1077,6 @@
    "id": "VIII.9.2",
    "title": "Enriched and Improved Data – Obligations: Genome EDIC CC",
    "level": 3,
-   "page": 126,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -1325,7 +1086,6 @@
    "id": "VIII.10",
    "title": "Data Subject Related Data [healthcare only]",
    "level": 2,
-   "page": 126,
    "applies_to": [
     "healthcare only"
    ]
@@ -1334,7 +1094,6 @@
    "id": "VIII.10.1",
    "title": "Data Subject Related Data – Obligations: Users",
    "level": 3,
-   "page": 126,
    "actor": "Users",
    "scopes": [
     "user"
@@ -1344,7 +1103,6 @@
    "id": "VIII.10.2",
    "title": "Data Subject Related Data – Obligations: Genome EDIC CC",
    "level": 3,
-   "page": 127,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -1353,14 +1111,12 @@
   {
    "id": "VIII.11",
    "title": "Incidental Findings",
-   "level": 2,
-   "page": 127
+   "level": 2
   },
   {
    "id": "VIII.11.1",
    "title": "Incidental Findings – Rights and Responsibilities: User",
    "level": 3,
-   "page": 127,
    "actor": "User",
    "scopes": [
     "user"
@@ -1370,7 +1126,6 @@
    "id": "VIII.11.2",
    "title": "Incidental Findings – Rights and Responsibilities: Genome EDIC CC",
    "level": 3,
-   "page": 128,
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
@@ -1380,7 +1135,6 @@
    "id": "VIII.11.3",
    "title": "Incidental Findings – Rights and Responsibilities: 1+MG NCP",
    "level": 3,
-   "page": 128,
    "actor": "1+MG NCP",
    "scopes": [
     "national"
@@ -1390,7 +1144,6 @@
    "id": "VIII.11.4",
    "title": "Incidental Findings – Rights and Responsibilities: 1+MG Data Provider",
    "level": 3,
-   "page": 129,
    "actor": "1+MG Data Provider",
    "scopes": [
     "local"

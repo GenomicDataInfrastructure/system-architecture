@@ -193,10 +193,10 @@ Use the [ADR template](/decisions/template). One decision per ADR. Keep it under
 
 ## Risks and technical debt
 
-**Headings:** a table *ID · risk or debt · probability · impact · mitigation · owner · status*. Include the governance items still "under discussion", dependencies on EHDS implementing acts, and national readiness.
+**Headings:** a table *ID · risk or debt · probability · impact · mitigation · owner · status*. Include the points the governance itself leaves open (sections that say a point is still to be discussed or clarified), dependencies on EHDS implementing acts, and national readiness.
 
 ## Reference pages
 
-- **Glossary:** governance definitions are quoted word for word (decision D-012). Architecture terms are marked "architecture term".
+- **Glossary:** governance definitions are quoted word for word (decision D-016). Architecture terms are marked "architecture term".
 - **Reader guides:** each question links to the page that answers it. Add questions as pages are written. Remove none without asking the architecture lead.
 - **National implementation profile template:** keep it to one page per country: national actors, deployment pattern, and a table *common requirement · how the country meets it · evidence*.

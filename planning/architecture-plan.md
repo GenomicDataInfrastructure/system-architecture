@@ -1,6 +1,6 @@
 # Genome EDIC System Architecture — Plan (draft 0.1, 18 Sep 2026)
 
-Purpose: plan for writing the Genome EDIC system architecture (arc42), published as a Docusaurus site on GitHub, traceable to the 1+MG Data Governance (Genome EDIC Secondary Use Framework, master document 2025-12-22) and implementing data protection by design and by default (GDPR Art. 25).
+Purpose: plan for writing the Genome EDIC system architecture (arc42), published as a Docusaurus site on GitHub, traceable to the 1+MG Data Governance (Genome EDIC Secondary Use Framework, master document version 2025-12, published as the annex of GDI D2.4) and implementing data protection by design and by default (GDPR Art. 25).
 
 ## 1. How to organise three scopes (European, national, local)
 
@@ -46,9 +46,8 @@ Why this works for the governance: the governance assigns rights and duties per 
 
 ## 4. Sources (candidates, to confirm)
 
-- 1+MG Data Governance master document, version 2025-12-22 (project workspace)
-- Draft Commission Implementing Regulation on HealthData@EU, Ref. Ares(2026)8339104 (draft, not adopted)
-- GDI D2.4 Framework for data governance — https://zenodo.org/records/19096953
+- 1+MG Data Governance master document, version 2025-12, published as the annex of GDI D2.4 Framework for data governance — https://zenodo.org/records/19096953 (decision D-016)
+- Draft Commission Implementing Regulation on HealthData@EU, Ref. Ares(2026)8339104 (draft, not adopted) — https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16155-European-Health-Data-Space-technical-requirements-for-HealthData@EU_en
 - GDI D3.4 Updated infrastructure status report and roadmap — https://zenodo.org/records/17990533
 - GDI D6.3 Requirements for data quality and distributed analysis — https://zenodo.org/records/13920170
 - GDI D6.6 Recommendations on data curation and ELSI compliance — https://zenodo.org/records/10723494

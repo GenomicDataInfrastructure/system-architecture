@@ -23,7 +23,7 @@ type Section = {
   id: string;
   title: string;
   level: number;
-  page: number;
+  printed_as?: string;
   actor?: string;
   scopes?: string[];
 };
@@ -95,7 +95,8 @@ export function TraceabilityMatrix() {
               <tr key={s.id} id={govAnchor(s.id)} className={`trace-level-${s.level}`}>
                 <td className="nowrap">{s.id}</td>
                 <td>
-                  {s.title} <span className="muted">(p. {s.page})</span>
+                  {s.title}
+                  {s.printed_as && <span className="muted"> (numbered {s.printed_as} in the published document)</span>}
                 </td>
                 <td>{(s.scopes ?? []).map((x) => SCOPE_LABEL[x] ?? x).join(', ')}</td>
                 <td>
