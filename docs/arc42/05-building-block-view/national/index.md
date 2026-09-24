@@ -20,7 +20,9 @@ last_reviewed:
 
 ## What this page must answer
 
-- Level 2 of the national scope: the common building blocks every Member Country must provide, whatever its national set-up.
+- Level 2 of the national scope: the common building blocks every Genome EDIC Member Country must provide, whichever organisations it assigns the roles to (1+MG NCP, 1+MG Data Holders, 1+MG Data Providers, 1+MG Data Hosts, Local DACs).
+- Which building blocks are usually run by the 1+MG NCP (5.2.1 to 5.2.4), and which by a 1+MG Data Provider or 1+MG Data Host (5.2.5 to 5.2.7)?
+- Where does a Member Country record which organisation holds which role? (Link to the national implementation profile.)
 
 ## Sources to start from
 

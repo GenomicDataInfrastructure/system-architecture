@@ -19,7 +19,9 @@ last_reviewed:
 
 ## What this page must answer
 
-- How are access requests captured, routed to 1+MG Data Holders and Local DACs, and tracked?
+- How are access requests captured, routed per type of dataset (to 1+MG Data Holders for 1+MG compliant data; to 1+MG Data Providers and/or Local DACs for 1+MG cohort data), and tracked?
+- How does the Genome EDIC CC adopt and document the access decision for 1+MG cohort data?
+- How are Users sent on to the Data Provider or the EU dataset catalogue for externally governed datasets?
 - Which functions support the 1+MG DAC (review workflow, consensus moderation, inconsistency flags)?
 - How does the request form align with the EHDS application form?
 

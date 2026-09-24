@@ -20,6 +20,7 @@ last_reviewed:
 ## What this page must answer
 
 - Which data and metadata models, vocabularies and standards are used (e.g. HealthDCAT-AP, DUO, Beacon v2, phenopackets)?
+- How is the type of dataset, and who reviews and decides on access, recorded in the metadata?
 
 ## Sources to start from
 

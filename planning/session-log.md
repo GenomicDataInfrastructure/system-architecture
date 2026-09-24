@@ -2,6 +2,12 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-09-24 — Scopes restructured (B. Pacheco with Claude)
+- Decided D-018: scopes of responsibility European, national, User Organisation; no local scope; chapter 7 by IT level (central, national, local). ADR-0002 (proposed): the Member Country decides whether its data are 1+MG compliant (national 1+MG Data Holder decides) or 1+MG cohort data (Genome EDIC decides); the system supports both paths per dataset, plus externally governed datasets.
+- Done: 5.3.x pages moved to 5.2.5–5.2.7; new 5.3 User Organisation scope and 5.3.1; 7.1 renamed Central deployment; governance scope tags, glossary, reader guides, handbook, script and plan updated.
+- Types of dataset made visible: 3.3 matrix question, per-type questions on 1.1, 5.1.1, 5.1.2, 5.2.2 (renamed Access review and decision support), 6.1, 6.2.1, 6.2.3, 6.2.4, 6.3.1, 8.2, 8.6, 8.10; recipes and review checklist; guide questions; "Applies to" column in the traceability table; ADRs no longer count as coverage.
+- Next, after merge: rename the GitHub issues of moved or renamed pages (3.3, 5.2.2, 5.2.5–5.2.7, 7.1), close the issue of the old 5.3 Local scope, create the `scope-user-organisation` label, relabel and delete `scope-local`, run `setup.mjs issues` for the new pages; then draft 3.3 (owner: B. Pacheco).
+
 ## 2026-09-24 — Published governance (B. Pacheco with Claude)
 - The governance is published as the annex of GDI D2.4 (https://zenodo.org/records/19096953, version 2025-12, CC BY 4.0). Decided D-016 (replaces D-012).
 - Done: `governance.json` rebuilt against the published document (133 numbered sections, no page numbers; overview printed as "I." keeps ID IV); titles updated; `dg` source points to Zenodo; glossary aligned word for word; page numbers removed from `<GovRef>` and the traceability table; AGENTS.md, handbook, plan and chapter 11 updated. All existing `governance_refs` IDs are unchanged and valid. The published text has no cyan "under discussion" marking; open points are named in III, VII.3.3, VII.4.3, VII.5.3, VIII.11.1.

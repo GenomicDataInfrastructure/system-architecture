@@ -21,6 +21,7 @@ last_reviewed:
 
 - Scenario: from a 1+MG Data Provider deciding to contribute data to the dataset being formally available and findable.
 - Steps: establish principal availability, transform, document, establish formal availability.
+- What differs per type of dataset (1+MG compliant, 1+MG cohort, externally governed): who establishes formal availability, and what the catalogue must say?
 
 ## Sources to start from
 

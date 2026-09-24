@@ -1,7 +1,7 @@
 ---
-title: "7.1 European deployment"
+title: "7.1 Central deployment"
 sidebar_position: 1
-slug: /deployment/european
+slug: /deployment/central
 owner: TBD
 reviewers: []
 status: placeholder
@@ -19,7 +19,7 @@ last_reviewed:
 
 ## What this page must answer
 
-- Hosting of central services, environments, connection to HealthData@EU.
+- Hosting of the services of the European scope at central level, environments, connection to HealthData@EU.
 
 ## Sources to start from
 

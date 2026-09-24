@@ -6,7 +6,7 @@ Read this first. It tells you what this repository is, where the plan lives and 
 The Genome EDIC system architecture, written with the arc42 template and published as a Docusaurus site on GitHub Pages. It must:
 - respect the 1+MG Data Governance (Genome EDIC Secondary Use Framework, master document version 2025-12, published as the annex of GDI D2.4: https://zenodo.org/records/19096953);
 - implement data protection by design and by default (GDPR Art. 25);
-- cover three scopes: European (Genome EDIC CC), national (1+MG NCP node) and local (1+MG Data Provider / Data Host).
+- cover three scopes of responsibility: European (Genome EDIC), national (Genome EDIC Member Country: 1+MG NCP, 1+MG Data Holders, 1+MG Data Providers, 1+MG Data Hosts, Local DACs) and User Organisation (the User Organisation and its Users). Deployment is described at central, national and local level (decision D-018).
 
 Primary audience: implementers. Also read by ministries, legal experts, ELSI specialists, security advisors and DPOs, so write in plain, direct language.
 

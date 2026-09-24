@@ -12,7 +12,7 @@ hide_page_meta: true
 This is a working draft of the Genome EDIC system architecture taskforce. It is not an adopted document.
 :::
 
-This site describes the IT system of the Genome EDIC: the European, national and local components that together let people find, request and use genomic and related health data across borders.
+This site describes the IT system of the Genome EDIC: the European, national and User Organisation parts that together let people find, request and use genomic and related health data across borders.
 
 It shows **how the system implements the 1+MG Data Governance** (the Genome EDIC Secondary Use Framework) and how it applies **data protection by design and by default**.
 
@@ -33,7 +33,7 @@ Pick the guide for your role. Each one lists the questions people in that role u
 
 It follows the [arc42](https://arc42.org) template, with twelve chapters. Three rules make it easier to navigate:
 
-1. **Three scopes.** The system has a *European* scope (services run by the Genome EDIC Central Coordination), a *national* scope (run in each Member Country, coordinated by the 1+MG NCP) and a *local* scope (run by 1+MG Data Providers and Data Hosts). Chapters 5 and 7 are split by scope. See [3.3 Scopes](/context/scopes).
+1. **Three scopes.** The system has a *European* scope (what the Genome EDIC is responsible for), a *national* scope (what each Member Country is responsible for: its 1+MG NCP, 1+MG Data Holders, 1+MG Data Providers and 1+MG Data Hosts) and a *User Organisation* scope (the User Organisation and its Users). Chapter 5 is split by scope; chapter 7 by where things run (central, national, local). See [3.3 Scopes](/context/scopes).
 2. **Runtime follows the governance.** Chapter 6 walks through the data lifecycle in the same order as the governance: data inclusion, data access, data use.
 3. **Every page shows its governance links.** The box at the top of each page lists the governance sections it implements. The [governance traceability](/appendix/traceability) page shows the reverse view: for every governance section, the pages that implement it, and the gaps.
 

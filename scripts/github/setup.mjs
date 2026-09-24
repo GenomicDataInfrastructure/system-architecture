@@ -79,7 +79,8 @@ function chapterKey(rel) {
   return null;
 }
 function scopeKey(rel) {
-  const m = rel.match(/\/(european|national|local)(\/|\.md)/);
+  // Scopes are responsibility scopes of the building block view (chapter 5).
+  const m = rel.match(/05-building-block-view\/(european|national|user-organisation)\//);
   return m ? m[1] : null;
 }
 
@@ -120,7 +121,7 @@ function trackedPages() {
   const rank = (f) => (f.includes('/arc42/') ? 0 : f.includes('/readers/') ? 1 : 2);
   const key = (p) => [
     rank(p.rel),
-    path.dirname(p.rel).replace('/european', '/1').replace('/national', '/2').replace('/local', '/3'),
+    path.dirname(p.rel).replace('/european', '/1').replace('/national', '/2').replace('/user-organisation', '/3'),
     path.basename(p.rel).startsWith('index.') ? 0 : 1,
     Number(p.data.sidebar_position ?? 99),
   ];
@@ -149,9 +150,9 @@ function labels() {
     ['page', '1f5f8b', 'Write, review or update a page of the architecture'],
     ['documentation', '0075ca', 'Documentation work'],
     ['reader-question', 'd4c5f9', 'A question the documentation does not answer yet'],
-    ['scope-european', 'bfdadc', 'European scope (Genome EDIC CC services)'],
-    ['scope-national', 'c2e0c6', 'National scope (1+MG NCP node)'],
-    ['scope-local', 'fef2c0', 'Local scope (1+MG Data Provider / Data Host)'],
+    ['scope-european', 'bfdadc', 'European scope (Genome EDIC)'],
+    ['scope-national', 'c2e0c6', 'National scope (Genome EDIC Member Country)'],
+    ['scope-user-organisation', 'fef2c0', 'User Organisation scope (User Organisation and its Users)'],
     ['needs-dpo', 'e99695', 'Needs review by a data protection officer'],
     ['needs-security', 'e99695', 'Needs review by a security advisor'],
     ['needs-legal', 'e99695', 'Needs review by a legal expert'],

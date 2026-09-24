@@ -20,7 +20,8 @@ last_reviewed:
 
 ## What this page must answer
 
-- Where the building blocks run, per scope, and how the scopes are connected.
+- Where the building blocks run, at the three IT levels of the governance (central, national and local), and how these levels are connected.
+- How Users connect from their User Organisation.
 
 ## Sources to start from
 

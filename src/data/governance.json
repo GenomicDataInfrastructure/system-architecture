@@ -108,6 +108,7 @@
    "level": 3,
    "actor": "1+MG IT Infrastructure Provider",
    "scopes": [
+    "european",
     "national"
    ]
   },
@@ -149,7 +150,7 @@
    "level": 3,
    "actor": "1+MG Data Provider",
    "scopes": [
-    "local"
+    "national"
    ]
   },
   {
@@ -176,6 +177,7 @@
    "level": 3,
    "actor": "1+MG IT Infrastructure Provider",
    "scopes": [
+    "european",
     "national"
    ]
   },
@@ -185,7 +187,7 @@
    "level": 3,
    "actor": "User",
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -240,7 +242,7 @@
    "level": 3,
    "actor": "1+MG Data Provider",
    "scopes": [
-    "local"
+    "national"
    ]
   },
   {
@@ -263,7 +265,7 @@
    "level": 3,
    "actor": "1+MG Data Provider",
    "scopes": [
-    "local"
+    "national"
    ]
   },
   {
@@ -295,7 +297,7 @@
    "level": 3,
    "actor": "1+MG Data Provider",
    "scopes": [
-    "local"
+    "national"
    ]
   },
   {
@@ -345,7 +347,7 @@
    "level": 3,
    "actor": "1+MG Data Providers",
    "scopes": [
-    "local"
+    "national"
    ]
   },
   {
@@ -375,6 +377,7 @@
    "level": 3,
    "actor": "1+MG IT Infrastructure Provider",
    "scopes": [
+    "european",
     "national"
    ]
   },
@@ -415,7 +418,7 @@
    "level": 3,
    "actor": "User Organisation",
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -463,6 +466,7 @@
     "Research, Policy Development, QM in Healthcare"
    ],
    "scopes": [
+    "european",
     "national"
    ]
   },
@@ -475,7 +479,7 @@
     "Research, Policy Development, QM in Healthcare"
    ],
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -493,7 +497,7 @@
    "level": 3,
    "actor": "1+MG Data Providers",
    "scopes": [
-    "local"
+    "national"
    ]
   },
   {
@@ -531,7 +535,7 @@
     "Research, Policy Development, QM in Healthcare"
    ],
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -543,7 +547,7 @@
     "Healthcare reuse"
    ],
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -555,7 +559,7 @@
     "Research, Policy Development, QM in Healthcare"
    ],
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -646,7 +650,6 @@
     "Research, Policy Development, QM in Healthcare"
    ],
    "scopes": [
-    "local",
     "national"
    ]
   },
@@ -659,7 +662,7 @@
     "Healthcare reuse"
    ],
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -749,7 +752,7 @@
    "level": 3,
    "actor": "Users",
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -790,7 +793,7 @@
    "level": 3,
    "actor": "Users",
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -804,7 +807,7 @@
    "level": 3,
    "actor": "Users",
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -822,6 +825,7 @@
    "level": 3,
    "actor": "1+MG IT Infrastructure Providers",
    "scopes": [
+    "european",
     "national"
    ]
   },
@@ -860,7 +864,7 @@
    "level": 3,
    "actor": "Users",
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -879,7 +883,7 @@
    "level": 3,
    "actor": "treating healthcare professionals",
    "scopes": [
-    "user"
+    "national"
    ]
   },
   {
@@ -905,7 +909,7 @@
    "level": 3,
    "actor": "Users",
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -914,7 +918,6 @@
    "level": 3,
    "actor": "1+MG NCP/1+MG Data Providers",
    "scopes": [
-    "local",
     "national"
    ]
   },
@@ -950,7 +953,7 @@
     "research only"
    ],
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -959,7 +962,7 @@
    "level": 3,
    "actor": "1+MG Data Providers",
    "scopes": [
-    "local"
+    "national"
    ]
   },
   {
@@ -985,7 +988,7 @@
    "level": 3,
    "actor": "Users",
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -1029,7 +1032,7 @@
    "level": 3,
    "actor": "Users",
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -1056,6 +1059,7 @@
    "level": 3,
    "actor": "1+MG IT Infrastructure providers",
    "scopes": [
+    "european",
     "national"
    ]
   },
@@ -1070,7 +1074,7 @@
    "level": 3,
    "actor": "Users",
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -1096,7 +1100,7 @@
    "level": 3,
    "actor": "Users",
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -1119,7 +1123,7 @@
    "level": 3,
    "actor": "User",
    "scopes": [
-    "user"
+    "user-organisation"
    ]
   },
   {
@@ -1146,7 +1150,7 @@
    "level": 3,
    "actor": "1+MG Data Provider",
    "scopes": [
-    "local"
+    "national"
    ]
   }
  ]

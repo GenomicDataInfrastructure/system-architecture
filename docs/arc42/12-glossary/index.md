@@ -116,15 +116,19 @@ The legal entity under which the User is operating.
 
 ### European scope
 
-The services operated centrally by the Genome EDIC Central Coordination for all Member Countries. _Architecture term._
+What the Genome EDIC is responsible for: the services operated by the Genome EDIC Central Coordination for all Member Countries, including the support for the 1+MG DAC. _Architecture term._
 
 ### National scope
 
-The services each Genome EDIC Member Country operates, coordinated by its 1+MG NCP. _Architecture term._
+What a Genome EDIC Member Country is responsible for: the building blocks of the 1+MG NCP, the 1+MG Data Holders, the 1+MG Data Providers, the 1+MG Data Hosts and the Local DACs in that country. The Member Country decides which organisations take these roles. _Architecture term._
 
-### Local scope
+### User Organisation scope
 
-The systems run by a 1+MG Data Provider or 1+MG Data Host. _Architecture term._
+What a User Organisation is responsible for, for itself and for the Users acting on its behalf: its registration, the onboarding and offboarding of its Users, its access requests and the use of the data. _Architecture term._
+
+### Central, national and local level
+
+Where an IT environment runs, as in the definition of the 1+MG IT infrastructure provider. The deployment view (chapter 7) uses these levels. A level is not a scope: a 1+MG Data Host, for example, belongs to the national scope and runs at local level. _Architecture term._
 
 ## Acronyms
 

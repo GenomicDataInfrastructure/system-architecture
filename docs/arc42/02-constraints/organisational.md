@@ -20,7 +20,7 @@ last_reviewed:
 ## What this page must answer
 
 - What must each Member Country put in place (NCP, IT infrastructure, resources, conflict-of-interest management)?
-- What is decided centrally by the Assembly of Members and what nationally?
+- What does the Genome EDIC Assembly of Members decide for all Member Countries, and what does each Member Country decide?
 - Which accreditation, audit or certification obligations apply to national entities?
 
 ## Sources to start from

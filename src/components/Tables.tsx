@@ -25,6 +25,7 @@ type Section = {
   level: number;
   printed_as?: string;
   actor?: string;
+  applies_to?: string[];
   scopes?: string[];
 };
 
@@ -44,11 +45,32 @@ function pagesFor(id: string): Page[] {
 /** A section counts as covered only when a page with real content (not a placeholder) references it. */
 const hasContent = (p: Page) => (p.status ?? 'placeholder') !== 'placeholder';
 
+/** ADRs explain a choice; other pages implement the governance. ADRs are listed but not counted as coverage. */
+const isDecision = (p: Page) => p.slug.startsWith('/decisions/');
+const implementingPages = (id: string) => pagesFor(id).filter((p) => !isDecision(p));
+
+/** Notes in square brackets in a governance title, e.g. "[1+MG Cohort Data only]" or "[Healthcare reuse]". */
+const QUALIFIERS = /\s*\/?\s*\[[^\]]+\]/g;
+/** A note that limits a section to a type of dataset (1+MG compliant or 1+MG cohort), not to a type of use. */
+const isDatasetType = (q: string) => /compliant|cohort/i.test(q);
+
+function AppliesTo({qualifiers}: {qualifiers?: string[]}) {
+  const sorted = [...(qualifiers ?? [])].sort((a, b) => Number(isDatasetType(b)) - Number(isDatasetType(a)));
+  return (
+    <>
+      {sorted.map((q) => (
+        <span key={q} className={`badge ${isDatasetType(q) ? 'badge--warning' : 'badge--secondary'} applies-to`}>
+          {q}
+        </span>
+      ))}
+    </>
+  );
+}
+
 const SCOPE_LABEL: Record<string, string> = {
   european: 'European',
   national: 'National',
-  local: 'Local',
-  user: 'User side',
+  'user-organisation': 'User Organisation',
 };
 
 /**
@@ -61,9 +83,9 @@ export function TraceabilityMatrix() {
   );
   const brokenLinks = useBrokenLinks();
   SECTIONS.forEach((s) => brokenLinks.collectAnchor(govAnchor(s.id)));
-  const covered = requirementSections.filter((s) => pagesFor(s.id).some(hasContent)).length;
+  const covered = requirementSections.filter((s) => implementingPages(s.id).some(hasContent)).length;
   const planned = requirementSections.filter(
-    (s) => pagesFor(s.id).length > 0 && !pagesFor(s.id).some(hasContent),
+    (s) => implementingPages(s.id).length > 0 && !implementingPages(s.id).some(hasContent),
   ).length;
   const gaps = requirementSections.length - covered - planned;
   return (
@@ -76,13 +98,15 @@ export function TraceabilityMatrix() {
       </p>
       <p className="muted">
         Covered: referenced by a page with content (draft, in review or approved). Planned: referenced only by
-        placeholder pages. Gap: no page references it yet.
+        placeholder pages. Gap: no page references it yet. Architecture decisions (ADRs) are listed, but don't count
+        as coverage.
       </p>
       <table className="trace-table">
         <thead>
           <tr>
             <th>DG section</th>
             <th>Title</th>
+            <th>Applies to</th>
             <th>Scope</th>
             <th>Implemented in</th>
           </tr>
@@ -95,8 +119,11 @@ export function TraceabilityMatrix() {
               <tr key={s.id} id={govAnchor(s.id)} className={`trace-level-${s.level}`}>
                 <td className="nowrap">{s.id}</td>
                 <td>
-                  {s.title}
+                  {s.title.replace(QUALIFIERS, '').trim()}
                   {s.printed_as && <span className="muted"> (numbered {s.printed_as} in the published document)</span>}
+                </td>
+                <td>
+                  <AppliesTo qualifiers={s.applies_to} />
                 </td>
                 <td>{(s.scopes ?? []).map((x) => SCOPE_LABEL[x] ?? x).join(', ')}</td>
                 <td>
@@ -107,7 +134,9 @@ export function TraceabilityMatrix() {
                       {!hasContent(p) && ' (planned)'}
                     </span>
                   ))}
-                  {isRequirement && impl.length === 0 && <span className="gap">Gap: not yet covered</span>}
+                  {isRequirement && implementingPages(s.id).length === 0 && (
+                    <span className="gap">Gap: not yet covered</span>
+                  )}
                 </td>
               </tr>
             );

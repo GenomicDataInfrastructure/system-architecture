@@ -114,13 +114,14 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 **Headings:**
 
 1. **Responsibility:** what it does, in two or three sentences.
-2. **Operated by:** the governance actor and the scope (European, national or local).
+2. **Operated by:** the governance actor and the scope (European, national or User Organisation). Say when a 1+MG IT infrastructure provider operates it on the actor's behalf.
 3. **Interfaces:** a table *interface · provided or required · partner · standard or protocol · data exchanged*.
 4. **Data it handles:** personal data? Which categories? Stored, or only passed through? Which retention?
 5. **Quality and security needs:** link to the relevant quality scenarios and concepts in chapter 8.
 6. **Governance requirements:** for each `GovRef`, one line on how this component meets it.
-7. **Reference implementation:** the matching GDI Starter Kit component, if one exists (decision D-007).
-8. **Open points.**
+7. **Differences per type of dataset** (1+MG compliant, 1+MG cohort, externally governed), where there are any. See [ADR-0002](/decisions/0002-disclosure-paths-per-dataset).
+8. **Reference implementation:** the matching GDI Starter Kit component, if one exists (decision D-007).
+9. **Open points.**
 
 **Avoid:** naming products as requirements. Name functions and standards; products only as examples.
 
@@ -140,7 +141,7 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
      actor U as User
      participant P as 1+MG User Portal (European)
      participant N as NCP node (national)
-     participant H as Data Host (local)
+     participant H as Data Host (national)
      U->>P: Submit access request
      P->>N: Route request
      N->>H: Ask for data availability
@@ -152,6 +153,7 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 5. **Alternatives and exceptions:** refusal, withdrawal of consent, errors.
 6. **Data protection notes:** what is minimised, logged, or checked in this scenario, with links to chapter 8.
 7. **Differences per type of use** (research, policy development, QM, healthcare reuse), where there are any.
+8. **Differences per type of dataset** (1+MG compliant, 1+MG cohort, externally governed), where there are any: who reviews, who decides, who is controller. See [ADR-0002](/decisions/0002-disclosure-paths-per-dataset).
 
 **Tip:** the steps table is the traceability backbone. Every governance responsibility in `governance_refs` should appear in at least one row.
 

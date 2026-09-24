@@ -20,7 +20,7 @@ last_reviewed:
 ## What this page must answer
 
 - What must the system do along the three lifecycle phases (data inclusion, data access, data use)?
-- Which requirements differ per type of use (colour coding of the governance)?
+- Which requirements differ per type of use (colour coding of the governance) or per type of dataset (1+MG compliant, 1+MG cohort, externally governed)?
 - Which requirements come from the EHDS rather than the governance?
 
 ## Sources to start from

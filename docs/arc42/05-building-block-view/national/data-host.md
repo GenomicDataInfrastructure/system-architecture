@@ -1,7 +1,7 @@
 ---
-title: "5.3.1 1+MG compliant local IT infrastructure (Data Host)"
-sidebar_position: 1
-slug: /building-blocks/local/data-host
+title: "5.2.5 1+MG compliant local IT infrastructure (Data Host)"
+sidebar_position: 5
+slug: /building-blocks/national/data-host
 owner: TBD
 reviewers: []
 status: placeholder

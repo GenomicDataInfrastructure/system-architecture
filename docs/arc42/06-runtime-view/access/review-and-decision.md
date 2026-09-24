@@ -19,7 +19,10 @@ last_reviewed:
 
 ## What this page must answer
 
-- Scenario: review by the 1+MG DAC and Local DACs, decision by each 1+MG Data Holder, notification of the User.
+- Scenario for 1+MG compliant data: review by the 1+MG DAC and as each 1+MG Data Holder organises it, decision by each 1+MG Data Holder, notification of the User.
+- Scenario for 1+MG cohort data: review by 1+MG Data Providers and/or Local DACs and by the 1+MG DAC, a national veto where applicable, decision by the Genome EDIC CC, information through the 1+MG NCP.
+- A request that covers both types of dataset: how the User gets one outcome from the Genome EDIC CC (one-stop shop).
+- Externally governed datasets: no decision in the system; how the User is sent to the Data Provider or the EU dataset catalogue.
 
 ## Sources to start from
 
