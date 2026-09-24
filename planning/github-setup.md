@@ -9,10 +9,12 @@ There are no review teams, no CODEOWNERS file and no Project board for now. We c
 
 | Step | Who | Status |
 |---|---|---|
-| 1. Install and log in to the GitHub CLI | Architecture lead | ☐ |
-| 2. Create labels and one issue per page | Architecture lead (repo admin) | ☐ |
-| 3. Protect `main` | Architecture lead (repo admin) | ☐ |
-| 4. Tag `v0.1` | Architecture lead | ☐ |
+| 1. Install and log in to the GitHub CLI | Architecture lead | ☑ Done |
+| 2. Create labels and one issue per page | Architecture lead (repo admin) | ☑ Done, 2026-09-18: 38 labels, 76 page issues with `wave-N` labels |
+| 3. Protect `main` | Architecture lead (repo admin) | ☑ Done: pull requests only, one approval, CI must pass |
+| 4. Tag `v0.1` and publish its release | Architecture lead | ☑ Done: tag 2026-09-18; release and changelog `[0.1.0]` 2026-09-24 |
+
+The set-up is complete. Later versions follow the same pattern: move the `[Unreleased]` notes in `CHANGELOG.md` under a version heading in a pull request, then tag `main` (signed) and publish a GitHub release with those notes. `v0.2` was released this way on 2026-09-24.
 
 ## 1. Install and log in to the GitHub CLI
 
