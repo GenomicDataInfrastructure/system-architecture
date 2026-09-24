@@ -34,7 +34,7 @@
     {
       "id": 6,
       "name": "Deployment, quality and consolidation",
-      "goal": "Deployment per scope, quality scenarios, risks, national profile template, and a final check of the reader guides.",
+      "goal": "Deployment at central, national and local level, quality scenarios, risks, national profile template, and a final check of the reader guides.",
       "depends_on": [4, 5]
     }
   ]

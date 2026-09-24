@@ -31,12 +31,12 @@ last_reviewed:
 | ADR | Title | Status |
 |---|---|---|
 | [ADR-0001](/decisions/0001-record-architecture-decisions) | Record architecture decisions | Proposed |
+| [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) | Who decides on access, per type of dataset | Proposed |
 
 ## Candidate decisions to record
 
 These choices are already made in the governance or in GDI. They should become ADRs so that their reasons are visible:
 
-- Access decision taken nationally by 1+MG Data Holders, not centrally by the Genome EDIC <GovRef id="II.1" />.
 - Consent (or a specific legislative act) as the legal basis for making data available <GovRef id="III" />.
 - Federated processing in national SPEs instead of pooling data centrally <GovRef id="II.2" />.
 - No download of personal data; only non-personal results leave the SPE <GovRef id="II.2" />.

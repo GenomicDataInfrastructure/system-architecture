@@ -54,7 +54,7 @@ The full step-by-step version, with who does what and when each step is done, is
 - Write for a reader who is not an IT specialist: short sentences, active voice, one idea per paragraph.
 - Explain every acronym on first use, or link to the glossary (`docs/arc42/12-glossary/index.md`).
 - Use the governance terms exactly as defined (e.g. *1+MG Data Holder*, *Genome EDIC CC*, *key-coded identifier*).
-- Say which scope (European, national, local) a component or step belongs to.
+- Say which scope (European, national, User Organisation) a component or step belongs to. In chapter 7, say at which level (central, national, local) it runs.
 - Prefer a diagram (Mermaid) plus a short text over long prose.
 - Name functions and standards, not products. Products appear only as examples or in the reference implementation mapping (decision D-007).
 

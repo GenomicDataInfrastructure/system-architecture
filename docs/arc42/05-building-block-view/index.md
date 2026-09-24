@@ -20,8 +20,8 @@ last_reviewed:
 
 ## What this page must answer
 
-- Level 1: the three scopes (European, national, local) and the users as black boxes, with their interfaces.
-- Which governance actor is responsible for each building block?
+- Level 1: the three scopes (European, national, User Organisation) as black boxes, with their interfaces.
+- Which governance actor is responsible for each building block, and where is it operated by a 1+MG IT infrastructure provider?
 
 ## Sources to start from
 

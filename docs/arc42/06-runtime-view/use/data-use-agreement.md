@@ -20,6 +20,7 @@ last_reviewed:
 ## What this page must answer
 
 - Scenario: the data use agreement is signed and drives data provisioning.
+- What differs per type of dataset (1+MG compliant, 1+MG cohort, externally governed)?
 
 ## Sources to start from
 

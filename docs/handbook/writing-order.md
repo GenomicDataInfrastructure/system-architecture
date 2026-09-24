@@ -22,7 +22,7 @@ flowchart LR
 ## Rules
 
 1. **A wave can start when the pages of the waves it depends on are at least *in review*.** It doesn't need to wait for their approval. If a later page shows that an earlier one is wrong, open an issue for the earlier page. Don't work around it silently.
-2. **Inside a wave, pages are independent** and can be written in parallel. Wave 4 is the largest (about 30 pages). The European, national and local scope teams work on it at the same time.
+2. **Inside a wave, pages are independent** and can be written in parallel. Wave 4 is the largest (about 30 pages). The European, national and User Organisation scope teams work on it at the same time.
 3. **ADRs are written whenever a decision is taken,** in any wave. Chapter 9 is never "finished".
 4. **The architecture lead can move a page to another wave.** Change `wave` in its front matter and explain why in the page's issue.
 

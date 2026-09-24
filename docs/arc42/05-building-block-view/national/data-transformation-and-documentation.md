@@ -1,7 +1,7 @@
 ---
-title: "5.3.2 Data transformation and documentation"
-sidebar_position: 2
-slug: /building-blocks/local/data-transformation
+title: "5.2.6 Data transformation and documentation"
+sidebar_position: 6
+slug: /building-blocks/national/data-transformation
 owner: TBD
 reviewers: []
 status: placeholder
@@ -19,7 +19,7 @@ last_reviewed:
 
 ## What this page must answer
 
-- How are local data transformed into the 1+MG minimum data models and described with metadata?
+- How does a 1+MG Data Provider transform its data into the 1+MG minimum data models and describe them with metadata?
 
 ## Sources to start from
 

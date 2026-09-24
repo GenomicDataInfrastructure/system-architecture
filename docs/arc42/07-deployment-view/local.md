@@ -19,7 +19,7 @@ last_reviewed:
 
 ## What this page must answer
 
-- How a Data Host is deployed and connected to its national node.
+- How a 1+MG Data Host deploys 1+MG compliant local IT infrastructure and connects it to its national node.
 
 ## Sources to start from
 

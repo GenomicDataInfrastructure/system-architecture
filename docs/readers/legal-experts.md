@@ -20,6 +20,7 @@ You check that the system respects the GDPR, the EHDS Regulation and the governa
 | Which legal acts apply to the system? | [2.1 Legal and regulatory constraints](/constraints/legal) |
 | Who is controller, joint controller or processor for each processing operation? | [8.2 Controllers, processors and responsibilities](/concepts/roles) |
 | What is the legal basis for each dataset, and how is it enforced technically? | [8.6 Legal basis, consent and objection](/concepts/legal-basis-and-consent) |
+| Who decides on access to which type of dataset, and as which controller? | [3.3 Scopes](/context/scopes), [ADR-0002 Who decides on access, per type of dataset](/decisions/0002-disclosure-paths-per-dataset) |
 | How does an access request flow, and who decides? | [6.2.4 Review and decision](/runtime/access/review-and-decision) |
 | What does the data use agreement control? | [6.3.1 Data use agreement](/runtime/use/data-use-agreement) |
 | How are data subjects’ rights handled end to end? | [6.4 Exercise of data subjects’ rights](/runtime/data-subject-rights) |

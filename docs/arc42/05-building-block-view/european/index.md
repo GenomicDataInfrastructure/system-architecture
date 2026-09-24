@@ -20,7 +20,7 @@ last_reviewed:
 
 ## What this page must answer
 
-- Level 2 of the European scope: the central services operated by the Genome EDIC CC.
+- Level 2 of the European scope: the services of the Genome EDIC, operated by the Genome EDIC CC, including the support for the 1+MG DAC.
 
 ## Sources to start from
 

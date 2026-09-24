@@ -17,6 +17,7 @@ Comment in the pull request. Suggest concrete wording where you can (GitHub's *s
 - [ ] **Complete:** every question in the page's scope note is answered, or moved to another page with an issue.
 - [ ] **Traceable:** `governance_refs` lists every governance section the page implements, and the page cites them where they apply.
 - [ ] **Consistent:** scopes, actors and terms match the glossary and neighbouring pages. The page doesn't contradict an approved page or an ADR.
+- [ ] **Both axes covered:** where the page's content differs per type of use or per type of dataset (1+MG compliant, 1+MG cohort, externally governed), it says so. Nothing assumes a single path.
 - [ ] **Readable:** a non-specialist understands the *In short* box. Sentences are short, acronyms are explained, and diagrams have a sentence saying what they show.
 - [ ] **Honest about gaps:** open points are marked and have an issue. Nothing undecided is presented as decided.
 - [ ] **Technology-neutral:** functions and standards, not products (decision D-007).
@@ -45,7 +46,7 @@ Comment in the pull request. Suggest concrete wording where you can (GitHub's *s
 
 - [ ] Every legal act cited is correct, and its status (adopted or draft) is stated.
 - [ ] Responsibilities match the governance and the legal acts. No actor gets a task that the law gives to another.
-- [ ] National decisions (access decisions by 1+MG Data Holders) are not presented as central ones.
+- [ ] Access decisions are attributed to the right actor: the 1+MG Data Holder for 1+MG compliant data, the Genome EDIC for 1+MG cohort data ([ADR-0002](/decisions/0002-disclosure-paths-per-dataset)).
 - [ ] Contracts and agreements (terms of use, data use agreement, data processing agreements) are named where they apply.
 - [ ] Draft or undecided legal points are marked as such.
 

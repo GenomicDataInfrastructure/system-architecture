@@ -36,5 +36,5 @@ What problem are we solving? Which governance sections or legal acts are relevan
 What we decided, in one or two sentences.
 
 ## Consequences
-What becomes easier or harder. Effects on each scope (European, national, local).
+What becomes easier or harder. Effects on each scope (European, national, User Organisation).
 ```

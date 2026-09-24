@@ -2,21 +2,22 @@
 
 Purpose: plan for writing the Genome EDIC system architecture (arc42), published as a Docusaurus site on GitHub, traceable to the 1+MG Data Governance (Genome EDIC Secondary Use Framework, master document version 2025-12, published as the annex of GDI D2.4) and implementing data protection by design and by default (GDPR Art. 25).
 
-## 1. How to organise three scopes (European, national, local)
+## 1. How to organise the scopes (European, national, User Organisation)
 
 arc42 advice for large systems (arc42 FAQ J-1): modularise. Put global goals, business context, solution strategy, principles and crosscutting concepts in one top-level document; document subsystems separately; decisions and requirements cascade downwards.
 
 Recommended structure: **one top-level arc42 + scope views + national profiles**.
 
 - **Top level (shared, one copy):** ch. 1–4, 8–12. Goals, legal constraints, context, strategy, crosscutting concepts (data protection by design and default, security, identity and access, logging, metadata, consent and legal basis, dataset versioning), decisions, quality, risks, glossary.
-- **Scope views (ch. 5 and 7 split by scope):** building block level 1 = the three scopes; level 2 = components in each scope.
-  - European scope — Genome EDIC Central Coordination services: 1+MG User Portal, central data catalogue, access request management, 1+MG DAC tooling, User Organisation registry, help desk, communication infrastructure, connection to HealthData@EU.
-  - National scope — 1+MG NCP node: national catalogue, access review support for 1+MG Data Holders / Local DACs, national SPE(s), data subject rights and transparency tools.
-  - Local scope — 1+MG Data Provider / Data Host: 1+MG compliant local IT infrastructure, data transformation, subject-level discovery endpoint, storage and dataset versioning.
+- **Scope views (ch. 5 split by scope of responsibility, decision D-018):** building block level 1 = the three scopes; level 2 = components in each scope.
+  - European scope — what the Genome EDIC is responsible for, operated by the Genome EDIC CC: 1+MG User Portal, central data catalogue, access request management, 1+MG DAC tooling, User Organisation registry, help desk, communication infrastructure, connection to HealthData@EU.
+  - National scope — what a Genome EDIC Member Country is responsible for, whichever organisations it assigns the roles to: 1+MG NCP node and national catalogue, access review support for 1+MG Data Holders / Local DACs, national SPE(s), data subject rights and transparency tools, and what 1+MG Data Providers / Data Hosts run (1+MG compliant local IT infrastructure, data transformation, subject-level discovery endpoint, storage and dataset versioning).
+  - User Organisation scope — what a User Organisation and its Users must provide: registration, onboarding and offboarding of Users, access requests, review for healthcare reuse.
+- **Deployment view (ch. 7) split by IT level:** central, national and local, the levels named in the governance's definition of the 1+MG IT infrastructure provider. The 1+MG IT infrastructure provider is a role that can appear in any scope.
 - **Runtime view (ch. 6) organised by the governance lifecycle**, not by technology: Data inclusion (4 steps), Data access (5 steps), Data use (SPE, reaching back, publications, archiving, incidental findings), data subject rights, incidents. Each scenario cites the governance section it implements.
 - **National implementation profile (template):** the governance gives countries implementation freedom. Each Member Country documents its own node with a short arc42-canvas-style profile showing how it meets the common requirements.
 
-Why this works for the governance: the governance assigns rights and duties per actor per lifecycle step. Scopes map to actors (EDIC CC = European; NCP, Data Holder, IT Infrastructure Provider = national; Data Provider / Data Host = local). The lifecycle maps to the runtime view.
+Why this works for the governance: the governance assigns rights and duties per actor per lifecycle step. Scopes map to actors (Genome EDIC, EDIC CC, 1+MG DAC = European; NCP, Data Holder, Data Provider, Data Host, Local DAC = national; User Organisation, User = User Organisation). Within a country, the Member Country decides which organisation takes which role, so the architecture does not split national from local. The lifecycle maps to the runtime view.
 
 ## 2. Making it readable for non-implementers
 
@@ -36,7 +37,7 @@ Why this works for the governance: the governance assigns rights and duties per 
 | 4 Solution strategy | Federated, data stays in country, one-stop shop, virtual cohort, no download of personal data, DPbDD strategy | All |
 | 5 Building block view | Level 1 scopes, level 2 components per scope | Implementers, security |
 | 6 Runtime view | Lifecycle scenarios with DG references | Implementers, legal, ELSI, DPO |
-| 7 Deployment view | Central hosting, national deployment patterns, local hosting | Implementers, security |
+| 7 Deployment view | Central hosting, national deployment patterns, local hosting (by IT level) | Implementers, security |
 | 8 Crosscutting concepts | DPbDD, security/ISMS, AAI, logging and audit, consent and legal basis, key-coded identifiers, output control, dataset versioning, metadata, controller/processor map | DPO, security, ELSI |
 | 9 Architecture decisions | ADRs (e.g. decentralised access decision, consent as legal basis, federation vs pooling) | Policy, implementers |
 | 10 Quality requirements | Quality tree and scenarios (privacy, security, interoperability, scalability) | Security, implementers |
@@ -65,7 +66,7 @@ Why this works for the governance: the governance assigns rights and duties per 
 
 ## 5. Docusaurus site
 
-- `docs/` one folder per arc42 chapter; `docs/05-building-blocks/{european,national,local}`; `docs/readers/` reader guides; `docs/appendix/`.
+- `docs/` one folder per arc42 chapter; `docs/arc42/05-building-block-view/{european,national,user-organisation}`; `docs/readers/` reader guides; `docs/appendix/`.
 - Front matter per page: `owner`, `reviewers`, `status`, `audience`, `governance_refs`, `last_reviewed`.
 - MDX components: `<GovRef id="VII.2.3"/>` (link + tooltip to the DG section), `<InShort>`, `<AudienceBadges>`; source register in `src/data/sources.json` with DOIs, rendered as a bibliography.
 - Diagrams in Mermaid (`@docusaurus/theme-mermaid`), C4-style levels.
@@ -90,6 +91,6 @@ Use GitHub itself — no extra tool.
 0. Setup: repo, Docusaurus skeleton, conventions, governance ID catalogue, source register.
 1. Foundations: ch. 1–4, glossary, reader guides.
 2. Governance core: ch. 6 runtime scenarios and ch. 8 data protection and security concepts.
-3. Scopes: ch. 5 and ch. 7 per scope; national profile template.
+3. Scopes: ch. 5 per scope, ch. 7 per IT level; national profile template.
 4. Decisions, quality, risks: ch. 9–11; traceability matrix complete.
 5. Reader testing per audience, taskforce review, v1.0 release.

@@ -1,5 +1,5 @@
 ---
-title: "5.2.2 Access decision support for 1+MG Data Holders"
+title: "5.2.2 Access review and decision support"
 sidebar_position: 2
 slug: /building-blocks/national/access-decision-support
 owner: TBD
@@ -19,7 +19,8 @@ last_reviewed:
 
 ## What this page must answer
 
-- How do 1+MG Data Holders and Local DACs receive, review and decide on requests, and return the decision?
+- For 1+MG compliant data: how do 1+MG Data Holders receive, review and decide on requests, and return their decision?
+- For 1+MG cohort data: how do 1+MG Data Providers and/or Local DACs review requests and return their opinion to the Genome EDIC, and how is a national veto expressed?
 
 ## Sources to start from
 

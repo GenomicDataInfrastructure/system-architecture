@@ -20,6 +20,7 @@ last_reviewed:
 ## What this page must answer
 
 - Scenario: a User Organisation registers, signs agreements and declares its authorised Users.
+- With which controllers does the User Organisation agree joint controller arrangements for subject-level discovery, per type of dataset?
 
 ## Sources to start from
 

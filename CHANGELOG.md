@@ -13,8 +13,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- ADR-0002: who decides on access for each type of dataset (1+MG compliant, 1+MG cohort, externally governed).
+- User Organisation scope in chapter 5: 5.3 User Organisation scope and 5.3.1 User Organisation registration and user management.
+- Types of dataset (1+MG compliant, 1+MG cohort, externally governed) made visible: a matrix question in 3.3, a "what differs per type of dataset?" question on the pages where it matters, a heading in the building block and runtime scenario recipes, a review checklist item, and a question in the guides for policy makers and legal experts.
+- "Applies to" column on the governance traceability page: the notes in square brackets of the governance titles, with types of dataset highlighted.
+
+### Changed
+
+- Scopes are scopes of responsibility: European, national and User Organisation (decision D-018, replacing the scopes of D-005). The former local scope pages move to the national scope as 5.2.5 to 5.2.7.
+- Chapter 7 is split by IT level (central, national, local); 7.1 is renamed "Central deployment".
+- Governance section catalogue: scope tags follow the new scopes; sections of the 1+MG IT infrastructure provider apply to the European and national scopes; VIII.4.4 (treating healthcare professionals) moves to the national scope.
+- Glossary: new scope terms, and "central, national and local level" for deployment.
+- GitHub set-up script: labels `scope-european`, `scope-national` and `scope-user-organisation`, given to chapter 5 pages only.
+- 6.2.4, 5.1.2 and 5.2.2 no longer assume that every access decision is taken by a 1+MG Data Holder; 5.2.2 is renamed "Access review and decision support".
+- Traceability coverage no longer counts ADRs: they are listed, but only the pages that implement a section count.
+
 ### Removed
 
+- The local scope and its overview page (5.3 Local scope).
 - `planning/github-setup.md`: the one-off GitHub set-up is complete. How to find and create page issues, and the release steps, are now in `CONTRIBUTING.md`.
 
 ## [0.2.0] - 2026-09-24

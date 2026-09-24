@@ -21,6 +21,7 @@ last_reviewed:
 
 - How is the legal basis of each dataset (consent or legislative act) recorded and enforced technically?
 - How are consent, withdrawal and objection propagated to catalogues, discovery and SPEs?
+- What legal basis applies to the disclosure of each type of dataset (1+MG compliant, 1+MG cohort, externally governed)?
 
 ## Sources to start from
 

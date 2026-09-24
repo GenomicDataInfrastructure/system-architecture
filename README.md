@@ -2,7 +2,7 @@
 
 The system architecture of the Genome EDIC, written with the [arc42](https://arc42.org) template and published as a [Docusaurus](https://docusaurus.io) site.
 
-It describes the European, national and local components of the Genome EDIC infrastructure and shows how they implement the **1+MG Data Governance** (Genome EDIC Secondary Use Framework) and **data protection by design and by default**.
+It describes the European, national and User Organisation parts of the Genome EDIC infrastructure and shows how they implement the **1+MG Data Governance** (Genome EDIC Secondary Use Framework) and **data protection by design and by default**.
 
 > Working draft of the architecture taskforce. Not an adopted document.
 >
@@ -25,7 +25,7 @@ The site shows each page's last author and date from Git history, so it needs at
 
 | Path | Contents |
 |---|---|
-| `docs/arc42/` | The twelve arc42 chapters. Chapters 5 and 7 are split into European, national and local scopes. |
+| `docs/arc42/` | The twelve arc42 chapters. Chapter 5 is split into the European, national and User Organisation scopes; chapter 7 into the central, national and local levels. |
 | `docs/readers/` | Reader guides: questions per audience, linked to the answering sections. |
 | `docs/handbook/` | Taskforce handbook: writing order, page choreography, recipes, sources, review checklists. |
 | `docs/appendix/` | Governance traceability, sources, document status, national profile template. |

@@ -20,6 +20,7 @@ last_reviewed:
 ## What this page must answer
 
 - Scenario: submission of a request (incl. joint User Organisations and staged healthcare reuse requests).
+- What differs per type of dataset (1+MG compliant, 1+MG cohort, externally governed), including where the request is sent?
 
 ## Sources to start from
 

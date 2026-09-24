@@ -20,6 +20,7 @@ last_reviewed:
 ## What this page must answer
 
 - Responsibilities, interfaces and data of the User Portal and the central Genome EDIC data catalogue (incl. mock datasets, externally governed datasets).
+- How does the catalogue show, for each dataset, its type (1+MG compliant, 1+MG cohort, externally governed) and who reviews and decides on access?
 - How is the catalogue kept interoperable with the EU dataset catalogue?
 
 ## Sources to start from

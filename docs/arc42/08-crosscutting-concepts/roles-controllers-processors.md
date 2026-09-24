@@ -21,6 +21,7 @@ last_reviewed:
 
 - For each processing operation, who is controller, joint controller or processor, and which component carries it out?
 - How do the three lifecycle phases each have their own controller(s)?
+- Who is controller for the access decision for each type of dataset: the 1+MG Data Holder (1+MG compliant), the Genome EDIC (1+MG cohort), or nobody in the system (externally governed)?
 
 ## Sources to start from
 
