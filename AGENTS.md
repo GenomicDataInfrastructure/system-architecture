@@ -16,7 +16,7 @@ Primary audience: implementers. Also read by ministries, legal experts, ELSI spe
 | `planning/architecture-plan.md` | Agreed structure, chapter outline, sources, tooling, phases | The plan changes |
 | `planning/decisions.md` | Decisions about the documentation itself, and open questions | A decision is taken or a question is raised |
 | `planning/session-log.md` | Short handover notes: what was done, what is next | At the end of every working session |
-| `CONTRIBUTING.md` | Review workflow, front matter, writing rules, GitHub set-up | The workflow changes |
+| `CONTRIBUTING.md` | Review workflow, front matter, writing rules, page issues, releases | The workflow changes |
 | `docs/handbook/` | Taskforce handbook: writing order (waves), page choreography, page recipes, sources, review checklists | The way we write changes |
 | `src/data/waves.json` | The six writing waves (the `wave` field of each page refers to them) | The writing order changes |
 | `docs/` | The published architecture (arc42 chapters, reader guides, appendices) | Normal writing work |

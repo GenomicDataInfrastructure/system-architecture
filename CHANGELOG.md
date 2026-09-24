@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Removed
+
+- `planning/github-setup.md`: the one-off GitHub set-up is complete. How to find and create page issues, and the release steps, are now in `CONTRIBUTING.md`.
+
 ## [0.2.0] - 2026-09-24
 
 ### Added

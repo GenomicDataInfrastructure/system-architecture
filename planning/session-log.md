@@ -7,7 +7,8 @@ Newest first. Keep each entry to a few lines: what was done, what is next, where
 - Done: `governance.json` rebuilt against the published document (133 numbered sections, no page numbers; overview printed as "I." keeps ID IV); titles updated; `dg` source points to Zenodo; glossary aligned word for word; page numbers removed from `<GovRef>` and the traceability table; AGENTS.md, handbook, plan and chapter 11 updated. All existing `governance_refs` IDs are unchanged and valid. The published text has no cyan "under discussion" marking; open points are named in III, VII.3.3, VII.4.3, VII.5.3, VIII.11.1.
 - Draft HealthData@EU implementing act: now cited through its public Have your say page (initiative 16155), decision D-017; source register, AGENTS.md, handbook and plan updated.
 - Changelog split into `[0.1.0]` (what `v0.1` shipped) and `[0.2.0]` (handbook, waves, published governance).
-- Tagged `v0.2` (signed) on `main`; published GitHub releases for `v0.1` and `v0.2`; deleted the merged branches; GitHub set-up status table marked complete.
+- Tagged `v0.2` (signed) on `main`; published GitHub releases for `v0.1` and `v0.2`; deleted the merged branches.
+- The one-off GitHub set-up is complete, so `planning/github-setup.md` is removed. Page issues (searches, creating issues for new pages) and the release steps are now in `CONTRIBUTING.md`.
 - Next: assign owners for wave 1; start writing 3.3.
 
 ## 2026-09-18 — Writing order and taskforce handbook (B. Pacheco with Claude)
