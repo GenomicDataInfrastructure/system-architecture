@@ -71,7 +71,7 @@ Write a short **scope note** as a comment in the issue: in scope, out of scope, 
 
 **Who:** the owner. See [Sources, examples and best practices](/handbook/sources-and-examples) for where to look.
 
-1. **Read the governance sections** listed in the page's `governance_refs`. The [traceability page](/appendix/traceability) gives the titles and page numbers. Note, for each section, the responsibilities that affect the architecture.
+1. **Read the governance sections** listed in the page's `governance_refs`. The [traceability page](/appendix/traceability) gives their titles. Find them by section number in the [published governance](https://zenodo.org/records/19096953) (the annex of GDI D2.4). Note, for each section, the responsibilities that affect the architecture.
 2. **Check the legal acts** that apply to the page: the EHDS, the GDPR, the draft HealthData@EU implementing act, and NIS2 where relevant.
 3. **Search the GDI, B1MG and B1MG+ deliverables** and other sources the page mentions.
 4. **Add every source you will cite** to `src/data/sources.json`, with status `candidate` until the taskforce has checked it.

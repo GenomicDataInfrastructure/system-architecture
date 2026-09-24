@@ -15,9 +15,9 @@ Where to look when you write a page, how to judge what you find, and how to reco
 
 | Source | Where | Notes |
 |---|---|---|
-| 1+MG Data Governance master document (2025-12-22) | Taskforce shared folder (not public) | Start from the sections in `governance_refs`. Cite by section number, summarise, and quote only short passages (decision D-012). |
+| 1+MG Data Governance master document (version 2025-12), published as the annex of GDI D2.4 | [Zenodo](https://zenodo.org/records/19096953) (CC BY 4.0) | Start from the sections in `governance_refs`. Cite by section number with `<GovRef>`, never by page. Summarise in your own words, and quote only definitions and short passages, with attribution (decision D-016). |
 | EHDS Regulation (EU) 2025/327 | [EUR-Lex](http://data.europa.eu/eli/reg/2025/327/oj) | Chapter IV (secondary use), Art. 73 (SPE), Art. 75 (HealthData@EU). |
-| Draft HealthData@EU implementing act | Taskforce shared folder | Cite as a draft (decision D-008). Don't copy its text into the repository. |
+| Draft HealthData@EU implementing act (Ref. Ares(2026)8339104) | [Have your say, initiative 16155](https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16155-European-Health-Data-Space-technical-requirements-for-HealthData@EU_en) | Cite as a draft (decisions D-008, D-017). Don't copy its text into the repository; link to it. |
 | GDPR (EU) 2016/679 | [EUR-Lex](http://data.europa.eu/eli/reg/2016/679/oj) | Art. 5, 25, 26, 28, 32–36 are the most relevant. |
 | NIS2 Directive (EU) 2022/2555 | [EUR-Lex](http://data.europa.eu/eli/dir/2022/2555/oj) | Incident notification, security measures. |
 
