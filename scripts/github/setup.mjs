@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// One-off GitHub set-up for the system-architecture repository, using the GitHub CLI (`gh`).
-// See planning/github-setup.md for the full procedure.
+// GitHub set-up for the system-architecture repository, using the GitHub CLI (`gh`).
+// Run `issues` again whenever pages are added; see "Page issues" in CONTRIBUTING.md.
 //
 //   node scripts/github/setup.mjs labels    create or update the issue labels
 //   node scripts/github/setup.mjs issues    create one issue per page

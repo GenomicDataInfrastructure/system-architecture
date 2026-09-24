@@ -58,10 +58,30 @@ The full step-by-step version, with who does what and when each step is done, is
 - Prefer a diagram (Mermaid) plus a short text over long prose.
 - Name functions and standards, not products. Products appear only as examples or in the reference implementation mapping (decision D-007).
 
+## Page issues
+
+Every page has one GitHub issue, titled `[page] <page title>`. Its labels give the chapter, scope, wave and any specialist review (`needs-dpo`, `needs-security`, `needs-legal`, `needs-elsi`). Useful searches:
+
+| To find | Search in *Issues* |
+|---|---|
+| Pages without an owner | `is:issue is:open label:page no:assignee` |
+| The pages of a wave | `is:issue is:open label:page label:wave-1` |
+| The pages of a chapter | `is:issue label:page label:chapter-06` |
+| The pages of a scope | `is:issue label:page label:scope-national` |
+| Pages waiting for a DPO review | `is:issue is:open label:needs-dpo` |
+
+When pages are added, the architecture lead creates their issues with `scripts/github/setup.mjs`. The script skips issues that already exist, and its header lists all its commands.
+
+```bash
+DRY_RUN=1 node scripts/github/setup.mjs issues   # preview: prints the gh commands
+node scripts/github/setup.mjs issues             # creates the missing issues
+```
+
 ## Releases
 
-When a set of pages is approved, the architecture lead tags a release (`git tag v0.2`), writes release notes on GitHub, and (optionally) archives it on Zenodo to get a DOI.
+The architecture lead releases a version when a set of pages is approved, or when the baseline changes (for example, a new version of the governance).
 
-## One-time GitHub set-up (repository admin)
-
-See [planning/github-setup.md](planning/github-setup.md): labels, one issue per page, branch protection and the first release.
+1. In a pull request, move the `[Unreleased]` notes in `CHANGELOG.md` under a heading `## [0.N.0] - YYYY-MM-DD` (the day you will tag), and add its compare link at the bottom of the file.
+2. Once it is merged, tag `main` with a signed tag and push it: `git tag -s v0.N -m "v0.N: <summary>"`, then `git push origin v0.N`.
+3. On GitHub, publish a release for the tag, with that changelog section as the release notes.
+4. Optional: to get a DOI, switch on the Zenodo–GitHub integration for this repository *before* publishing the release.
