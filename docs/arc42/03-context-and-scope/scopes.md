@@ -78,9 +78,9 @@ The data lifecycle has three phases, and each phase has its own controller(s) <G
 
 | Phase | 1+MG compliant datasets | 1+MG cohort datasets | Externally governed datasets |
 |---|---|---|---|
-| **1. Data inclusion** | 1+MG Data Provider (national) <GovRef id="VI.4.4" /> | 1+MG Data Provider (national) <GovRef id="VI.4.4" /> | Their own data provider, outside the 1+MG data governance. These datasets should meet inclusion criteria on quality and on ethical, legal and societal implications (<Term id="ELSI" />) to be listed in the catalogue <GovRef id="III" />. |
+| **1. Data inclusion** | 1+MG Data Provider (national) <GovRef id="VI.4.4" /> | 1+MG Data Provider (national) <GovRef id="VI.4.4" /> | Their own data provider, outside the 1+MG data governance. These datasets should meet inclusion criteria on quality and on ethical, legal and societal implications (<Acronym id="ELSI" />) to be listed in the catalogue <GovRef id="III" />. |
 | **2. Access decision** | 1+MG Data Holder, as controller (**national**) <GovRef id="VII.5.4" /> | Genome EDIC, as controller (**European**): the Genome EDIC CC adopts and documents the decision <GovRef id="VII.5.5" />, after review by the 1+MG DAC and by 1+MG Data Providers and/or Local DACs (national) <GovRef id="VII.4.7" /> | **Outside the system:** the dataset's own data provider, or a health data access body under the European Health Data Space. The Genome EDIC CC only sends the User there <GovRef id="VII.3.1" />. |
-| **3. Use** | The User Organisation, as controller for the use (**User Organisation scope**) <GovRef id="VII.1.3" />. Its Users work in a 1+MG secure processing environment (<Term id="SPE" />), in the national scope <GovRef id="II.1" />. | Same as for 1+MG compliant datasets | In the 1+MG IT infrastructure, but not under the 1+MG data governance <GovRef id="III" />. A 1+MG SPE lets Users import the data <GovRef id="VIII.3.3" />. |
+| **3. Use** | The User Organisation, as controller for the use (**User Organisation scope**) <GovRef id="VII.1.3" />. Its Users work in a 1+MG secure processing environment (<Acronym id="SPE" />), in the national scope <GovRef id="II.1" />. | Same as for 1+MG compliant datasets | In the 1+MG IT infrastructure, but not under the 1+MG data governance <GovRef id="III" />. A 1+MG SPE lets Users import the data <GovRef id="VIII.3.3" />. |
 
 Whatever type a dataset is given, the system supports its path. It also lists externally governed datasets without deciding on access to them.
 
@@ -102,7 +102,7 @@ So each building block names two things:
 This split matches the split between controller and processor in [8.2](/concepts/roles).
 
 :::caution[Open point]
-The details of this role, including accreditation, are still to be defined jointly with 1+MG Working Group 5 and <Term id="GDI" /> Pillar II <GovRef id="III" />. See [11. Risks and technical debt](/risks).
+The details of this role, including accreditation, are still to be defined jointly with 1+MG Working Group 5 and <Acronym id="GDI" /> Pillar II <GovRef id="III" />. See [11. Risks and technical debt](/risks).
 :::
 
 ## Scopes and deployment levels
