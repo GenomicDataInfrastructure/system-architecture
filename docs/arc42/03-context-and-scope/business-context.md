@@ -19,8 +19,9 @@ last_reviewed:
 
 ## What this page must answer
 
-- Which actors interact with the system, and what do they exchange with it (data, metadata, applications, decisions, results)?
-- A context diagram with all governance actors.
+- Seen from outside, as one black box (the Genome EDIC system, run by the European and national scopes): which people, organisations and external systems are outside it, and what do they exchange with it (data, metadata, access requests, decisions, results)?
+- A C4 system context diagram, and a table of partners (see the recipe).
+- How do the User Organisation and its Users relate to the boundary? They form a scope with duties in the framework (3.3), but their people and systems are outside the system.
 
 ## Sources to start from
 
