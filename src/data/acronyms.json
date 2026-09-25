@@ -1,5 +1,5 @@
 {
-  "_comment": "Acronyms used in the architecture. 'id' is used in <Term id=\"…\" />. The glossary's acronym table is generated from this file, so each meaning is written once (decision D-021).",
+  "_comment": "Acronyms used in the architecture. 'id' is used in <Acronym id=\"…\" />. The glossary's acronym table is generated from this file, so each meaning is written once (decision D-021).",
   "acronyms": [
     {"id": "1+MG", "meaning": "1+ Million Genomes initiative"},
     {"id": "AAI", "meaning": "Authentication and authorisation infrastructure"},

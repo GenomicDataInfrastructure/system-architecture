@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Concept page 8.12 *Types of dataset*: the three types, the rule, how each lifecycle phase differs per type, where it applies, and the open points.
-- `<Term>` component: the first use of an acronym on a page shows its meaning as a tooltip and links to the glossary. Acronyms live in `src/data/acronyms.json`, which also generates the glossary's acronym table (decision D-021); `npm run check` rejects unknown acronyms. New acronyms: 1+MG, CC, IP.
+- `<Acronym>` component (named `<Term>` until decision D-022): the first use of an acronym on a page shows its meaning as a tooltip and links to the glossary. Acronyms live in `src/data/acronyms.json`, which also generates the glossary's acronym table (decision D-021); `npm run check` rejects unknown acronyms. New acronyms: 1+MG, CC, IP.
 - `<Diagram>` component for draw.io diagrams saved as `.drawio.svg` in `static/diagrams/` (one file is both the editable source and the image; white background and a legend with section and last edit).
 - Diagram rules (decision D-019) in a new handbook page *Diagrams*: draw.io, notation per diagram (C4 by default for structure, UML sequence diagrams for runtime), white background, legend with section and *Last edited* date, one colour per scope.
 - Chapter 11 lists the open point of ADR-0002 (who chooses the path per dataset, issue #85).
@@ -28,7 +28,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Writing rule: "explain every acronym on first use" becomes "link the first use of each acronym on a page to the glossary with `<Term>`" (decision D-021), in `AGENTS.md`, `CONTRIBUTING.md`, the review checklist and the pull request template.
+- Writing rule: the first mention of each glossary term on a page links to its glossary entry, or to the concept page that explains it (decision D-022), in `AGENTS.md`, `CONTRIBUTING.md`, the page choreography, the review checklist and the pull request template. 8.12 follows it.
+- `<Term>` is renamed `<Acronym>` and stays for acronyms only (decision D-022); `npm run check` reports any `<Term>` left.
+- `npm run build` fails on a link to an anchor that doesn't exist, such as a glossary entry whose heading changed (`onBrokenAnchors: 'throw'`).
+- Writing rule: "explain every acronym on first use" becomes "link the first use of each acronym on a page to the glossary" (decision D-021), in `AGENTS.md`, `CONTRIBUTING.md`, the review checklist and the pull request template.
 - The recipes and ADR-0002 point to 8.12 for the differences per type of dataset.
 - "Technology-neutral" becomes "interfaces first" (decision D-020, refining D-007): components are described by function, interfaces and standards, and the GDI Starter Kit and GDI central services are named as reference implementation. Contributor guides, recipes, review checklists and the chapter 9 list of candidate decisions updated.
 - GitHub set-up script: refreshing issue text (`UPDATE_BODIES=1`) keeps the steps already ticked; the count of existing issues is correct.

@@ -65,11 +65,12 @@ const pages = [];
 for (const file of walk(DOCS).sort()) {
   const rel = path.relative(ROOT, file);
   const {data, content} = matter(fs.readFileSync(file, 'utf8'));
-  const prose = content.replace(/```[\s\S]*?```/g, ''); // examples in code blocks are not diagrams
+  const prose = content.replace(/```[\s\S]*?```/g, '').replace(/`[^`\n]*`/g, ''); // examples in code are not checked
   for (const m of prose.matchAll(/<Diagram\b[^>]*\bsrc="([^"]+)"/g)) checkDiagram(rel, data, m[1]);
-  for (const m of prose.matchAll(/<Term\b[^>]*\bid="([^"]+)"/g)) {
-    if (!ACRONYMS.has(m[1])) errors.push(`${rel}: <Term id="${m[1]}"> is not in src/data/acronyms.json`);
+  for (const m of prose.matchAll(/<Acronym\b[^>]*\bid="([^"]+)"/g)) {
+    if (!ACRONYMS.has(m[1])) errors.push(`${rel}: <Acronym id="${m[1]}"> is not in src/data/acronyms.json`);
   }
+  if (/<Term\b/.test(prose)) errors.push(`${rel}: <Term> is renamed <Acronym> (decision D-022)`);
   if (data.hide_page_meta) continue; // landing pages without ownership tracking
 
   for (const key of REQUIRED) {

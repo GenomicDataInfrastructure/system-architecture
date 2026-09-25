@@ -4,26 +4,26 @@ import useBrokenLinks from '@docusaurus/useBrokenLinks';
 import data from '@site/src/data/acronyms.json';
 import {acronymAnchor} from './vocab';
 
-type Acronym = {id: string; meaning: string};
-const ACRONYMS = data.acronyms as Acronym[];
-const byId = new Map<string, Acronym>(ACRONYMS.map((a) => [a.id, a]));
+type Entry = {id: string; meaning: string};
+const ACRONYMS = data.acronyms as Entry[];
+const byId = new Map<string, Entry>(ACRONYMS.map((a) => [a.id, a]));
 
 /**
- * An acronym, with its meaning as a tooltip and a link to its row in the glossary (decision D-021).
- * Use it for the first use of each acronym on a page.
- * Usage: <Term id="SPE" />  or, to change the text shown, <Term id="SPE">SPEs</Term>
+ * An acronym, with its meaning as a tooltip and a link to its row in the glossary (decisions D-021, D-022).
+ * Use it for the first use of each acronym on a page. Glossary terms are linked with a normal Markdown link.
+ * Usage: <Acronym id="SPE" />  or, to change the text shown, <Acronym id="SPE">SPEs</Acronym>
  */
-export default function Term({id, children}: {id: string; children?: React.ReactNode}) {
+export default function Acronym({id, children}: {id: string; children?: React.ReactNode}) {
   const a = byId.get(id);
   if (!a) {
     return (
-      <span className="term term--unknown" title="Unknown acronym: add it to src/data/acronyms.json">
+      <span className="acronym acronym--unknown" title="Unknown acronym: add it to src/data/acronyms.json">
         {children ?? id} (?)
       </span>
     );
   }
   return (
-    <Link className="term" to={`/glossary#${acronymAnchor(id)}`}>
+    <Link className="acronym" to={`/glossary#${acronymAnchor(id)}`}>
       <abbr title={a.meaning}>{children ?? id}</abbr>
     </Link>
   );

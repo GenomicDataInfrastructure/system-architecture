@@ -109,20 +109,20 @@
   height: auto;
 }
 
-/* Acronyms (<Term>): a dotted underline shows that the meaning is available as a tooltip; the link goes to the glossary. */
-.term {
+/* Acronyms (<Acronym>): a dotted underline shows that the meaning is available as a tooltip; the link goes to the glossary. */
+.acronym {
   color: inherit;
   text-decoration: none;
 }
-.term abbr {
+.acronym abbr {
   text-decoration: underline dotted;
   text-underline-offset: 0.15em;
   cursor: help;
 }
-.term:hover abbr {
+.acronym:hover abbr {
   color: var(--ifm-link-color);
 }
-.term--unknown {
+.acronym--unknown {
   color: var(--gap);
   font-weight: 600;
 }
