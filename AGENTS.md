@@ -22,6 +22,7 @@ Primary audience: implementers. Also read by ministries, legal experts, ELSI spe
 | `docs/` | The published architecture (arc42 chapters, reader guides, appendices) | Normal writing work |
 | `src/data/governance.json` | Catalogue of governance sections (IDs for `governance_refs` and `<GovRef>`) | The governance document changes |
 | `src/data/sources.json` | Source register (IDs for `<Cite>`) | A new source is cited |
+| `src/data/acronyms.json` | Acronyms and their meaning (IDs for `<Term>`; generates the glossary's acronym table) | A new acronym is used |
 | `static/diagrams/` | Diagrams (draw.io, `.drawio.svg`), shown with `<Diagram>`; rules in `docs/handbook/diagrams.md` | A diagram is added or changed |
 
 Files outside `docs/` are not published on the site.
@@ -41,7 +42,7 @@ When you help write a page, follow the steps in `docs/handbook/choreography.md` 
 3. Cite governance sections as `<GovRef id="VII.2.3" />` (Roman section numbers from the governance master document, never page numbers) and list them in `governance_refs`. This feeds the traceability page.
 4. Cite other sources as `<Cite id="gdi-d3.4" />` and add new ones to `src/data/sources.json`.
 5. Use the governance definitions word for word (e.g. "1+MG Data Holder", "Genome EDIC CC", "key-coded identifier", not "pseudonym"). See the glossary (chapter 12).
-6. Short sentences, active voice, one idea per paragraph. Explain every acronym on first use.
+6. Short sentences, active voice, one idea per paragraph. Link the first use of each acronym on a page to the glossary with `<Term id="SPE" />` (tooltip with its meaning); add new acronyms to `src/data/acronyms.json` (decision D-021). Acronyms inside a governance term ("1+MG Data Holder", "Genome EDIC CC") are covered by the term's glossary entry.
 7. Interfaces first: describe each component by its function, interfaces and standards, then name its reference implementation (the GDI Starter Kit component for national nodes, or the GDI central service for the European scope). Say that a Member Country may use other tools that meet the same interfaces (governance II.2; decisions D-007, D-020).
 8. The architecture describes the Genome EDIC target state for all four uses (research, policy development, QM in healthcare, healthcare reuse); flag what the GDI MVP already delivers (decision D-006).
 9. Diagrams follow `docs/handbook/diagrams.md` (decision D-019): draw.io, saved as `.drawio.svg` in `static/diagrams/` and shown with `<Diagram>`; notation chosen per diagram (C4 by default for structure) and named in the legend; a white background; a legend with the section and *Last edited* date, updated on every edit. No Mermaid in architecture pages.

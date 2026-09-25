@@ -64,6 +64,9 @@ The governance does not say who chooses between the two paths. This ADR assumes 
 
 ## Consequences
 
+How the three types work in each phase of the lifecycle is described in [8.12 Types of dataset](/concepts/dataset-types).
+
+
 - **European scope:** access request management (5.1.2) handles both paths in one request. For 1+MG cohort data, the Genome EDIC CC takes the decision and the data protection impact assessment. The Genome EDIC CC remains the one-stop shop: the User follows the same procedure whatever the path.
 - **National scope:** access decision support (5.2.2) serves 1+MG Data Holders and Local DACs. Each Member Country records its choices in its national implementation profile.
 - **User Organisation scope:** no difference in how to apply.

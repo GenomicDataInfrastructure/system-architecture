@@ -13,7 +13,7 @@
 - [ ] Every governance requirement this page implements is listed in `governance_refs` and cited with `<GovRef id="…" />`.
 - [ ] New external sources are added to `src/data/sources.json` and cited with `<Cite id="…" />`.
 - [ ] The *In short* box has at most three plain-language bullets.
-- [ ] Plain language: short sentences, active voice, acronyms explained on first use, governance terms used as defined.
+- [ ] Plain language: short sentences, active voice, first use of each acronym linked with `<Term>`, governance terms used as defined.
 - [ ] `npm run check` and `npm run build` pass locally (CI runs both).
 
 ## Sign-off needed

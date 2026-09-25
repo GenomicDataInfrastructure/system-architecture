@@ -18,7 +18,7 @@ Comment in the pull request. Suggest concrete wording where you can (GitHub's *s
 - [ ] **Traceable:** `governance_refs` lists every governance section the page implements, and the page cites them where they apply.
 - [ ] **Consistent:** scopes, actors and terms match the glossary and neighbouring pages. The page doesn't contradict an approved page or an ADR.
 - [ ] **Both axes covered:** where the page's content differs per type of use or per type of dataset (1+MG compliant, 1+MG cohort, externally governed), it says so. Nothing assumes a single path.
-- [ ] **Readable:** a non-specialist understands the *In short* box. Sentences are short, acronyms are explained, and diagrams have a sentence saying what they show.
+- [ ] **Readable:** a non-specialist understands the *In short* box. Sentences are short, the first use of each acronym is linked to the glossary (`<Term>`), and diagrams have a sentence saying what they show.
 - [ ] **Diagrams:** each follows the [diagram rules](/handbook/diagrams): the notation is right and named in the legend, the section and the *Last edited* date are up to date, the alt text says what the diagram shows, and it reads well in dark mode and on a phone.
 - [ ] **Honest about gaps:** open points are marked and have an issue. Nothing undecided is presented as decided.
 - [ ] **Interfaces first:** components are described by function, interfaces and standards; the reference implementation (GDI Starter Kit or GDI central service) is named, and not presented as the only option (decisions D-007, D-020).

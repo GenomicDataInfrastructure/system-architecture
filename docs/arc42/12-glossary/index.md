@@ -132,21 +132,6 @@ Where an IT environment runs, as in the definition of the 1+MG IT infrastructure
 
 ## Acronyms
 
-| Acronym | Meaning |
-|---|---|
-| AAI | Authentication and authorisation infrastructure |
-| ADR | Architecture decision record |
-| DAC | Data access committee |
-| DG | The 1+MG Data Governance master document, published as the annex of GDI D2.4 |
-| DPIA | Data protection impact assessment (GDPR Art. 35) |
-| DPO | Data protection officer |
-| EDIC | European Digital Infrastructure Consortium |
-| EHDS | European Health Data Space (Regulation (EU) 2025/327) |
-| ELSI | Ethical, legal and societal implications |
-| GDI | Genomic Data Infrastructure project |
-| GDPR | General Data Protection Regulation (Regulation (EU) 2016/679) |
-| HDAB | Health data access body (EHDS) |
-| ISMS | Information security management system |
-| NCP | National Coordination Point (1+MG NCP) |
-| QM | Quality management in healthcare |
-| SPE | Secure processing environment |
+On other pages, the first use of each acronym links to this table, with its meaning as a tooltip.
+
+<AcronymTable />

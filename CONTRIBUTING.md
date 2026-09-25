@@ -52,7 +52,7 @@ The full step-by-step version, with who does what and when each step is done, is
 ## Writing rules
 
 - Write for a reader who is not an IT specialist: short sentences, active voice, one idea per paragraph.
-- Explain every acronym on first use, or link to the glossary (`docs/arc42/12-glossary/index.md`).
+- Link the first use of each acronym on a page to the glossary with `<Term id="SPE" />`: readers see its meaning as a tooltip. Add new acronyms to `src/data/acronyms.json` (decision D-021).
 - Use the governance terms exactly as defined (e.g. *1+MG Data Holder*, *Genome EDIC CC*, *key-coded identifier*).
 - Say which scope (European, national, User Organisation) a component or step belongs to. In chapter 7, say at which level (central, national, local) it runs.
 - Prefer a diagram plus a short text over long prose. Diagrams follow the [diagram rules](https://genomicdatainfrastructure.github.io/system-architecture/handbook/diagrams) (decision D-019): draw.io, a white background, and a legend with the section and the date of the last edit. Run `npm run diagrams` after editing one.
