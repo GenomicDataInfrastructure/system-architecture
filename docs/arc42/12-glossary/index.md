@@ -22,7 +22,7 @@ last_reviewed:
 
 ## Terms from the governance
 
-The definitions below are quoted word for word from the 1+MG Data Governance master document (version 2025-12), published as the annex of GDI D2.4 <Cite id="dg" />, <GovRef id="III" long />. Words in square brackets are in the original, except "[catalogue]", which we added where a word is missing. If the governance changes a definition, update it here.
+The definitions below are quoted word for word from the 1+MG Data Governance master document (version 2025-12), published as the annex of GDI D2.4 <Cite id="dg" />, <GovRef id="III" long />. Words in square brackets are in the original, except "[catalogue]", which we added where a word is missing. If the governance changes a definition, update it here. On other pages, the first mention of each term links to its entry here.
 
 ### Genome EDIC Assembly of Members
 

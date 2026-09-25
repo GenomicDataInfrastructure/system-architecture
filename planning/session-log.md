@@ -2,6 +2,11 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-09-25 — 8.12 merged, glossary links (B. Pacheco with Claude)
+- #87 merged (8.12 *Types of dataset*, `<Term>`, D-021); issue #88 created for 8.12; #84 rebased on `main`. In 3.3 (#84) the types of dataset link to 8.12, SPE, ELSI and GDI use `<Term>`, and the first mention of each glossary term links to its entry (18 links).
+- Branch `glossary-links-rule`: decided D-022 (link the first mention of each glossary term on a page; `<Term>` renamed `<Acronym>`, for acronyms only; broken anchors fail the build). Rule texts updated; 8.12 follows the rule.
+- Next: once `glossary-links-rule` is merged, rebase #84 and switch its three `<Term>` to `<Acronym>` (`npm run check` points to them). Then the kick-off meeting, as below.
+
 ## 2026-09-25 — Ways of working merged, 3.3 reader-tested, kick-off deck (B. Pacheco with Claude)
 - 3.3: step 5 done (comparable infrastructures: Federated EGA, ELIXIR, HealthData@EU; C4 system landscape) and noted on #13 with the scope note and sources; `needs-legal` added. Reader test run twice with a reader without context; fixes committed in #84 (dataset types defined, controller named per phase, "the Member Country chooses the type" marked as proposed, acronyms linked to the glossary, "1+MG" added to the glossary). #13 steps 1 and 4–8 ticked.
 - Open point of ADR-0002 (who chooses the type of a dataset) tracked in #85 and listed in chapter 11. Set-up script: refreshing issue text keeps ticked steps.

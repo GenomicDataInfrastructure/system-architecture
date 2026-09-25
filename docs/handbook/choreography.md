@@ -122,7 +122,7 @@ If you use an AI assistant, give it `AGENTS.md`, the page file, and the sources 
 - [ ] The *In short* box has at most three bullets that a non-specialist understands.
 - [ ] Every question in the scope note is answered, or explicitly moved to another page.
 - [ ] `governance_refs` lists every governance section the page implements.
-- [ ] Every scope, actor and governance term matches the glossary.
+- [ ] Every scope, actor and governance term matches the glossary. Its first mention on the page links to its glossary entry, and the first use of each acronym is linked with `<Acronym>`.
 - [ ] Open points are marked and have an issue.
 - [ ] `npm run check` and `npm run build` pass. You checked the page in the local preview (`npm start`).
 - [ ] **Reader test:** give the page to someone outside the subject, or to an AI assistant with no other context, together with the questions from the page's reader guides. Fix what they got wrong.
