@@ -12,6 +12,7 @@ import matter from 'gray-matter';
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const DOCS = path.join(ROOT, 'docs');
 const OUT = path.join(ROOT, 'src/data/pages.json');
+const DIAGRAMS = path.join(ROOT, 'static/diagrams');
 const governance = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/governance.json'), 'utf8'));
 const WAVES = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/waves.json'), 'utf8')).waves.map((w) => w.id);
 
@@ -34,11 +35,37 @@ function walk(dir) {
 
 const errors = [];
 const warnings = [];
+
+/** Checks a diagram against the diagram rules (docs/handbook/diagrams.md, decision D-019). */
+function checkDiagram(rel, data, src) {
+  const file = path.join(DIAGRAMS, src);
+  if (!fs.existsSync(file)) return errors.push(`${rel}: diagram "${src}" not found in static/diagrams/`);
+  const svg = fs.readFileSync(file, 'utf8');
+  if (!svg.includes('content="&lt;mxfile')) {
+    errors.push(`${rel}: diagram "${src}" has no editable draw.io copy; save it from draw.io as .drawio.svg`);
+  }
+  if (svg.includes('light-dark(')) {
+    errors.push(`${rel}: diagram "${src}" uses colours that change in dark mode; run \`npm run diagrams\``);
+  }
+  // The legend text, with tags removed and entities decoded (it appears in the image and in the embedded copy).
+  let text = svg;
+  for (let i = 0; i < 3; i++) text = text.replace(/<[^>]*>/g, ' ').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&amp;/g, '&');
+  text = text.replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ');
+  if (!/Last edited: ?\d{4}-\d{2}-\d{2}/.test(text)) {
+    errors.push(`${rel}: diagram "${src}" has no "Last edited: YYYY-MM-DD" in its legend`);
+  }
+  const section = String(data.title ?? '').match(/^(\d+(?:\.\d+)*)\.?\s/);
+  if (section && !text.includes(`Section ${section[1]}`)) {
+    warnings.push(`${rel}: the legend of diagram "${src}" does not name section ${section[1]}`);
+  }
+}
 const pages = [];
 
 for (const file of walk(DOCS).sort()) {
   const rel = path.relative(ROOT, file);
-  const {data} = matter(fs.readFileSync(file, 'utf8'));
+  const {data, content} = matter(fs.readFileSync(file, 'utf8'));
+  const prose = content.replace(/```[\s\S]*?```/g, ''); // examples in code blocks are not diagrams
+  for (const m of prose.matchAll(/<Diagram\b[^>]*\bsrc="([^"]+)"/g)) checkDiagram(rel, data, m[1]);
   if (data.hide_page_meta) continue; // landing pages without ownership tracking
 
   for (const key of REQUIRED) {

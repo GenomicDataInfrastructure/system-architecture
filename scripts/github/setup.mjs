@@ -8,7 +8,7 @@
 //   node scripts/github/setup.mjs all       all of the above, in this order
 //
 // Add DRY_RUN=1 in front to print the gh commands without running them.
-// Add UPDATE_BODIES=1 to `issues` to rewrite the text of existing issues (resets their checkboxes).
+// Add UPDATE_BODIES=1 to `issues` to rewrite the text of existing issues from their pages (ticked steps are kept).
 // All commands are safe to run again: existing labels and issues are reused, not duplicated.
 //
 // Roles are tracked with issue assignees (owner) and the page front matter (owner, reviewers).
@@ -208,14 +208,21 @@ function issueBody(page) {
   ].join('\n');
 }
 
+/** Keeps the steps ticked in an existing issue when its text is refreshed. Steps match by number ("1.", "7–8."). */
+function keepTickedSteps(newBody, oldBody) {
+  const ticked = new Set([...(oldBody ?? '').matchAll(/^- \[[xX]\] (\S+)/gm)].map((m) => m[1]));
+  return newBody.replace(/^- \[ \] (\S+)/gm, (line, step) => (ticked.has(step) ? `- [x] ${step}` : line));
+}
+
 function issues() {
   const existing = gh(
-    ['issue', 'list', '--repo', REPO, '--label', 'page', '--state', 'all', '--limit', '500', '--json', 'title,url'],
+    ['issue', 'list', '--repo', REPO, '--label', 'page', '--state', 'all', '--limit', '500', '--json', 'title,url,body'],
     {json: true},
   ) ?? [];
-  const existingByTitle = new Map(existing.map((i) => [i.title, i.url]));
+  const existingByTitle = new Map(existing.map((i) => [i.title, i]));
 
   let created = 0;
+  let existed = 0;
   for (const page of trackedPages()) {
     const title = `[page] ${page.data.title}`;
     const chapter = chapterKey(page.rel);
@@ -223,10 +230,14 @@ function issues() {
     const waveLabel = page.data.wave ? `wave-${page.data.wave}` : null;
     if (existingByTitle.has(title)) {
       // Existing issue: make sure it has its wave label (added after the first run).
-      const url = existingByTitle.get(title) || title;
+      const issue = existingByTitle.get(title);
+      const url = issue.url || title;
+      existed++;
       if (waveLabel) gh(['issue', 'edit', url, '--repo', REPO, '--add-label', waveLabel]);
-      // UPDATE_BODIES=1 rewrites the issue text. It resets the step checkboxes, so use it only before work starts.
-      if (process.env.UPDATE_BODIES === '1') gh(['issue', 'edit', url, '--repo', REPO, '--body-file', '-'], {input: issueBody(page)});
+      // UPDATE_BODIES=1 rewrites the issue text from the page, keeping the steps already ticked.
+      if (process.env.UPDATE_BODIES === '1') {
+        gh(['issue', 'edit', url, '--repo', REPO, '--body-file', '-'], {input: keepTickedSteps(issueBody(page), issue.body)});
+      }
       continue;
     }
     const labelList = ['page', chapter && `chapter-${chapter}`, scope && `scope-${scope}`, waveLabel].filter(Boolean).join(',');
@@ -236,7 +247,7 @@ function issues() {
     created++;
     console.log(`issue: ${title}${url ? ` → ${url}` : ''}`);
   }
-  console.log(`issues: ${created} created, ${existingByTitle.size} already existed (wave labels updated)`);
+  console.log(`issues: ${created} created, ${existed} already existed (wave labels updated)`);
 }
 
 // ---------------------------------------------------------------- branch protection

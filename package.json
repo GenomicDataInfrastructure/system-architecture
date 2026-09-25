@@ -8,6 +8,7 @@
     "docusaurus": "docusaurus",
     "meta": "node scripts/collect-page-meta.mjs",
     "check": "node scripts/collect-page-meta.mjs --check",
+    "diagrams": "node scripts/export-diagrams.mjs",
     "prestart": "npm run meta",
     "start": "docusaurus start",
     "prebuild": "npm run meta",

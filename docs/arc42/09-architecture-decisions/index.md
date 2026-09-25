@@ -41,7 +41,7 @@ These choices are already made in the governance or in GDI. They should become A
 - Federated processing in national SPEs instead of pooling data centrally <GovRef id="II.2" />.
 - No download of personal data; only non-personal results leave the SPE <GovRef id="II.2" />.
 - "Key-coded identifier" instead of "pseudonym" <GovRef id="I" />.
-- Technology-neutral components, with the GDI Starter Kit as reference implementation (documentation decision D-007).
+- Interfaces first: components described by function, interfaces and standards, with the GDI Starter Kit and the GDI central services as reference implementation (documentation decisions D-007, D-020).
 
 :::note[Placeholder]
 This page has no content yet. The owner replaces this note and the questions above with the content.

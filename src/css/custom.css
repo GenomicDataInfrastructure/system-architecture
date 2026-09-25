@@ -97,3 +97,14 @@
 .status-count {
   margin-right: 1rem;
 }
+
+/* Diagrams (draw.io, .drawio.svg): they carry their own white frame and legend. Selecting one opens it full size. */
+.diagram {
+  display: block;
+  margin: 1rem 0 0.5rem;
+}
+.diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

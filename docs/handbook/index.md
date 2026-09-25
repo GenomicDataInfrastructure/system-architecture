@@ -14,6 +14,7 @@ This handbook is for the members of the system architecture taskforce: the peopl
 | Know which pages to write first | [Writing order](/handbook/writing-order) |
 | Know what to do, step by step, from picking up a page to getting it approved | [Page choreography](/handbook/choreography) |
 | Know what a good page of a given type contains | [Page recipes](/handbook/recipes) |
+| Draw or edit a diagram | [Diagrams](/handbook/diagrams) |
 | Find sources, examples and best practices | [Sources, examples and best practices](/handbook/sources-and-examples) |
 | Review a page | [Review checklists](/handbook/review-checklists) |
 

@@ -25,6 +25,7 @@ last_reviewed:
 ## Sources to start from
 
 - Governance: the governance is a "living document" <Cite id="dg" />. These sections say that a point is still open: <GovRef id="III" /> (accreditation details of the 1+MG IT infrastructure provider), <GovRef id="VII.3.3" /> (EHDS requirements for access applications), <GovRef id="VII.4.3" /> (checking that a User is a licensed healthcare professional), <GovRef id="VII.5.3" /> (national information flow; repeated consent or objection for healthcare reuse and recruitment into clinical trials), <GovRef id="VIII.11.1" /> (legal basis for returning incidental findings).
+- Open points of the architecture itself: who chooses between the 1+MG compliant and the 1+MG cohort path for a dataset ([ADR-0002](/decisions/0002-disclosure-paths-per-dataset), [issue #85](https://github.com/GenomicDataInfrastructure/system-architecture/issues/85)).
 - Other: <Cite id="hdeu-ia-draft" />, <Cite id="gdi-d3.4" />
 
 :::note[Placeholder]
