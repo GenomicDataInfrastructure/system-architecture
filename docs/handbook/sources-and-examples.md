@@ -1,7 +1,7 @@
 ---
 title: Sources, examples and best practices
 slug: /handbook/sources-and-examples
-sidebar_position: 4
+sidebar_position: 5
 hide_page_meta: true
 ---
 

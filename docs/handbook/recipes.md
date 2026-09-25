@@ -48,7 +48,7 @@ The box with owner, reviewers, audiences and governance references is generated 
 **Headings:**
 
 1. *In short*
-2. One diagram that shows how the sub-pages fit together. For 5 and 5.x, this is the level-1 or level-2 building block diagram.
+2. One diagram that shows how the sub-pages fit together. For 5 and 5.x, this is the level-1 or level-2 building block diagram (a C4 container diagram). See [Diagrams](/handbook/diagrams).
 3. **Pages in this chapter:** one line per sub-page, saying what question it answers.
 
 **Avoid:** repeating the content of the sub-pages.
@@ -71,7 +71,7 @@ The box with owner, reviewers, audiences and governance references is generated 
 
 **10 headings:**
 
-1. **Quality tree:** a Mermaid mind map or a nested list, from the quality goals down to scenarios.
+1. **Quality tree:** a nested list or a tree diagram, from the quality goals down to scenarios.
 2. **Quality scenarios:** a table *ID · quality · source · stimulus · environment · response · measure*.
 
 Example scenario: *"A User runs a subject-level query (stimulus) against the national discovery endpoint in normal operation (environment). The endpoint returns only counts at or above the agreed threshold, and logs the query (response). 100 % of test queries below the threshold return no count (measure)."*
@@ -94,7 +94,7 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 
 **Headings:**
 
-1. **Context diagram** (Mermaid flowchart): the system (or the three scopes) in the middle, actors and external systems around it, one arrow per exchange.
+1. **Context diagram** (a C4 system context diagram, see [Diagrams](/handbook/diagrams)): the system in the middle as one box, the people, organisations and external systems around it, one arrow per exchange. For 3.3, a diagram of the scopes and who belongs to each.
 2. **Table of partners:** *actor or external system · scope it talks to · what it sends · what it receives · governance section*.
 3. For 3.2 only: **channels and protocols** per interface.
 4. For 3.3 only: **which governance actor operates which scope**, and how to read the scoped chapters 5 and 7.
@@ -120,10 +120,10 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 5. **Quality and security needs:** link to the relevant quality scenarios and concepts in chapter 8.
 6. **Governance requirements:** for each `GovRef`, one line on how this component meets it.
 7. **Differences per type of dataset** (1+MG compliant, 1+MG cohort, externally governed), where there are any. See [ADR-0002](/decisions/0002-disclosure-paths-per-dataset).
-8. **Reference implementation:** the matching GDI Starter Kit component, if one exists (decision D-007).
+8. **Reference implementation:** the matching GDI Starter Kit component (national scope) or GDI central service (European scope). A country that uses other tools must meet the interfaces above (decisions D-007, D-020).
 9. **Open points.**
 
-**Avoid:** naming products as requirements. Name functions and standards; products only as examples.
+**Avoid:** presenting a product as the requirement. The requirement is the function and its interfaces; the product is the reference implementation.
 
 ## Runtime scenario
 
@@ -133,22 +133,7 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 
 1. **Trigger and outcome:** what starts the scenario, and what is true at the end.
 2. **Actors and building blocks involved,** with their scope.
-3. **Sequence diagram** (Mermaid), for example:
-
-   ````md
-   ```mermaid
-   sequenceDiagram
-     actor U as User
-     participant P as 1+MG User Portal (European)
-     participant N as NCP node (national)
-     participant H as Data Host (national)
-     U->>P: Submit access request
-     P->>N: Route request
-     N->>H: Ask for data availability
-     H-->>N: Counts only
-     N-->>P: Status update
-   ```
-   ````
+3. **Sequence diagram** (UML notation, see [Diagrams](/handbook/diagrams)). Each participant is an actor or a building block, with its scope in brackets: for example *1+MG User Portal (European)* or *1+MG Data Host (national)*.
 4. **Steps:** a table *# · step · actor · building block · scope · governance section · personal data involved?*
 5. **Alternatives and exceptions:** refusal, withdrawal of consent, errors.
 6. **Data protection notes:** what is minimised, logged, or checked in this scenario, with links to chapter 8.
@@ -165,7 +150,7 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 
 **Headings:**
 
-1. **Deployment diagram** (Mermaid flowchart with subgraphs for hosting zones).
+1. **Deployment diagram** (a C4 deployment diagram, see [Diagrams](/handbook/diagrams)), with the central, national and local levels.
 2. **Nodes:** a table *node · hosted by · building blocks deployed · security zone*.
 3. For 7.2: **deployment patterns.** For each pattern: when it fits (national situation), pros, cons, and an example country, if one is willing to be named.
 4. **Trust boundaries and network connections** between scopes.

@@ -2,6 +2,14 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-09-24 — Page 3.3 drafted (B. Pacheco with Claude)
+- Issue housekeeping after #80 done (renames, labels, new issues #81–#83). Page 3.3 drafted (owner B. Pacheco, issue #13): three scopes, actor-to-scope table, why no local scope, dataset type × phase matrix, IT infrastructure provider as a role, scopes vs deployment levels. Draft pull request open; no reviewers yet.
+- Diagrams: the Mermaid scope diagram (hard to read in dark mode and at small sizes) is replaced by a draw.io diagram in C4 notation (`static/diagrams/3.3-scopes.drawio.svg`, white frame, legend with section and last edit), shown with the new `<Diagram>` component. 3.1 and 3.2 questions sharpened: 3.1 = black box and what crosses the boundary, 3.2 = channels and standards; 3.3 = who is responsible inside.
+- Decided D-019 (diagram rules): draw.io `.drawio.svg`, notation per diagram (C4 by default), white background, legend with section and *Last edited*, one colour per scope, no shared template, no Mermaid in architecture pages. New handbook page *Diagrams*; `npm run diagrams` re-exports in light colours (the draw.io app saves adaptive colours by default); `npm run check` checks diagrams. The 3.3 diagram now has no grey border (B. Pacheco also aligned the legend).
+- 2026-09-25: step 5 for 3.3 done (comparable infrastructures: Federated EGA, ELIXIR, HealthData@EU; C4 system landscape), noted on #13 with the scope note and sources; steps 1 and 6 ticked; `needs-legal` added. Open point of ADR-0002 tracked in #85 and listed in chapter 11. Set-up script: refreshing issue text keeps ticked steps.
+- Next: choose reviewers for 3.3; reader test; then 2.2 Governance principles.
+- 2026-09-25: "technology-neutral" becomes "interfaces first" (D-020, refines D-007). PR #84 split: the ways of working (diagram rules D-019, D-020, `<Diagram>` and checks, `npm run diagrams`, set-up script, chapter 11 line, changelog, this log) go to their own pull request; #84 keeps only page 3.3, its diagram and the 3.1/3.2 questions, and takes `main` once that pull request is merged. Kick-off deck prepared (`TF Architecture Kick-off.pptx`).
+
 ## 2026-09-24 — Scopes restructured (B. Pacheco with Claude)
 - Decided D-018: scopes of responsibility European, national, User Organisation; no local scope; chapter 7 by IT level (central, national, local). ADR-0002 (proposed): the Member Country decides whether its data are 1+MG compliant (national 1+MG Data Holder decides) or 1+MG cohort data (Genome EDIC decides); the system supports both paths per dataset, plus externally governed datasets.
 - Done: 5.3.x pages moved to 5.2.5–5.2.7; new 5.3 User Organisation scope and 5.3.1; 7.1 renamed Central deployment; governance scope tags, glossary, reader guides, handbook, script and plan updated.

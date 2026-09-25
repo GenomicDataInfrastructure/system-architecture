@@ -2,7 +2,7 @@
 
 This architecture is written by a taskforce. Every change goes through a pull request, so that we always know **who wrote what, who reviewed it, and when**.
 
-**New to the taskforce? Start with the [Taskforce handbook](https://genomicdatainfrastructure.github.io/system-architecture/handbook)** (`docs/handbook/`): the writing order, a step-by-step choreography for each page, recipes per kind of page, where to find sources, and the review checklists. This file is the short version.
+**New to the taskforce? Start with the [Taskforce handbook](https://genomicdatainfrastructure.github.io/system-architecture/handbook)** (`docs/handbook/`): the writing order, a step-by-step choreography for each page, recipes per kind of page, the diagram rules, where to find sources, and the review checklists. This file is the short version.
 
 ## How ownership and review are tracked
 
@@ -55,8 +55,8 @@ The full step-by-step version, with who does what and when each step is done, is
 - Explain every acronym on first use, or link to the glossary (`docs/arc42/12-glossary/index.md`).
 - Use the governance terms exactly as defined (e.g. *1+MG Data Holder*, *Genome EDIC CC*, *key-coded identifier*).
 - Say which scope (European, national, User Organisation) a component or step belongs to. In chapter 7, say at which level (central, national, local) it runs.
-- Prefer a diagram (Mermaid) plus a short text over long prose.
-- Name functions and standards, not products. Products appear only as examples or in the reference implementation mapping (decision D-007).
+- Prefer a diagram plus a short text over long prose. Diagrams follow the [diagram rules](https://genomicdatainfrastructure.github.io/system-architecture/handbook/diagrams) (decision D-019): draw.io, a white background, and a legend with the section and the date of the last edit. Run `npm run diagrams` after editing one.
+- Interfaces first: describe a component by its function, interfaces and standards, then name its reference implementation (GDI Starter Kit or GDI central service). A country may use other tools that meet the same interfaces (decisions D-007, D-020).
 
 ## Page issues
 

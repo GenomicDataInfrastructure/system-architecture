@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `<Diagram>` component for draw.io diagrams saved as `.drawio.svg` in `static/diagrams/` (one file is both the editable source and the image; white background and a legend with section and last edit).
+- Diagram rules (decision D-019) in a new handbook page *Diagrams*: draw.io, notation per diagram (C4 by default for structure, UML sequence diagrams for runtime), white background, legend with section and *Last edited* date, one colour per scope.
+- Chapter 11 lists the open point of ADR-0002 (who chooses the path per dataset, issue #85).
+- `npm run diagrams` re-exports every diagram in light colours with its editable copy embedded. `npm run check` fails when a diagram is missing, has no editable copy, uses colours that change in dark mode, or has no *Last edited* date in its legend.
 - ADR-0002: who decides on access for each type of dataset (1+MG compliant, 1+MG cohort, externally governed).
 - User Organisation scope in chapter 5: 5.3 User Organisation scope and 5.3.1 User Organisation registration and user management.
 - Types of dataset (1+MG compliant, 1+MG cohort, externally governed) made visible: a matrix question in 3.3, a "what differs per type of dataset?" question on the pages where it matters, a heading in the building block and runtime scenario recipes, a review checklist item, and a question in the guides for policy makers and legal experts.
@@ -22,6 +26,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- "Technology-neutral" becomes "interfaces first" (decision D-020, refining D-007): components are described by function, interfaces and standards, and the GDI Starter Kit and GDI central services are named as reference implementation. Contributor guides, recipes, review checklists and the chapter 9 list of candidate decisions updated.
+- GitHub set-up script: refreshing issue text (`UPDATE_BODIES=1`) keeps the steps already ticked; the count of existing issues is correct.
 - Scopes are scopes of responsibility: European, national and User Organisation (decision D-018, replacing the scopes of D-005). The former local scope pages move to the national scope as 5.2.5 to 5.2.7.
 - Chapter 7 is split by IT level (central, national, local); 7.1 is renamed "Central deployment".
 - Governance section catalogue: scope tags follow the new scopes; sections of the 1+MG IT infrastructure provider apply to the European and national scopes; VIII.4.4 (treating healthcare professionals) moves to the national scope.

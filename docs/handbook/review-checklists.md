@@ -1,7 +1,7 @@
 ---
 title: Review checklists
 slug: /handbook/review-checklists
-sidebar_position: 5
+sidebar_position: 6
 hide_page_meta: true
 ---
 
@@ -19,8 +19,9 @@ Comment in the pull request. Suggest concrete wording where you can (GitHub's *s
 - [ ] **Consistent:** scopes, actors and terms match the glossary and neighbouring pages. The page doesn't contradict an approved page or an ADR.
 - [ ] **Both axes covered:** where the page's content differs per type of use or per type of dataset (1+MG compliant, 1+MG cohort, externally governed), it says so. Nothing assumes a single path.
 - [ ] **Readable:** a non-specialist understands the *In short* box. Sentences are short, acronyms are explained, and diagrams have a sentence saying what they show.
+- [ ] **Diagrams:** each follows the [diagram rules](/handbook/diagrams): the notation is right and named in the legend, the section and the *Last edited* date are up to date, the alt text says what the diagram shows, and it reads well in dark mode and on a phone.
 - [ ] **Honest about gaps:** open points are marked and have an issue. Nothing undecided is presented as decided.
-- [ ] **Technology-neutral:** functions and standards, not products (decision D-007).
+- [ ] **Interfaces first:** components are described by function, interfaces and standards; the reference implementation (GDI Starter Kit or GDI central service) is named, and not presented as the only option (decisions D-007, D-020).
 - [ ] **Front matter:** `owner`, `reviewers`, `audience`, `wave` and `governance_refs` are right.
 
 ## Data protection officer (`needs-dpo`)
@@ -63,4 +64,4 @@ Comment in the pull request. Suggest concrete wording where you can (GitHub's *s
 - [ ] Two teams in different countries could build compatible components from this page.
 - [ ] Interfaces name a standard or protocol and the data exchanged.
 - [ ] Non-functional needs (performance, availability, scale) are stated or linked.
-- [ ] The mapping to the GDI Starter Kit (if any) is correct.
+- [ ] The reference implementation named (GDI Starter Kit component or GDI central service) is correct.

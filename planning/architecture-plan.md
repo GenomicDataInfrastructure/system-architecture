@@ -69,7 +69,7 @@ Why this works for the governance: the governance assigns rights and duties per 
 - `docs/` one folder per arc42 chapter; `docs/arc42/05-building-block-view/{european,national,user-organisation}`; `docs/readers/` reader guides; `docs/appendix/`.
 - Front matter per page: `owner`, `reviewers`, `status`, `audience`, `governance_refs`, `last_reviewed`.
 - MDX components: `<GovRef id="VII.2.3"/>` (link + tooltip to the DG section), `<InShort>`, `<AudienceBadges>`; source register in `src/data/sources.json` with DOIs, rendered as a bibliography.
-- Diagrams in Mermaid (`@docusaurus/theme-mermaid`), C4-style levels.
+- Diagrams drawn in draw.io (`.drawio.svg` in `static/diagrams/`, shown with `<Diagram>`); C4 notation for structure diagrams, UML sequence diagrams for runtime scenarios (decision D-019). Mermaid only in the handbook.
 - Local search plugin; versioned docs per release; GitHub Actions deploys to GitHub Pages.
 - Auto-generated "Document status" page from front matter.
 
