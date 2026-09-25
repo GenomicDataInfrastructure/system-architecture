@@ -119,7 +119,7 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 4. **Data it handles:** personal data? Which categories? Stored, or only passed through? Which retention?
 5. **Quality and security needs:** link to the relevant quality scenarios and concepts in chapter 8.
 6. **Governance requirements:** for each `GovRef`, one line on how this component meets it.
-7. **Differences per type of dataset** (1+MG compliant, 1+MG cohort, externally governed), where there are any. See [ADR-0002](/decisions/0002-disclosure-paths-per-dataset).
+7. **Differences per type of dataset** (1+MG compliant, 1+MG cohort, externally governed), where there are any. See [8.12 Types of dataset](/concepts/dataset-types).
 8. **Reference implementation:** the matching GDI Starter Kit component (national scope) or GDI central service (European scope). A country that uses other tools must meet the interfaces above (decisions D-007, D-020).
 9. **Open points.**
 
@@ -138,7 +138,7 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 5. **Alternatives and exceptions:** refusal, withdrawal of consent, errors.
 6. **Data protection notes:** what is minimised, logged, or checked in this scenario, with links to chapter 8.
 7. **Differences per type of use** (research, policy development, QM, healthcare reuse), where there are any.
-8. **Differences per type of dataset** (1+MG compliant, 1+MG cohort, externally governed), where there are any: who reviews, who decides, who is controller. See [ADR-0002](/decisions/0002-disclosure-paths-per-dataset).
+8. **Differences per type of dataset** (1+MG compliant, 1+MG cohort, externally governed), where there are any: who reviews, who decides, who is controller. See [8.12 Types of dataset](/concepts/dataset-types).
 
 **Tip:** the steps table is the traceability backbone. Every governance responsibility in `governance_refs` should appear in at least one row.
 

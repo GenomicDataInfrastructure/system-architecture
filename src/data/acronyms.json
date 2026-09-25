@@ -1,0 +1,24 @@
+{
+  "_comment": "Acronyms used in the architecture. 'id' is used in <Term id=\"…\" />. The glossary's acronym table is generated from this file, so each meaning is written once (decision D-021).",
+  "acronyms": [
+    {"id": "1+MG", "meaning": "1+ Million Genomes initiative"},
+    {"id": "AAI", "meaning": "Authentication and authorisation infrastructure"},
+    {"id": "ADR", "meaning": "Architecture decision record"},
+    {"id": "CC", "meaning": "Central Coordination (Genome EDIC CC)"},
+    {"id": "DAC", "meaning": "Data access committee"},
+    {"id": "DG", "meaning": "The 1+MG Data Governance master document, published as the annex of GDI D2.4"},
+    {"id": "DPIA", "meaning": "Data protection impact assessment (GDPR Art. 35)"},
+    {"id": "DPO", "meaning": "Data protection officer"},
+    {"id": "EDIC", "meaning": "European Digital Infrastructure Consortium"},
+    {"id": "EHDS", "meaning": "European Health Data Space (Regulation (EU) 2025/327)"},
+    {"id": "ELSI", "meaning": "Ethical, legal and societal implications"},
+    {"id": "GDI", "meaning": "Genomic Data Infrastructure project"},
+    {"id": "GDPR", "meaning": "General Data Protection Regulation (Regulation (EU) 2016/679)"},
+    {"id": "HDAB", "meaning": "Health data access body (EHDS)"},
+    {"id": "IP", "meaning": "Intellectual property"},
+    {"id": "ISMS", "meaning": "Information security management system"},
+    {"id": "NCP", "meaning": "National Coordination Point (1+MG NCP)"},
+    {"id": "QM", "meaning": "Quality management in healthcare"},
+    {"id": "SPE", "meaning": "Secure processing environment"}
+  ]
+}

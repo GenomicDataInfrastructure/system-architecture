@@ -108,3 +108,21 @@
   width: 100%;
   height: auto;
 }
+
+/* Acronyms (<Term>): a dotted underline shows that the meaning is available as a tooltip; the link goes to the glossary. */
+.term {
+  color: inherit;
+  text-decoration: none;
+}
+.term abbr {
+  text-decoration: underline dotted;
+  text-underline-offset: 0.15em;
+  cursor: help;
+}
+.term:hover abbr {
+  color: var(--ifm-link-color);
+}
+.term--unknown {
+  color: var(--gap);
+  font-weight: 600;
+}

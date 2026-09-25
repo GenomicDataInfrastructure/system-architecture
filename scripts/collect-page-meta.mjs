@@ -13,6 +13,7 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const DOCS = path.join(ROOT, 'docs');
 const OUT = path.join(ROOT, 'src/data/pages.json');
 const DIAGRAMS = path.join(ROOT, 'static/diagrams');
+const ACRONYMS = new Set(JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/acronyms.json'), 'utf8')).acronyms.map((a) => a.id));
 const governance = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/governance.json'), 'utf8'));
 const WAVES = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/waves.json'), 'utf8')).waves.map((w) => w.id);
 
@@ -66,6 +67,9 @@ for (const file of walk(DOCS).sort()) {
   const {data, content} = matter(fs.readFileSync(file, 'utf8'));
   const prose = content.replace(/```[\s\S]*?```/g, ''); // examples in code blocks are not diagrams
   for (const m of prose.matchAll(/<Diagram\b[^>]*\bsrc="([^"]+)"/g)) checkDiagram(rel, data, m[1]);
+  for (const m of prose.matchAll(/<Term\b[^>]*\bid="([^"]+)"/g)) {
+    if (!ACRONYMS.has(m[1])) errors.push(`${rel}: <Term id="${m[1]}"> is not in src/data/acronyms.json`);
+  }
   if (data.hide_page_meta) continue; // landing pages without ownership tracking
 
   for (const key of REQUIRED) {
