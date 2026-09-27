@@ -26,6 +26,7 @@ You build or operate a component: a Genome EDIC service, a national node, a secu
 | Which standards and data models must I use? | [8.10 Metadata and semantic interoperability](/concepts/metadata-and-interoperability) |
 | How should I deploy a national node? | [7.2 National deployment patterns](/deployment/national) |
 | Is there a reference implementation? | [2.4 Technical constraints](/constraints/technical) |
+| Which governance principles constrain my design, and what do they rule out? | [2.2 Governance principles](/constraints/governance-principles) |
 | Which decisions constrain my design? | [9. Architecture decisions](/decisions) |
 
 :::tip
