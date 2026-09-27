@@ -12,11 +12,13 @@ governance_refs:
   - "II.1"
   - "III"
   - "V.1.3"
+  - "VI.1.1"
   - "VII.3.1"
   - "VII.3.3"
   - "VII.4.3"
   - "VII.5.1"
   - "VII.5.3"
+  - "VIII.3.4"
   - "VIII.11.1"
 last_reviewed:
 toc_max_heading_level: 4
@@ -68,6 +70,12 @@ The governance is a "living document" <Cite id="dg" />. In these sections, it sa
 - **Why it matters:** access request management must support the deadline, and be able to change it.
 - **Tracked in:** no issue yet.
 
+#### Who decides on pooling for 1+MG compliant datasets {#pooling-decision}
+
+- **What is open:** for research, the governance lets each Member Country choose whether its data may be streamed or temporarily pooled with data from other countries, where the purpose can't be achieved in a federated way <GovRef id="VIII.3.4" />. For [1+MG compliant datasets](/concepts/dataset-types), it says that the decision now rests with each [1+MG Data Holder](/glossary#1mg-data-holder), and that it could be taken at country level instead, to reduce complexity <GovRef id="VIII.3.4" />. Two related questions have no answer in the governance: whether pooling is possible for uses other than research, and who judges that a purpose can't be achieved in a federated way.
+- **Why it matters:** the catalogue must show, for each dataset, whether pooling is allowed, and the secure processing environments must respect that choice.
+- **Tracked in:** [issue #91](https://github.com/GenomicDataInfrastructure/system-architecture/issues/91).
+
 #### Who informs data subjects after an access decision {#national-information-flow}
 
 - **What is open:** after a positive access decision, the [1+MG NCP](/glossary#1mg-national-coordination-point-1mg-ncp) informs the data subjects about the project, and collects consent or objections where needed <GovRef id="VII.5.3" />. The governance says that this information flow may not have to go through the 1+MG NCP, and could be organised otherwise at national level: "to be discussed" <GovRef id="VII.5.3" />.
@@ -92,13 +100,19 @@ The governance doesn't answer these questions, but the architecture needs an ans
 
 #### Who chooses the type of a dataset {#dataset-type-choice}
 
-- **What is open:** for the access decision, the governance describes two scenarios: a decision at national level, for [1+MG compliant datasets](/concepts/dataset-types), or by the Genome EDIC, for 1+MG cohort datasets <GovRef id="II.1" />. It doesn't say who chooses which scenario applies to a dataset, or at which level: per dataset, per [1+MG Data Provider](/glossary#1mg-data-provider), or for the whole country. [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) proposes that the Member Country chooses.
+- **What is open:** for the access decision, the governance describes two scenarios: a decision at national level, for 1+MG compliant datasets, or by the Genome EDIC, for 1+MG cohort datasets <GovRef id="II.1" />. It doesn't say who chooses which scenario applies to a dataset, or at which level: per dataset, per [1+MG Data Provider](/glossary#1mg-data-provider), or for the whole country. [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) proposes that the Member Country chooses.
 - **Why it matters:** the type decides who takes the access decision, and who is controller for it.
 - **Tracked in:** [issue #85](https://github.com/GenomicDataInfrastructure/system-architecture/issues/85).
 
 ### Dependencies {#dependencies}
 
 Work outside this architecture that it depends on.
+
+#### Data and metadata models from 1+MG Working Group 3 {#data-models}
+
+- **What is open:** the governance requires minimum data and metadata models, but doesn't contain them. 1+MG Working Group 3 defines them <GovRef id="II.1" />, and the [Genome EDIC Assembly of Members](/glossary#genome-edic-assembly-of-members) adopts them, with the <Acronym id="ELSI" /> metadata models <GovRef id="VI.1.1" />. Which models exist, in which version, and where they are published is not yet known.
+- **Why it matters:** data inclusion, the central data catalogue and analysis across countries all depend on common models.
+- **Tracked in:** [issue #94](https://github.com/GenomicDataInfrastructure/system-architecture/issues/94).
 
 #### EHDS requirements for health data access applications {#ehds-access-applications}
 

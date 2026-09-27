@@ -125,8 +125,8 @@ Some principles limit each other. The architecture handles them as follows.
 - **EHDS-proof, and stricter 1+MG rules.** Components meet the EHDS interfaces and the stricter 1+MG requirements at the same time <GovRef id="V.1.3" />. Some EHDS requirements are still a draft (see below).
 
 :::caution[Open points]
-- **Who decides on pooling for 1+MG compliant datasets.** The recommendation lets each Member Country choose. Its justification says that for 1+MG compliant datasets the decision now rests with each [1+MG Data Holder](/glossary#1mg-data-holder), and that it could be taken at country level instead, to reduce complexity <GovRef id="VIII.3.4" />. Listed in [11. Risks and technical debt](/risks) ([issue #91](https://github.com/GenomicDataInfrastructure/system-architecture/issues/91)).
-- **How 1+MG IT infrastructure providers are accredited** is still to be defined <GovRef id="III" />.
-- **The data and metadata models** are not part of the governance: 1+MG Working Group 3 defines them, and the Assembly of Members adopts them <GovRef id="II.1" /> <GovRef id="VI.1.1" />.
-- **The HealthData@EU implementing act is still a draft** <Cite id="hdeu-ia-draft" />, so the EHDS requirements for connection and for SPEs may still change.
+- **Who decides on pooling for 1+MG compliant datasets.** The recommendation lets each Member Country choose. Its justification says that for 1+MG compliant datasets the decision now rests with each [1+MG Data Holder](/glossary#1mg-data-holder), and that it could be taken at country level instead, to reduce complexity <GovRef id="VIII.3.4" />. See [chapter 11](/risks#pooling-decision).
+- **How 1+MG IT infrastructure providers are accredited** is still to be defined <GovRef id="III" />. See [chapter 11](/risks#accreditation).
+- **The data and metadata models** are not part of the governance: 1+MG Working Group 3 defines them, and the Assembly of Members adopts them <GovRef id="II.1" /> <GovRef id="VI.1.1" />. See [chapter 11](/risks#data-models).
+- **The HealthData@EU implementing act is still a draft** <Cite id="hdeu-ia-draft" />, so the EHDS requirements for connection and for SPEs may still change. See [chapter 11](/risks#healthdata-eu-act).
 :::
