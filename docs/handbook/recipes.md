@@ -121,7 +121,7 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 6. **Governance requirements:** for each `GovRef`, one line on how this component meets it.
 7. **Differences per type of dataset** (1+MG compliant, 1+MG cohort, externally governed), where there are any. See [8.12 Types of dataset](/concepts/dataset-types).
 8. **Reference implementation:** the matching GDI Starter Kit component (national scope) or GDI central service (European scope). A country that uses other tools must meet the interfaces above (decisions D-007, D-020).
-9. **Open points.**
+9. **Open points,** each linked to its entry in [chapter 11](/risks#open-points).
 
 **Avoid:** presenting a product as the requirement. The requirement is the function and its interfaces; the product is the reference implementation.
 
@@ -166,7 +166,7 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 3. **How it works:** mechanism, standards, diagram if useful.
 4. **Where it applies:** links to the building blocks and scenarios.
 5. **Legal and governance basis:** GDPR articles, governance sections, EHDS articles.
-6. **Open points.**
+6. **Open points,** each linked to its entry in [chapter 11](/risks#open-points).
 
 For **8.1 (data protection by design and by default)**, add a table *GDPR principle (Art. 5 and Art. 25) · mechanisms · pages*. For **8.2 (controllers and processors)**, add a table *processing operation · lifecycle phase · controller(s) · processor(s) · building block · legal basis*.
 
@@ -180,7 +180,40 @@ Use the [ADR template](/decisions/template). One decision per ADR. Keep it under
 
 ## Risks and technical debt
 
-**Headings:** a table *ID · risk or debt · probability · impact · mitigation · owner · status*. Include the points the governance itself leaves open (sections that say a point is still to be discussed or clarified), dependencies on EHDS implementing acts, and national readiness.
+Chapter 11 is the one place that lists what is not decided yet, what could go wrong, and what we owe (decision D-023). Every pull request that raises such a point adds its entry here, and the page marks the point in a box that links to the entry.
+
+**Headings:**
+
+1. **Open points and open questions,** in three groups: *open in the governance* (the governance says itself that a point is still to be defined, discussed or clarified), *open in the architecture* (the governance doesn't answer, but the architecture needs an answer), and *dependencies* (outside work we depend on).
+2. **Risks:** what could go wrong and harm the system or its users, for example national readiness.
+3. **Technical debt:** shortcuts taken on purpose, to be paid back later.
+
+**One entry per point.** Each entry is a level-4 heading with a fixed, short anchor, so that links keep working when the title changes. Add it in alphabetical order of its title within its group, so that pull requests rarely add entries at the same place.
+
+```md
+#### Who chooses the type of a dataset {#dataset-type-choice}
+
+- **What is open:** … <GovRef id="II.1" />
+- **Why it matters:** …
+- **Tracked in:** [issue #85](https://github.com/GenomicDataInfrastructure/system-architecture/issues/85).
+```
+
+For a **risk**, use *What could happen*, *Probability* (low, medium or high), *Impact* (low, medium or high), *Mitigation*, *Owner* and *Tracked in*. For **technical debt**, use *What we owe*, *Why we took it*, *Impact* and *How to pay it back*, and *Tracked in*.
+
+On the page that raises the point, link each point to its entry:
+
+```md
+:::caution[Open point]
+The governance doesn't say who chooses the type of a dataset. See [chapter 11](/risks#dataset-type-choice).
+:::
+```
+
+**Rules:**
+
+- Only the chapter 11 entry links to the GitHub issue; pages link to the entry.
+- Add every governance section an entry cites to `governance_refs` of chapter 11, one per line.
+- When a point is settled (an ADR, a new governance version, or a finished piece of work), remove its entry and update the pages that link to it. `npm run check` and `npm run build` fail while a page still links to a removed entry.
+- If two pull requests add entries at the same place, Git reports a conflict: keep both entries.
 
 ## Reference pages
 

@@ -59,7 +59,7 @@ Option 3.
 | **What the system does** | Routes the request to each 1+MG Data Holder and collects the decisions | Routes the request to the reviewers, records the Genome EDIC decision and informs stakeholders through the 1+MG NCP <GovRef id="VII.5.5" /> | Lists the dataset, sends Users to the Data Provider or the EU dataset catalogue <GovRef id="VII.3.1" />, and lets Users import the data into an SPE <GovRef id="VIII.3.3" /> |
 
 :::caution[Open point]
-The governance does not say who chooses between the two paths. This ADR assumes that the Member Country does. To be confirmed with the Genome EDIC governance bodies.
+The governance does not say who chooses between the two paths. This ADR assumes that the Member Country does. To be confirmed with the Genome EDIC governance bodies. See [chapter 11](/risks#dataset-type-choice).
 :::
 
 ## Consequences

@@ -8,26 +8,118 @@ reviewers: []
 status: placeholder
 wave: 6
 audience: [policy, legal, elsi, security, dpo, implementer]
-governance_refs: ["III", "VII.3.3", "VII.4.3", "VII.5.3", "VIII.11.1"]
+governance_refs:
+  - "II.1"
+  - "III"
+  - "V.1.3"
+  - "VII.3.1"
+  - "VII.3.3"
+  - "VII.4.3"
+  - "VII.5.1"
+  - "VII.5.3"
+  - "VIII.11.1"
 last_reviewed:
+toc_max_heading_level: 4
 ---
 
 <InShort>
 
-- _To be written: three plain-language bullets that answer the questions below._
+- This page lists what is not decided yet: points the governance itself leaves open, questions it doesn't answer, and outside work the architecture depends on. It also records the risks and the technical debt of the architecture.
+- Other pages mark each open point, risk or piece of technical debt in a box, and link to its entry here. Each entry says what is open, why it matters, and where it is tracked.
+- Risks and technical debt are added as they are found. This page is completed in writing wave 6.
 
 </InShort>
 
-## What this page must answer
+## Open points and open questions {#open-points}
 
-- Known risks, points the governance leaves open, dependencies on EHDS implementing acts, national readiness.
+Every page that depends on an undecided point marks it in an *Open point* box, and links to its entry below. When a point is settled, its entry is removed and the pages that link to it are updated.
 
-## Sources to start from
+### Open in the governance {#open-in-the-governance}
 
-- Governance: the governance is a "living document" <Cite id="dg" />. These sections say that a point is still open: <GovRef id="III" /> (accreditation details of the 1+MG IT infrastructure provider), <GovRef id="VII.3.3" /> (EHDS requirements for access applications), <GovRef id="VII.4.3" /> (checking that a User is a licensed healthcare professional), <GovRef id="VII.5.3" /> (national information flow; repeated consent or objection for healthcare reuse and recruitment into clinical trials), <GovRef id="VIII.11.1" /> (legal basis for returning incidental findings).
-- Open points of the architecture itself: who chooses between the 1+MG compliant and the 1+MG cohort path for a dataset ([ADR-0002](/decisions/0002-disclosure-paths-per-dataset), [issue #85](https://github.com/GenomicDataInfrastructure/system-architecture/issues/85)).
-- Other: <Cite id="hdeu-ia-draft" />, <Cite id="gdi-d3.4" />
+The governance is a "living document" <Cite id="dg" />. In these sections, it says itself that a point is still to be defined, discussed or clarified.
 
-:::note[Placeholder]
-This page has no content yet. The owner replaces this note and the questions above with the content.
+#### Accreditation of 1+MG IT infrastructure providers {#accreditation}
+
+- **What is open:** the IT infrastructure of a [1+MG IT infrastructure provider](/glossary#1mg-it-infrastructure-provider) must be accredited for service provision in the [Genome EDIC](/glossary#genome-edic). The details are still to be defined, jointly with 1+MG Working Group 5 and <Acronym id="GDI" /> Pillar II <GovRef id="III" />. The governance already asks for external audit and, in some cases, certification <GovRef id="V.1.3" />. How accreditation relates to them is not settled.
+- **Why it matters:** trust between the nodes of the federation rests on it, and it decides which services a provider may run.
+- **Tracked in:** [issue #93](https://github.com/GenomicDataInfrastructure/system-architecture/issues/93).
+
+#### Checking that a User is a licensed healthcare professional {#healthcare-professional-check}
+
+- **What is open:** for healthcare reuse, the [Genome EDIC CC](/glossary#genome-edic-central-coordination-genome-edic-cc) checks that the [User](/glossary#user)'s status as a healthcare professional hasn't changed <GovRef id="VII.4.3" />. Ideally, each [Genome EDIC Member Country](/glossary#genome-edic-member-country) provides a database of licensed healthcare professionals for this check. Whether and how this can be done is still under discussion, and other approaches are to be explored <GovRef id="VII.4.3" />.
+- **Why it matters:** acting under professional secrecy is the main safeguard for access in healthcare <GovRef id="VII.4.3" />. The identity and access services must be able to check it.
+- **Tracked in:** no issue yet.
+
+#### Legal basis for returning incidental findings {#incidental-findings}
+
+- **What is open:** the legal basis for a User to return incidental findings to a [data subject](/glossary#data-subject) is "not entirely ensured yet". It is to be discussed with the data protection authorities <GovRef id="VIII.11.1" />.
+- **Why it matters:** it decides whether, and how, the system supports returning findings to data subjects.
+- **Tracked in:** no issue yet.
+
+#### Repeated consent or objection for healthcare reuse and clinical trials {#repeated-consent}
+
+- **What is open:** it is "still to be clarified" whether data subjects must be asked again for consent, or given another chance to object, for healthcare reuse and for recruitment into clinical trials <GovRef id="VII.5.3" />.
+- **Why it matters:** it decides whether these uses need an extra step with the data subject before data are disclosed.
+- **Tracked in:** no issue yet.
+
+#### Review time for healthcare reuse {#healthcare-review-time}
+
+- **What is open:** the [1+MG DAC](/glossary#1mg-dac) should finish its first assessment of a healthcare reuse request within 1 working day, or up to 3 working days in justified cases. The governance says that this timeframe must be reviewed once there is experience with the process <GovRef id="VII.4.3" />.
+- **Why it matters:** access request management must support the deadline, and be able to change it.
+- **Tracked in:** no issue yet.
+
+#### Who informs data subjects after an access decision {#national-information-flow}
+
+- **What is open:** after a positive access decision, the [1+MG NCP](/glossary#1mg-national-coordination-point-1mg-ncp) informs the data subjects about the project, and collects consent or objections where needed <GovRef id="VII.5.3" />. The governance says that this information flow may not have to go through the 1+MG NCP, and could be organised otherwise at national level: "to be discussed" <GovRef id="VII.5.3" />.
+- **Why it matters:** it decides which national component informs data subjects and collects their answers, and how it connects to the Genome EDIC.
+- **Tracked in:** no issue yet.
+
+### Open in the architecture {#open-in-the-architecture}
+
+The governance doesn't answer these questions, but the architecture needs an answer.
+
+#### When a national veto applies to 1+MG cohort datasets {#national-veto}
+
+- **What is open:** the 1+MG DAC takes into account a national veto on [1+MG cohort datasets](/concepts/dataset-types), "where applicable" <GovRef id="VII.5.1" />. When a veto applies, and who may use it, is still to be detailed in [6.2.4 Review and decision](/runtime/access/review-and-decision).
+- **Why it matters:** access request management must collect and record vetoes, and the 1+MG DAC must be able to mediate them <GovRef id="VII.5.1" />.
+- **Tracked in:** no issue yet.
+
+#### Whether one dataset can be of more than one type {#dataset-multiple-types}
+
+- **What is open:** for example, whether part of a dataset can be disclosed as 1+MG compliant data and part as 1+MG cohort data. The governance doesn't say.
+- **Why it matters:** the catalogue and access request management must know the type of every dataset in a request.
+- **Tracked in:** no issue yet; related to [issue #85](https://github.com/GenomicDataInfrastructure/system-architecture/issues/85).
+
+#### Who chooses the type of a dataset {#dataset-type-choice}
+
+- **What is open:** for the access decision, the governance describes two scenarios: a decision at national level, for [1+MG compliant datasets](/concepts/dataset-types), or by the Genome EDIC, for 1+MG cohort datasets <GovRef id="II.1" />. It doesn't say who chooses which scenario applies to a dataset, or at which level: per dataset, per [1+MG Data Provider](/glossary#1mg-data-provider), or for the whole country. [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) proposes that the Member Country chooses.
+- **Why it matters:** the type decides who takes the access decision, and who is controller for it.
+- **Tracked in:** [issue #85](https://github.com/GenomicDataInfrastructure/system-architecture/issues/85).
+
+### Dependencies {#dependencies}
+
+Work outside this architecture that it depends on.
+
+#### EHDS requirements for health data access applications {#ehds-access-applications}
+
+- **What is open:** under the European Health Data Space (<Acronym id="EHDS" />), the requirements for health data access applications are still under discussion. The European Commission will set them in implementing decisions <GovRef id="VII.3.3" />. The access request form of the [1+MG User Portal](/building-blocks/european/user-portal-and-catalogue) must integrate into the EHDS form <GovRef id="VII.3.1" />.
+- **Why it matters:** the 1+MG access request form may have to change when these requirements are set.
+- **Tracked in:** no issue yet.
+
+#### The draft HealthData@EU implementing act {#healthdata-eu-act}
+
+- **What is open:** the architecture cites the Commission's draft implementing regulation on the technical requirements for [HealthData@EU](/concepts/ehds-integration) <Cite id="hdeu-ia-draft" />. Its requirements for connecting to HealthData@EU, for secure processing environments and for security may still change before it is adopted.
+- **Why it matters:** the Genome EDIC connects to HealthData@EU, and its secure processing environments should meet the EHDS rules.
+- **Tracked in:** [issue #95](https://github.com/GenomicDataInfrastructure/system-architecture/issues/95).
+
+## Risks {#risks}
+
+_None recorded yet._ A risk is something that could go wrong and harm the system or its users: for example, a Member Country not ready in time. Each risk gets an entry here, in the format of the [page recipe](/handbook/recipes#risks-and-technical-debt).
+
+## Technical debt {#technical-debt}
+
+_None recorded yet._ Technical debt is a shortcut taken on purpose, which must be paid back later: for example, a temporary manual step where the target design is automated. Each piece of debt gets an entry here, in the format of the [page recipe](/handbook/recipes#risks-and-technical-debt).
+
+:::note[To be completed in wave 6]
+The owner of this page reviews the risks and technical debt in writing wave 6, and adds national readiness and the risks of the dependencies above. Sources to start from: <Cite id="gdi-d3.4" />.
 :::

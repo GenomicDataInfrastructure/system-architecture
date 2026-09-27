@@ -72,7 +72,7 @@ These pages ask *what differs per type of dataset?* and build on this page:
 - **EHDS:** for data made available through the EHDS, the User applies through the EU dataset catalogue, to a health data access body <GovRef id="VII.3.1" /> <Cite id="ehds" />.
 
 :::caution[Open points]
-- **Who chooses the type of a dataset,** and at which level: per dataset, per 1+MG Data Provider, or for the whole country. ADR-0002 assumes the Member Country ([issue #85](https://github.com/GenomicDataInfrastructure/system-architecture/issues/85)).
-- **Whether one dataset can be of more than one type,** for example part of it disclosed as 1+MG compliant data and part as 1+MG cohort data. The governance doesn't say. Related to issue #85.
-- **When a national veto applies** to 1+MG cohort data ("where applicable") <GovRef id="VII.5.1" />: to be detailed in 6.2.4.
+- **Who chooses the type of a dataset,** and at which level: per dataset, per 1+MG Data Provider, or for the whole country. ADR-0002 assumes the Member Country. See [chapter 11](/risks#dataset-type-choice).
+- **Whether one dataset can be of more than one type,** for example part of it disclosed as 1+MG compliant data and part as 1+MG cohort data. The governance doesn't say. See [chapter 11](/risks#dataset-multiple-types).
+- **When a national veto applies** to 1+MG cohort data ("where applicable") <GovRef id="VII.5.1" />: to be detailed in 6.2.4. See [chapter 11](/risks#national-veto).
 :::
