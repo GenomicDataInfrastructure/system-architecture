@@ -2,6 +2,12 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-09-27 — 2.2 drafted and reader-tested, open points tracked (B. Pacheco with Claude)
+- 2026-09-25: merged branches deleted (remote and local). Page 2.2 *Governance principles* drafted (owner B. Pacheco, issue #7, draft PR #92): the eight principles of II.2 as design rules (a table of what each means and what it rules out, then one section per principle, each rule citing its governance section), and where principles pull in different directions. Scope note, sources and examples posted on #7.
+- 2026-09-27: reader test run twice on 2.2; fixes committed in #92 (data stay in the country "as a rule"; pooling is a national exception the governance describes for research; every node at minimum externally audited; who does what between the Assembly of Members, the Genome EDIC CC and Working Group 3; Users may keep an older dataset version, V.2.1). The reader guides for policy makers and implementers now point to 2.2. #7 steps 1 and 4–8 ticked.
+- Open points tracked in issues: #91 who decides on pooling for 1+MG compliant datasets (VIII.3.4, added to chapter 11 in #92), #93 accreditation of 1+MG IT infrastructure providers (III), #94 data and metadata models from 1+MG Working Group 3 (II.1), #95 the draft HealthData@EU implementing act. #85 (who chooses the dataset path) was already open.
+- Next: the kick-off meeting, including reviewers for 3.3 (#84) and 2.2 (#92; a legal or ELSI member); link #93–#95 from the open-point boxes of 2.2 and 3.3 and from chapter 11; wave 1 pages still without an owner: 1.3 (#4), 3.1 (#11), 12 Glossary (#69).
+
 ## 2026-09-25 — 8.12 and D-022 merged, #84 rebased (B. Pacheco with Claude)
 - #87 merged (8.12 *Types of dataset*, acronym component, D-021); issue #88 created for 8.12. In 3.3 (#84) the types of dataset link to 8.12, and the first mention of each glossary term links to its entry (18 links).
 - #89 merged: decided D-022 (link the first mention of each glossary term on a page; `<Term>` renamed `<Acronym>`, for acronyms only; broken anchors fail the build). Rule texts updated; 8.12 follows the rule. Branch deleted.
