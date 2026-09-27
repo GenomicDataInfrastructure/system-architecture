@@ -39,6 +39,24 @@ The box with owner, reviewers, audiences and governance references is generated 
 | 11 | [Risks and technical debt](#risks-and-technical-debt) |
 | 12, reader guides, national profile template | [Reference pages](#reference-pages) |
 
+## Fit with arc42
+
+Every page must cover what arc42 asks for its section, or say why not (decision D-024). Before you write (step 5 of the [page choreography](/handbook/choreography)), read the arc42 documentation for your section at `https://docs.arc42.org/section-N/`: its *content*, *motivation* and *form*, and the tips and FAQ entries it links to ([faq.arc42.org](https://faq.arc42.org)). Each recipe below starts from that guidance, and says where we depart from it.
+
+arc42 may be customised (FAQ K-1). These departures are agreed, and don't need to be explained again in a pull request:
+
+| Where | arc42 | What we do, and why |
+|---|---|---|
+| The whole document | One arc42 per system; very large systems are split into modules linked together (FAQ J-1) | One arc42 for the Genome EDIC. Chapters 5 and 7 are split by scope and by level, and each Member Country describes its choices in a national implementation profile (decisions D-005, D-018). |
+| Every page | Only the sections | An *In short* box, and a box with owner, reviewers, status and governance references. These help readers who aren't architects, and make review and traceability visible. |
+| 1.3 | A table *role · contact · expectations* | Contacts are roles, not named people: the Genome EDIC CC and each 1+MG NCP. The site is public. What readers need from the documentation is in the reader guides. |
+| Chapter 2 | Organisational and political constraints, technical constraints, conventions (FAQ C-2-2) | Pages by source: legal (2.1), governance (2.2), organisational (2.3), technical (2.4). The conventions (terminology, diagram notation, ADRs) are in this handbook, and the chapter overview links to them. |
+| 3.1 | The system as one black box; no internal components in the context view, except for large heterogeneous systems (FAQ C-3-3) | The system is shown with its European and national parts, so that the diagram shows which scope handles each exchange. |
+| 3.2 | Technical context; for information systems, often better in the deployment view (FAQ C-3-2) | Kept short: the channels and standards of each exchange. Hosting and networks are in chapter 7. |
+| 3.3 | Not an arc42 section | Added: the scopes of responsibility (decision D-018), because responsibility in the Genome EDIC doesn't follow the system boundary. |
+| Chapter 11 | Risks and technical debt, ordered by priority | Also the register of open points and open questions (decision D-023). Open points are listed alphabetically within their group; risks and debt by priority. |
+| Chapter 12 | A table *term · definition* | One heading per term, so that each term has a stable anchor for links (decision D-022). The acronyms are a table. |
+
 ---
 
 ## Chapter overview
@@ -51,6 +69,8 @@ The box with owner, reviewers, audiences and governance references is generated 
 2. One diagram that shows how the sub-pages fit together. For 5 and 5.x, this is the level-1 or level-2 building block diagram (a C4 container diagram). See [Diagrams](/handbook/diagrams).
 3. **Pages in this chapter:** one line per sub-page, saying what question it answers.
 
+For **5, 5.1, 5.2 and 5.3**, also give the reason for the decomposition: arc42 describes each level as a *white box* with an overview diagram, the reason for the decomposition, the building blocks and their important interfaces (docs.arc42.org/section-5).
+
 **Avoid:** repeating the content of the sub-pages.
 
 ## Requirements and stakeholders
@@ -59,7 +79,9 @@ The box with owner, reviewers, audiences and governance references is generated 
 
 **1.1 headings:** Requirements by lifecycle phase (inclusion, access, use), as a table: *requirement · type of use · governance section*. Then requirements that come from the EHDS rather than the governance.
 
-**1.3 headings:** a table *stakeholder · role in the governance · what they expect from the architecture · where the page answers it*.
+**1.3 headings:** a table *stakeholder · role in the governance · what they expect from the architecture · where the page answers it*. Then how to contact each group, and what readers need from the documentation.
+
+**arc42:** 1.1 briefly states the goals and the 3 to 5 most important requirements, and links to the rest (FAQ C-1-1). 1.3 lists everyone who must know the architecture, be convinced of it, work with it, or take decisions about it, with their expectations of the architecture *and* its documentation (docs.arc42.org/section-1). Search broadly: auditors and developers of external interfaces are often forgotten (FAQ C-1-3). Expectations should be confirmed with the stakeholders themselves (tip 1-20).
 
 **Tip:** keep requirements at the level of "what", not "how". The "how" belongs in chapters 4 to 8.
 
@@ -76,7 +98,7 @@ The box with owner, reviewers, audiences and governance references is generated 
 
 Example scenario: *"A User runs a subject-level query (stimulus) against the national discovery endpoint in normal operation (environment). The endpoint returns only counts at or above the agreed threshold, and logs the query (response). 100 % of test queries below the threshold return no count (measure)."*
 
-**Guidance:** docs.arc42.org/section-10, and ISO/IEC 25010 for the vocabulary of quality attributes.
+**arc42:** keep 1.2 short: the top 3 to 5 quality goals. Chapter 10 gives a quality overview (a quality tree, using ISO/IEC 25010 or the arc42 quality model) and quality scenarios: usage, change, and failure scenarios, each with a measurable response (docs.arc42.org/section-10).
 
 ## Constraints
 
@@ -85,6 +107,8 @@ Example scenario: *"A User runs a subject-level query (stimulus) against the nat
 **Headings:** one table per page: *constraint · source (legal act, governance section, standard) · consequence for the architecture*.
 
 Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2" /> (federated principle) · "Every analysis runs in an SPE. Only non-personal results leave it (see 8.8)."*
+
+**arc42:** anything that limits the freedom of design, implementation or the development process, as a table with explanations (docs.arc42.org/section-2). Types: organisational and political, technical, and conventions (FAQ C-2-2). Say what each constraint costs or rules out (tip 2-2): that is the *consequence* column.
 
 **Avoid:** explaining the law. One line per constraint, with a link to the source.
 
@@ -99,13 +123,15 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 3. For 3.2 only: **channels and protocols** per interface.
 4. For 3.3 only: **which governance actor operates which scope**, and how to read the scoped chapters 5 and 7.
 
-**Guidance:** docs.arc42.org/section-3.
+**arc42:** 3.1 shows the system as a black box, and every communication partner with its domain inputs and outputs. Combine a diagram with a table, keep it at overview level, and group similar partners. 3.2 maps those exchanges to technical channels (docs.arc42.org/section-3, FAQ C-3-1 and C-3-2). Don't show internal components in the context view (FAQ C-3-3); for our agreed exception, see [Fit with arc42](#fit-with-arc42).
 
 ## Solution strategy
 
 **Purpose:** the few fundamental choices, and why.
 
 **Headings:** a table *goal or constraint · approach we chose · where it is detailed*. Then, for each major choice, one short paragraph with the reason and a link to its ADR.
+
+**arc42:** the fundamental decisions (technology, decomposition, how the quality goals are reached, organisation), kept compact. Link each approach to the quality goals of 1.2, and always give the reason (docs.arc42.org/section-4).
 
 ## Building block
 
@@ -122,6 +148,8 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 7. **Differences per type of dataset** (1+MG compliant, 1+MG cohort, externally governed), where there are any. See [8.12 Types of dataset](/concepts/dataset-types).
 8. **Reference implementation:** the matching GDI Starter Kit component (national scope) or GDI central service (European scope). A country that uses other tools must meet the interfaces above (decisions D-007, D-020).
 9. **Open points,** each linked to its entry in [chapter 11](/risks#open-points).
+
+**arc42:** each building block is described as a *black box*: purpose and responsibility, interfaces, quality and performance characteristics, location (for us, the reference implementation), the requirements it fulfils, and open issues (docs.arc42.org/section-5). The headings above follow that template.
 
 **Avoid:** presenting a product as the requirement. The requirement is the function and its interfaces; the product is the reference implementation.
 
@@ -142,7 +170,7 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 
 **Tip:** the steps table is the traceability backbone. Every governance responsibility in `governance_refs` should appear in at least one row.
 
-**Guidance:** docs.arc42.org/section-6.
+**arc42:** only the architecturally relevant scenarios: important uses, critical external interfaces, operation, and error handling. Keep them schematic (docs.arc42.org/section-6).
 
 ## Deployment
 
@@ -154,6 +182,8 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 2. **Nodes:** a table *node · hosted by · building blocks deployed · security zone*.
 3. For 7.2: **deployment patterns.** For each pattern: when it fits (national situation), pros, cons, and an example country, if one is willing to be named.
 4. **Trust boundaries and network connections** between scopes.
+
+**arc42:** the infrastructure in levels (level 1: locations and environments; level 2: inside selected nodes), and which building blocks run where, with the reasons (docs.arc42.org/section-7). Say which environments each level needs (for example test and production) where it matters.
 
 ## Crosscutting concept
 
@@ -170,13 +200,15 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 
 For **8.1 (data protection by design and by default)**, add a table *GDPR principle (Art. 5 and Art. 25) · mechanisms · pages*. For **8.2 (controllers and processors)**, add a table *processing operation · lifecycle phase · controller(s) · processor(s) · building block · legal basis*.
 
-**Guidance:** docs.arc42.org/section-8.
+**arc42:** only the essential concepts, and how they work. Link each concept to its building blocks, and the building blocks back to it (docs.arc42.org/section-8).
 
 ## Architecture decision record
 
 Use the [ADR template](/decisions/template). One decision per ADR. Keep it under one page. State the options you rejected, and why.
 
 **When to write one:** the decision affects more than one scope, changes an interface, implements a governance choice, or was disputed in a review.
+
+**arc42:** only architecturally significant decisions, with context, decision, status (proposed, accepted, deprecated, superseded) and consequences. Give the criteria, the rejected alternatives and the date (docs.arc42.org/section-9).
 
 ## Risks and technical debt
 
@@ -188,7 +220,9 @@ Chapter 11 is the one place that lists what is not decided yet, what could go wr
 2. **Risks:** what could go wrong and harm the system or its users, for example national readiness.
 3. **Technical debt:** shortcuts taken on purpose, to be paid back later.
 
-**One entry per point.** Each entry is a level-4 heading with a fixed, short anchor, so that links keep working when the title changes. Add it in alphabetical order of its title within its group, so that pull requests rarely add entries at the same place.
+**arc42:** a list of risks and technical debt, ordered by priority, with measures to reduce them (docs.arc42.org/section-11). The open points are our addition (see [Fit with arc42](#fit-with-arc42)).
+
+**One entry per point.** Each entry is a level-4 heading with a fixed, short anchor, so that links keep working when the title changes. Add open points in alphabetical order of their title within their group, so that pull requests rarely add entries at the same place. Order risks and technical debt by priority, highest first.
 
 ```md
 #### Who chooses the type of a dataset {#dataset-type-choice}
@@ -220,3 +254,5 @@ The governance doesn't say who chooses the type of a dataset. See [chapter 11](/
 - **Glossary:** governance definitions are quoted word for word (decision D-016). Architecture terms are marked "architecture term".
 - **Reader guides:** each question links to the page that answers it. Add questions as pages are written. Remove none without asking the architecture lead.
 - **National implementation profile template:** keep it to one page per country: national actors, deployment pattern, and a table *common requirement · how the country meets it · evidence*.
+
+**arc42:** the glossary holds the important domain and technical terms, so that everyone understands them the same way, without synonyms (docs.arc42.org/section-12). For our agreed departure, see [Fit with arc42](#fit-with-arc42).
