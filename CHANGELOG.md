@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Chapter 11 records the open points and open questions (open in the governance, open in the architecture, dependencies), the risks and the technical debt, one entry each with a fixed anchor (decision D-023). It starts with 11 open points. Pages link to the entries instead of to GitHub issues; 8.12 and ADR-0002 do so.
+- `npm run check`: an *Open point*, *Risk* or *Technical debt* box must link each point to its entry in chapter 11, and links to `/risks#…` must match an entry. Direct issue links in pages give a warning.
 - Concept page 8.12 *Types of dataset*: the three types, the rule, how each lifecycle phase differs per type, where it applies, and the open points.
 - `<Acronym>` component (named `<Term>` until decision D-022): the first use of an acronym on a page shows its meaning as a tooltip and links to the glossary. Acronyms live in `src/data/acronyms.json`, which also generates the glossary's acronym table (decision D-021); `npm run check` rejects unknown acronyms. New acronyms: 1+MG, CC, IP.
 - `<Diagram>` component for draw.io diagrams saved as `.drawio.svg` in `static/diagrams/` (one file is both the editable source and the image; white background and a legend with section and last edit).
@@ -28,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Writing rule: open points, risks and technical debt are recorded in chapter 11 in the pull request that raises them (decision D-023), in `AGENTS.md` (rule 10), `CONTRIBUTING.md`, the page choreography, the recipe for chapter 11, the review checklist and the pull request template.
 - Writing rule: the first mention of each glossary term on a page links to its glossary entry, or to the concept page that explains it (decision D-022), in `AGENTS.md`, `CONTRIBUTING.md`, the page choreography, the review checklist and the pull request template. 8.12 follows it.
 - `<Term>` is renamed `<Acronym>` and stays for acronyms only (decision D-022); `npm run check` reports any `<Term>` left.
 - `npm run build` fails on a link to an anchor that doesn't exist, such as a glossary entry whose heading changed (`onBrokenAnchors: 'throw'`).

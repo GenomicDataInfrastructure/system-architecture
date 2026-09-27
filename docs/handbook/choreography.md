@@ -108,7 +108,7 @@ Early feedback on the outline is cheaper than rewriting a finished page.
 - **Start with the diagram or the table,** then explain it. Readers look at the picture first.
 - **Cite as you go.** Each claim that comes from the governance gets `<GovRef id="…" />`, and each claim from another source gets `<Cite id="…" />`. List every governance section you implement in `governance_refs`.
 - **Name the scope and the actor** for every component and every step.
-- **Say what is not decided.** Use `:::caution[Open point]` for anything that still needs a decision, and add it to chapter 11 (Risks) through an issue.
+- **Say what is not decided,** and what could go wrong. Record each open point, risk or piece of technical debt as an entry in [chapter 11](/risks), in this pull request, with its issue ([recipe](/handbook/recipes#risks-and-technical-debt)). On the page, mark it in a `:::caution[Open point]`, `:::caution[Risk]` or `:::caution[Technical debt]` box that links to its entry (decision D-023).
 - **Link, don't repeat.** If another page explains something, link to it.
 
 If you use an AI assistant, give it `AGENTS.md`, the page file, and the sources you gathered. Check every claim and every citation it produces against the source. You remain the author.
@@ -123,7 +123,7 @@ If you use an AI assistant, give it `AGENTS.md`, the page file, and the sources 
 - [ ] Every question in the scope note is answered, or explicitly moved to another page.
 - [ ] `governance_refs` lists every governance section the page implements.
 - [ ] Every scope, actor and governance term matches the glossary. Its first mention on the page links to its glossary entry, and the first use of each acronym is linked with `<Acronym>`.
-- [ ] Open points are marked and have an issue.
+- [ ] Open points, risks and technical debt are marked on the page, each linked to its entry in chapter 11, and each entry names its issue.
 - [ ] `npm run check` and `npm run build` pass. You checked the page in the local preview (`npm start`).
 - [ ] **Reader test:** give the page to someone outside the subject, or to an AI assistant with no other context, together with the questions from the page's reader guides. Fix what they got wrong.
 
@@ -154,7 +154,7 @@ If you use an AI assistant, give it `AGENTS.md`, the page file, and the sources 
 
 **Who:** the owner.
 
-- **New questions or gaps** found while writing: open an issue for each (template *Page task* or *Reader question*).
+- **New questions or gaps** found while writing: open an issue for each (template *Page task* or *Reader question*). If it is an open point, a risk or technical debt, it also gets an entry in chapter 11.
 - **Decisions taken** during writing or review: make sure each has an ADR.
 - **Reader guides:** if the page answers a question that isn't in the guides yet, add it to the matching guide.
 - **Tell the taskforce** in the regular meeting or channel that the page is approved, so that pages in the next wave can build on it.

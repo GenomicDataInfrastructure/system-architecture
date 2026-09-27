@@ -24,6 +24,12 @@ const REQUIRED = ['title', 'slug', 'owner', 'reviewers', 'status', 'audience', '
 const REVIEW_MAX_AGE_DAYS = 180;
 
 const govIds = new Set(governance.sections.map((s) => s.id));
+
+// Chapter 11 holds the open points, risks and technical debt (decision D-023). Its anchors are the
+// explicit heading ids ({#id}); pages link to them, and boxes that mark these points must do so.
+const RISKS_PAGE = path.join(DOCS, 'arc42/11-risks-and-technical-debt/index.md');
+const RISKS_ANCHORS = new Set([...fs.readFileSync(RISKS_PAGE, 'utf8').matchAll(/^#+ .*\{#([a-z0-9-]+)\}\s*$/gm)].map((m) => m[1]));
+const REGISTER_BOX = /^:::(?:caution|warning|note)\[(Open points?|Risks?|Technical debt)\]([\s\S]*?)^:::/gm;
 const check = process.argv.includes('--check');
 
 function walk(dir) {
@@ -71,6 +77,19 @@ for (const file of walk(DOCS).sort()) {
     if (!ACRONYMS.has(m[1])) errors.push(`${rel}: <Acronym id="${m[1]}"> is not in src/data/acronyms.json`);
   }
   if (/<Term\b/.test(prose)) errors.push(`${rel}: <Term> is renamed <Acronym> (decision D-022)`);
+  for (const m of prose.matchAll(/\]\(\/risks#([^)\s]+)\)/g)) {
+    if (!RISKS_ANCHORS.has(m[1])) errors.push(`${rel}: links to /risks#${m[1]}, which is not an entry in chapter 11`);
+  }
+  for (const m of prose.matchAll(REGISTER_BOX)) {
+    const items = m[2].split('\n').filter((l) => /^\s*[-*] /.test(l));
+    const unlinked = (items.length ? items : [m[2]]).filter((t) => !/\]\(\/risks#[^)]+\)/.test(t));
+    for (const t of unlinked) {
+      errors.push(`${rel}: "${m[1]}" box: link each point to its entry in chapter 11 (/risks#…, decision D-023): "${t.trim().slice(0, 60)}…"`);
+    }
+  }
+  if (!data.hide_page_meta && data.slug !== '/risks' && /github\.com\/[^)\s]+\/issues\/\d+/.test(prose)) {
+    warnings.push(`${rel}: links to a GitHub issue; link to the point's entry in chapter 11 instead (decision D-023)`);
+  }
   if (data.hide_page_meta) continue; // landing pages without ownership tracking
 
   for (const key of REQUIRED) {
