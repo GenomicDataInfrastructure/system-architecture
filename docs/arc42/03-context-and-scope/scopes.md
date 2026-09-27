@@ -87,7 +87,7 @@ Whatever type a dataset is given, the system supports its path. It also lists ex
 A scope is not the same as a controller. For 1+MG cohort datasets, the Genome EDIC (European scope) decides on access, but the data stay with a 1+MG Data Host in the country (national scope). [8.2 Controllers, processors and responsibilities](/concepts/roles) gives the controllers and processors for each processing operation.
 
 :::caution[Open point]
-The governance does not say who chooses the type of a dataset, and so its path. ADR-0002 assumes that the Member Country does ([issue #85](https://github.com/GenomicDataInfrastructure/system-architecture/issues/85)). This is to be confirmed with the Genome EDIC governance bodies.
+The governance does not say who chooses the type of a dataset, and so its path. ADR-0002 assumes that the Member Country does. This is to be confirmed with the Genome EDIC governance bodies. See [chapter 11](/risks#dataset-type-choice).
 :::
 
 ## The 1+MG IT infrastructure provider: a role, not a scope
@@ -102,7 +102,7 @@ So each building block names two things:
 This split matches the split between controller and processor in [8.2](/concepts/roles).
 
 :::caution[Open point]
-The details of this role, including accreditation, are still to be defined jointly with 1+MG Working Group 5 and <Acronym id="GDI" /> Pillar II <GovRef id="III" />. See [11. Risks and technical debt](/risks).
+The details of this role, including accreditation, are still to be defined jointly with 1+MG Working Group 5 and <Acronym id="GDI" /> Pillar II <GovRef id="III" />. See [chapter 11](/risks#accreditation).
 :::
 
 ## Scopes and deployment levels
