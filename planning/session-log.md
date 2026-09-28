@@ -2,6 +2,18 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-09-28 — Glossary claimed; ADR-0002 broadened with implementation in steps (B. Pacheco with Claude)
+- Before claiming the glossary: the four open wave 1 branches (1.3, 2.2, 3.1, 3.3) don't edit the glossary or `acronyms.json`, and all their glossary links and `<Acronym>` IDs resolve on `main`.
+- 12 *Glossary* claimed (owner B. Pacheco, issue #69, draft PR #117): European and national scope aligned with D-018 and the 3.3 draft; intro to the architecture terms, linking to 3.3; the three types of dataset point on to 8.12; the intro explains the order of the terms. No heading changed. Questions in the PR: "User organisation" (governance) versus "User Organisation" (all other pages); "Genome EDIC General Assembly" in one definition; candidate terms (key-coded identifier, 1+MG minimum dataset).
+- ADR-0002 *Who decides on access, per type of dataset* (issue #83, draft PR #118) broadened: seven situations the decision must cover; five criteria; options A1–A5 (which types the system supports) and B1–B3 (who chooses the type); decision A5 + B1. New *Implementation in steps* in the consequences: step 1 is GDI, with externally governed datasets only (Genome of Europe data) and discovery without an access decision; then 1+MG compliant, then 1+MG cohort datasets once the Genome EDIC is operational; later the EHDS. The type of dataset is part of the interfaces from step 1. Source: GDI D3.4 (§1, §4.3, §4.8), which also says the May 2025 vote on national access decisions is interim until the EHDS. Also: first mentions linked, open points #104 and #105 added to the box.
+- New chapter 11 dependency `genome-edic-operational` (#116), in #118.
+- Both PRs: signed commits; check, build and CI pass.
+- Next:
+  - reviewers for #117 and #118 (with those for 3.3, 2.2, 3.1 and 1.3 at the kick-off);
+  - confirm in #118 where the "externally governed first" decision is recorded besides D3.4, the order "1+MG compliant before 1+MG cohort", and whether to split the steps into their own ADR (the ADR is now longer than one page);
+  - answer the glossary questions in #117;
+  - scope note, sources and reader test for #69 and #83 (steps 3–5 and 8).
+
 ## 2026-09-28 — Pages checked against arc42 (D-024); 1.3 drafted and reader-tested (B. Pacheco with Claude)
 - Decided D-024 (#112 merged): every page is checked against the arc42 documentation for its section (docs.arc42.org, its tips and FAQ) at step 5 and in the self-check. The recipes now say what arc42 asks for each chapter, and list our departures: one document with scoped chapters (FAQ J-1), 1.3 contacts as roles, 3.1 split into its European and national parts (FAQ C-3-3), 3.3 added, chapter 11 as the register (open points in alphabetical order, risks and debt by priority), and glossary headings. Other departures are explained in the pull request, which now has a checkbox for it. The site credits arc42's authors and its CC BY-SA 4.0 licence (introduction, README, footer). The check found gaps only in 1.3, which was not written yet.
 - Page 1.3 *Stakeholders* drafted (owner B. Pacheco, issue #4, draft PR #114). It has:
