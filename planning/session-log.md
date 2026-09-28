@@ -2,6 +2,15 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-09-28 — 1.3 re-checked against the glossary and ADR-0002 (B. Pacheco with Claude)
+- #120 merged (previous session log); branch deleted.
+- 1.3 *Stakeholders* (#4, draft PR #114) aligned with #117 and #118: the 1+MG IT infrastructure provider is "a role, in any scope" (as in D-018, 3.3 and the glossary; this settles the question the PR had left for reviewers); the GDI project gives access only to externally governed datasets until it ends, the other types follow once the Genome EDIC is operational (ADR-0002, proposed; cites `gdi-d3.4`). No new reader test: two lines changed.
+- #114 merges cleanly with #84, #92, #110, #117 and #118. #4 now has steps 1 and 3–8 ticked, like #69 and #83; the re-check is posted on #4.
+- Next:
+  - decide which `needs-…` labels #4 gets (the page touches legal, security, DPO and ELSI duties; the PR template lists all four sign-offs);
+  - reviewers for #114, #117 and #118 (with those for 3.3, 2.2 and 3.1 at the kick-off);
+  - the open questions in #117 and #118 (see the entry below).
+
 ## 2026-09-28 — Glossary and ADR-0002: steps 3–8 done, reader-tested (B. Pacheco with Claude)
 - #119 merged (previous session log); branch deleted. Both #69 and #83 now have steps 1 and 3–8 ticked; only reviewers (step 2), review and approval remain.
 - 12 *Glossary* (#69, draft PR #117):
