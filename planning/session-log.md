@@ -2,6 +2,17 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-09-28 — 3.3 and 2.2 re-checked against the glossary, ADR-0002 and 1.3 (B. Pacheco with Claude)
+- 3.3 *Scopes* (#13, draft PR #84): the Member Country chooses between the two 1+MG types, and the level of the choice is still to be confirmed (as in ADR-0002); flag what GDI delivers (D-006, cites `gdi-d3.4`). The glossary already follows 3.3.
+- 2.2 *Governance principles* (#7, draft PR #92): Users start from the 1+MG User Portal whatever the type of dataset; for externally governed datasets the portal sends them to the dataset's own procedure (VII.3.1, as in ADR-0002).
+- D-022 checked on all wave 1 branches: the types of dataset link to 8.12. Fixed in 2.2 and in 3.1 (#110), which linked "externally governed datasets" to the glossary.
+- #84 and #92 merge cleanly with `main` and with every other open wave 1 PR. Both patches were checked with `npm run check` and `npm run build` before committing. No new reader tests: a few sentences changed.
+- #13 and #7 now have steps 1 and 3–8 ticked: all six wave 1 pages (#4, #7, #11, #13, #69, #83) are at the same point, waiting for reviewers.
+- Next:
+  - the kick-off: reviewers for all six pages, and the `needs-…` labels for #4, #7 and #11 (#13 has `needs-legal`, #83 has `needs-legal` and `needs-dpo`);
+  - the open questions in #117 and #118;
+  - after #84 is merged, retarget #110 to `main`.
+
 ## 2026-09-28 — 3.1 re-checked against the glossary, ADR-0002 and 1.3 (B. Pacheco with Claude)
 - #121 merged (previous session log); branch deleted.
 - 3.1 *Business context* (#11, draft PR #110, still stacked on #84) already matched #114, #117 and #118. One addition, to flag what GDI delivers (D-006): until the GDI project ends, externally governed datasets are the only datasets Users can get access to through the system, for example Genome of Europe data (cites `gdi-d3.4`; ADR-0002, proposed). No new reader test: one sentence added.
