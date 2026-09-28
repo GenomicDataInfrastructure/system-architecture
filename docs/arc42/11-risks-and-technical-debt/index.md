@@ -114,6 +114,12 @@ Work outside this architecture that it depends on.
 - **Why it matters:** the Genome EDIC connects to HealthData@EU, and its secure processing environments should meet the EHDS rules.
 - **Tracked in:** [issue #95](https://github.com/GenomicDataInfrastructure/system-architecture/issues/95).
 
+#### The Genome EDIC must be operational {#genome-edic-operational}
+
+- **What is open:** the paths for [1+MG compliant and 1+MG cohort datasets](/concepts/dataset-types) need the Genome EDIC: the [Genome EDIC CC](/glossary#genome-edic-central-coordination-genome-edic-cc) is the one-stop shop for Users, and the [1+MG DAC](/glossary#1mg-dac) reviews access requests <GovRef id="III" />. The Genome EDIC can't be assumed to be in place before GDI ends <Cite id="gdi-d3.4" />.
+- **Why it matters:** until then, the system offers only externally governed datasets. [ADR-0002](/decisions/0002-disclosure-paths-per-dataset#implementation-in-steps) adds the other two types in later steps.
+- **Tracked in:** [issue #116](https://github.com/GenomicDataInfrastructure/system-architecture/issues/116).
+
 ## Risks {#risks}
 
 _None recorded yet._ A risk is something that could go wrong and harm the system or its users: for example, a Member Country not ready in time. Each risk gets an entry here, in the format of the [page recipe](/handbook/recipes#risks-and-technical-debt).
