@@ -3,7 +3,7 @@ title: "12. Glossary"
 sidebar_label: "12. Glossary"
 slug: /glossary
 sidebar_position: 12
-owner: TBD
+owner: "@brunopacheco1"
 reviewers: []
 status: draft
 wave: 1
@@ -22,7 +22,7 @@ last_reviewed:
 
 ## Terms from the governance
 
-The definitions below are quoted word for word from the 1+MG Data Governance master document (version 2025-12), published as the annex of GDI D2.4 <Cite id="dg" />, <GovRef id="III" long />. Words in square brackets are in the original, except "[catalogue]", which we added where a word is missing. If the governance changes a definition, update it here. On other pages, the first mention of each term links to its entry here.
+The definitions below are quoted word for word from the 1+MG Data Governance master document (version 2025-12), published as the annex of GDI D2.4 <Cite id="dg" />, <GovRef id="III" long />. Words in square brackets are in the original, except "[catalogue]", which we added where a word is missing. If the governance changes a definition, update it here. The terms follow the governance's order: alphabetical, ignoring the prefixes "1+MG" and "Genome EDIC". On other pages, the first mention of each term links to its entry here.
 
 ### Genome EDIC Assembly of Members
 
@@ -36,9 +36,13 @@ Support staff in the Genome EDIC; the Genome EDIC CC is responsible for operatio
 
 Datasets that can be disclosed to Users by the Genome EDIC as controller in accordance with the 1+MG data governance.
 
+_How the architecture handles this type: [8.12 Types of dataset](/concepts/dataset-types)._
+
 ### 1+MG compliant datasets
 
 Datasets that can be disclosed to Users by 1+MG Data Holders as controllers in accordance with the 1+MG data governance.
+
+_How the architecture handles this type: [8.12 Types of dataset](/concepts/dataset-types)._
 
 ### 1+MG compliant local IT infrastructure
 
@@ -71,6 +75,8 @@ A natural person whose data are made available in the Genome EDIC. By principle,
 ### Externally governed datasets
 
 Datasets that should meet certain inclusion criteria on quality and ELSI, based on which they are made findable in the [catalogue] and will be made available to Users in the 1+MG IT infrastructure but not according to the 1+MG data governance.
+
+_How the architecture handles this type: [8.12 Types of dataset](/concepts/dataset-types)._
 
 ### Genome EDIC
 
@@ -114,13 +120,15 @@ The legal entity under which the User is operating.
 
 ## Architecture terms
 
+The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run (decision D-018). [3.3 European, national and User Organisation scopes](/context/scopes) explains them in more depth.
+
 ### European scope
 
-What the Genome EDIC is responsible for: the services operated by the Genome EDIC Central Coordination for all Member Countries, including the support for the 1+MG DAC. _Architecture term._
+What the Genome EDIC is responsible for: its bodies (the Genome EDIC Assembly of Members, the Genome EDIC Central Coordination and the 1+MG DAC), the common rules, and the services the Genome EDIC Central Coordination runs for all Member Countries. _Architecture term._
 
 ### National scope
 
-What a Genome EDIC Member Country is responsible for: the building blocks of the 1+MG NCP, the 1+MG Data Holders, the 1+MG Data Providers, the 1+MG Data Hosts and the Local DACs in that country. The Member Country decides which organisations take these roles. _Architecture term._
+What a Genome EDIC Member Country is responsible for: the building blocks of the 1+MG NCP, the 1+MG Data Holders, the 1+MG Data Providers, the 1+MG Data Hosts, the Local DACs and the other Genome EDIC national entities in that country. The Member Country decides which organisations take these roles. _Architecture term._
 
 ### User Organisation scope
 
