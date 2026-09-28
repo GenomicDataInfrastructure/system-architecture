@@ -8,7 +8,7 @@ reviewers: []
 status: draft
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
-governance_refs: ["III"]
+governance_refs: ["III", "VII.3.1", "VII.5.4", "VII.5.5"]
 last_reviewed:
 ---
 
@@ -36,13 +36,13 @@ Support staff in the Genome EDIC; the Genome EDIC CC is responsible for operatio
 
 Datasets that can be disclosed to Users by the Genome EDIC as controller in accordance with the 1+MG data governance.
 
-_How the architecture handles this type: [8.12 Types of dataset](/concepts/dataset-types)._
+_In the architecture: the Genome EDIC decides on access; the Genome EDIC CC adopts and documents the decision <GovRef id="VII.5.5" />. See [8.12 Types of dataset](/concepts/dataset-types)._
 
 ### 1+MG compliant datasets
 
 Datasets that can be disclosed to Users by 1+MG Data Holders as controllers in accordance with the 1+MG data governance.
 
-_How the architecture handles this type: [8.12 Types of dataset](/concepts/dataset-types)._
+_In the architecture: a 1+MG Data Holder in the Member Country decides on access <GovRef id="VII.5.4" />. See [8.12 Types of dataset](/concepts/dataset-types)._
 
 ### 1+MG compliant local IT infrastructure
 
@@ -76,7 +76,7 @@ A natural person whose data are made available in the Genome EDIC. By principle,
 
 Datasets that should meet certain inclusion criteria on quality and <Acronym id="ELSI" />, based on which they are made findable in the [catalogue] and will be made available to Users in the 1+MG IT infrastructure but not according to the 1+MG data governance.
 
-_How the architecture handles this type: [8.12 Types of dataset](/concepts/dataset-types)._
+_In the architecture: access follows the dataset's own rules, set by its data provider or by a health data access body under the EHDS; the Genome EDIC doesn't decide on access <GovRef id="VII.3.1" />. See [8.12 Types of dataset](/concepts/dataset-types)._
 
 ### Genome EDIC
 
@@ -87,7 +87,7 @@ The central legal entity incorporating the 1+MG infrastructure. It is establishe
 An entity that makes an IT environment on the central, national and local level, as applicable, that may host data and metadata of 1+MG and enables local or federated workflows through suitable tools. The 1+MG IT infrastructure must be accredited for service provision in the Genome EDIC. [The details are to be defined jointly with 1+MG <Acronym id="WG">WG5</Acronym>/Pillar II.]
 
 :::caution[Open point]
-The governance still has to define how the 1+MG IT infrastructure is accredited. See [chapter 11](/risks#accreditation).
+The details of the 1+MG IT infrastructure, including how it is accredited, are still to be defined, jointly with 1+MG Working Group 5 and GDI Pillar II. See [chapter 11](/risks#accreditation).
 :::
 
 ### Local DAC
@@ -124,7 +124,7 @@ The legal entity under which the User is operating.
 
 ## Architecture terms
 
-The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run (decision D-018). [3.3 European, national and User Organisation scopes](/context/scopes) explains them in more depth, with a diagram of which actor belongs to which scope.
+The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run (decision D-018). [3.3 European, national and User Organisation scopes](/context/scopes) explains them in more depth, with a diagram of which actor belongs to which scope. Two actors are not tied to one scope. A 1+MG IT infrastructure provider can work for any of the three. Data subjects are the people the data are about, and have no responsibility in the system.
 
 ### European scope
 
