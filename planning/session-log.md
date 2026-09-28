@@ -2,6 +2,15 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-09-28 — 3.1 re-checked against the glossary, ADR-0002 and 1.3 (B. Pacheco with Claude)
+- #121 merged (previous session log); branch deleted.
+- 3.1 *Business context* (#11, draft PR #110, still stacked on #84) already matched #114, #117 and #118. One addition, to flag what GDI delivers (D-006): until the GDI project ends, externally governed datasets are the only datasets Users can get access to through the system, for example Genome of Europe data (cites `gdi-d3.4`; ADR-0002, proposed). No new reader test: one sentence added.
+- #110 merges cleanly with `main`, #92, #114, #117 and #118. #11 now has steps 1 and 3–8 ticked, like #4, #69 and #83; the re-check is posted on #11.
+- Next:
+  - decide which `needs-…` labels #4 and #11 get (both pages touch legal, security, DPO and ELSI duties);
+  - the same re-check for 3.3 (#13, #84) and 2.2 (#7, #92);
+  - reviewers for all wave 1 PRs at the kick-off, and the open questions in #117 and #118.
+
 ## 2026-09-28 — 1.3 re-checked against the glossary and ADR-0002 (B. Pacheco with Claude)
 - #120 merged (previous session log); branch deleted.
 - 1.3 *Stakeholders* (#4, draft PR #114) aligned with #117 and #118: the 1+MG IT infrastructure provider is "a role, in any scope" (as in D-018, 3.3 and the glossary; this settles the question the PR had left for reviewers); the GDI project gives access only to externally governed datasets until it ends, the other types follow once the Genome EDIC is operational (ADR-0002, proposed; cites `gdi-d3.4`). No new reader test: two lines changed.
