@@ -2,6 +2,24 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-09-28 — Pages checked against arc42 (D-024); 1.3 drafted and reader-tested (B. Pacheco with Claude)
+- Decided D-024 (#112 merged): every page is checked against the arc42 documentation for its section (docs.arc42.org, its tips and FAQ) at step 5 and in the self-check. The recipes now say what arc42 asks for each chapter, and list our departures: one document with scoped chapters (FAQ J-1), 1.3 contacts as roles, 3.1 split into its European and national parts (FAQ C-3-3), 3.3 added, chapter 11 as the register (open points in alphabetical order, risks and debt by priority), and glossary headings. Other departures are explained in the pull request, which now has a checkbox for it. The site credits arc42's authors and its CC BY-SA 4.0 licence (introduction, README, footer). The check found gaps only in 1.3, which was not written yet.
+- Page 1.3 *Stakeholders* drafted (owner B. Pacheco, issue #4, draft PR #114). It has:
+  - a table of the twelve governance actors: their role, what they expect from the architecture (derived from their duties), and where it is answered;
+  - how to reach each group: the Genome EDIC CC, each 1+MG NCP, and GitHub issues for the taskforce;
+  - the other stakeholders, the six kinds of readers, and who decides on the architecture.
+- 1.3 was reader-tested twice, and the fixes are included:
+  - the Genome EDIC CC provides the minimum requirements for the audit and certification framework (V.1.2), while the Assembly of Members adopts the policies;
+  - IT infrastructure providers are audited and/or certified, and certification is required for an SPE that pools data from several countries (V.1.3);
+  - missing stakeholders were added.
+- New chapter 11 entry `architecture-adoption` (#113): no body adopts the architecture as a whole, and the taskforce's decision process is not set. The page also links the `accreditation` entry (#93). The reader guides for policy makers and legal experts point to 1.3. Scope note, sources and examples are on #4, with steps 1 and 4–8 ticked. The changes merge cleanly with `main`, #92 and #110. Merged branch `arc42-fit` deleted.
+- Next:
+  - the kick-off meeting: reviewers for 3.3 (#84), 2.2 (#92), 3.1 (#110) and 1.3 (#114); an owner for chapter 11; who adopts the architecture (#113);
+  - a legal look at the licence mix raised in #112 (our content is CC BY 4.0, the arc42 structure is CC BY-SA 4.0);
+  - after #84 is merged, check that #110 moves to `main`;
+  - after #92 is merged, keep one link to *1+MG Data Provider* in chapter 11;
+  - the only wave 1 page still without an owner is 12 Glossary (#69).
+
 ## 2026-09-27 — 2.2 and 3.1 drafted and reader-tested; chapter 11 register and its issues (B. Pacheco with Claude)
 - 2026-09-25: merged branches deleted (remote and local). Page 2.2 *Governance principles* drafted (owner B. Pacheco, issue #7, draft PR #92): the eight principles of II.2 as design rules (a table of what each means and what it rules out, then one section per principle, each rule citing its governance section), and where principles pull in different directions. Scope note, sources and examples posted on #7.
 - 2026-09-27: reader test run twice on 2.2; fixes committed in #92 (data stay in the country "as a rule"; pooling is a national exception the governance describes for research; every node at minimum externally audited; who does what between the Assembly of Members, the Genome EDIC CC and Working Group 3; Users may keep an older dataset version, V.2.1). The reader guides for policy makers and implementers now point to 2.2. #7 steps 1 and 4–8 ticked.
