@@ -103,7 +103,7 @@ Implementations and procedures should scale to large data volumes and many Users
 The data should behave, as much as possible, as one single cohort <GovRef id="II.2" />.
 
 - **Common data models.** 1+MG Working Group 3 defines the data models, ontologies (shared vocabularies) and metadata models <GovRef id="II.1" />. The Assembly of Members adopts them, with quality labels <GovRef id="VI.1.1" />. [1+MG Data Providers](/glossary#1mg-data-provider) transform their data into these models <GovRef id="VI.2.2" />. The [1+MG NCP](/glossary#1mg-national-coordination-point-1mg-ncp) checks that they do, before the data are made available <GovRef id="VI.4.4" />. See [5.2.6](/building-blocks/national/data-transformation) and 8.10.
-- **One catalogue, one portal, one procedure.** Users find all data in one central data catalogue <GovRef id="VII.2.1" /> and apply through the 1+MG User Portal <GovRef id="VII.3.1" />, whatever the country or the type of dataset.
+- **One catalogue, one portal, one procedure.** Users find all data in one central data catalogue <GovRef id="VII.2.1" /> and start from the 1+MG User Portal, whatever the country or the type of dataset. For 1+MG data they apply there; for externally governed datasets the portal sends them to the dataset's own procedure <GovRef id="VII.3.1" />.
 - **Analysis across countries.** SPEs should allow efficient analysis of data from several 1+MG Data Providers and Member Countries, ideally federated across the national SPEs <GovRef id="VIII.3.3" />.
 
 ### Federated
@@ -113,7 +113,7 @@ Personal data are held in a federated IT infrastructure. Users can only download
 - **Analysis runs in a 1+MG SPE.** No download is possible, so each Member Country provides SPEs, and they all meet the same minimum requirements <GovRef id="VIII.3.3" />. See [5.2.3](/building-blocks/national/spe) and [6.3.2](/runtime/use/processing-in-spe).
 - **Only non-personal results reach the User.** Users must not export personal data <GovRef id="VIII.2.2" />. See [8.8 Output control](/concepts/output-control).
 - **Pooling is an exception, chosen nationally.** For research, the governance lets each Member Country keep its data federated only. It may instead allow "data streaming" (which the governance doesn't define further) or temporary pooling with data from other countries, where the purpose of the research can't be achieved otherwise. The choice is recorded as ELSI metadata in the dataset descriptions <GovRef id="VIII.3.4" />. An SPE that pools data from other Member Countries must be certified <GovRef id="V.1.3" />. The governance describes this choice for research only. Who takes it for 1+MG compliant datasets is still open (see below).
-- **Own data and tools come in.** Users may bring their own data and software into the SPE, after a security review. This includes data from HDABs and [externally governed datasets](/glossary#externally-governed-datasets) <GovRef id="VIII.3.1" />.
+- **Own data and tools come in.** Users may bring their own data and software into the SPE, after a security review. This includes data from HDABs and [externally governed datasets](/concepts/dataset-types) <GovRef id="VIII.3.1" />.
 - **Reproducibility without download.** As Users can't download personal data, the data must stay available through the Genome EDIC and its national entities, so that analyses can be run again <GovRef id="VIII.8.1" /> <GovRef id="VIII.8.2" />. See [6.3.7](/runtime/use/archiving).
 
 ## Where principles pull in different directions
