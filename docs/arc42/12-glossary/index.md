@@ -22,7 +22,7 @@ last_reviewed:
 
 ## Terms from the governance
 
-The definitions below are quoted word for word from the 1+MG Data Governance master document (version 2025-12), published as the annex of GDI D2.4 <Cite id="dg" />, <GovRef id="III" long />. Words in square brackets are in the original, except "[catalogue]", which we added where a word is missing. If the governance changes a definition, update it here. The terms follow the governance's order: alphabetical, ignoring the prefixes "1+MG" and "Genome EDIC". On other pages, the first mention of each term links to its entry here.
+The definitions below are quoted word for word from the 1+MG Data Governance master document (version 2025-12), published as the annex of <Acronym id="GDI" /> D2.4 <Cite id="dg" />, <GovRef id="III" long />. Words in square brackets are in the original, except "[catalogue]", which we added where a word is missing. If the governance changes a definition, update it here. The terms follow the governance's order: alphabetical, ignoring the prefixes "1+MG" and "Genome EDIC". On other pages, the first mention of each term links to its entry here.
 
 ### Genome EDIC Assembly of Members
 
@@ -64,9 +64,9 @@ An entity that physically holds 1+MG compliant data or 1+MG cohort datasets in 1
 
 An organisation that, individually or jointly with other 1+MG Data Providers, can form at least one category of 1+MG minimum datasets from data it processes as controller for its own purposes, and makes these data available within the Genome EDIC Secondary Use Framework in accordance with the 1+MG Data Governance. The actual datasets may be broader and contain more data types than the respective 1+MG minimum dataset.
 
-A 1+MG Data Provider may be, but is not necessarily, the same entity as the 1+MG Data Holder. A 1+MG Data Provider may also be a health data holder in the EHDS. 1+MG Data Providers must be based in a country that is a full member of the Genome EDIC.
+A 1+MG Data Provider may be, but is not necessarily, the same entity as the 1+MG Data Holder. A 1+MG Data Provider may also be a health data holder in the <Acronym id="EHDS" />. 1+MG Data Providers must be based in a country that is a full member of the Genome EDIC.
 
-They must be able to demonstrate a legal basis to make the data available in 1+MG. Such a legal basis can be established through consent under Art. 6.1 and 9.2 GDPR or through a legislative act on the country/region or Union level that explicitly mandates them for such a data sharing.
+They must be able to demonstrate a legal basis to make the data available in 1+MG. Such a legal basis can be established through consent under Art. 6.1 and 9.2 <Acronym id="GDPR" /> or through a legislative act on the country/region or Union level that explicitly mandates them for such a data sharing.
 
 ### Data subject
 
@@ -74,7 +74,7 @@ A natural person whose data are made available in the Genome EDIC. By principle,
 
 ### Externally governed datasets
 
-Datasets that should meet certain inclusion criteria on quality and ELSI, based on which they are made findable in the [catalogue] and will be made available to Users in the 1+MG IT infrastructure but not according to the 1+MG data governance.
+Datasets that should meet certain inclusion criteria on quality and <Acronym id="ELSI" />, based on which they are made findable in the [catalogue] and will be made available to Users in the 1+MG IT infrastructure but not according to the 1+MG data governance.
 
 _How the architecture handles this type: [8.12 Types of dataset](/concepts/dataset-types)._
 
@@ -84,7 +84,11 @@ The central legal entity incorporating the 1+MG infrastructure. It is establishe
 
 ### 1+MG IT infrastructure provider
 
-An entity that makes an IT environment on the central, national and local level, as applicable, that may host data and metadata of 1+MG and enables local or federated workflows through suitable tools. The 1+MG IT infrastructure must be accredited for service provision in the Genome EDIC. [The details are to be defined jointly with 1+MG WG5/Pillar II.]
+An entity that makes an IT environment on the central, national and local level, as applicable, that may host data and metadata of 1+MG and enables local or federated workflows through suitable tools. The 1+MG IT infrastructure must be accredited for service provision in the Genome EDIC. [The details are to be defined jointly with 1+MG <Acronym id="WG">WG5</Acronym>/Pillar II.]
+
+:::caution[Open point]
+The governance still has to define how the 1+MG IT infrastructure is accredited. See [chapter 11](/risks#accreditation).
+:::
 
 ### Local DAC
 
@@ -120,7 +124,7 @@ The legal entity under which the User is operating.
 
 ## Architecture terms
 
-The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run (decision D-018). [3.3 European, national and User Organisation scopes](/context/scopes) explains them in more depth.
+The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run (decision D-018). [3.3 European, national and User Organisation scopes](/context/scopes) explains them in more depth, with a diagram of which actor belongs to which scope.
 
 ### European scope
 

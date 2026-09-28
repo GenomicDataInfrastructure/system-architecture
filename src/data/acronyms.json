@@ -19,6 +19,7 @@
     {"id": "ISMS", "meaning": "Information security management system"},
     {"id": "NCP", "meaning": "National Coordination Point (1+MG NCP)"},
     {"id": "QM", "meaning": "Quality management in healthcare"},
-    {"id": "SPE", "meaning": "Secure processing environment"}
+    {"id": "SPE", "meaning": "Secure processing environment"},
+    {"id": "WG", "meaning": "Working group (of the 1+MG initiative)"}
   ]
 }
