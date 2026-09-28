@@ -15,7 +15,7 @@ last_reviewed:
 
 - The system has three scopes, set by who is responsible: **European** (the Genome EDIC), **national** (each Genome EDIC Member Country) and **User Organisation** (the organisation that uses the data, and its Users).
 - Each Member Country organises its national roles (which organisation does what), so there is no separate local scope. Where things run (central, national or local level) is described in the deployment view.
-- The type of each dataset decides who takes the access decision: a 1+MG Data Holder in the country for 1+MG compliant datasets, the Genome EDIC for 1+MG cohort datasets. We propose that each Member Country chooses the type.
+- The type of each dataset decides who takes the access decision: a 1+MG Data Holder in the country for 1+MG compliant datasets, the Genome EDIC for 1+MG cohort datasets. We propose that each Member Country chooses between the two 1+MG types.
 
 </InShort>
 
@@ -74,7 +74,7 @@ The governance defines three types of dataset <GovRef id="III" />. [8.12 Types o
 
 The data lifecycle has three phases, and each phase has its own controller(s) <GovRef id="II.1" />. For the access decision, the governance describes two alternative scenarios: a decision at national level (1+MG compliant datasets) or by the Genome EDIC (1+MG cohort datasets). Externally governed datasets sit outside both.
 
-**The type of a dataset decides who takes the access decision.** We propose that the Member Country chooses the type of each of its datasets: this is the architecture decision record [ADR-0002](/decisions/0002-disclosure-paths-per-dataset), still to be confirmed (see the open point below). The table shows who is responsible in each phase, and who is controller where the governance says so.
+**The type of a dataset decides who takes the access decision.** We propose that the Member Country chooses whether its datasets are 1+MG compliant or 1+MG cohort datasets: this is the architecture decision record [ADR-0002](/decisions/0002-disclosure-paths-per-dataset), still to be confirmed, as is the level of the choice (see the open point below). The table shows who is responsible in each phase, and who is controller where the governance says so.
 
 | Phase | 1+MG compliant datasets | 1+MG cohort datasets | Externally governed datasets |
 |---|---|---|---|
@@ -82,7 +82,7 @@ The data lifecycle has three phases, and each phase has its own controller(s) <G
 | **2. Access decision** | 1+MG Data Holder, as controller (**national**) <GovRef id="VII.5.4" /> | Genome EDIC, as controller (**European**): the Genome EDIC CC adopts and documents the decision <GovRef id="VII.5.5" />, after review by the 1+MG DAC and by 1+MG Data Providers and/or Local DACs (national) <GovRef id="VII.4.7" /> | **Outside the system:** the dataset's own data provider, or a health data access body under the European Health Data Space. The Genome EDIC CC only sends the User there <GovRef id="VII.3.1" />. |
 | **3. Use** | The User Organisation, as controller for the use (**User Organisation scope**) <GovRef id="VII.1.3" />. Its Users work in a 1+MG secure processing environment (<Acronym id="SPE" />), in the national scope <GovRef id="II.1" />. | Same as for 1+MG compliant datasets | In the 1+MG IT infrastructure, but not under the 1+MG data governance <GovRef id="III" />. A 1+MG SPE lets Users import the data <GovRef id="VIII.3.3" />. |
 
-Whatever type a dataset is given, the system supports its path. It also lists externally governed datasets without deciding on access to them.
+Whatever type a dataset is given, the system supports its path. It also lists externally governed datasets without deciding on access to them. Until the <Acronym id="GDI" /> project ends, externally governed datasets are the only ones Users can get access to; the other two types follow once the Genome EDIC is operational (ADR-0002) <Cite id="gdi-d3.4" />.
 
 A scope is not the same as a controller. For 1+MG cohort datasets, the Genome EDIC (European scope) decides on access, but the data stay with a 1+MG Data Host in the country (national scope). [8.2 Controllers, processors and responsibilities](/concepts/roles) gives the controllers and processors for each processing operation.
 
@@ -102,7 +102,7 @@ So each building block names two things:
 This split matches the split between controller and processor in [8.2](/concepts/roles).
 
 :::caution[Open point]
-The details of this role, including accreditation, are still to be defined jointly with 1+MG Working Group 5 and <Acronym id="GDI" /> Pillar II <GovRef id="III" />. See [chapter 11](/risks#accreditation).
+The details of this role, including accreditation, are still to be defined jointly with 1+MG Working Group 5 and GDI Pillar II <GovRef id="III" />. See [chapter 11](/risks#accreditation).
 :::
 
 ## Scopes and deployment levels
