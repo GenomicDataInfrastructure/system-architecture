@@ -2,6 +2,24 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-09-28 — Glossary and ADR-0002: steps 3–8 done, reader-tested (B. Pacheco with Claude)
+- #119 merged (previous session log); branch deleted. Both #69 and #83 now have steps 1 and 3–8 ticked; only reviewers (step 2), review and approval remain.
+- 12 *Glossary* (#69, draft PR #117):
+  - scope note, sources (no new ones) and the arc42 check (tips 12-1 to 12-6) posted on #69; comparable examples: EHDS Art. 2 (refer to the GDPR instead of redefining), the 1+MG Framework (no glossary);
+  - new departure, explained in #117: no translations (arc42 tip 12-4); national names belong in the national implementation profile;
+  - self-check fixes: first acronyms linked (GDI, EHDS, GDPR, ELSI, WG5; "WG" added to `acronyms.json`); *Open point* box on the accreditation of 1+MG IT infrastructure (`accreditation`, #93); link to the 3.3 diagram;
+  - reader test, two runs: a note under each type of dataset says who decides on access (VII.3.1, VII.5.4, VII.5.5, added to `governance_refs`); the box covers all the details still "to be defined"; the actors not tied to one scope; "Data Access Committee" capitalised as in the governance.
+- ADR-0002 (#83, draft PR #118):
+  - `needs-legal` and `needs-dpo` added;
+  - scope note, sources (GDI D3.4 checked: §4.4 supports one entry point for Users) and the arc42 check posted on #83; comparable examples: EGA (a DAC per dataset decides; the archive routes) and EHDS Art. 67(3) (one application, each health data access body decides for its country);
+  - open departure: arc42 tip 9-9 asks for one decision per ADR; the owner's recommendation is to keep one ADR, with splitting the steps as the alternative;
+  - reader test, two runs: the Decision names its three parts (which types, who chooses, when) and what is proposed or open in each; a controller row; the cohort decision made consistent (the Genome EDIC decides, the Genome EDIC CC adopts and documents); externally governed datasets outside the 1+MG request; non-member countries; the User Portal as the entry point in step 1; the order of steps 2 and 3 marked as proposed.
+- Next:
+  - reviewers for #117 and #118 (with those for 3.3, 2.2, 3.1 and 1.3 at the kick-off); the legal and DPO specialist review for #118;
+  - decide in #118: one ADR or two; the order "1+MG compliant before 1+MG cohort"; other records of "externally governed first"; whether the GDI Pillar I vote and the member states' vote of May 2025 are the same;
+  - decide in #117: "User organisation" vs "User Organisation"; "Genome EDIC General Assembly" and "1+MG Member Countries" in the quoted definitions; which undefined terms to add (key-coded identifier, 1+MG minimum dataset, 1+MG IT infrastructure, catalogue, Pillar II);
+  - the architecture lead to review `gdi-d3.4`, still `candidate` in `sources.json`.
+
 ## 2026-09-28 — Glossary claimed; ADR-0002 broadened with implementation in steps (B. Pacheco with Claude)
 - Before claiming the glossary: the four open wave 1 branches (1.3, 2.2, 3.1, 3.3) don't edit the glossary or `acronyms.json`, and all their glossary links and `<Acronym>` IDs resolve on `main`.
 - 12 *Glossary* claimed (owner B. Pacheco, issue #69, draft PR #117): European and national scope aligned with D-018 and the 3.3 draft; intro to the architecture terms, linking to 3.3; the three types of dataset point on to 8.12; the intro explains the order of the terms. No heading changed. Questions in the PR: "User organisation" (governance) versus "User Organisation" (all other pages); "Genome EDIC General Assembly" in one definition; candidate terms (key-coded identifier, 1+MG minimum dataset).
