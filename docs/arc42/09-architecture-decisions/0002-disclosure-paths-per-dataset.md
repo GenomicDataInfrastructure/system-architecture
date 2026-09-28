@@ -14,8 +14,8 @@ last_reviewed:
 <InShort>
 
 - For 1+MG compliant datasets, a 1+MG Data Holder in the Member Country decides on access. For 1+MG cohort datasets, the Genome EDIC decides. Externally governed datasets follow their own rules.
-- The target architecture supports all three types. This ADR proposes that each Member Country chooses the type of its datasets. This is still to be confirmed.
-- The system is built in steps. GDI supports only externally governed datasets, because the Genome EDIC will not be operational before GDI ends. The other two types follow when it is.
+- The target architecture supports all three types. This ADR proposes that each Member Country chooses between the two 1+MG types for its datasets. This is still to be confirmed.
+- The system is built in steps. For access to data, GDI supports only externally governed datasets, because the Genome EDIC can't be assumed to be operational before GDI ends. The other two types follow when it is.
 
 </InShort>
 
@@ -33,9 +33,9 @@ The governance defines three types of dataset <GovRef id="III" />:
 - **[1+MG cohort datasets](/concepts/dataset-types):** the [Genome EDIC](/glossary#genome-edic) discloses them to Users, as controller.
 - **[Externally governed datasets](/concepts/dataset-types):** they meet inclusion criteria on quality and <Acronym id="ELSI" /> and can be found in the catalogue, but access follows their own rules, not the 1+MG data governance.
 
-For the access decision, the governance describes two alternative scenarios. In the first, the legal responsibility is at national level (1+MG compliant data). In the second, it lies with the Genome EDIC legal entity (1+MG cohort data) <GovRef id="II.1" />. <Acronym id="GDI" /> Pillar I voted to keep the legal responsibility for the access decision at national level <Cite id="dg" />. The member states' vote of May 2025 makes this an interim governance, until genomic data can be shared through the European Health Data Space (<Acronym id="EHDS" />) <Cite id="gdi-d3.4" />. Externally governed datasets were added afterwards, for data providers that cannot follow the harmonised governance when no 1+MG Data Holder is available in their country <GovRef id="VII.2.1" />.
+For the access decision, the governance describes two alternative scenarios. In the first, the legal responsibility is at national level (1+MG compliant data). In the second, it lies with the Genome EDIC legal entity (1+MG cohort data) <GovRef id="II.1" />. <Acronym id="GDI" /> Pillar I voted to keep the legal responsibility for the access decision at national level <Cite id="dg" />. GDI D3.4 reports a vote of the member states in May 2025 for this national model, as an interim governance until genomic data can be shared through the European Health Data Space (<Acronym id="EHDS" />) <Cite id="gdi-d3.4" />. The governance added externally governed datasets later, for data providers that cannot follow the harmonised governance when no 1+MG Data Holder is available in their country <GovRef id="VII.2.1" />.
 
-The governance leaves three questions open:
+The governance leaves three questions open. This ADR answers them:
 
 - **Which types the system must support.** The governance describes all three, but doesn't say whether the system must offer all of them.
 - **Who chooses the type of a dataset.** The governance doesn't say.
@@ -59,7 +59,7 @@ The criteria:
 
 1. **Follows the governance:** both scenarios for the access decision stay possible <GovRef id="II.1" />, and the legal responsibility stays at national level by default, as GDI Pillar I and the member states voted.
 2. **Covers every situation** in the table above.
-3. **One procedure for Users:** they start from one entry point, whatever the type of dataset. When the Genome EDIC is operational, the Genome EDIC CC is that entry point <GovRef id="III" />.
+3. **One procedure for Users:** they start from one entry point, whatever the type of dataset. Once the Genome EDIC is operational, the Genome EDIC CC provides it <GovRef id="III" />; before that, the central User Portal does.
 4. **A clear controller for every access decision,** as data protection by design requires (<Acronym id="GDPR" /> Art. 25) <Cite id="gdpr" />.
 5. **Can be built in steps:** the system works before the Genome EDIC is operational, and later adds the other paths without changing the User's procedure or the interfaces.
 
@@ -69,28 +69,37 @@ The criteria:
 |---|---|---|---|---|---|
 | **A1. Only 1+MG compliant datasets** | Partly: no cohort scenario | No: leaves out cohort data, external data and countries that are not members | Yes | Yes | No: nothing works before the Genome EDIC is operational |
 | **A2. Only 1+MG cohort datasets** (the Genome EDIC decides on all data) | No: against the vote for national responsibility | No | Yes | Yes | No |
-| **A3. Only externally governed datasets** | No: the 1+MG data governance is never applied | No: leaves out data that should follow the 1+MG data governance | Partly: one entry point, then each dataset's own procedure | Outside the system | Yes |
+| **A3. Only externally governed datasets** | No: the 1+MG data governance is never applied | No: leaves out data that should follow the 1+MG data governance | Partly: one entry point, then each dataset's own procedure | No 1+MG controller: each dataset keeps its own | Yes |
 | **A4. 1+MG compliant and 1+MG cohort datasets** | Yes | No: leaves out external data and countries that are not members | Yes | Yes | No |
-| **A5. All three types** | Yes | Yes | Yes: one entry point; the two 1+MG paths share one procedure | Yes | Yes, if the type is part of the interfaces from the start |
+| **A5. All three types** | Yes | Yes | Yes: one entry point; the two 1+MG paths share one procedure | Yes for the two 1+MG paths; externally governed datasets keep their own | Yes, if the type is part of the interfaces from the start |
 
 ### Who chooses the type of a dataset
 
 - **B1. The Member Country, for its datasets.** It keeps the responsibility at national level, and uses the freedom the governance gives to each country to organise its national roles <GovRef id="II.2" />. The [1+MG NCP](/glossary#1mg-national-coordination-point-1mg-ncp), mandated by the Member Country, already checks each dataset when it is included <GovRef id="VI.4.4" />.
 - **B2. The 1+MG Data Provider, for each dataset.** It is closest to the data and to their legal basis. But a data provider alone can't name a 1+MG Data Holder, or make the Genome EDIC the controller.
-- **B3. The Genome EDIC Assembly of Members, for all countries.** One rule for everyone, but it takes away a choice the governance leaves to each country <GovRef id="II.2" />.
+- **B3. The [Genome EDIC Assembly of Members](/glossary#genome-edic-assembly-of-members), for all countries.** One rule for everyone, but it takes away a choice the governance leaves to each country <GovRef id="II.2" />.
 
 ## Decision
 
-Options A5 and B1. The system supports all three types of dataset, and each Genome EDIC Member Country chooses the type of each of its datasets. The system is built in steps (see [Implementation in steps](#implementation-in-steps)).
+Options A5 and B1, built in steps:
+
+- **Which types:** the system supports all three types of dataset.
+- **Who chooses:** each Genome EDIC Member Country chooses whether its datasets are 1+MG compliant or 1+MG cohort datasets. This is proposed, and still to be confirmed, as is the level of the choice (per dataset, per 1+MG Data Provider or for the whole country). A data provider that can't follow the 1+MG data governance offers its data as externally governed datasets <GovRef id="VII.2.1" />.
+- **When:** the system is built in steps, and the order of the two 1+MG types is proposed (see [Implementation in steps](#implementation-in-steps)).
+
+In detail:
 
 - **The Member Country decides** which organisation acts as 1+MG Data Holder for its data, or whether its data are made available as 1+MG cohort data with the Genome EDIC as controller. A 1+MG Data Holder is always an organisation in a Genome EDIC Member Country <GovRef id="III" />.
-- **The system supports both 1+MG paths for every dataset,** and a single access request can cover datasets of both types.
-- **The catalogue entry of each dataset states its type and who reviews and decides.** For 1+MG cohort data, the 1+MG NCP already provides this information <GovRef id="VI.4.4" />.
+- **The system supports both 1+MG paths in every Member Country,** and a single access request can cover datasets of both types (from step 3).
+- **Externally governed datasets are not part of a 1+MG access request.** The User follows the dataset's own procedure.
+- **A country that is not a full member of the Genome EDIC** can offer only externally governed datasets: its data providers can't be 1+MG Data Providers <GovRef id="III" />.
+- **The catalogue entry of each dataset states its type and who reviews and decides.** For 1+MG cohort data, the governance already asks the 1+MG NCP to say with whom the access application is shared <GovRef id="VI.4.4" />.
 
 | | 1+MG compliant datasets | 1+MG cohort datasets | Externally governed datasets |
 |---|---|---|---|
 | **Who decides on access** | The 1+MG Data Holder <GovRef id="VII.5.4" /> | The Genome EDIC. The Genome EDIC CC adopts and documents the decision <GovRef id="VII.5.5" /> | Not the Genome EDIC: the data provider's own procedure, or a health data access body under the EHDS <GovRef id="VII.3.1" /> |
-| **Who reviews** | As the 1+MG Data Holder decides, without conflicts of interest, considering the opinion of the 1+MG DAC <GovRef id="VII.4.6" /> | 1+MG Data Providers and/or [Local DACs](/glossary#local-dac), as the Member Country determines, and the 1+MG DAC <GovRef id="VII.4.7" />. A national veto is possible where applicable <GovRef id="VII.5.1" /> | Outside the governance |
+| **Controller for the access decision** | The 1+MG Data Holder <GovRef id="III" /> | The Genome EDIC <GovRef id="III" /> | Outside the 1+MG data governance: the dataset's own |
+| **Who reviews** | The 1+MG Data Holder organises the review as it sees fit, without conflicts of interest, and considers the opinion of the 1+MG DAC <GovRef id="VII.4.6" /> | 1+MG Data Providers and/or [Local DACs](/glossary#local-dac), as the Member Country determines, and the 1+MG DAC <GovRef id="VII.4.7" />. A national veto is possible where applicable <GovRef id="VII.5.1" /> | Outside the governance |
 | **Data protection impact assessment (<Acronym id="DPIA" />)** | The 1+MG Data Holder, supported by the Genome EDIC CC <GovRef id="VII.5.5" /> | The Genome EDIC CC, with prior consultation of the data protection authority <GovRef id="VII.5.5" /> | Outside the governance |
 | **What the system does** | Routes the request to each 1+MG Data Holder and collects the decisions | Routes the request to the reviewers, records the Genome EDIC decision and informs stakeholders through the 1+MG NCP <GovRef id="VII.5.5" /> | Lists the dataset, sends Users to the data provider or the EU dataset catalogue <GovRef id="VII.3.1" />, and lets Users import the data into an <Acronym id="SPE" /> <GovRef id="VIII.3.3" /> |
 
@@ -106,7 +115,7 @@ How the three types work in each phase of the lifecycle is described in [8.12 Ty
 
 ### Per scope
 
-- **[European scope](/glossary#european-scope):** [5.1.2 Access request management](/building-blocks/european/access-request-management) handles both 1+MG paths in one request. For 1+MG cohort data, the Genome EDIC CC takes the decision and the data protection impact assessment. The Genome EDIC CC remains the one-stop shop: the User follows the same procedure whatever the path.
+- **[European scope](/glossary#european-scope):** [5.1.2 Access request management](/building-blocks/european/access-request-management) handles both 1+MG paths in one request. For 1+MG cohort data, the Genome EDIC decides; the Genome EDIC CC adopts and documents the decision, and carries out the data protection impact assessment. The Genome EDIC CC remains the one-stop shop: the User follows the same procedure whatever the path.
 - **[National scope](/glossary#national-scope):** [5.2.2 Access review and decision support](/building-blocks/national/access-decision-support) serves 1+MG Data Holders and Local DACs. Each Member Country records its choices in its [national implementation profile](/appendix/national-profile-template).
 - **[User Organisation scope](/glossary#user-organisation-scope):** no difference in how to apply.
 - **Catalogue** ([5.1.1](/building-blocks/european/user-portal-and-catalogue), [5.2.1](/building-blocks/national/ncp-node)): every dataset carries its type and its reviewers.
@@ -115,19 +124,19 @@ How the three types work in each phase of the lifecycle is described in [8.12 Ty
 
 ### Implementation in steps
 
-The architecture describes the target state. GDI can't deliver all three types before it ends, so the system is built in steps. Step 1 is what GDI delivers.
+The architecture describes the target state. GDI can't deliver all three types before it ends, so the system is built in steps. Step 1 is what GDI delivers. The order of steps 2 and 3 is proposed.
 
 | Step | Starts when | Types of dataset | Who decides on access | What the system adds |
 |---|---|---|---|---|
-| **1. GDI** | Now, until GDI ends in 2026 | Externally governed datasets, for example Genome of Europe data for use by the Genome of Europe consortium. Also discovery that needs no access decision: allele frequencies, which are aggregated and not personal data, and metadata search <Cite id="gdi-d3.4" /> | The dataset's own governance, for example the Genome of Europe's own access procedure | Catalogue entries that state their type; the User Portal sends Users to the dataset's own access procedure; import into an SPE |
+| **1. GDI** | Now, until GDI ends in 2026 | Externally governed datasets, for example Genome of Europe data for use by the Genome of Europe consortium. Also discovery that needs no access decision: allele frequencies, which are aggregated and not personal data, and metadata search <Cite id="gdi-d3.4" /> | The dataset's own governance, for example the Genome of Europe's own access procedure | Catalogue entries that state their type; the central User Portal is the one entry point, and sends Users to the dataset's own access procedure; import into an SPE |
 | **2. 1+MG compliant datasets** | The Genome EDIC is operational (the Genome EDIC CC and the 1+MG DAC work), and the Member Country has named a 1+MG Data Holder | Adds 1+MG compliant datasets | The 1+MG Data Holder, considering the opinion of the 1+MG DAC | Access request management routes requests to the 1+MG DAC and to each 1+MG Data Holder ([5.1.2](/building-blocks/european/access-request-management), [5.2.2](/building-blocks/national/access-decision-support)) |
-| **3. 1+MG cohort datasets** | The Genome EDIC can act as controller for access decisions, and its Genome EDIC CC has done the data protection impact assessment | Adds 1+MG cohort datasets | The Genome EDIC | National review and veto; the Genome EDIC CC records the decision and informs stakeholders through the 1+MG NCP |
-| **Later** | Genomic data can be shared through the EHDS | The interim governance of May 2025 may change <Cite id="gdi-d3.4" />. Data made available through the EHDS are requested from a health data access body <GovRef id="VII.3.1" /> | To be decided then | The connection to HealthData@EU ([8.11](/concepts/ehds-integration)) |
+| **3. 1+MG cohort datasets** | The Genome EDIC can act as controller for access decisions, and its Genome EDIC CC has done the data protection impact assessment | Adds 1+MG cohort datasets | The Genome EDIC | National review, with a national veto where applicable; the Genome EDIC CC records the decision and informs stakeholders through the 1+MG NCP |
+| **Later** | Genomic data can be shared through the EHDS | The interim governance of May 2025 may change <Cite id="gdi-d3.4" /> | To be decided then | The connection to HealthData@EU ([8.11](/concepts/ehds-integration)) |
 
 Three rules keep the steps compatible:
 
-- **Build the interfaces for all three types from step 1.** Every catalogue entry states its type from the first dataset on, and access request management routes each request by type. Each step adds a route; it doesn't change what Users do.
-- **1+MG compliant before 1+MG cohort.** The national path is the default the member states voted for. It also asks less of the Genome EDIC, which doesn't have to act as controller for access decisions. Member Countries that prefer the Genome EDIC to decide wait for step 3.
+- **Build the interfaces for all three types from step 1.** Every catalogue entry states its type from the first dataset on, and the system uses it to send each User to the right procedure: in step 1 the dataset's own, later the 1+MG access request. Each step adds a route; it doesn't change what Users do.
+- **1+MG compliant before 1+MG cohort (proposed).** The national path is the default the member states voted for. It also asks less of the Genome EDIC, which doesn't have to act as controller for access decisions. Member Countries that prefer the Genome EDIC to decide wait for step 3.
 - **Each Member Country moves at its own pace.** A country offers 1+MG compliant datasets once the Genome EDIC is operational and the country has named a 1+MG Data Holder. A country that is not a full member of the Genome EDIC offers only externally governed datasets.
 
 :::caution[Open point]
