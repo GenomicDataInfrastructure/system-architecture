@@ -30,6 +30,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      # GitHub Pages runs Jekyll on a branch unless .nojekyll is at its root. Only the production
+      # deploy adds it: a preview folder must not carry one, since the deploy action never deletes
+      # .nojekyll and the folder would survive the removal of its preview.
+      - run: touch build/.nojekyll
       - name: Publish to the root of gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
