@@ -2,6 +2,22 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-10-01 — Reader test of the seven open pages against the published governance; fixes applied (B. Pacheco with Claude)
+- Fact check of 8.12, ADR-0002, 12 Glossary, 1.3, 3.1, 2.2 and 3.3 against the full D2.4 (body and annex, version 2025-12), role-playing legal expert, DPO, implementer, security advisor, ELSI specialist and policy maker. Findings and fixes are posted on each page issue (#88, #83, #69, #13, #11, #7, #4). The main ones:
+  - **VI.1.3** already gives the Member Country the national strategy for downstream disclosure and the nomination of 1+MG Data Holders: the basis of ADR-0002 option B1. What stays open (#85) is the level of the choice and whether a country may nominate no 1+MG Data Holder.
+  - The vote on national responsibility is in the **D2.4 body, section 3** (Pillar I GOV group); the annex refers to it (VII.2.1) and says Pillar I voted on an earlier version (II.1). Pages cite D2.4 for it, D3.4 only for the May 2025 date and the interim framing.
+  - Healthcare reuse has **no formal access decision** per request (VII.5.4, VII.5.5): the "who decides" tables are marked research, policy development and QM, with a healthcare reuse row.
+  - "With whom the application is shared" is published for **both** 1+MG types (VI.4.4, VI.4.5); the inclusion phase differs per type (controller VI.2.2; data held legally by the Data Holder VI.4.5 or the Genome EDIC III).
+  - V.1.3: external audit **and/or** certification; 2.2 required both.
+  - The 1+MG IT infrastructure provider works for the European or the national scope (glossary, 3.3, 1.3 aligned with the 3.3 diagram).
+  - GDI ends in March 2027 (ADR-0002 said 2026).
+- #123 merged: chapter 11 (`dataset-type-choice` rewritten on VI.1.3; `genome-edic-operational` moved there from #118) and 8.12. All six draft branches (#84, #92, #110, #114, #117, #118) got their fixes in one signed commit each, merged `main`, and link the new entry where they depend on the GDI step plan. The branch PR descriptions carry a "Reader test 2026-10-01" section.
+- Not verified: the claims cited to GDI D3.4 (May 2025 vote date, interim governance until the EHDS, GDI gives access only to externally governed datasets, discovery without an access decision); `gdi-d3.4` is still `candidate` in `sources.json`.
+- Next:
+  - the architecture lead checks `gdi-d3.4` and the D3.4 claims; add the section in prose next to each `<Cite id="gdi-d3.4" />`;
+  - reviewers for the six branches at the kick-off; legal review of the VI.1.3 reading in #118;
+  - per-PR site previews for reviewers (suggested; GitHub Pages serves one site, so previews go into per-PR subfolders of the `gh-pages` branch, or a preview service).
+
 ## 2026-09-28 — 3.3 and 2.2 re-checked against the glossary, ADR-0002 and 1.3 (B. Pacheco with Claude)
 - 3.3 *Scopes* (#13, draft PR #84): the Member Country chooses between the two 1+MG types, and the level of the choice is still to be confirmed (as in ADR-0002); flag what GDI delivers (D-006, cites `gdi-d3.4`). The glossary already follows 3.3.
 - 2.2 *Governance principles* (#7, draft PR #92): Users start from the 1+MG User Portal whatever the type of dataset; for externally governed datasets the portal sends them to the dataset's own procedure (VII.3.1, as in ADR-0002).
