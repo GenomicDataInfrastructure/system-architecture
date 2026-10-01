@@ -21,6 +21,7 @@ last_reviewed:
 ## What this page must answer
 
 - Which constraints limit our design freedom, and where does each come from?
+- How do 2.1 to 2.4 map to arc42's types of constraints (organisational and political, technical, conventions)? Which conventions apply (terminology, diagram notation, ADRs), with links to the handbook?
 
 ## Sources to start from
 

@@ -1,6 +1,6 @@
 # Genome EDIC System Architecture
 
-The system architecture of the Genome EDIC, written with the [arc42](https://arc42.org) template and published as a [Docusaurus](https://docusaurus.io) site.
+The system architecture of the Genome EDIC, written with the [arc42](https://arc42.org) template and published as a [Docusaurus](https://docusaurus.io) site. arc42 was created by Gernot Starke and Peter Hruschka; its structure is used and adapted under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
 It describes the European, national and User Organisation parts of the Genome EDIC infrastructure and shows how they implement the **1+MG Data Governance** (Genome EDIC Secondary Use Framework) and **data protection by design and by default**.
 
