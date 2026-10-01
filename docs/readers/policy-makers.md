@@ -21,7 +21,8 @@ You represent a ministry or public body backing the Genome EDIC. You want to kno
 | What must my country put in place (organisation, infrastructure, people)? | [2.3 Organisational constraints](/constraints/organisational) |
 | What stays under national control, and what is done at European level? | [3.3 European, national and User Organisation scopes](/context/scopes) |
 | Who decides on access to which data: my country or the Genome EDIC? | [3.3 Scopes](/context/scopes), [ADR-0002 Who decides on access, per type of dataset](/decisions/0002-disclosure-paths-per-dataset) |
-| Do genomic data leave my country? | [4. Solution strategy](/solution-strategy) |
+| Do genomic data leave my country? | [2.2 Governance principles](/constraints/governance-principles#federated), [4. Solution strategy](/solution-strategy) |
+| Must my country use specific products, and what can it decide itself? | [2.2 Governance principles](/constraints/governance-principles#implementation-freedom) |
 | How does this fit the European Health Data Space (EHDS)? | [8.11 EHDS integration](/concepts/ehds-integration) |
 | Which options does my country have to organise its national node? | [7.2 National deployment patterns](/deployment/national) |
 | What are the main risks and open issues? | [11. Risks and technical debt](/risks) |
