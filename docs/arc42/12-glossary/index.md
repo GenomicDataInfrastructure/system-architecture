@@ -8,7 +8,7 @@ reviewers: []
 status: draft
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
-governance_refs: ["III", "VII.3.1", "VII.5.4", "VII.5.5"]
+governance_refs: ["I", "III", "VII.3.1", "VII.4.7", "VII.5.4", "VII.5.5"]
 last_reviewed:
 ---
 
@@ -22,7 +22,7 @@ last_reviewed:
 
 ## Terms from the governance
 
-The definitions below are quoted word for word from the 1+MG Data Governance master document (version 2025-12), published as the annex of <Acronym id="GDI" /> D2.4 <Cite id="dg" />, <GovRef id="III" long />. Words in square brackets are in the original, except "[catalogue]", which we added where a word is missing. If the governance changes a definition, update it here. The terms follow the governance's order: alphabetical, ignoring the prefixes "1+MG" and "Genome EDIC". On other pages, the first mention of each term links to its entry here.
+The definitions below are quoted word for word from the 1+MG Data Governance master document (version 2025-12), published as the annex of <Acronym id="GDI" /> D2.4 <Cite id="dg" />, <GovRef id="III" long />. Words in square brackets are in the original, except "[catalogue]", which we added where a word is missing. If the governance changes a definition, update it here. The terms are in alphabetical order, ignoring the prefixes "1+MG" and "Genome EDIC". On other pages, the first mention of each term links to its entry here.
 
 ### Genome EDIC Assembly of Members
 
@@ -94,6 +94,8 @@ The details of the 1+MG IT infrastructure, including how it is accredited, are s
 
 Group of natural or legal persons that reviews the access requests and the opinion by the 1+MG DAC relevant for the datasets for which it is in charge to come to a recommendation on the access request for the data it oversees.
 
+_The reading guide of the governance calls it "the national DAC who supports the 1+MG Data Holders in their access decision" <GovRef id="I" />. For 1+MG cohort datasets, it may also be the body the Member Country names for the national review <GovRef id="VII.4.7" />._
+
 ### Genome EDIC Member Country
 
 A country that has become a full member of the Genome EDIC. Genome EDIC Member Countries must have established a 1+MG NCP and the relevant 1+MG IT infrastructure locally or have access to relevant 1+MG IT infrastructure.
@@ -124,7 +126,7 @@ The legal entity under which the User is operating.
 
 ## Architecture terms
 
-The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run (decision D-018). [3.3 European, national and User Organisation scopes](/context/scopes) explains them in more depth, with a diagram of which actor belongs to which scope. Two actors are not tied to one scope. A 1+MG IT infrastructure provider can work for any of the three. Data subjects are the people the data are about, and have no responsibility in the system.
+The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run (decision D-018). [3.3 European, national and User Organisation scopes](/context/scopes) explains them in more depth, with a diagram of which actor belongs to which scope. Two actors are not tied to one scope. A 1+MG IT infrastructure provider can work for the European or the national scope, at central, national or local level. Data subjects are the people the data are about, and have no responsibility in the system.
 
 ### European scope
 
