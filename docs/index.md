@@ -31,7 +31,7 @@ Pick the guide for your role. Each one lists the questions people in that role u
 
 ## How this documentation is organised
 
-It follows the [arc42](https://arc42.org) template, with twelve chapters. Three rules make it easier to navigate:
+It follows the [arc42](https://arc42.org) template, with twelve chapters. arc42 was created by Gernot Starke and Peter Hruschka, and its structure is used and adapted here under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) licence. The [page recipes](/handbook/recipes#fit-with-arc42) list where we depart from it. Three rules make it easier to navigate:
 
 1. **Three scopes.** The system has a *European* scope (what the Genome EDIC is responsible for), a *national* scope (what each Member Country is responsible for: its 1+MG NCP, 1+MG Data Holders, 1+MG Data Providers and 1+MG Data Hosts) and a *User Organisation* scope (the User Organisation and its Users). Chapter 5 is split by scope; chapter 7 by where things run (central, national, local). See [3.3 Scopes](/context/scopes).
 2. **Runtime follows the governance.** Chapter 6 walks through the data lifecycle in the same order as the governance: data inclusion, data access, data use.
