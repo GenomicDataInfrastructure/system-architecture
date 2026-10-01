@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- *Fit with arc42* in the page recipes: how to check a page against arc42, and the table of agreed departures. Each recipe now says what arc42 asks for its chapter (decision D-024).
+- Credit to arc42's authors, Gernot Starke and Peter Hruschka, and to its CC BY-SA 4.0 licence, on the home page, in the footer and in the README.
 - Chapter 11 records the open points and open questions (open in the governance, open in the architecture, dependencies), the risks and the technical debt, one entry each with a fixed anchor (decision D-023). It starts with 11 open points. Pages link to the entries instead of to GitHub issues; 8.12 and ADR-0002 do so.
 - `npm run check`: an *Open point*, *Risk* or *Technical debt* box must link each point to its entry in chapter 11, and links to `/risks#…` must match an entry. Direct issue links in pages give a warning.
 - Concept page 8.12 *Types of dataset*: the three types, the rule, how each lifecycle phase differs per type, where it applies, and the open points.
@@ -30,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- The arc42 check is in the page choreography (steps 5 and 8), the review checklist, the pull request template, `AGENTS.md` and `CONTRIBUTING.md` (decision D-024). Recipe for chapter 11: risks and technical debt are ordered by priority, open points alphabetically. ADR template: status *Deprecated*, and the criteria for the choice. The chapter 2 and 3 overviews ask about conventions and about 3.3 as our addition.
 - Writing rule: open points, risks and technical debt are recorded in chapter 11 in the pull request that raises them (decision D-023), in `AGENTS.md` (rule 10), `CONTRIBUTING.md`, the page choreography, the recipe for chapter 11, the review checklist and the pull request template.
 - Writing rule: the first mention of each glossary term on a page links to its glossary entry, or to the concept page that explains it (decision D-022), in `AGENTS.md`, `CONTRIBUTING.md`, the page choreography, the review checklist and the pull request template. 8.12 follows it.
 - `<Term>` is renamed `<Acronym>` and stays for acronyms only (decision D-022); `npm run check` reports any `<Term>` left.

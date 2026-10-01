@@ -21,7 +21,7 @@ last_reviewed:
 
 | Field | Value |
 |---|---|
-| Status | Proposed / Accepted / Replaced by ADR-XXXX |
+| Status | Proposed / Accepted / Deprecated / Replaced by ADR-XXXX |
 | Date | YYYY-MM-DD |
 | Deciders | … |
 
@@ -29,6 +29,7 @@ last_reviewed:
 What problem are we solving? Which governance sections or legal acts are relevant?
 
 ## Options considered
+The criteria used to choose, then the options:
 1. …
 2. …
 

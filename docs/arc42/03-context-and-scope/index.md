@@ -21,6 +21,7 @@ last_reviewed:
 ## What this page must answer
 
 - What is inside the Genome EDIC system and what is outside it?
+- How do 3.1, 3.2 and 3.3 relate? 3.3 is our addition to the arc42 template (see the page recipes).
 
 ## Sources to start from
 

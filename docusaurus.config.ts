@@ -61,7 +61,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `Genome EDIC system architecture taskforce. Draft — not an adopted document. Built with Docusaurus.`,
+      copyright: `Genome EDIC system architecture taskforce. Draft — not an adopted document. Structure based on arc42 by Gernot Starke and Peter Hruschka (CC BY-SA 4.0). Built with Docusaurus.`,
     },
     docs: {sidebar: {hideable: true}},
     tableOfContents: {minHeadingLevel: 2, maxHeadingLevel: 4},

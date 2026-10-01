@@ -7,14 +7,14 @@ reviewers: []
 status: draft
 wave: 2
 audience: [policy, legal, dpo, implementer]
-governance_refs: ["II.1", "III", "VI.4.4", "VII.1.3", "VII.2.1", "VII.3.1", "VII.4.3", "VII.4.6", "VII.4.7", "VII.5.1", "VII.5.4", "VII.5.5", "VIII.3.3"]
+governance_refs: ["II.1", "III", "VI.1.3", "VI.1.5", "VI.2.2", "VI.4.3", "VI.4.4", "VI.4.5", "VI.4.6", "VII.1.3", "VII.2.1", "VII.2.2", "VII.2.4", "VII.3.1", "VII.4.3", "VII.4.5", "VII.4.6", "VII.4.7", "VII.5.1", "VII.5.4", "VII.5.5", "VIII.3.3"]
 last_reviewed:
 ---
 
 <InShort>
 
 - The governance knows three types of dataset: 1+MG compliant, 1+MG cohort and externally governed. The type decides who takes the access decision, and who is controller for it.
-- For 1+MG compliant datasets, a 1+MG Data Holder in the country decides. For 1+MG cohort datasets, the Genome EDIC decides, after a national review. Externally governed datasets follow their own rules, outside the 1+MG data governance.
+- For 1+MG compliant datasets, a 1+MG Data Holder in the country decides. For 1+MG cohort datasets, the Genome EDIC decides, after a national review where the Member Country provides one. Externally governed datasets follow their own rules, outside the 1+MG data governance.
 - Every dataset states its type in the catalogue, and the system supports all three types, so that Users follow one procedure whatever the type.
 
 </InShort>
@@ -37,23 +37,24 @@ The glossary gives the governance definitions word for word. In short:
 
 ## The rule
 
-1. **Every dataset must state its type** in the catalogue. For 1+MG cohort datasets, the catalogue entry must also say with whom the data access application is shared <GovRef id="VI.4.4" />.
-2. **The Member Country chooses the type** of each of its datasets. This is proposed in the architecture decision record [ADR-0002](/decisions/0002-disclosure-paths-per-dataset), and is still to be confirmed (see the open points).
+1. **Every dataset must state its type** in the catalogue, and with whom the data access application is shared. For 1+MG cohort datasets, the [1+MG NCP](/glossary#1mg-national-coordination-point-1mg-ncp) provides this information <GovRef id="VI.4.4" />; for 1+MG compliant datasets, the 1+MG Data Holder does <GovRef id="VI.4.5" />.
+2. **The Member Country chooses the type** of its datasets. The governance asks each Member Country to decide on a national strategy for the responsibility of downstream data disclosure, and to nominate, where applicable, its 1+MG Data Holders <GovRef id="VI.1.3" />. The architecture decision record [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) proposes to read this as the choice between the two 1+MG types. The level of the choice (country, 1+MG Data Provider or dataset) is still open (see the open points).
 3. **The system must support both decision paths for every dataset,** and one access request may cover datasets of both types.
 4. **Users must follow one procedure, whatever the type.** The Genome EDIC CC remains their one-stop shop and tells them the outcome <GovRef id="VII.5.5" />.
-5. **Externally governed datasets must not enter the 1+MG review.** The Genome EDIC CC sends the User to their data provider, or to the EU dataset catalogue <GovRef id="VII.3.1" />. A 1+MG secure processing environment (<Acronym id="SPE" />) must let the User import the data <GovRef id="VIII.3.3" />.
+5. **Externally governed datasets must not enter the 1+MG review.** The Genome EDIC CC lets the User contact the data provider of these high value datasets directly, or sends them to the EU dataset catalogue <GovRef id="VII.3.1" />. A 1+MG secure processing environment (<Acronym id="SPE" />) must let the User import the data <GovRef id="VIII.3.3" />.
 
 ## How it works in each phase
 
 | Phase | 1+MG compliant datasets | 1+MG cohort datasets | Externally governed datasets |
 |---|---|---|---|
-| **Inclusion and catalogue** | The [1+MG Data Provider](/glossary#1mg-data-provider) includes the data. The [1+MG NCP](/glossary#1mg-national-coordination-point-1mg-ncp) checks them and sends the metadata to the Genome EDIC catalogue <GovRef id="VI.4.4" /> | Same, and the catalogue entry says with whom the access application is shared <GovRef id="VI.4.4" /> | Listed in the catalogue if they meet the inclusion criteria on quality and ELSI <GovRef id="III" /> |
+| **Inclusion and catalogue** | The [1+MG Data Provider](/glossary#1mg-data-provider) includes the data, as controller for the inclusion <GovRef id="VI.2.2" /> <GovRef id="VI.4.3" />. The 1+MG NCP checks them and sends the metadata to the Genome EDIC catalogue <GovRef id="VI.4.4" />. The 1+MG Data Holder receives the data and holds them legally for secondary use <GovRef id="VI.4.5" />; a [1+MG Data Host](/glossary#1mg-data-host) that is not the 1+MG Data Holder signs a data processing agreement <GovRef id="VI.4.6" /> | Same inclusion and checks. The Genome EDIC holds the data legally; a 1+MG Data Host holds them on its behalf <GovRef id="III" /> | Listed in the catalogue if they meet the inclusion criteria on quality and ELSI <GovRef id="III" /> |
+| **Discovery** (research, policy development, QM in healthcare) | Subject-level data discovery is already processing of personal data. The User states the purpose and the inclusion criteria first <GovRef id="VII.2.4" />. The User Organisation and the 1+MG Data Holder, as controller for the disclosure, are joint controllers <GovRef id="VII.1.3" />. The 1+MG Data Holder performs the DPIA; the Genome EDIC may prepare it where it is joint controller <GovRef id="VII.2.2" /> | Same, with the Genome EDIC as controller for the disclosure <GovRef id="VII.1.3" />. The Genome EDIC CC performs the DPIA <GovRef id="VII.2.2" /> | Found in the catalogue, labelled as external <GovRef id="VII.2.1" />. No subject-level discovery under the 1+MG data governance |
 | **Access request** | Submitted through the Genome EDIC CC <GovRef id="VII.3.1" /> | Same | The User is sent to the data provider or to the EU dataset catalogue <GovRef id="VII.3.1" /> |
-| **Review** | As the 1+MG Data Holder decides, without conflicts of interest, considering the opinion of the [1+MG DAC](/glossary#1mg-dac) <GovRef id="VII.4.6" /> | By 1+MG Data Providers and/or [Local DACs](/glossary#local-dac), as the Member Country determines <GovRef id="VII.4.7" />, and by the 1+MG DAC. A national veto is possible where applicable <GovRef id="VII.5.1" /> | Outside the 1+MG data governance |
-| **Decision** | The 1+MG Data Holder <GovRef id="VII.5.4" /> | The Genome EDIC CC adopts and documents it, and informs stakeholders through the 1+MG NCP <GovRef id="VII.5.5" /> | Outside the 1+MG data governance |
-| **Data protection impact assessment (<Acronym id="DPIA" />)** | The 1+MG Data Holder, supported by the Genome EDIC CC <GovRef id="VII.5.5" /> | The Genome EDIC CC, with prior consultation of the data protection authority <GovRef id="VII.5.5" /> | Outside the 1+MG data governance |
+| **Review** (research, policy development, QM in healthcare) | By an internal or external local DAC without conflicts of interest, as the 1+MG Data Holder organises it, considering the opinion of the [1+MG DAC](/glossary#1mg-dac) <GovRef id="VII.4.6" /> | By 1+MG Data Providers and/or [Local DACs](/glossary#local-dac), as the Member Country determines <GovRef id="VII.4.7" />, and by the 1+MG DAC. A national veto is possible where applicable <GovRef id="VII.5.1" /> | Outside the 1+MG data governance |
+| **Decision** (research, policy development, QM in healthcare) | The 1+MG Data Holder <GovRef id="VII.5.4" /> | The Genome EDIC CC adopts and documents it, and informs stakeholders through the 1+MG NCP <GovRef id="VII.5.5" /> | Outside the 1+MG data governance |
+| **Data protection impact assessment (<Acronym id="DPIA" />)** | The 1+MG Data Holder, with prior consultation of the data protection authority before the first access <GovRef id="VII.5.4" />, supported by the Genome EDIC CC <GovRef id="VII.5.5" /> | The Genome EDIC CC, with prior consultation of the data protection authority <GovRef id="VII.5.5" /> | Outside the 1+MG data governance |
 | **Use** | In a 1+MG SPE. The [User Organisation](/glossary#user-organisation) is controller for the downstream use <GovRef id="VII.1.3" /> | Same | Imported into a 1+MG SPE, under the dataset's own rules <GovRef id="VIII.3.3" /> |
-| **Healthcare reuse fast track** | The 1+MG Data Holder arranges who co-reviews with the 1+MG DAC: a four-eyes check <GovRef id="VII.4.3" /> | At least two people check the request <GovRef id="VII.4.3" /> | Not applicable |
+| **Healthcare reuse** | No formal access decision per request: access rests on the framework data use agreement of the User Organisation <GovRef id="VII.5.4" />. The 1+MG DAC checks the plausibility of the request within 1 to 3 working days, and the Genome EDIC CC arranges with the 1+MG Data Holder who co-reviews, so that two people check it <GovRef id="VII.4.3" />. The 1+MG NCP informs the 1+MG Data Holder of the request and of the outcome at once <GovRef id="VII.4.5" /> | Same: no access decision per request <GovRef id="VII.5.5" />. At least two people in the 1+MG DAC check the request <GovRef id="VII.4.3" />. The 1+MG NCP channels the information to the national stakeholders after the 1+MG DAC's check <GovRef id="VII.4.5" /> | Not applicable |
 
 ## Where it applies
 
@@ -67,12 +68,12 @@ These pages ask *what differs per type of dataset?* and build on this page:
 
 ## Legal and governance basis
 
-- **Governance:** three lifecycle phases, each with its own controller(s), and two scenarios for the access decision <GovRef id="II.1" />; the definitions of the three types <GovRef id="III" />; why externally governed datasets were added <GovRef id="VII.2.1" />. The sections cited in the tables above give each responsibility.
+- **Governance:** three lifecycle phases, each with its own controller(s), and two scenarios for the access decision <GovRef id="II.1" />; the definitions of the three types <GovRef id="III" />; the Member Country's national strategy for the responsibility of downstream disclosure <GovRef id="VI.1.3" />, taken before inclusion because it becomes part of the consent <GovRef id="VI.1.5" />; why externally governed datasets were added <GovRef id="VII.2.1" />. The sections cited in the tables above give each responsibility.
 - **<Acronym id="GDPR" />:** the controller (Art. 4(7)) and the data protection impact assessment (Art. 35) <Cite id="gdpr" />.
 - **EHDS:** for data made available through the EHDS, the User applies through the EU dataset catalogue, to a health data access body <GovRef id="VII.3.1" /> <Cite id="ehds" />.
 
 :::caution[Open points]
-- **Who chooses the type of a dataset,** and at which level: per dataset, per 1+MG Data Provider, or for the whole country. ADR-0002 assumes the Member Country. See [chapter 11](/risks#dataset-type-choice).
+- **At which level the type of a dataset is chosen.** The Member Country decides the national strategy for downstream disclosure <GovRef id="VI.1.3" />. Whether it chooses once for the country, per 1+MG Data Provider or per dataset, and whether it may nominate no 1+MG Data Holder at all, is open. See [chapter 11](/risks#dataset-type-choice).
 - **Whether one dataset can be of more than one type,** for example part of it disclosed as 1+MG compliant data and part as 1+MG cohort data. The governance doesn't say. See [chapter 11](/risks#dataset-multiple-types).
 - **When a national veto applies** to 1+MG cohort data ("where applicable") <GovRef id="VII.5.1" />: to be detailed in 6.2.4. See [chapter 11](/risks#national-veto).
 :::
