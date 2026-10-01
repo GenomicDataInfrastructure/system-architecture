@@ -20,6 +20,7 @@ You check that the system applies data protection by design and by default, and 
 | How is each GDPR principle implemented? | [8.1 Data protection by design and by default](/concepts/data-protection-by-design) |
 | Who is controller or processor for each processing operation? | [8.2 Controllers, processors and responsibilities](/concepts/roles) |
 | Which personal data are processed where? | [5. Building block view (level 1)](/building-blocks) |
+| Where do data about people enter and leave the system? | [3.1 Business context](/context/business#where-data-about-people-come-in-and-go-out) |
 | How are key-coded identifiers managed, and how is re-identification risk controlled? | [8.7 Key-coded identifiers and data linkage](/concepts/identifiers-and-linkage) |
 | How are data subjects’ rights applied to datasets already in use? | [8.9 Dataset versioning](/concepts/dataset-versioning) |
 | How are breaches detected and notified? | [6.5 Security incident and personal data breach](/runtime/security-incident) |

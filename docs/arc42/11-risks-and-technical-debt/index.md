@@ -22,6 +22,7 @@ governance_refs:
   - "VII.5.2"
   - "VII.5.3"
   - "VIII.11.1"
+  - "VIII.2.2"
 last_reviewed:
 toc_max_heading_level: 4
 ---
@@ -81,6 +82,12 @@ The governance is a "living document" <Cite id="dg" />. In these sections, it sa
 ### Open in the architecture {#open-in-the-architecture}
 
 The governance doesn't answer these questions, but the architecture needs an answer.
+
+#### When 1+MG data may be processed in the SPE of the European Commission {#commission-spe}
+
+- **What is open:** Users must process 1+MG data in a 1+MG SPE or, "where applicable", in the SPE provided by the European Commission under the EHDS <GovRef id="VIII.2.2" />. The governance doesn't say when that applies. It prefers federation to pooling data in the Commission's SPE <GovRef id="V.1.3" />.
+- **Why it matters:** if it applies, 1+MG data leave the system for an SPE that the Genome EDIC doesn't run, and the [data use agreement](/runtime/use/data-use-agreement), controllers and audits must cover that.
+- **Tracked in:** [issue #109](https://github.com/GenomicDataInfrastructure/system-architecture/issues/109).
 
 #### When a national veto applies to 1+MG cohort datasets {#national-veto}
 
