@@ -5,7 +5,7 @@
     {"id": "AAI", "meaning": "Authentication and authorisation infrastructure"},
     {"id": "ADR", "meaning": "Architecture decision record"},
     {"id": "CC", "meaning": "Central Coordination (Genome EDIC CC)"},
-    {"id": "DAC", "meaning": "Data access committee"},
+    {"id": "DAC", "meaning": "Data Access Committee"},
     {"id": "DG", "meaning": "The 1+MG Data Governance master document, published as the annex of GDI D2.4"},
     {"id": "DPIA", "meaning": "Data protection impact assessment (GDPR Art. 35)"},
     {"id": "DPO", "meaning": "Data protection officer"},
@@ -19,6 +19,7 @@
     {"id": "ISMS", "meaning": "Information security management system"},
     {"id": "NCP", "meaning": "National Coordination Point (1+MG NCP)"},
     {"id": "QM", "meaning": "Quality management in healthcare"},
-    {"id": "SPE", "meaning": "Secure processing environment"}
+    {"id": "SPE", "meaning": "Secure processing environment"},
+    {"id": "WG", "meaning": "Working group (of the 1+MG initiative)"}
   ]
 }
