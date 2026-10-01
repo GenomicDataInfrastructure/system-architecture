@@ -6,16 +6,24 @@ import type * as Preset from '@docusaurus/preset-classic';
 const organizationName = 'GenomicDataInfrastructure';
 const projectName = 'system-architecture';
 
+// Pull request previews (decision D-025): the preview workflow builds with PR_NUMBER set, so the
+// site lives under /system-architecture/pr-<number>/, is kept out of search engines and shows a
+// banner. Try it locally with `PR_NUMBER=123 npm run build && npm run serve`.
+const prNumber = process.env.PR_NUMBER?.trim();
+if (prNumber && !/^\d+$/.test(prNumber)) throw new Error(`PR_NUMBER must be a number, got "${prNumber}"`);
+const baseUrl = prNumber ? `/${projectName}/pr-${prNumber}/` : `/${projectName}/`;
+
 const config: Config = {
   title: 'Genome EDIC System Architecture',
   tagline: 'How the Genome EDIC infrastructure implements the 1+MG Data Governance',
   favicon: 'img/favicon.svg',
 
   url: 'https://genomicdatainfrastructure.github.io',
-  baseUrl: `/${projectName}/`,
+  baseUrl,
   organizationName,
   projectName,
   trailingSlash: false,
+  noIndex: Boolean(prNumber),
 
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'throw',
@@ -47,6 +55,15 @@ const config: Config = {
 
   themeConfig: {
     colorMode: {respectPrefersColorScheme: true},
+    ...(prNumber && {
+      announcementBar: {
+        id: `pr-preview-${prNumber}`,
+        content: `Preview of <a href="https://github.com/${organizationName}/${projectName}/pull/${prNumber}">pull request #${prNumber}</a>, not the published architecture. It is removed when the pull request is closed.`,
+        backgroundColor: '#fff4ce',
+        textColor: '#3b2f00',
+        isCloseable: false,
+      },
+    }),
     navbar: {
       title: 'Genome EDIC Architecture',
       logo: {alt: 'Genome EDIC', src: 'img/favicon.svg'},
