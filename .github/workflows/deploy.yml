@@ -1,3 +1,8 @@
+# Publishes main to the root of the gh-pages branch, which GitHub Pages serves (decision D-025).
+# Pull request previews live in pr-<number>/ folders of the same branch (preview.yml); this deploy
+# leaves them alone. The repository's Pages source must be "Deploy from a branch: gh-pages, / (root)"
+# (Settings > Pages); see CONTRIBUTING.md, "Previews and publication".
+
 name: Deploy to GitHub Pages
 
 on:
@@ -6,36 +11,38 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write # push to the gh-pages branch
 
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # full history, so pages can show their last author and date
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
       - run: npm ci
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+      # GitHub Pages runs Jekyll on a branch unless .nojekyll is at its root. Only the production
+      # deploy adds it: a preview folder must not carry one, since the deploy action never deletes
+      # .nojekyll and the folder would survive the removal of its preview.
+      - run: touch build/.nojekyll
+      - name: Publish to the root of gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: build
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          folder: build
+          branch: gh-pages
+          clean: true # removes files the new build no longer has (renamed or deleted pages) …
+          clean-exclude: |
+            pr-*
+          # … except the pull request previews
+          force: false # a preview may publish at the same time: rebase and retry instead of force-pushing
+          attempt-limit: 5
+          commit-message: 'Deploy ${{ github.sha }}'
