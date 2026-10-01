@@ -70,7 +70,7 @@ Why this works for the governance: the governance assigns rights and duties per 
 - Front matter per page: `owner`, `reviewers`, `status`, `audience`, `governance_refs`, `last_reviewed`.
 - MDX components: `<GovRef id="VII.2.3"/>` (link + tooltip to the DG section), `<InShort>`, `<AudienceBadges>`; source register in `src/data/sources.json` with DOIs, rendered as a bibliography.
 - Diagrams drawn in draw.io (`.drawio.svg` in `static/diagrams/`, shown with `<Diagram>`); C4 notation for structure diagrams, UML sequence diagrams for runtime scenarios (decision D-019). Mermaid only in the handbook.
-- Local search plugin; versioned docs per release; GitHub Actions deploys to GitHub Pages.
+- Local search plugin; versioned docs per release; GitHub Actions publishes `main` to the root of the `gh-pages` branch, which GitHub Pages serves, and every pull request to `pr-<number>/` on the same branch as a preview (decision D-025).
 - Auto-generated "Document status" page from front matter.
 
 ## 6. Tracking authorship, review and versions
