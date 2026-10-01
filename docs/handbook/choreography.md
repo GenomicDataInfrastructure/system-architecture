@@ -83,7 +83,7 @@ Write a short **scope note** as a comment in the issue: in scope, out of scope, 
 
 **Who:** the owner.
 
-1. Read the [page recipe](/handbook/recipes) for this type of page, and the arc42 guidance for the chapter.
+1. Read the [page recipe](/handbook/recipes) for this type of page, and **check the page against arc42**: the arc42 documentation for its section (`https://docs.arc42.org/section-N/`), and the tips and FAQ entries it links to. Note in the issue what the page takes from it. If the page departs from arc42 in a way the recipe doesn't already list, say why (decision D-024).
 2. Look for **one or two comparable solutions**: how other European health or research data infrastructures solve the same problem.
 3. Note in the issue what you will reuse, and what doesn't fit Genome EDIC (and why).
 
@@ -122,6 +122,7 @@ If you use an AI assistant, give it `AGENTS.md`, the page file, and the sources 
 - [ ] The *In short* box has at most three bullets that a non-specialist understands.
 - [ ] Every question in the scope note is answered, or explicitly moved to another page.
 - [ ] `governance_refs` lists every governance section the page implements.
+- [ ] **Fits arc42:** the page covers what arc42 asks for its section, or the pull request says why not.
 - [ ] Every scope, actor and governance term matches the glossary. Its first mention on the page links to its glossary entry, and the first use of each acronym is linked with `<Acronym>`.
 - [ ] Open points, risks and technical debt are marked on the page, each linked to its entry in chapter 11, and each entry names its issue.
 - [ ] `npm run check` and `npm run build` pass. You checked the page in the local preview (`npm start`).

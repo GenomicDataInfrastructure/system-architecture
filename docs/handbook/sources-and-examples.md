@@ -39,9 +39,9 @@ GA4GH (Beacon v2, Passports and Visas, DUO, htsget, Data Connect), HealthDCAT-AP
 
 ### 4. Architecture guidance
 
-- arc42 documentation per chapter: `https://docs.arc42.org/section-N/`
-- arc42 FAQ: [faq.arc42.org](https://faq.arc42.org)
-- arc42 examples: [arc42.org/examples](https://arc42.org/examples)
+- arc42 documentation per chapter: `https://docs.arc42.org/section-N/`, with tips per section
+- arc42 FAQ: [faq.arc42.org](https://faq.arc42.org), for example [K-1 Customizing arc42](https://faq.arc42.org/questions/K-1/) and [J-1 Large systems](https://faq.arc42.org/questions/J-1/)
+- arc42 examples: [examples.arc42.org](https://examples.arc42.org)
 - C4 model, for diagram levels: [c4model.com](https://c4model.com)
 
 ### 5. Comparable infrastructures (examples and best practices)

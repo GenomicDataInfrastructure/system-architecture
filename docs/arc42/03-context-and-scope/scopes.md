@@ -7,7 +7,7 @@ reviewers: []
 status: draft
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
-governance_refs: ["I", "II.1", "II.2", "III", "VI.4.4", "VII.1.3", "VII.3.1", "VII.4.7", "VII.5.4", "VII.5.5", "VIII.3.3"]
+governance_refs: ["I", "II.1", "II.2", "III", "VI.1.3", "VI.2.2", "VI.4.3", "VI.4.4", "VI.4.5", "VII.1.3", "VII.2.1", "VII.3.1", "VII.4.7", "VII.5.4", "VII.5.5", "VIII.2.1", "VIII.3.3"]
 last_reviewed:
 ---
 
@@ -15,7 +15,7 @@ last_reviewed:
 
 - The system has three scopes, set by who is responsible: **European** (the Genome EDIC), **national** (each Genome EDIC Member Country) and **User Organisation** (the organisation that uses the data, and its Users).
 - Each Member Country organises its national roles (which organisation does what), so there is no separate local scope. Where things run (central, national or local level) is described in the deployment view.
-- The type of each dataset decides who takes the access decision: a 1+MG Data Holder in the country for 1+MG compliant datasets, the Genome EDIC for 1+MG cohort datasets. We propose that each Member Country chooses the type.
+- The type of each dataset decides who takes the access decision: a 1+MG Data Holder in the country for 1+MG compliant datasets, the Genome EDIC for 1+MG cohort datasets. We propose that each Member Country chooses between the two 1+MG types.
 
 </InShort>
 
@@ -51,7 +51,8 @@ The actors and their names come from the governance definitions <GovRef id="III"
 | [Genome EDIC national entities](/glossary#genome-edic-national-entities) | National | Other organisations in the Member Country that contribute to the operations. |
 | [User Organisation](/glossary#user-organisation) | User Organisation | The legal entity the User works for. It is the controller for the downstream use <GovRef id="VII.1.3" />. |
 | [User](/glossary#user) | User Organisation | The person who seeks and gets access to data, acting on behalf of the User Organisation. |
-| [1+MG IT infrastructure provider](/glossary#1mg-it-infrastructure-provider) | Any (a role) | A role, not a scope. See [below](#the-1mg-it-infrastructure-provider-a-role-not-a-scope). |
+| Provider of [externally governed datasets](/concepts/dataset-types) | None | Not acting as a 1+MG Data Provider: its datasets are listed in the catalogue, but access follows its own rules <GovRef id="VII.2.1" />. It may be in a Member Country or outside. |
+| [1+MG IT infrastructure provider](/glossary#1mg-it-infrastructure-provider) | European or national (a role) | A role, not a scope. See [below](#the-1mg-it-infrastructure-provider-a-role-not-a-scope). |
 
 [Data subjects](/glossary#data-subject) are not part of any scope. They are the people the data are about. They deal with their own country: information, consent and objection are national tasks <GovRef id="I" />, supported by the national [data subject services](/building-blocks/national/data-subject-services).
 
@@ -74,25 +75,26 @@ The governance defines three types of dataset <GovRef id="III" />. [8.12 Types o
 
 The data lifecycle has three phases, and each phase has its own controller(s) <GovRef id="II.1" />. For the access decision, the governance describes two alternative scenarios: a decision at national level (1+MG compliant datasets) or by the Genome EDIC (1+MG cohort datasets). Externally governed datasets sit outside both.
 
-**The type of a dataset decides who takes the access decision.** We propose that the Member Country chooses the type of each of its datasets: this is the architecture decision record [ADR-0002](/decisions/0002-disclosure-paths-per-dataset), still to be confirmed (see the open point below). The table shows who is responsible in each phase, and who is controller where the governance says so.
+**The type of a dataset decides who takes the access decision.** The governance asks each Member Country to decide on a national strategy for the responsibility of downstream data disclosure, and to nominate, where applicable, its 1+MG Data Holders <GovRef id="VI.1.3" />. We read this as the Member Country choosing whether its datasets are 1+MG compliant or 1+MG cohort datasets: this is the architecture decision record [ADR-0002](/decisions/0002-disclosure-paths-per-dataset), still to be confirmed, as is the level of the choice (see the open points below). The table shows who is responsible in each phase, and who is controller where the governance says so.
 
 | Phase | 1+MG compliant datasets | 1+MG cohort datasets | Externally governed datasets |
 |---|---|---|---|
-| **1. Data inclusion** | 1+MG Data Provider (national) <GovRef id="VI.4.4" /> | 1+MG Data Provider (national) <GovRef id="VI.4.4" /> | Their own data provider, outside the 1+MG data governance. These datasets should meet inclusion criteria on quality and on ethical, legal and societal implications (<Acronym id="ELSI" />) to be listed in the catalogue <GovRef id="III" />. |
-| **2. Access decision** | 1+MG Data Holder, as controller (**national**) <GovRef id="VII.5.4" /> | Genome EDIC, as controller (**European**): the Genome EDIC CC adopts and documents the decision <GovRef id="VII.5.5" />, after review by the 1+MG DAC and by 1+MG Data Providers and/or Local DACs (national) <GovRef id="VII.4.7" /> | **Outside the system:** the dataset's own data provider, or a health data access body under the European Health Data Space. The Genome EDIC CC only sends the User there <GovRef id="VII.3.1" />. |
-| **3. Use** | The User Organisation, as controller for the use (**User Organisation scope**) <GovRef id="VII.1.3" />. Its Users work in a 1+MG secure processing environment (<Acronym id="SPE" />), in the national scope <GovRef id="II.1" />. | Same as for 1+MG compliant datasets | In the 1+MG IT infrastructure, but not under the 1+MG data governance <GovRef id="III" />. A 1+MG SPE lets Users import the data <GovRef id="VIII.3.3" />. |
+| **1. Data inclusion** | 1+MG Data Provider, as controller for the inclusion (**national**) <GovRef id="VI.2.2" /> <GovRef id="VI.4.3" />, checked by the 1+MG NCP <GovRef id="VI.4.4" />. The 1+MG Data Holder then holds the data legally <GovRef id="VI.4.5" />. | 1+MG Data Provider, as controller for the inclusion (**national**) <GovRef id="VI.2.2" /> <GovRef id="VI.4.3" />, checked by the 1+MG NCP <GovRef id="VI.4.4" />. The Genome EDIC then holds the data legally, with a 1+MG Data Host in the country <GovRef id="III" />. | Their own data provider, outside the 1+MG data governance. These datasets should meet inclusion criteria on quality and on ethical, legal and societal implications (<Acronym id="ELSI" />) to be listed in the catalogue <GovRef id="III" />. |
+| **2. Access decision** | 1+MG Data Holder, as controller (**national**) <GovRef id="VII.5.4" />. For healthcare reuse, no formal access decision is taken per request: access rests on the framework data use agreement <GovRef id="VII.5.4" />. | Genome EDIC, as controller (**European**): the Genome EDIC CC adopts and documents the decision <GovRef id="VII.5.5" />, after review by the 1+MG DAC and by 1+MG Data Providers and/or Local DACs (national) <GovRef id="VII.4.7" />. For healthcare reuse, the same: no decision per request <GovRef id="VII.5.5" />. | **Outside the system:** the dataset's own data provider, or a health data access body under the European Health Data Space. The Genome EDIC CC only sends the User there <GovRef id="VII.3.1" />. |
+| **3. Use** | The User Organisation, as controller for the use (**User Organisation scope**) <GovRef id="VII.1.3" />. Its Users work in a 1+MG secure processing environment (<Acronym id="SPE" />), in the national scope <GovRef id="II.1" />. The Genome EDIC acts as processor towards the User Organisation, and the SPE providers are its sub-processors <GovRef id="VIII.2.1" />; see [8.2](/concepts/roles). | Same as for 1+MG compliant datasets | In the 1+MG IT infrastructure, but not under the 1+MG data governance <GovRef id="III" />. A 1+MG SPE lets Users import the data <GovRef id="VIII.3.3" />. |
 
-Whatever type a dataset is given, the system supports its path. It also lists externally governed datasets without deciding on access to them.
+Whatever type a dataset is given, the system supports its path. It also lists externally governed datasets without deciding on access to them. Until the <Acronym id="GDI" /> project ends, externally governed datasets are the only ones Users can get access to; the other two types follow once the Genome EDIC is operational (ADR-0002, proposed) <Cite id="gdi-d3.4" />.
 
 A scope is not the same as a controller. For 1+MG cohort datasets, the Genome EDIC (European scope) decides on access, but the data stay with a 1+MG Data Host in the country (national scope). [8.2 Controllers, processors and responsibilities](/concepts/roles) gives the controllers and processors for each processing operation.
 
-:::caution[Open point]
-The governance does not say who chooses the type of a dataset, and so its path. ADR-0002 assumes that the Member Country does. This is to be confirmed with the Genome EDIC governance bodies. See [chapter 11](/risks#dataset-type-choice).
+:::caution[Open points]
+- **At which level the type of a dataset is chosen.** The Member Country decides the national strategy for downstream disclosure <GovRef id="VI.1.3" />. Whether it chooses once for the country, per 1+MG Data Provider or per dataset, and whether it may nominate no 1+MG Data Holder at all, is open. ADR-0002 leaves the level to the Member Country; to be confirmed with the Genome EDIC governance bodies. See [chapter 11](/risks#dataset-type-choice).
+- **The 1+MG paths need an operational Genome EDIC.** Until then, only externally governed datasets can be accessed through the system; the step plan of ADR-0002 is proposed. See [chapter 11](/risks#genome-edic-operational).
 :::
 
 ## The 1+MG IT infrastructure provider: a role, not a scope
 
-A 1+MG IT infrastructure provider runs an IT environment at [central, national or local level](/glossary#central-national-and-local-level). That IT infrastructure must be accredited for service provision in the Genome EDIC <GovRef id="III" />. It can work for any scope. For example, it can host the services of the Genome EDIC CC, or a national 1+MG SPE.
+A 1+MG IT infrastructure provider runs an IT environment at [central, national or local level](/glossary#central-national-and-local-level). That IT infrastructure must be accredited for service provision in the Genome EDIC <GovRef id="III" />. It can work for the European or the national scope. For example, it can host the services of the Genome EDIC CC, or a national 1+MG SPE.
 
 So each building block names two things:
 
@@ -102,7 +104,7 @@ So each building block names two things:
 This split matches the split between controller and processor in [8.2](/concepts/roles).
 
 :::caution[Open point]
-The details of this role, including accreditation, are still to be defined jointly with 1+MG Working Group 5 and <Acronym id="GDI" /> Pillar II <GovRef id="III" />. See [chapter 11](/risks#accreditation).
+The details of this role, including accreditation, are still to be defined jointly with 1+MG Working Group 5 and GDI Pillar II <GovRef id="III" />. See [chapter 11](/risks#accreditation).
 :::
 
 ## Scopes and deployment levels
