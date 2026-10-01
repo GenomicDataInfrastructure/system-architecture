@@ -9,6 +9,7 @@ status: placeholder
 wave: 6
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs:
+  - "I"
   - "II.1"
   - "III"
   - "V.1.3"
@@ -93,6 +94,12 @@ The governance doesn't answer these questions, but the architecture needs an ans
 - **What is open:** for example, whether part of a dataset can be disclosed as 1+MG compliant data and part as 1+MG cohort data. The governance doesn't say.
 - **Why it matters:** the catalogue and access request management must know the type of every dataset in a request.
 - **Tracked in:** [issue #105](https://github.com/GenomicDataInfrastructure/system-architecture/issues/105); related to [issue #85](https://github.com/GenomicDataInfrastructure/system-architecture/issues/85).
+
+#### Who adopts the system architecture {#architecture-adoption}
+
+- **What is open:** the governance says that the Genome EDIC Assembly of Members decides on the principles and sets the minimum requirements <GovRef id="I" />, and that committees and working groups turn the principles into technical requirements <GovRef id="II.1" />. It doesn't say which body adopts the system architecture, or how changes to it are decided. This site is a working draft of the architecture taskforce, and its architecture decision records name their deciders as "to be confirmed by the taskforce".
+- **Why it matters:** Member Countries and implementers need to know when the architecture binds them, and who can change it.
+- **Tracked in:** [issue #113](https://github.com/GenomicDataInfrastructure/system-architecture/issues/113).
 
 #### Who chooses the type of a dataset {#dataset-type-choice}
 

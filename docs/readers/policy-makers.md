@@ -18,6 +18,7 @@ You represent a ministry or public body backing the Genome EDIC. You want to kno
 | Question | Answer |
 |---|---|
 | What is the system for, and which uses does it support? | [1. Introduction and goals](/introduction) |
+| Who are the stakeholders, and who decides on the architecture? | [1.3 Stakeholders](/introduction/stakeholders) |
 | What must my country put in place (organisation, infrastructure, people)? | [2.3 Organisational constraints](/constraints/organisational) |
 | What stays under national control, and what is done at European level? | [3.3 European, national and User Organisation scopes](/context/scopes) |
 | Who decides on access to which data: my country or the Genome EDIC? | [3.3 Scopes](/context/scopes), [ADR-0002 Who decides on access, per type of dataset](/decisions/0002-disclosure-paths-per-dataset) |
