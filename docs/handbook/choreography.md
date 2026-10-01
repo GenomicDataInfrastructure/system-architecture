@@ -95,7 +95,7 @@ Write a short **scope note** as a comment in the issue: in scope, out of scope, 
 
 1. Replace the placeholder content with the **headings from the recipe** and a first *In short* box.
 2. Set `status: draft`.
-3. Open a **draft pull request** that says `Refs #<issue number>`. Ask the reviewers for a quick look at the outline: 10 minutes, comments only.
+3. Open a **draft pull request** that says `Refs #<issue number>`. A comment on the pull request links its **preview**, a rendered copy of the whole site with your page in it, updated on every push. Ask the reviewers for a quick look at the outline: 10 minutes, comments only.
 
 Early feedback on the outline is cheaper than rewriting a finished page.
 
@@ -136,7 +136,7 @@ If you use an AI assistant, give it `AGENTS.md`, the page file, and the sources 
 
 1. Set `status: in-review`, mark the pull request *Ready for review*, and change `Refs` to `Closes #<issue number>`.
 2. Request the reviewers on the pull request.
-3. Reviewers use the [review checklists](/handbook/review-checklists) and comment within **5 working days**.
+3. Reviewers read the page in the pull request's preview (the link is in the preview comment), use the [review checklists](/handbook/review-checklists), and comment within **5 working days**.
 4. The owner answers every comment: either changes the text, or explains why not.
 5. **Two review rounds at most.** If owner and reviewer still disagree, the architecture lead decides. If the disagreement is about the architecture itself, the decision becomes an ADR.
 

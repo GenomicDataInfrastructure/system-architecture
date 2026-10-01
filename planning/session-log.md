@@ -17,6 +17,11 @@ Newest first. Keep each entry to a few lines: what was done, what is next, where
   - reviewers for the six branches at the kick-off; legal review of the VI.1.3 reading in #118;
   - per-PR site previews for reviewers (suggested; GitHub Pages serves one site, so previews go into per-PR subfolders of the `gh-pages` branch, or a preview service).
 
+## 2026-10-01 — Pull request previews (B. Pacheco with Claude)
+- Decided D-025: every pull request gets a rendered preview of the whole site at `…/system-architecture/pr-<number>/`, on the `gh-pages` branch next to the published site; Netlify / Cloudflare Pages documented as the alternative.
+- Done: `.github/workflows/preview.yml` (build with `PR_NUMBER`, publish to `pr-<number>/`, one comment per pull request, folder removed on close); `deploy.yml` now publishes `main` to the root of `gh-pages` and keeps the `pr-*` folders; `docusaurus.config.ts` derives `baseUrl`, `noIndex` and a preview banner from `PR_NUMBER`. Checked locally: `PR_NUMBER=999 npm run build` passes with `onBrokenLinks`/`onBrokenAnchors: 'throw'`, and every asset and page link is under `/system-architecture/pr-999/` (`<Diagram>` uses `useBaseUrl`). CONTRIBUTING ("Previews and publication"), choreography steps 6 and 9, plan and changelog updated.
+- Next, once this is merged (in this order): wait for the *Deploy to GitHub Pages* run to create the `gh-pages` branch; in *Settings > Pages* switch the source to *Deploy from a branch*, `gh-pages`, `/ (root)`; check the site and open a test pull request to see its preview comment. Until the switch, the published site is simply not updated.
+
 ## 2026-09-28 — 3.3 and 2.2 re-checked against the glossary, ADR-0002 and 1.3 (B. Pacheco with Claude)
 - 3.3 *Scopes* (#13, draft PR #84): the Member Country chooses between the two 1+MG types, and the level of the choice is still to be confirmed (as in ADR-0002); flag what GDI delivers (D-006, cites `gdi-d3.4`). The glossary already follows 3.3.
 - 2.2 *Governance principles* (#7, draft PR #92): Users start from the 1+MG User Portal whatever the type of dataset; for externally governed datasets the portal sends them to the dataset's own procedure (VII.3.1, as in ADR-0002).
