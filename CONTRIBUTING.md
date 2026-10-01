@@ -46,7 +46,7 @@ The full step-by-step version, with who does what and when each step is done, is
    - the `<InShort>` box: at most three plain-language bullets;
    - the content, citing governance sections with `<GovRef id="VII.2.3" />` and other sources with `<Cite id="gdi-d3.4" />`.
 3. **Ask for review.** Set `status: in-review`, open a pull request that says `Closes #<issue number>`, and fill in the checklist. Request the reviewers listed in `reviewers` on the pull request. Add a `needs-dpo`, `needs-security`, `needs-legal` or `needs-elsi` label to the issue when a specialist must review.
-4. **Review.** Reviewers comment in the pull request. When satisfied, the reviewer sets `status: approved` and `last_reviewed` to today, and approves the pull request.
+4. **Review.** Reviewers read the page in the **preview** of the pull request: a rendered copy of the whole site at `https://genomicdatainfrastructure.github.io/system-architecture/pr-<number>/`, linked in a comment on the pull request and updated on every push (see [Previews and publication](#previews-and-publication)). Reviewers comment in the pull request. When satisfied, the reviewer sets `status: approved` and `last_reviewed` to today, and approves the pull request.
 5. **Merge.** `main` accepts a pull request once it has at least one approval and CI passes. Merging closes the issue.
 
 ## Writing rules
@@ -81,6 +81,22 @@ When pages are added, the architecture lead creates their issues with `scripts/g
 DRY_RUN=1 node scripts/github/setup.mjs issues   # preview: prints the gh commands
 node scripts/github/setup.mjs issues             # creates the missing issues
 ```
+
+## Previews and publication
+
+Both the published site and the pull request previews are served by GitHub Pages from the `gh-pages` branch (decision D-025). Nobody edits that branch by hand.
+
+| What | Where | Published by |
+|---|---|---|
+| The site, from `main` | `https://genomicdatainfrastructure.github.io/system-architecture/` (root of `gh-pages`) | *Deploy to GitHub Pages* (`.github/workflows/deploy.yml`), on every push to `main` |
+| The preview of a pull request | `https://genomicdatainfrastructure.github.io/system-architecture/pr-<number>/` (folder `pr-<number>/`) | *Pull request preview* (`.github/workflows/preview.yml`), on every push to the pull request |
+
+- The preview workflow posts the URL in **one comment** on the pull request and updates it on every push. GitHub Pages needs a minute or two after the run to publish the files.
+- The preview shows a banner naming the pull request and is marked `noindex`, so search engines do not pick up drafts. When the pull request is closed or merged, its folder is removed and the comment says so.
+- Only pull requests from branches of this repository get a preview. A pull request from a fork runs with a read-only token and cannot publish; such a pull request is checked by CI but reviewed from the source.
+- To see a page under the preview path locally: `PR_NUMBER=123 npm run build && npm run serve`.
+
+**One-off set-up (architecture lead):** the repository's Pages source must be *Deploy from a branch*, branch `gh-pages`, folder `/ (root)` (*Settings > Pages*). The branch is created by the first run of *Deploy to GitHub Pages*; switch the source after that run, so that the site never goes blank. Nothing else changes: the deploy workflow keeps the `pr-*` folders, and the preview workflow touches only its own folder.
 
 ## Releases
 
