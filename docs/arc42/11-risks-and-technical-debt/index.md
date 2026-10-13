@@ -14,6 +14,9 @@ governance_refs:
   - "V.1.3"
   - "VI.1.3"
   - "VI.1.5"
+  - "VII.2.1"
+  - "VII.2.2"
+  - "VII.2.3"
   - "VII.3.1"
   - "VII.3.3"
   - "VII.4.3"
@@ -94,6 +97,12 @@ The governance doesn't answer these questions, but the architecture needs an ans
 - **Why it matters:** the catalogue and access request management must know the type of every dataset in a request.
 - **Tracked in:** [issue #105](https://github.com/GenomicDataInfrastructure/system-architecture/issues/105); related to [issue #85](https://github.com/GenomicDataInfrastructure/system-architecture/issues/85).
 
+#### Whether the filter list of subject-level discovery is public {#discovery-filter-list}
+
+- **What is open:** a subject-level discovery endpoint publishes the list of filters it accepts: ontology terms such as phenotypes and diagnoses. In Beacon v2, this is the `/filtering_terms` endpoint. The list is built from the data the node holds, so a rare term in it tells the [User](/glossary#user) that at least one record has that term. The governance asks for a <Acronym id="DPIA" /> of subject-level discovery that considers the results returned to the User <GovRef id="VII.2.2" />, and for a search engine with built-in safeguards <GovRef id="VII.2.3" />. It doesn't say whether the filter list is metadata, like the catalogue, or a discovery result under these safeguards.
+- **Why it matters:** Beacon network clients read the list to learn what a node can be asked. A node that withholds it can't be queried without help. A node that publishes it shows the presence of a term below any count threshold its DPIA sets. The Beacon v2 reference implementation applies the same limit to the list as to the records: a node that returns counts only publishes an empty list, and fails the Beacon v2 verifier.
+- **Tracked in:** [issue #128](https://github.com/GenomicDataInfrastructure/system-architecture/issues/128).
+
 #### Who chooses the type of a dataset {#dataset-type-choice}
 
 - **What is open:** for the access decision, the governance describes two scenarios: a decision at national level, for [1+MG compliant datasets](/concepts/dataset-types), or by the Genome EDIC, for 1+MG cohort datasets <GovRef id="II.1" />. Who chooses between them is settled in part: each Genome EDIC Member Country decides on "a national strategy for the responsibility of downstream data disclosure" and nominates, where applicable, the 1+MG Data Holders in the country <GovRef id="VI.1.3" />. It does so before any data are included, because the choice becomes part of the consent for inclusion <GovRef id="VI.1.5" />. The governance doesn't say at which level the choice is made: for the whole country, per [1+MG Data Provider](/glossary#1mg-data-provider), or per dataset. Nor does it say whether "where applicable" lets a country nominate no 1+MG Data Holder and make all its data available as 1+MG cohort data. [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) proposes that the Member Country chooses, on the basis of VI.1.3, and leaves the level open.
@@ -121,6 +130,12 @@ Work outside this architecture that it depends on.
 - **What is open:** the paths for [1+MG compliant and 1+MG cohort datasets](/concepts/dataset-types) need the Genome EDIC: the [Genome EDIC CC](/glossary#genome-edic-central-coordination-genome-edic-cc) is the one-stop shop for Users, and the [1+MG DAC](/glossary#1mg-dac) reviews access requests <GovRef id="III" />. The Genome EDIC can't be assumed to be in place before GDI ends, because of the administrative process to create an EDIC (GDI D3.4, section 1) <Cite id="gdi-d3.4" />.
 - **Why it matters:** until then, the system offers only externally governed datasets. [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) proposes to add the other two types in later steps.
 - **Tracked in:** [issue #116](https://github.com/GenomicDataInfrastructure/system-architecture/issues/116).
+
+#### The Starter Kit FAIR Data Point uses its own metadata schemas {#starter-kit-fdp-schemas}
+
+- **What is open:** the national catalogue of the <Acronym id="GDI" /> Starter Kit <Cite id="gdi-starter-kit" /> runs the stock FAIR Data Point. It loads the FAIR Data Point's own metadata schemas (version 1.0.0), not the GDI metadata shapes (`gdi-metadata`, version 1.1). The two disagree. The stock schema accepts the media type of a distribution only as text, and rejects the registered media type as a web address, which DCAT-AP 3.0 requires. A node on the defaults can't publish conformant distributions until it loads the GDI shapes itself.
+- **Why it matters:** the national catalogues feed the central data catalogue, which must be interoperable with the EU dataset catalogue of the EHDS <GovRef id="VII.2.1" />. If each node fixes this by itself, the nodes run different schema versions.
+- **Tracked in:** [issue #129](https://github.com/GenomicDataInfrastructure/system-architecture/issues/129).
 
 ## Risks {#risks}
 
