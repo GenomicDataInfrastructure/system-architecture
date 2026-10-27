@@ -61,6 +61,16 @@
       "note": "Zenodo record 17990533, published 2025-12-19. Cited with the section number in prose, e.g. (GDI D3.4, section 4.3)."
     },
     {
+      "id": "gdi-d4.4",
+      "short": "GDI D4.4",
+      "title": "GDI D4.4 Updated roadmap on helpdesk and European operations",
+      "publisher": "GDI project",
+      "date": "2026-08-05",
+      "url": "https://zenodo.org/records/21810229",
+      "status": "candidate",
+      "note": "Gives the end of the GDI project: March 2027."
+    },
+    {
       "id": "gdi-d6.3",
       "short": "GDI D6.3",
       "title": "GDI D6.3 Report on requirements for data quality and distributed analysis, as well as external resource interoperability",

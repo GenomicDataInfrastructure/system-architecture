@@ -30,7 +30,7 @@ last_reviewed:
 [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) decides that the target architecture supports all three types of dataset, and that each Genome EDIC Member Country chooses between the two 1+MG types. This ADR decides when each type can be offered.
 
 - **The 1+MG paths need the Genome EDIC.** The [Genome EDIC CC](/glossary#genome-edic-central-coordination-genome-edic-cc) is the one-stop shop for Users, and the [1+MG DAC](/glossary#1mg-dac) reviews access requests <GovRef id="III" />.
-- **The Genome EDIC can't be assumed to be operational before GDI ends** in March 2027, because of the administrative process to create a European Digital Infrastructure Consortium (EDIC) <Cite id="gdi-d3.4" />.
+- **The Genome EDIC can't be assumed to be operational before GDI ends** in March 2027 <Cite id="gdi-d4.4" />, because of the administrative process to create a European Digital Infrastructure Consortium (EDIC) <Cite id="gdi-d3.4" />.
 - **The type of a dataset is part of the consent at inclusion.** It names the controller for the disclosure, so it is decided before any data are included <GovRef id="VI.1.3" /> <GovRef id="VI.1.5" />. Changing it later needs new information to data subjects, and new consent where consent is the legal basis (ADR-0002).
 - **The <Acronym id="GDI" /> project works with data that need no 1+MG access decision:** Genome of Europe data, which the Genome of Europe consortium uses under its own legal basis, and data not related to individuals <Cite id="gdi-d3.4" />.
 

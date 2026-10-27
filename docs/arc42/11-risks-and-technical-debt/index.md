@@ -223,7 +223,7 @@ A risk is something that could go wrong and harm the system or its users: for ex
 
 #### GDI ends before the Genome EDIC is operational {#gdi-end-gap}
 
-- **What could happen:** GDI ends in March 2027, and the Genome EDIC is not yet operational <Cite id="gdi-d3.4" />. The central User Portal and catalogue, and the step 1 services of [ADR-0003](/decisions/0003-implementation-in-steps), then have no operator, and no controller or security authority for them.
+- **What could happen:** GDI ends in March 2027 <Cite id="gdi-d4.4" />, and the Genome EDIC is not yet operational <Cite id="gdi-d3.4" />. The central User Portal and catalogue, and the step 1 services of [ADR-0003](/decisions/0003-implementation-in-steps), then have no operator, and no controller or security authority for them.
 - **Probability:** medium.
 - **Impact:** high: Users lose access to the externally governed datasets offered in step 1, and the work of GDI may not carry over to the Genome EDIC.
 - **Mitigation:** agree before GDI ends who runs the central services in the gap, and on which agreements; record the roles of step 1 (see [The Genome EDIC must be operational](#genome-edic-operational)).
