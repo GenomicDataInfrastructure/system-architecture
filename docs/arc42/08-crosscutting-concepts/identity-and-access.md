@@ -24,6 +24,7 @@ last_reviewed:
 
 ## Sources to start from
 
+- Builds on [ADR-0004 Identity federation and authorisation across scopes](/decisions/0004-identity-and-authorisation), decided in wave 3 (decision D-027).
 - Governance: <GovRef id="VII.1.3" />, <GovRef id="VIII.3.1" />
 - Other: <Cite id="gdi-starter-kit" />
 

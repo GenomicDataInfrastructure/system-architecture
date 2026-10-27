@@ -24,6 +24,7 @@ last_reviewed:
 
 ## Sources to start from
 
+- Builds on [ADR-0008 How the system connects to HealthData@EU](/decisions/0008-connection-to-healthdata-eu), decided in wave 3 (decision D-027).
 - Other: <Cite id="ehds" />, <Cite id="hdeu-ia-draft" />
 
 :::note[Placeholder]

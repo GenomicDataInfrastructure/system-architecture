@@ -30,9 +30,9 @@ flowchart LR
 
 - **Wave 1 fixes the vocabulary and the boundaries.** Every other page talks about scopes and actors. If 3.3 and 3.1 are unclear, every page after them will be unclear too.
 - **Wave 2 fixes the direction.** The legal constraints, the solution strategy and the controller/processor map (8.2) decide what is allowed. Data protection by design and default (8.1) comes this early because it shapes every component and scenario.
-- **Wave 3 draws the outline** that wave 4 fills in.
+- **Wave 3 draws the outline** that wave 4 fills in. It starts with five decisions that hide inside crosscutting concepts but change the structure: identity federation and authorisation, where the identity link is held, trust boundaries, the catalogue metadata standard, and the connection to HealthData@EU (ADR-0004 to ADR-0008, decision D-027). Taken later, they would force chapters 5 and 6 to be redrawn.
 - **Wave 4 describes behaviour and components together.** A scenario in chapter 6 and the components it uses in chapter 5 inform each other, so their owners should talk.
-- **Wave 5 details the concepts** that waves 3 and 4 have already referenced. This avoids writing abstract concepts nobody uses.
+- **Wave 5 details the concepts** that waves 3 and 4 have already referenced, building on the wave 3 decisions. This avoids writing abstract concepts nobody uses.
 - **Wave 6 consolidates:** deployment, measurable quality scenarios, risks, and a final check that every question in the reader guides has an answer.
 
 ## Progress per wave
