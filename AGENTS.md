@@ -17,7 +17,8 @@ Primary audience: implementers. Also read by ministries, legal experts, ELSI spe
 | `planning/decisions.md` | Decisions about the documentation itself, and open questions | A decision is taken or a question is raised |
 | `planning/session-log.md` | Short handover notes: what was done, what is next | At the end of every working session |
 | `CONTRIBUTING.md` | Review workflow, front matter, writing rules, page issues, releases | The workflow changes |
-| `docs/handbook/` | Taskforce handbook: writing order (waves), page choreography, page recipes, sources, review checklists | The way we write changes |
+| `docs/handbook/` | Taskforce handbook: writing order (waves), page choreography, page recipes, sources, review checklists, drafting and review roles | The way we write changes |
+| `.claude/agents/` | Thin wrappers for the drafting and review roles (`docs/handbook/drafting-roles.md`, decision D-026); the role text lives in the handbook | A role changes |
 | `src/data/waves.json` | The six writing waves (the `wave` field of each page refers to them) | The writing order changes |
 | `docs/` | The published architecture (arc42 chapters, reader guides, appendices) | Normal writing work |
 | `src/data/governance.json` | Catalogue of governance sections (IDs for `governance_refs` and `<GovRef>`) | The governance document changes |
