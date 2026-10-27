@@ -17,6 +17,7 @@ This handbook is for the members of the system architecture taskforce: the peopl
 | Draw or edit a diagram | [Diagrams](/handbook/diagrams) |
 | Find sources, examples and best practices | [Sources, examples and best practices](/handbook/sources-and-examples) |
 | Review a page | [Review checklists](/handbook/review-checklists) |
+| Know how pages are drafted with AI assistance, and which roles review them | [Drafting and review roles](/handbook/drafting-roles) |
 
 ## Roles
 
