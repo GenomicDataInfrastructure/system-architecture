@@ -20,7 +20,8 @@ last_reviewed:
 ## What this page must answer
 
 - Which external systems do we connect to (HealthData@EU central platform, national HDABs, LS Login, EU dataset catalogue, User Organisation identity providers)?
-- Which channels and protocols are used on each interface?
+- For each exchange in 3.1: which channel, protocol and standard is used?
+- A C4 system context diagram that shows the technologies on each connection.
 
 ## Sources to start from
 
