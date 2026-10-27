@@ -23,6 +23,7 @@ last_reviewed:
 
 ## Sources to start from
 
+- Builds on [ADR-0006 Trust boundaries between operators and what each crossing requires](/decisions/0006-trust-boundaries), decided in wave 3 (decision D-027).
 - Governance: <GovRef id="V.1.1" />, <GovRef id="V.1.2" />, <GovRef id="V.1.3" />
 - Other: <Cite id="b1mgplus-d2.8" />, <Cite id="nis2" />
 

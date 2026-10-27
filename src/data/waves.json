@@ -16,7 +16,7 @@
     {
       "id": 3,
       "name": "Structure",
-      "goal": "Draw the outline: technical context, technical constraints, level-1 building blocks and the scope overviews.",
+      "goal": "Draw the outline: technical context, technical constraints, the crosscutting decisions that shape the structure (ADR-0004 to ADR-0008: identity, identity link, trust boundaries, catalogue metadata, HealthData@EU connection), level-1 building blocks and the scope overviews.",
       "depends_on": [1, 2]
     },
     {
@@ -28,7 +28,7 @@
     {
       "id": 5,
       "name": "Crosscutting details",
-      "goal": "Detail the concepts that the scenarios and components rely on: security, identity, logging, consent, identifiers, output control, versioning, metadata, EHDS.",
+      "goal": "Detail the concepts that the scenarios and components rely on, building on the wave 3 decisions: security, identity, logging, consent, identifiers, output control, versioning, metadata, EHDS.",
       "depends_on": [4]
     },
     {
