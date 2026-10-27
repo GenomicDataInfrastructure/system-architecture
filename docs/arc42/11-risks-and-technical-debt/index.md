@@ -15,9 +15,13 @@ governance_refs:
   - "III"
   - "V.1.2"
   - "V.1.3"
+  - "V.2.2"
   - "VI.1.1"
   - "VI.1.3"
   - "VI.1.5"
+  - "VI.4.4"
+  - "VII.1.1"
+  - "VII.1.2"
   - "VII.2.1"
   - "VII.2.2"
   - "VII.2.3"
@@ -29,11 +33,14 @@ governance_refs:
   - "VII.5.2"
   - "VII.5.3"
   - "VII.5.5"
+  - "VIII.1.2"
   - "VIII.2.1"
   - "VIII.2.2"
   - "VIII.3.2"
   - "VIII.3.3"
   - "VIII.3.4"
+  - "VIII.5.1"
+  - "VIII.5.2"
   - "VIII.9.1"
   - "VIII.11.1"
   - "VIII.11.2"
@@ -101,6 +108,12 @@ The governance is a "living document" <Cite id="dg" />. In these sections, it sa
 - **Why it matters:** access request management must support the deadline, and be able to change it.
 - **Tracked in:** [issue #100](https://github.com/GenomicDataInfrastructure/system-architecture/issues/100).
 
+#### Users and User Organisations from third countries {#third-country-users}
+
+- **What is open:** the 1+MG initiative is open to third countries beyond the EEA in principle: data could be made available to Users from third countries, subject to suitable safeguards and a thorough risk assessment, if the use is of general interest. But neither Users nor Genome EDIC members from third countries are considered in the governance <GovRef id="II.4" />. The architecture proposes a default until the Member Countries decide: the User Organisation registry records each organisation's country, and organisations from third countries are not registered for 1+MG compliant and 1+MG cohort datasets. The GDI User Portal today has no registration of User Organisations: Users sign in individually and apply under each externally governed dataset's own procedure <Cite id="gdi-userportal-docs" />, so the default doesn't change what GDI offers now.
+- **Why it matters:** the User Organisation registry ([5.1.3](/building-blocks/european/user-organisation-registry)) and registration ([6.2.1](/runtime/access/registration)) must know whether to accept organisations from third countries, and which safeguards apply if they do.
+- **Tracked in:** [issue #146](https://github.com/GenomicDataInfrastructure/system-architecture/issues/146).
+
 #### Who decides on pooling for 1+MG compliant datasets {#pooling-decision}
 
 - **What is open:** for research, the governance lets each Member Country choose whether its data may be streamed or temporarily pooled with data from other countries, where the purpose can't be achieved in a federated way <GovRef id="VIII.3.4" />. For [1+MG compliant datasets](/concepts/dataset-types), it says that the decision now rests with each [1+MG Data Holder](/glossary#1mg-data-holder), and that it could be taken at country level instead, to reduce complexity <GovRef id="VIII.3.4" />. Two related questions have no answer in the governance: whether pooling is possible for uses other than research, and who judges that a purpose can't be achieved in a federated way.
@@ -125,9 +138,15 @@ The governance doesn't answer these questions, but the architecture needs an ans
 
 #### Role of 1+MG IT infrastructure providers in the use phase {#it-provider-role}
 
-- **What is open:** in the use phase, the governance makes the Genome EDIC a processor for the User Organisation, with the SPE providers as its sub-processors <GovRef id="VIII.2.1" />. Elsewhere it calls the 1+MG IT infrastructure provider the controller for the technical and organisational measures <GovRef id="VIII.3.3" />. The wave 1 pages use "sub-processor"; [8.2](/concepts/roles) must settle the role.
+- **What is open:** in the use phase, the governance makes the Genome EDIC a processor for the User Organisation, with the SPE providers as its sub-processors <GovRef id="VIII.2.1" />. Elsewhere it calls the 1+MG IT infrastructure provider the controller for the technical and organisational measures <GovRef id="VIII.3.3" />. [8.2](/concepts/roles#the-role-of-spe-providers) proposes a reading that keeps both: sub-processor for the data the User analyses, and controller for the SPE provider's own platform processing, such as User accounts and security logs. An expert workshop of B1MG+ voted for this split by a large majority in the scenario that follows the Genome EDIC Secondary Use Framework (11 of 12 voters); in a generic repository scenario, opinions were divided (5 of 11) <Cite id="b1mgplus-ms17" />. [ADR-0010](/decisions/0010-spe-provider-role) proposes it; until the ADR is accepted, the point stays open.
 - **Why it matters:** it decides which agreements the SPE providers sign, and who answers for the security of the SPE.
 - **Tracked in:** [issue #137](https://github.com/GenomicDataInfrastructure/system-architecture/issues/137).
+
+#### Roles the governance doesn't assign to supporting services {#unassigned-roles}
+
+- **What is open:** the governance doesn't give a GDPR role to some actors for some processing operations: the [1+MG NCP](/glossary#1mg-national-coordination-point-1mg-ncp) when it checks data before inclusion <GovRef id="VI.4.4" />, and its role in the national information chain when it informs data subjects after an access decision, where the controller for the disclosure carries the transparency duty <GovRef id="VII.5.3" /> <GovRef id="VIII.1.2" /> (who informs is itself open: see [Who informs data subjects after an access decision](#national-information-flow)); the Genome EDIC when it registers and vets User Organisations and their Users <GovRef id="VII.1.1" /> <GovRef id="VII.1.2" />; the central information database and portal components <GovRef id="V.2.2" />; reaching back to data subjects to recruit them into research <GovRef id="VIII.5.1" /> <GovRef id="VIII.5.2" />; and the national service that links key-coded identifiers to identities. An expert workshop of B1MG+ proposed roles for some of them: the 1+MG NCP as processor of the 1+MG Data Provider for the check, and the identity link service as processor for the controller(s) for the disclosure, unless a law gives it that task, in which case it would be joint controller <Cite id="b1mgplus-ms17" />.
+- **Why it matters:** each of these operations processes personal data, so each needs a controller and, where a processor acts, an agreement (<Acronym id="GDPR" /> Art. 5(2), 24 and 28) <Cite id="gdpr" />. [8.2](/concepts/roles#controllers-and-processors-for-each-processing-operation) lists them.
+- **Tracked in:** [issue #147](https://github.com/GenomicDataInfrastructure/system-architecture/issues/147).
 
 #### When 1+MG data may be processed in the SPE of the European Commission {#commission-spe}
 
@@ -156,8 +175,14 @@ The governance doesn't answer these questions, but the architecture needs an ans
 #### Whether the Genome EDIC is joint controller with the 1+MG Data Holder {#joint-controllership}
 
 - **What is open:** the governance names the [1+MG Data Holder](/glossary#1mg-data-holder) as controller for the disclosure of 1+MG compliant datasets <GovRef id="III" />. It also mentions, twice and conditionally, that the Genome EDIC may be joint controller with it: for subject-level data discovery <GovRef id="VII.2.2" />, and for the data protection impact assessment on disclosure <GovRef id="VII.5.5" />. It doesn't say when that is the case.
-- **Why it matters:** joint controllers need an arrangement that sets out their responsibilities (<Acronym id="GDPR" /> Art. 26) <Cite id="gdpr" />, and data subjects must be told who is responsible. [8.2](/concepts/roles) must answer it; [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) doesn't depend on it.
+- **Why it matters:** joint controllers need an arrangement that sets out their responsibilities (<Acronym id="GDPR" /> Art. 26) <Cite id="gdpr" />, and data subjects must be told who is responsible. [8.2](/concepts/roles#joint-controllership) sets out three options: the 1+MG Data Holder as sole controller, joint controllers for the disclosure, or joint controllers for subject-level discovery only. An expert workshop of B1MG+ voted for joint controllership for the disclosure (10 of 12 voters, in the scenario that follows the Genome EDIC Secondary Use Framework), by analogy with the *IAB Europe* judgment of the Court of Justice of the EU (C-604/22) <Cite id="b1mgplus-ms17" />; that is input, not a decision. [ADR-0009](/decisions/0009-joint-controllership-disclosure) proposes it, with the 1+MG Data Holder alone taking the access decision; until the ADR is accepted, the point stays open. [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) doesn't depend on it.
 - **Tracked in:** [issue #138](https://github.com/GenomicDataInfrastructure/system-architecture/issues/138).
+
+#### Which national nodes fall under NIS2 {#nis2-applicability}
+
+- **What is open:** the NIS2 Directive, as transposed in each Member State, applies per organisation: to entities of the types listed in its annexes that are medium-sized or larger, and, regardless of size, to entities a Member State identifies and to public administration entities. Member States identify essential and important entities (NIS2 Art. 2, 3, 41) <Cite id="nis2" />. B1MG+ found that the Genome EDIC itself is not likely to be in scope, but that national nodes may be, because of a healthcare role or the IT services they provide, and recommended a node-by-node analysis <Cite id="b1mgplus-d2.8" />. That analysis has not been done. It must check each node's sector and size, whether it is a public body, and whether its Member State has listed it.
+- **Why it matters:** a node in scope must meet the NIS2 risk-management measures (Art. 21) and report significant incidents to its computer security incident response team (<Acronym id="CSIRT" />) or competent authority (Art. 23), in addition to the governance's own reporting line. The security concept ([8.3](/concepts/security)) and the incident scenario ([6.5](/runtime/security-incident)) must cover both. See [2.1](/constraints/legal).
+- **Tracked in:** [issue #148](https://github.com/GenomicDataInfrastructure/system-architecture/issues/148).
 
 #### Who adopts the system architecture {#architecture-adoption}
 
@@ -229,6 +254,15 @@ A risk is something that could go wrong and harm the system or its users: for ex
 - **Mitigation:** agree before GDI ends who runs the central services in the gap, and on which agreements; record the roles of step 1 (see [The Genome EDIC must be operational](#genome-edic-operational)).
 - **Owner:** to be named by the architecture taskforce.
 - **Tracked in:** [issue #141](https://github.com/GenomicDataInfrastructure/system-architecture/issues/141).
+
+#### Integrity of the central services {#central-services-integrity}
+
+- **What could happen:** a wrong or tampered access decision, data use agreement or registration in the central services leads national nodes to release data to someone who has no right to them. A 1+MG Data Host releases data on the basis of the data use agreement that the Genome EDIC CC issues <GovRef id="VII.5.5" /> <GovRef id="VIII.3.3" />, and every country relies on the central services ([4. Solution strategy](/solution-strategy#one-stop-shop-for-users)).
+- **Probability:** low.
+- **Impact:** high: personal data from several countries could be disclosed without a valid decision.
+- **Mitigation:** national nodes check that a decision or registration is authentic and current before they release data; every exchange between operators is authenticated and encrypted; central decisions are logged and auditable. To be designed in [8.3](/concepts/security) and in the trust-boundaries decision of wave 3.
+- **Owner:** to be named by the architecture taskforce.
+- **Tracked in:** [issue #149](https://github.com/GenomicDataInfrastructure/system-architecture/issues/149).
 
 ## Technical debt {#technical-debt}
 

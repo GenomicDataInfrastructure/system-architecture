@@ -33,6 +33,8 @@ last_reviewed:
 | [ADR-0001](/decisions/0001-record-architecture-decisions) | Record architecture decisions | Proposed |
 | [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) | Support all three types of dataset; the Member Country chooses the 1+MG type | Proposed |
 | [ADR-0003](/decisions/0003-implementation-in-steps) | Build the system in steps, starting with externally governed datasets | Proposed |
+| [ADR-0009](/decisions/0009-joint-controllership-disclosure) | The Genome EDIC and the 1+MG Data Holder are joint controllers for the disclosure of 1+MG compliant datasets | Proposed |
+| [ADR-0010](/decisions/0010-spe-provider-role) | SPE providers are sub-processors for the User's data and controllers for their own platform processing | Proposed |
 
 ## Candidate decisions to record
 

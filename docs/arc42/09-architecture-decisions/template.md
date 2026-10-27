@@ -14,15 +14,22 @@ slug: /decisions/NNNN-short-title
 owner: "@github-handle"
 reviewers: ["@github-handle"]
 status: draft
+wave: N
 audience: [implementer]
 governance_refs: []
 last_reviewed:
 ---
 
+<InShort>
+
+- This architecture decision record (ADR) decides …
+
+</InShort>
+
 | Field | Value |
 |---|---|
-| Status | Proposed / Accepted / Deprecated / Replaced by ADR-XXXX |
-| Date | YYYY-MM-DD |
+| Status | Proposed / Accepted / Deprecated / Superseded by ADR-XXXX |
+| Date | YYYY-MM-DD (first proposed YYYY-MM-DD) |
 | Deciders | … |
 
 ## Context

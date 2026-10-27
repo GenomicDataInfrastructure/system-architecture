@@ -77,7 +77,9 @@ For **5, 5.1, 5.2 and 5.3**, also give the reason for the decomposition: arc42 d
 
 **Purpose:** say what the system must do (1.1) and who cares about it (1.3).
 
-**1.1 headings:** Requirements by lifecycle phase (inclusion, access, use), as a table: *requirement · type of use · governance section*. Then requirements that come from the EHDS rather than the governance.
+**1.1 headings:** Requirements by lifecycle phase (inclusion, access, use), as a table: *ID · requirement · type of use · governance section*. Then requirements that come from the EHDS rather than the governance.
+
+**Requirement IDs:** `REQ-<phase>-<n>`, where the phase is `IN` (inclusion), `AC` (access), `US` (use) or `EH` (from the EHDS): for example REQ-AC-4. Numbers are never reused or renumbered. A new requirement gets the next number in its phase; a requirement that no longer applies is marked *withdrawn*, not deleted. Other pages cite requirements by ID, for example in the *governance requirements* of a building block.
 
 **1.3 headings:** a table *stakeholder · role in the governance · what they expect from the architecture · where the page answers it*. Then how to contact each group, and what readers need from the documentation.
 
@@ -89,12 +91,14 @@ For **5, 5.1, 5.2 and 5.3**, also give the reason for the decomposition: arc42 d
 
 **Purpose:** 1.2 names the 3 to 5 most important quality goals. Chapter 10 makes them measurable.
 
-**1.2 headings:** a table *priority · quality goal · motivation (governance principle) · where it is addressed*.
+**1.2 headings:** a table *ID · quality goal · motivation (governance principle) · where it is addressed*.
+
+**Quality goal IDs:** `QG-<n>`, in order of priority: QG-1 wins over QG-2 when they conflict. Chapter 4 names the goal each approach serves by its ID, and chapter 10 groups its scenarios under the goals.
 
 **10 headings:**
 
 1. **Quality tree:** a nested list or a tree diagram, from the quality goals down to scenarios.
-2. **Quality scenarios:** a table *ID · quality · source · stimulus · environment · response · measure*.
+2. **Quality scenarios:** a table *ID · quality goal · source · stimulus · environment · response · measure*. Scenario IDs are `QS-<n>`, numbered in order and never reused; the *quality goal* column gives the QG ID the scenario tests.
 
 Example scenario: *"A User runs a subject-level query (stimulus) against the national discovery endpoint in normal operation (environment). The endpoint returns only counts at or above the agreed threshold, and logs the query (response). 100 % of test queries below the threshold return no count (measure)."*
 

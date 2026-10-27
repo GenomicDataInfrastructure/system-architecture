@@ -11,6 +11,7 @@
     {"id": "DPIA", "meaning": "Data protection impact assessment (GDPR Art. 35)"},
     {"id": "DPO", "meaning": "Data protection officer"},
     {"id": "EDIC", "meaning": "European Digital Infrastructure Consortium"},
+    {"id": "EDPB", "meaning": "European Data Protection Board"},
     {"id": "EHDS", "meaning": "European Health Data Space (Regulation (EU) 2025/327)"},
     {"id": "ELSI", "meaning": "Ethical, legal and societal implications"},
     {"id": "GDI", "meaning": "Genomic Data Infrastructure project"},
@@ -18,9 +19,12 @@
     {"id": "HDAB", "meaning": "Health data access body (EHDS)"},
     {"id": "IP", "meaning": "Intellectual property"},
     {"id": "ISMS", "meaning": "Information security management system"},
+    {"id": "MVP", "meaning": "Minimum viable product"},
     {"id": "NCP", "meaning": "National Coordination Point (1+MG NCP)"},
     {"id": "QM", "meaning": "Quality management in healthcare"},
     {"id": "SPE", "meaning": "Secure processing environment"},
+    {"id": "TOM", "meaning": "Technical and organisational measures (GDPR Art. 24, 25 and 32)"},
+    {"id": "TRL", "meaning": "Technology readiness level"},
     {"id": "WG", "meaning": "Working group (of the 1+MG initiative)"}
   ]
 }
