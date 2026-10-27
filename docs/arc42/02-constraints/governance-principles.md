@@ -3,8 +3,8 @@ title: "2.2 Governance principles"
 sidebar_position: 2
 slug: /constraints/governance-principles
 owner: "@brunopacheco1"
-reviewers: []
-status: draft
+reviewers: ["@rwwh", "@kjellp", "@TroelsRasmussen"]
+status: in-review
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs: ["I", "II.1", "II.2", "II.3", "II.4", "III", "V.1.1", "V.1.2", "V.1.3", "V.1.4", "V.2.1", "V.2.2", "V.2.4", "V.2.6", "V.2.7", "VI.1.1", "VI.2.2", "VI.4.3", "VI.4.4", "VII.2.1", "VII.3.1", "VII.4.2", "VII.4.7", "VII.5.1", "VII.5.5", "VII.5.6", "VIII.2.1", "VIII.2.2", "VIII.3.1", "VIII.3.2", "VIII.3.3", "VIII.3.4", "VIII.8.1", "VIII.8.2"]

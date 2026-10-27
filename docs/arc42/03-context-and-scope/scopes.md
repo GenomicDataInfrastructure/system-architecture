@@ -3,8 +3,8 @@ title: "3.3 European, national and User Organisation scopes"
 sidebar_position: 3
 slug: /context/scopes
 owner: "@brunopacheco1"
-reviewers: []
-status: draft
+reviewers: ["@rwwh", "@kjellp", "@TroelsRasmussen"]
+status: in-review
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs: ["I", "II.1", "II.2", "III", "V.1.4", "V.2.2", "VI.1.3", "VI.1.5", "VI.2.2", "VI.4.4", "VI.4.5", "VI.4.6", "VII.1.3", "VII.2.1", "VII.2.2", "VII.3.1", "VII.4.3", "VII.4.6", "VII.4.7", "VII.5.1", "VII.5.4", "VII.5.5", "VIII.1.2", "VIII.2.1", "VIII.2.2", "VIII.3.3", "VIII.3.4", "VIII.4.5", "VIII.5.3"]

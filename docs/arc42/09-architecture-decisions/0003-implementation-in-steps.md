@@ -3,8 +3,8 @@ title: "ADR-0003 Build the system in steps, starting with externally governed da
 slug: /decisions/0003-implementation-in-steps
 sidebar_position: 3
 owner: "@brunopacheco1"
-reviewers: []
-status: draft
+reviewers: ["@rwwh", "@kjellp", "@TroelsRasmussen"]
+status: in-review
 wave: 1
 audience: [policy, legal, dpo, security, implementer]
 governance_refs: ["II.4", "III", "VI.1.3", "VI.1.5", "VII.3.2", "VII.4.4", "VII.5.4", "VII.5.5", "VIII.3.1"]

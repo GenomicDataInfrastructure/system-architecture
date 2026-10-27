@@ -3,8 +3,8 @@ title: "ADR-0002 Support all three types of dataset; the Member Country chooses 
 slug: /decisions/0002-disclosure-paths-per-dataset
 sidebar_position: 2
 owner: "@brunopacheco1"
-reviewers: []
-status: draft
+reviewers: ["@rwwh", "@kjellp", "@TroelsRasmussen"]
+status: in-review
 wave: 1
 audience: [policy, legal, dpo, security, implementer]
 governance_refs: ["II.1", "II.2", "II.4", "III", "VI.1.3", "VI.1.5", "VI.4.4", "VI.4.5", "VII.2.1", "VII.2.2", "VII.3.1", "VII.3.2", "VII.4.3", "VII.4.4", "VII.4.6", "VII.4.7", "VII.5.1", "VII.5.4", "VII.5.5", "VIII.3.1", "VIII.3.3"]

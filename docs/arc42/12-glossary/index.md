@@ -4,8 +4,8 @@ sidebar_label: "12. Glossary"
 slug: /glossary
 sidebar_position: 12
 owner: "@brunopacheco1"
-reviewers: []
-status: draft
+reviewers: ["@rwwh", "@kjellp", "@TroelsRasmussen"]
+status: in-review
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs: ["I", "II.3", "II.4", "III", "V.1.3", "V.2.4", "VI.1.1", "VI.4.6", "VII.1.3", "VII.2.3", "VII.3.1", "VII.4.6", "VII.4.7", "VII.5.4", "VII.5.5", "VIII.2.2", "VIII.3.3", "VIII.3.4", "VIII.11.1", "VIII.11.2"]

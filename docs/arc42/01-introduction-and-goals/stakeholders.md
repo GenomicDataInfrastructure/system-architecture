@@ -3,8 +3,8 @@ title: "1.3 Stakeholders"
 sidebar_position: 3
 slug: /introduction/stakeholders
 owner: "@brunopacheco1"
-reviewers: []
-status: draft
+reviewers: ["@rwwh", "@kjellp", "@TroelsRasmussen"]
+status: in-review
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs: ["I", "II.1", "II.2", "II.3", "III", "V.1.1", "V.1.2", "V.1.3", "V.1.4", "V.2.2", "V.2.3", "V.2.4", "VI.1.1", "VI.1.2", "VI.1.3", "VI.1.5", "VI.2.2", "VI.3.2", "VI.4.4", "VI.4.6", "VII.1.1", "VII.1.3", "VII.1.4", "VII.2.1", "VII.3.1", "VII.4.2", "VII.4.3", "VII.4.4", "VII.4.6", "VII.4.7", "VII.5.1", "VII.5.2", "VII.5.3", "VII.5.4", "VII.5.5", "VIII.1.2", "VIII.1.3", "VIII.2.1", "VIII.2.2", "VIII.3.1", "VIII.3.2", "VIII.3.3", "VIII.4.1", "VIII.4.4", "VIII.5.3", "VIII.7.3"]
