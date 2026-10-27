@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Review rounds and reviews in Word (decision D-028): `npm run export-docx` exports a wave, or chosen pages, at one version to a Word document (Pandoc; styles in `scripts/export-docx-reference.docx`); the handbook's *Drafting and review roles* describes review rounds on a fixed version and how to review in Word or Google Docs.
 - AI-assisted drafting (decision D-026): handbook page *Drafting and review roles* (source librarian, writer, architecture and governance reviewers, DPO, security, legal and ELSI specialists, reader test; the findings format; rules), and thin role wrappers in `.claude/agents/`.
 - Pull request previews (decision D-025): every pull request from a branch of this repository publishes a rendered copy of the whole site at `…/system-architecture/pr-<number>/`, linked in one comment on the pull request and removed when it is closed. The published site moves to the root of the `gh-pages` branch, next to the previews; the repository's Pages source must be switched to that branch (CONTRIBUTING, *Previews and publication*).
 - *Fit with arc42* in the page recipes: how to check a page against arc42, and the table of agreed departures. Each recipe now says what arc42 asks for its chapter (decision D-024).

@@ -136,8 +136,8 @@ If you use an AI assistant, give it `AGENTS.md`, the page file, and the sources 
 
 1. Set `status: in-review`, mark the pull request *Ready for review*, and change `Refs` to `Closes #<issue number>`.
 2. Request the reviewers on the pull request.
-3. Reviewers read the page in the pull request's preview (the link is in the preview comment), use the [review checklists](/handbook/review-checklists), and comment within **5 working days**.
-4. The owner answers every comment: either changes the text, or explains why not.
+3. Reviewers read the page in the pull request's preview (the link is in the preview comment), or in a Word export of the same version if they don't use GitHub, use the [review checklists](/handbook/review-checklists), and comment within **5 working days**.
+4. When every reviewer has answered, the owner answers every comment: either changes the text, or explains why not. The page doesn't change while reviewers are still reading it ([review rounds](/handbook/drafting-roles#review-rounds)).
 5. **Two review rounds at most.** If owner and reviewer still disagree, the architecture lead decides. If the disagreement is about the architecture itself, the decision becomes an ADR.
 
 **Done when:** every review conversation is resolved.
