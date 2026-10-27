@@ -9,6 +9,9 @@
 .cache-loader
 src/data/pages.json
 
+# Word exports for reviewers (npm run export-docx)
+/exports
+
 # Misc
 .DS_Store
 .env.local

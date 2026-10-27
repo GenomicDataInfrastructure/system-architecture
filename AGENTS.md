@@ -32,6 +32,7 @@ Files outside `docs/` are not published on the site.
 - `npm start` — live preview.
 - `npm run check` — validate front matter of all pages (run before every commit).
 - `npm run build` — build the site; fails on broken links or anchors.
+- `npm run export-docx -- --wave N --ref <commit> --pr <number> --round <R>` — export a wave (or `--pages …`) at one version to Word, for reviewers without GitHub (needs Pandoc; output in `exports/`, not committed).
 - `npm run diagrams` — re-export the draw.io diagrams in `static/diagrams/` (light colours, editable copy embedded); run it after editing a diagram. Needs the draw.io desktop app.
 
 ## Rules for writing
