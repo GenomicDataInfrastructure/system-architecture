@@ -24,6 +24,7 @@ last_reviewed:
 
 ## Sources to start from
 
+- Builds on [ADR-0007 Catalogue metadata standard and how catalogues are federated](/decisions/0007-catalogue-metadata-and-federation), decided in wave 3 (decision D-027).
 - Governance: <GovRef id="VI.3.1" />, <GovRef id="VI.3.2" />
 - Other: <Cite id="gdi-d8.7" />, <Cite id="b1mg-d3.5" />, <Cite id="gdi-d8.2" />
 

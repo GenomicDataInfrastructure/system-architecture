@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Crosscutting decisions before the structure (decision D-027): placeholders for ADR-0004 to ADR-0008 (identity and authorisation, identity link, trust boundaries, catalogue metadata, connection to HealthData@EU) in wave 3; concept pages 8.3, 8.4, 8.7, 8.10 and 8.11 build on them in wave 5.
 - AI-assisted drafting (decision D-026): handbook page *Drafting and review roles* (source librarian, writer, architecture and governance reviewers, DPO, security, legal and ELSI specialists, reader test; the findings format; rules), and thin role wrappers in `.claude/agents/`.
 - Pull request previews (decision D-025): every pull request from a branch of this repository publishes a rendered copy of the whole site at `…/system-architecture/pr-<number>/`, linked in one comment on the pull request and removed when it is closed. The published site moves to the root of the `gh-pages` branch, next to the previews; the repository's Pages source must be switched to that branch (CONTRIBUTING, *Previews and publication*).
 - *Fit with arc42* in the page recipes: how to check a page against arc42, and the table of agreed departures. Each recipe now says what arc42 asks for its chapter (decision D-024).

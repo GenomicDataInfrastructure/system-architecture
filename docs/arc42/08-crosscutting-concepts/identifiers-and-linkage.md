@@ -23,6 +23,7 @@ last_reviewed:
 
 ## Sources to start from
 
+- Builds on [ADR-0005 Where the link between identity and key-coded identifiers is held](/decisions/0005-identity-link-and-key-coded-identifiers), decided in wave 3 (decision D-027).
 - Governance: <GovRef id="VIII.3.3" />
 
 :::note[Placeholder]
