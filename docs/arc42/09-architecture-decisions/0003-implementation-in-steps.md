@@ -22,7 +22,7 @@ last_reviewed:
 | Field | Value |
 |---|---|
 | Status | Proposed |
-| Date | 2026-10-27 |
+| Date | 2026-10-27 (first proposed 2026-09-28, as part of ADR-0002) |
 | Deciders | B. Pacheco (architecture lead); to be confirmed by the taskforce |
 
 ## Context
