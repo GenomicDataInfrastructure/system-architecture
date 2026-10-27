@@ -31,7 +31,8 @@ last_reviewed:
 | ADR | Title | Status |
 |---|---|---|
 | [ADR-0001](/decisions/0001-record-architecture-decisions) | Record architecture decisions | Proposed |
-| [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) | Who decides on access, per type of dataset | Proposed |
+| [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) | Support all three types of dataset; the Member Country chooses the 1+MG type | Proposed |
+| [ADR-0003](/decisions/0003-implementation-in-steps) | Build the system in steps, starting with externally governed datasets | Proposed |
 
 ## Candidate decisions to record
 
