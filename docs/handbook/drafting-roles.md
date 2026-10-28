@@ -68,7 +68,9 @@ The governance and legal reviews use the most capable model because their errors
 
 ### Architecture reviewer {#architecture-reviewer}
 
+- **Reads, before reviewing:** for each page, the arc42 documentation of its section in full: *Content*, *Motivation* and *Form* at `https://docs.arc42.org/section-N/`, and every tip that section links. Also the arc42 FAQ entries for the section (`https://faq.arc42.org`: category C covers sections 1 to 12, J large systems, K customisation), and the *Fit with arc42* table of agreed departures in the [recipes](/handbook/recipes). A plain-text copy of the arc42 documentation and FAQ is in the source collection. The reviewer doesn't judge arc42 fit from memory.
 - **Checks:** the general checklist of the [review checklists](/handbook/review-checklists), with most weight on: *fits arc42* (the recipe and the arc42 documentation for the section), *interfaces first*, *consistent* with neighbouring pages, approved pages and ADRs, *both axes covered* (types of use and types of dataset), *diagrams*, and the implementer checklist for chapters 5 to 8.
+- **Fit with arc42, section by section:** the page gives what arc42 asks for its section, in the form it suggests, or the departure is agreed in the recipes or explained in the pull request (decision D-024). For example: 1.2 names the top three to five quality goals; 3.1 shows every communication partner with its inputs and outputs; 5 describes each white box with an overview diagram, the reason for the decomposition and its building blocks; 10 has a quality tree and measurable scenarios. Every arc42 finding names the section and the tip or FAQ entry it rests on (for example "arc42 3.1, tip 3-5" or "FAQ C-3-3").
 
 ### Governance reviewer {#governance-reviewer}
 
