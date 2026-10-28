@@ -23,7 +23,7 @@ last_reviewed:
 ## Pages in this chapter
 
 - [2.1 Legal and regulatory constraints](/constraints/legal): which laws apply, such as the <Acronym id="GDPR" />, the <Acronym id="EHDS" /> and NIS2, and what each requires from the architecture.
-- [2.2 Governance principles](/constraints/governance-principles): what the eight principles of the 1+MG Data Governance, the rules the 1+ Million Genomes countries agreed for sharing genomic data, require from the design, and what they rule out.
+- [2.2 Governance principles](/constraints/governance-principles): what the eight principles of the [1+MG Data Governance](/glossary#1mg-data-governance), the rules the 1+ Million Genomes countries agreed for sharing genomic data, require from the design, and what they rule out.
 - [2.3 Organisational constraints](/constraints/organisational): what each [Genome EDIC Member Country](/glossary#genome-edic-member-country) must put in place, including the audit and certification of IT infrastructure providers, and what the [Genome EDIC](/glossary#genome-edic) decides for all countries.
 - [2.4 Technical constraints](/constraints/technical): which technical constraints, such as mandatory standards, limit the design.
 

@@ -22,7 +22,7 @@ last_reviewed:
 
 ## Inside and outside
 
-Inside the system are the European and national services, and the organisations that run those services or take decisions in them. For example, the [Genome EDIC CC](/glossary#genome-edic-central-coordination-genome-edic-cc) runs the central services, the [1+MG NCPs](/glossary#1mg-national-coordination-point-1mg-ncp) run the national nodes, and the [1+MG Data Holders](/glossary#1mg-data-holder) decide on access to their datasets.
+Inside the [Genome EDIC system](/glossary#genome-edic-system) are the European and national services, and the organisations that run those services or take decisions in them. For example, the [Genome EDIC CC](/glossary#genome-edic-central-coordination-genome-edic-cc) runs the central services, the [1+MG NCPs](/glossary#1mg-national-coordination-point-1mg-ncp) run the national nodes, and the [1+MG Data Holders](/glossary#1mg-data-holder) decide on access to their datasets.
 
 Outside are the people, organisations and systems it deals with. Among them are [User Organisations](/glossary#user-organisation) and their [Users](/glossary#user), and [data subjects](/glossary#data-subject). The [1+MG Data Providers](/glossary#1mg-data-provider) take part in the framework, but the source systems their data come from are outside. So is [HealthData@EU](/glossary#healthdataeu), the network of the European Health Data Space (<Acronym id="EHDS" />) for cross-border access to health data. [3.1 Business context](/context/business) draws the boundary and lists every partner. The laws and rules that limit the system are in [chapter 2](/constraints).
 

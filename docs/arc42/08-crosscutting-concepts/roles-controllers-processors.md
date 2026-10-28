@@ -7,7 +7,7 @@ reviewers: []
 status: draft
 wave: 2
 audience: [legal, dpo, implementer]
-governance_refs: ["II.1", "III", "V.2.2", "V.2.4", "V.2.5", "VI.1.2", "VI.1.4", "VI.1.5", "VI.2.3", "VI.3.3", "VI.4.4", "VI.4.5", "VI.4.6", "VII.1.1", "VII.1.2", "VII.1.3", "VII.2.2", "VII.2.3", "VII.3.1", "VII.4.3", "VII.4.7", "VII.5.3", "VII.5.4", "VII.5.5", "VIII.1.2", "VIII.2.1", "VIII.2.2", "VIII.3.1", "VIII.3.2", "VIII.3.3", "VIII.4.3", "VIII.5.1", "VIII.5.2", "VIII.8.3"]
+governance_refs: ["II.1", "III", "V.1.3", "V.2.2", "V.2.4", "V.2.5", "VI.1.2", "VI.1.4", "VI.1.5", "VI.2.3", "VI.3.3", "VI.4.4", "VI.4.5", "VI.4.6", "VII.1.1", "VII.1.2", "VII.1.3", "VII.2.2", "VII.2.3", "VII.3.1", "VII.4.3", "VII.4.7", "VII.5.3", "VII.5.4", "VII.5.5", "VIII.1.2", "VIII.2.1", "VIII.2.2", "VIII.3.1", "VIII.3.2", "VIII.3.3", "VIII.4.3", "VIII.5.1", "VIII.5.2", "VIII.8.3"]
 last_reviewed:
 ---
 
@@ -50,7 +50,7 @@ The table follows the lifecycle. Where the governance doesn't assign a role, the
 | Disclosing the data to the User | Access | The controller for the disclosure: the 1+MG Data Holder or the Genome EDIC <GovRef id="III" /> | The 1+MG Data Host, which makes the data available on its behalf <GovRef id="VIII.3.3" /> | [5.2.5](/building-blocks/national/data-host) | Consent or a legislative act, as for inclusion <GovRef id="III" /> |
 | Healthcare reuse: disclosure without an access decision per request | Access | As for disclosure. Access rests on the framework data use agreement of the User Organisation <GovRef id="VII.5.4" /> <GovRef id="VII.4.3" /> | As for disclosure | [6.3.3](/runtime/use/healthcare-reuse) | As for disclosure |
 | Informing data subjects after a decision, and collecting consent or objections | Access | The controller for the disclosure, whose transparency duty under GDPR Art. 13 and 14 it is <GovRef id="VII.5.3" /> <GovRef id="VIII.1.2" /> | Not assigned. The 1+MG NCP informs the data subjects, unless the country organises the flow otherwise ([chapter 11](/risks#national-information-flow)) | [5.2.4](/building-blocks/national/data-subject-services) | To be set in [8.6](/concepts/legal-basis-and-consent) |
-| Central information database and portal components | All | Not assigned; the Genome EDIC CC performs their DPIA <GovRef id="VII.5.5" /> | — | [5.1.4](/building-blocks/european/transparency-and-reporting), [5.2.4](/building-blocks/national/data-subject-services) <GovRef id="V.2.2" /> | To be set in [8.6](/concepts/legal-basis-and-consent) |
+| Central information database and portal components | All | Not assigned; the Genome EDIC CC performs their data protection impact assessment (<Acronym id="DPIA" />) ([see below](#who-performs-which-dpia)) <GovRef id="VII.5.5" /> | — | [5.1.4](/building-blocks/european/transparency-and-reporting), [5.2.4](/building-blocks/national/data-subject-services) <GovRef id="V.2.2" /> | To be set in [8.6](/concepts/legal-basis-and-consent) |
 | Analysis in a 1+MG secure processing environment (<Acronym id="SPE" />) | Use | The User Organisation, controller for the downstream use <GovRef id="VII.1.3" /> | The Genome EDIC, under a data processing agreement; the SPE providers as its sub-processors <GovRef id="VIII.2.1" /> | [5.2.3](/building-blocks/national/spe) | The User Organisation's own |
 | Linking 1+MG data with other data in the SPE, and reducing the risk after linkage | Use | The User Organisation <GovRef id="VIII.3.1" /> | The Genome EDIC's sub-processors, which take measures to reduce the risk <GovRef id="VIII.3.1" /> | [5.2.3](/building-blocks/national/spe) | The User Organisation's own |
 | Running the SPE platform: accounts, access control, logs about the User | Use | Not assigned; [ADR-0010](/decisions/0010-spe-provider-role) proposes the SPE provider (see [below](#the-role-of-spe-providers)) | — | [5.2.3](/building-blocks/national/spe), [8.5](/concepts/logging-and-audit) | To be set in [8.6](/concepts/legal-basis-and-consent) |
@@ -62,7 +62,7 @@ Each controller and processor can start its record of processing activities (GDP
 
 Two cases sit outside the table:
 
-- **[Externally governed datasets](/concepts/dataset-types).** Their controller for the disclosure is not set by the 1+MG data governance: it is the dataset's own controller, under its own rules <GovRef id="VII.3.1" />. Once a User imports such data into a 1+MG SPE, the User Organisation is controller for their use, as for 1+MG data <GovRef id="VIII.3.3" />.
+- **[Externally governed datasets](/concepts/dataset-types).** Their controller for the disclosure is not set by the [1+MG Data Governance](/glossary#1mg-data-governance): it is the dataset's own controller, under its own rules <GovRef id="VII.3.1" />. Once a User imports such data into a 1+MG SPE, the User Organisation is controller for their use, as for 1+MG data <GovRef id="VIII.3.3" />.
 - **Step 1 of [ADR-0003](/decisions/0003-implementation-in-steps)**, before the Genome EDIC is operational. Who is controller and processor for the central services and the SPEs then is not decided ([chapter 11](/risks#genome-edic-operational)).
 
 :::caution[Open point]
@@ -101,6 +101,16 @@ The governance chose agreement 6 so that the User Organisation doesn't carry the
 :::caution[Open point]
 Who signs the data use agreement for 1+MG compliant datasets: whether the Genome EDIC is mandated to sign on behalf of the 1+MG Data Holders <GovRef id="VII.5.5" />. See [chapter 11](/risks#data-use-agreement-signatory).
 :::
+
+### Who performs which data protection impact assessment {#who-performs-which-dpia}
+
+A DPIA is the duty of the controller of the processing <GovRef id="VII.2.2" />. The governance plans these DPIAs, each with a prior consultation of the data protection authority:
+
+- **The 1+MG Data Provider:** a DPIA for the inclusion of data, before any data subject is included, in its own process outside the system <GovRef id="VI.1.5" />.
+- **The 1+MG Data Holder, for 1+MG compliant datasets:** a principal DPIA of the disclosure procedure, with regular updates and prior consultation before the first access, and a specific DPIA for a disclosure with high risk <GovRef id="VII.5.4" />, supported by the Genome EDIC CC <GovRef id="VII.5.5" />. It also performs the DPIA for subject-level data discovery; the Genome EDIC may prepare it where it is joint controller <GovRef id="VII.2.2" /> ([see below](#joint-controllership)).
+- **The Genome EDIC, through the Genome EDIC CC:** the DPIA for the disclosure of 1+MG cohort datasets <GovRef id="VII.5.5" />, the DPIA for subject-level data discovery on those datasets <GovRef id="VII.2.2" />, and the DPIA for the information portal components and the consent app it provides <GovRef id="VII.5.5" />.
+
+The list is not exhaustive: every other controller, such as the User Organisation for its project in the SPE, assesses under GDPR Art. 35 whether it needs a DPIA. 1+MG IT infrastructure providers support the controllers in their DPIAs <GovRef id="V.1.3" />. When each DPIA is done, and the inputs the system provides for it, are in [8.1](/concepts/data-protection-by-design#support-for-data-protection-impact-assessments).
 
 ### Who notifies a personal data breach
 

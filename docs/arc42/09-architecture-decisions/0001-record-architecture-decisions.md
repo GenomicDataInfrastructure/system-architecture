@@ -77,5 +77,5 @@ No body has been named to adopt the system architecture, so who confirms an ADR,
 
 - **Easier:** decisions and their reasons stay available to new taskforce members, auditors and Member Countries. When the governance changes, the governance sections in each ADR show which decisions to review.
 - **Harder:** writing an ADR takes time. The template is kept short to limit the effort.
-- **Per scope:** decisions that affect the [European](/glossary#european-scope), [national](/glossary#national-scope) or [User Organisation scope](/glossary#user-organisation-scope) say so in their consequences. Each Member Country records its own national choices in its [national implementation profile](/appendix/national-profile-template), not as ADRs.
+- **Per scope:** decisions that affect the [European](/glossary#european-scope), [national](/glossary#national-scope) or [User Organisation scope](/glossary#user-organisation-scope) say so in their consequences. Each Member Country records its own national choices in its [national implementation profile](/glossary#national-implementation-profile), not as ADRs.
 - **Later:** once the Genome EDIC CC runs the documentation system of the federation <GovRef id="V.1.2" />, the ADRs move there with the rest of the architecture.

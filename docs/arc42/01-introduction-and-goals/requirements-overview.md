@@ -21,7 +21,7 @@ last_reviewed:
 
 ## How to read this page
 
-The requirements come from the 1+MG Data Governance <Cite id="dg" /> and the European Health Data Space (<Acronym id="EHDS" />) <Cite id="ehds" />. This page lists the ones that shape the architecture. Where a row reads differently from the section it cites, the section prevails, and the difference is a defect to report.
+The requirements come from the [1+MG Data Governance](/glossary#1mg-data-governance) <Cite id="dg" /> and the European Health Data Space (<Acronym id="EHDS" />) <Cite id="ehds" />. This page lists the ones that shape the architecture. Where a row reads differently from the section it cites, the section prevails, and the difference is a defect to report.
 
 Each row is one requirement on the system:
 
@@ -48,7 +48,7 @@ The system serves the goals described in [chapter 1](/introduction). Five requir
 | REQ-IN-1 | The system shall let [1+MG Data Providers](/glossary#1mg-data-provider) transform each dataset into the common data models, and describe it with the scientific metadata (including the quality label) and the minimum <Acronym id="ELSI" /> metadata models that the [Genome EDIC Assembly of Members](/glossary#genome-edic-assembly-of-members) adopts. | All | <GovRef id="VI.1.1" /> <GovRef id="VI.2.2" /> <GovRef id="VI.3.2" /> | [6.1](/runtime/data-inclusion), [8.10](/concepts/metadata-and-interoperability) |
 | REQ-IN-2 | The system shall record, for each dataset, the type its [Genome EDIC Member Country](/glossary#genome-edic-member-country) chose, and publish in the catalogue with whom access applications for it are shared. | All | <GovRef id="VI.1.3" /> <GovRef id="VI.4.4" /> <GovRef id="VI.4.5" /> | [8.12](/concepts/dataset-types) |
 | REQ-IN-3 | The system shall record each [data subject](/glossary#data-subject)'s consent preferences and objections as ELSI metadata, "available alongside the data to be queried". | All | <GovRef id="VI.1.5" /> | [6.1](/runtime/data-inclusion), [8.6](/concepts/legal-basis-and-consent) |
-| REQ-IN-5 | The system shall hold personal data under [key-coded identifiers](/glossary#key-coded-identifier), new to the Genome EDIC, instead of direct identifiers. It should store genomic data apart from clinical, phenotypic and demographic data, ideally under a different key-coded identifier. | All | <GovRef id="VI.4.1" /> | [8.7](/concepts/identifiers-and-linkage) |
+| REQ-IN-5 | The system shall hold personal data under [key-coded identifiers](/glossary#key-coded-identifier), new to the Genome EDIC, instead of direct identifiers. It should store genomic data apart from clinical, phenotypic and demographic data, ideally under a different key-coded identifier. | All | <GovRef id="VI.4.1" /> | Decided in [ADR-0005](/decisions/0005-identity-link-and-key-coded-identifiers) (wave 3), described in [8.7](/concepts/identifiers-and-linkage) |
 
 ## Data access
 
@@ -80,7 +80,7 @@ For healthcare reuse, there is no formal access decision per request: access res
 | REQ-US-3a | The system shall make available in the SPE, to authorised Users, only the data that the data use agreement covers. | All | <GovRef id="VIII.3.3" /> | [6.3.2](/runtime/use/processing-in-spe) |
 | REQ-US-3b | When a breach of purpose limitation or confidentiality by a User is suspected, the system shall let the SPE provider revoke that User's access at once, and inform the Genome EDIC CC and, where applicable, the other 1+MG SPE providers concerned; it should do so automatically. | All | <GovRef id="VIII.3.3" /> | [6.5](/runtime/security-incident) |
 | REQ-US-5a | Where the choice recorded for the dataset allows it, and the purpose cannot be achieved in a federated way, the system shall support data streaming or temporary [pooling](/glossary#pooling) in a certified SPE; otherwise the data stay federated. | Research only | <GovRef id="VIII.3.4" /> <GovRef id="V.1.3" /> | [6.3.2](/runtime/use/processing-in-spe) |
-| REQ-US-5b | The system shall show, as ELSI metadata in each dataset description, whether the data may be streamed or pooled. | Research only | <GovRef id="VIII.3.4" /> | [8.10](/concepts/metadata-and-interoperability) |
+| REQ-US-5b | The system shall show, as ELSI metadata in each dataset description, whether the data may be streamed or pooled. | Research only | <GovRef id="VIII.3.4" /> | Decided in [ADR-0007](/decisions/0007-catalogue-metadata-and-federation) (wave 3), described in [8.10](/concepts/metadata-and-interoperability) |
 | REQ-US-11 | The system shall publish regular aggregate statistics on access, and a register of access requests and approvals. | All | <GovRef id="VII.5.5" /> | [6.3.4](/runtime/use/transparency) |
 | REQ-US-13 | When a data subject exercises a right that changes the data, the system shall create a new version of the dataset and tell the Users concerned. | All | <GovRef id="V.2.2" /> <GovRef id="V.2.6" /> | [6.4](/runtime/data-subject-rights), [8.9](/concepts/dataset-versioning) |
 
@@ -95,7 +95,7 @@ These apply to the Genome EDIC only once it is an [authorised participant in Hea
 
 | ID | Requirement | Source | Detail |
 |---|---|---|---|
-| REQ-EH-1 | Where the Genome EDIC is an authorised participant, the system shall connect to HealthData@EU and meet its requirements and technical specifications. | EHDS Art. 75(6) <Cite id="ehds" />; the draft implementing act under Art. 75(12) <Cite id="hdeu-ia-draft" /> | [8.11](/concepts/ehds-integration), [5.1.5](/building-blocks/european/ehds-connector) |
+| REQ-EH-1 | Where the Genome EDIC is an authorised participant, the system shall connect to HealthData@EU and meet its requirements and technical specifications. | EHDS Art. 75(6) <Cite id="ehds" />; the draft implementing act under Art. 75(12) <Cite id="hdeu-ia-draft" /> | Decided in [ADR-0008](/decisions/0008-connection-to-healthdata-eu) (wave 3), described in [8.11](/concepts/ehds-integration) |
 | REQ-EH-2 | Where the Genome EDIC is an authorised participant, the system shall publish its dataset catalogue, so that the EU dataset catalogue can connect to it. | EHDS Art. 79 <Cite id="ehds" /> | [8.10](/concepts/metadata-and-interoperability) |
 | REQ-EH-3 | Where the Genome EDIC is an authorised participant, the system shall receive the health data access applications forwarded automatically through HealthData@EU. | EHDS Art. 67(3) <Cite id="ehds" /> | [8.11](/concepts/ehds-integration) |
 

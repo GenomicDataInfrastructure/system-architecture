@@ -24,7 +24,7 @@ last_reviewed:
 
 The [Genome EDIC](/glossary#genome-edic) is a European Digital Infrastructure Consortium (<Acronym id="EDIC" />): a legal entity, set up by a Commission implementing decision, that runs the infrastructure of the 1+ Million Genomes initiative (<Acronym id="1+MG" />) <GovRef id="III" />. [2.1](/constraints/legal#the-genome-edic-today) says where its setting up stands. The system this documentation describes lets [Users](/glossary#user) find genomic and related health data from many countries, request access to them through one procedure, and analyse them in secure processing environments (<Acronym id="SPE">SPEs</Acronym>).
 
-Its business goals come from the 1+MG Data Governance <Cite id="dg" />:
+Its business goals come from the [1+MG Data Governance](/glossary#1mg-data-governance) <Cite id="dg" />:
 
 - **The data stay in the countries.** Each country's government makes sure that the national structures are in place, and the data remain in the country as a rule <GovRef id="I" />. Users analyse personal data only in SPEs, and can download only non-personal results <GovRef id="II.2" />.
 - **One system for the User.** Countries have as much freedom as possible in how they implement the system, but "homogeneity towards the user" is the guiding principle <GovRef id="I" />. The [Genome EDIC CC](/glossary#genome-edic-central-coordination-genome-edic-cc), the central office of the Genome EDIC, is the one-stop shop for Users, and does centrally what is more efficient there <GovRef id="I" />.
@@ -39,7 +39,7 @@ The governance knows three [types of dataset](/concepts/dataset-types), and the 
 
 - for **1+MG compliant datasets**, a [1+MG Data Holder](/glossary#1mg-data-holder) in the country decides <GovRef id="VII.5.4" />;
 - for **1+MG cohort datasets**, the Genome EDIC decides <GovRef id="VII.5.5" />;
-- **externally governed datasets** can be found in the catalogue, but access follows the dataset's own rules, not the 1+MG data governance <GovRef id="VII.3.1" />.
+- **externally governed datasets** can be found in the catalogue, but access follows the dataset's own rules, not the 1+MG Data Governance <GovRef id="VII.3.1" />.
 
 ## Four types of use
 
@@ -54,7 +54,7 @@ The system gives access to data only for these four types of secondary use <GovR
 
 ## What is outside the governance
 
-The governance says what it doesn't cover <GovRef id="II.4" />. "Not covered by the 1+MG data governance" doesn't always mean "not in the system":
+The governance says what it doesn't cover <GovRef id="II.4" />. "Not covered by the 1+MG Data Governance" doesn't always mean "not in the system":
 
 - **Data that are not about individual people,** such as reference genomes (standard sequences used for comparison) and pre-computed statistics like allele frequencies (how often each variant of a gene occurs in a population). A separate data governance is expected from the Genome of Europe project, a European project that collects genomes of people across Europe as reference data. The system still offers such data for discovery from the first step of implementation ([ADR-0003](/decisions/0003-implementation-in-steps), proposed). See [chapter 11](/risks#genome-of-europe-governance).
 - **Screening for secondary findings:** a deliberate search of the data for people who could benefit from a treatment. The 1+MG ELSI Working Group didn't recommend making data available for it, and some members of the 1+MG Special Group explicitly rejected it <GovRef id="II.4" />. It can only happen under national healthcare law, on national datasets, outside the system: the system offers no type of use or request form for it. It differs from [incidental findings](/glossary#incidental-findings), which are in scope.

@@ -82,7 +82,7 @@ Data subjects may exercise their rights against either joint controller (GDPR Ar
 - **Harder:** the arrangement must be agreed before step 2 of [ADR-0003](/decisions/0003-implementation-in-steps), when the first 1+MG compliant datasets are offered; the Genome EDIC takes on controller duties, and liability, for every 1+MG compliant dataset; data subjects must be told about two controllers.
 - **For data subjects:** the information at inclusion names both controllers for the disclosure. Because the type of a dataset is part of the consent ([ADR-0002](/decisions/0002-disclosure-paths-per-dataset)), the joint controllership must be settled before the first 1+MG compliant datasets are included.
 - **European scope:** [5.1.2 Access request management](/building-blocks/european/access-request-management) and the User Organisation registry act as joint controller, not as processor. The Genome EDIC CC keeps records of processing for them (GDPR Art. 30).
-- **National scope:** each 1+MG Data Holder signs the arrangement with its participation agreement. The national implementation profile says how data subjects reach the 1+MG Data Holder.
+- **National scope:** each 1+MG Data Holder signs the arrangement with its participation agreement. The [national implementation profile](/glossary#national-implementation-profile) says how data subjects reach the 1+MG Data Holder.
 - **User Organisation scope:** no change in how to apply. The terms of use name the joint controllers for discovery.
 - **Pages to update when accepted:** [8.2](/concepts/roles), [8.12](/concepts/dataset-types), [3.3](/context/scopes), [1.3](/introduction/stakeholders) and [ADR-0002](/decisions/0002-disclosure-paths-per-dataset), which today call the question open.
 
