@@ -31,9 +31,11 @@ governance_refs:
   - "VII.5.5"
   - "VIII.2.1"
   - "VIII.2.2"
+  - "VIII.3.1"
   - "VIII.3.2"
   - "VIII.3.3"
   - "VIII.3.4"
+  - "VIII.8.1"
   - "VIII.9.1"
   - "VIII.11.1"
   - "VIII.11.2"
@@ -229,6 +231,33 @@ A risk is something that could go wrong and harm the system or its users: for ex
 - **Mitigation:** agree before GDI ends who runs the central services in the gap, and on which agreements; record the roles of step 1 (see [The Genome EDIC must be operational](#genome-edic-operational)).
 - **Owner:** to be named by the architecture taskforce.
 - **Tracked in:** [issue #141](https://github.com/GenomicDataInfrastructure/system-architecture/issues/141).
+
+#### Member Countries not ready in time, or finding the common requirements too costly {#national-readiness}
+
+- **What could happen:** the governance asks every Member Country for SPEs that meet common minimum requirements <GovRef id="VIII.3.3" />, external audit and/or certification of every node <GovRef id="V.1.3" />, a certified SPE if it allows pooling <GovRef id="VIII.3.4" />, and data kept available for reproducibility <GovRef id="VIII.8.1" />. A country may find this too costly, or not be ready in time ([2.2](/constraints/governance-principles#what-the-principles-cost)).
+- **Probability:** medium.
+- **Impact:** medium: the country joins late or offers fewer data, and Users see an uneven federation.
+- **Mitigation:** a reference implementation for national nodes, shared SPEs where a country allows it, and a national implementation profile that shows each country what it still needs.
+- **Owner:** to be named by the architecture taskforce.
+- **Tracked in:** [issue #161](https://github.com/GenomicDataInfrastructure/system-architecture/issues/161).
+
+#### Imports into SPEs bring in malicious code or unexpected data {#spe-imports}
+
+- **What could happen:** Users import their own data and software into an SPE, and data from health data access bodies and providers of externally governed datasets <GovRef id="VIII.3.1" />. An import may carry malicious code, or data the User may not hold or link <GovRef id="VIII.2.2" />.
+- **Probability:** medium.
+- **Impact:** high: a breach of confidentiality, or easier identification of data subjects after linkage.
+- **Mitigation:** the security review of each import by the 1+MG IT infrastructure provider <GovRef id="VIII.3.1" />; output control ([8.8](/concepts/output-control)); the requirements for crossing trust boundaries ([ADR-0006](/decisions/0006-trust-boundaries)).
+- **Owner:** to be named by the architecture taskforce.
+- **Tracked in:** [issue #162](https://github.com/GenomicDataInfrastructure/system-architecture/issues/162).
+
+#### All sign-in depends on one identity federation {#identity-federation-dependency}
+
+- **What could happen:** Users sign in through an identity federation ([3.1](/context/business)). If it is unavailable, or its assurance is too weak, no User can work in the system, or the system can't trust who a User is.
+- **Probability:** low.
+- **Impact:** high: the whole system is unavailable to Users while the federation is down.
+- **Mitigation:** availability and assurance requirements for the federation, and a fallback, decided in [ADR-0004](/decisions/0004-identity-and-authorisation).
+- **Owner:** to be named by the architecture taskforce.
+- **Tracked in:** [issue #163](https://github.com/GenomicDataInfrastructure/system-architecture/issues/163).
 
 ## Technical debt {#technical-debt}
 

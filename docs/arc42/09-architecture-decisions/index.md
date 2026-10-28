@@ -33,6 +33,11 @@ last_reviewed:
 | [ADR-0001](/decisions/0001-record-architecture-decisions) | Record architecture decisions | Proposed |
 | [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) | Support all three types of dataset; the Member Country chooses the 1+MG type | Proposed |
 | [ADR-0003](/decisions/0003-implementation-in-steps) | Build the system in steps, starting with externally governed datasets | Proposed |
+| [ADR-0004](/decisions/0004-identity-and-authorisation) | Identity federation and authorisation across scopes | To be decided (wave 3) |
+| [ADR-0005](/decisions/0005-identity-link-and-key-coded-identifiers) | Where the link between identity and key-coded identifiers is held | To be decided (wave 3) |
+| [ADR-0006](/decisions/0006-trust-boundaries) | Trust boundaries between operators and what each crossing requires | To be decided (wave 3) |
+| [ADR-0007](/decisions/0007-catalogue-metadata-and-federation) | Catalogue metadata standard and how catalogues are federated | To be decided (wave 3) |
+| [ADR-0008](/decisions/0008-connection-to-healthdata-eu) | How the system connects to HealthData@EU | To be decided (wave 3) |
 
 ## Candidate decisions to record
 

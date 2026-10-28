@@ -107,7 +107,7 @@ In detail:
 - **The system supports both 1+MG paths in every Member Country,** and a single access request can cover datasets of both types.
 - **Externally governed datasets are not part of a 1+MG access request.** The User follows the dataset's own procedure.
 - **A country that is not a full member of the Genome EDIC** can offer only externally governed datasets: its data providers can't be 1+MG Data Providers <GovRef id="III" />. The governance doesn't consider data from such countries yet <GovRef id="II.4" />, so this is the architecture's reading until the Member Countries decide on a model.
-- **The catalogue entry of each dataset states its type and who reviews and decides.** The governance already asks the 1+MG NCP (for cohort data) and the 1+MG Data Holder (for compliant data) to say with whom access applications are shared <GovRef id="VI.4.4" /> <GovRef id="VI.4.5" />.
+- **The catalogue entry of each dataset states its type and who reviews and decides.** The governance already asks the 1+MG NCP (for cohort data) and the 1+MG Data Holder (for compliant data) to say with whom access applications are shared <GovRef id="VI.4.4" /> <GovRef id="VI.4.5" />. How the catalogue records it is decided in [ADR-0007](/decisions/0007-catalogue-metadata-and-federation) (wave 3).
 
 | | 1+MG compliant datasets | 1+MG cohort datasets | Externally governed datasets |
 |---|---|---|---|
