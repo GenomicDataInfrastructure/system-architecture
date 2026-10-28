@@ -112,7 +112,7 @@ So each building block (a part of the system, described in [chapter 5](/building
 
 This split is not the same as the split between controller and processor. The controller for a processing operation can sit in another scope: for the use of data in a national SPE, the controller is the User Organisation. [8.2](/concepts/roles) gives the controller and processors for each operation. Which role 1+MG IT infrastructure providers have in the use phase is itself open: see [chapter 11](/risks#it-provider-role).
 
-Each line between scopes, and each line between operators within a scope, is a trust boundary. [Chapter 5](/building-blocks) draws them, and [8.3](/concepts/security) gives the requirements for crossing them.
+Each line between scopes, and each line between operators within a scope, is a [trust boundary](/glossary#trust-boundary). [Chapter 5](/building-blocks) draws them. What each crossing requires is decided in [ADR-0006](/decisions/0006-trust-boundaries) (wave 3), and described in [8.3](/concepts/security).
 
 :::caution[Open points]
 - The details of this role, including accreditation, are still to be defined jointly with 1+MG Working Group 5 (Interoperability and Secure IT environment) and GDI Pillar II (the infrastructure work of the GDI project) <GovRef id="III" />. See [chapter 11](/risks#accreditation).
