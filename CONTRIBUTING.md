@@ -77,6 +77,10 @@ Every page has one GitHub issue, titled `[page] <page title>`. Its labels give t
 
 When pages are added, the architecture lead creates their issues with `scripts/github/setup.mjs`. The script skips issues that already exist, and its header lists all its commands.
 
+- **In the same pull request.** A pull request that adds a page creates its issue, so that no page is ever without one. This includes every ADR.
+- **Renamed pages.** The script finds an issue by its title, `[page] <page title>`. When a page's title changes, rename its issue first, or the script creates a second one.
+- **In the pull request description.** List each page with its issue (`#123`). Pages themselves don't link to issues; only chapter 11 does (decision D-023).
+
 ```bash
 DRY_RUN=1 node scripts/github/setup.mjs issues   # preview: prints the gh commands
 node scripts/github/setup.mjs issues             # creates the missing issues
