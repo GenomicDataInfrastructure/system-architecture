@@ -36,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Every ADR, like every page, has its `[page]` issue, created in the pull request that adds it; renamed pages have their issue renamed first; pull request descriptions name each page's issue (ADR recipe, *Page issues* in `CONTRIBUTING.md`, pull request template).
 - Architecture reviewer: reads the arc42 documentation of each section in full (content, motivation, form, every tip) and its FAQ entries before reviewing, and cites the section, tip or FAQ entry in each arc42 finding; a plain-text copy is kept in the source collection.
 - The arc42 check is in the page choreography (steps 5 and 8), the review checklist, the pull request template, `AGENTS.md` and `CONTRIBUTING.md` (decision D-024). Recipe for chapter 11: risks and technical debt are ordered by priority, open points alphabetically. ADR template: status *Deprecated*, and the criteria for the choice. The chapter 2 and 3 overviews ask about conventions and about 3.3 as our addition.
 - Writing rule: open points, risks and technical debt are recorded in chapter 11 in the pull request that raises them (decision D-023), in `AGENTS.md` (rule 10), `CONTRIBUTING.md`, the page choreography, the recipe for chapter 11, the review checklist and the pull request template.
