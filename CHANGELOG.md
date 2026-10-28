@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Review rounds and reviews in Word (decision D-028): `npm run export-docx` exports a wave, or chosen pages, at one version to a Word document (Pandoc; styles in `scripts/export-docx-reference.docx`); the handbook's *Drafting and review roles* describes review rounds on a fixed version and how to review in Word or Google Docs.
+- Crosscutting decisions before the structure (decision D-027): placeholders for ADR-0004 to ADR-0008 (identity and authorisation, identity link, trust boundaries, catalogue metadata, connection to HealthData@EU) in wave 3; concept pages 8.3, 8.4, 8.7, 8.10 and 8.11 build on them in wave 5.
 - AI-assisted drafting (decision D-026): handbook page *Drafting and review roles* (source librarian, writer, architecture and governance reviewers, DPO, security, legal and ELSI specialists, reader test; the findings format; rules), and thin role wrappers in `.claude/agents/`.
 - Pull request previews (decision D-025): every pull request from a branch of this repository publishes a rendered copy of the whole site at `…/system-architecture/pr-<number>/`, linked in one comment on the pull request and removed when it is closed. The published site moves to the root of the `gh-pages` branch, next to the previews; the repository's Pages source must be switched to that branch (CONTRIBUTING, *Previews and publication*).
 - *Fit with arc42* in the page recipes: how to check a page against arc42, and the table of agreed departures. Each recipe now says what arc42 asks for its chapter (decision D-024).
@@ -34,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Architecture reviewer: reads the arc42 documentation of each section in full (content, motivation, form, every tip) and its FAQ entries before reviewing, and cites the section, tip or FAQ entry in each arc42 finding; a plain-text copy is kept in the source collection.
 - The arc42 check is in the page choreography (steps 5 and 8), the review checklist, the pull request template, `AGENTS.md` and `CONTRIBUTING.md` (decision D-024). Recipe for chapter 11: risks and technical debt are ordered by priority, open points alphabetically. ADR template: status *Deprecated*, and the criteria for the choice. The chapter 2 and 3 overviews ask about conventions and about 3.3 as our addition.
 - Writing rule: open points, risks and technical debt are recorded in chapter 11 in the pull request that raises them (decision D-023), in `AGENTS.md` (rule 10), `CONTRIBUTING.md`, the page choreography, the recipe for chapter 11, the review checklist and the pull request template.
 - Writing rule: the first mention of each glossary term on a page links to its glossary entry, or to the concept page that explains it (decision D-022), in `AGENTS.md`, `CONTRIBUTING.md`, the page choreography, the review checklist and the pull request template. 8.12 follows it.
