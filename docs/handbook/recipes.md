@@ -77,9 +77,18 @@ For **5, 5.1, 5.2 and 5.3**, also give the reason for the decomposition: arc42 d
 
 **Purpose:** say what the system must do (1.1) and who cares about it (1.3).
 
-**1.1 headings:** Requirements by lifecycle phase (inclusion, access, use), as a table: *ID · requirement · type of use · governance section*. Then requirements that come from the EHDS rather than the governance.
+**1.1 headings:** how to read the page (the keywords, and that the governance prevails); the 3 to 5 most important requirements; then requirements by lifecycle phase (inclusion, access, use), as a table *ID · requirement · type of use · source · detail*; then the requirements from the EHDS; at the end, one line with the retired IDs.
 
-**Requirement IDs:** `REQ-<phase>-<n>`, where the phase is `IN` (inclusion), `AC` (access), `US` (use) or `EH` (from the EHDS): for example REQ-AC-4. Numbers are never reused or renumbered. A new requirement gets the next number in its phase; a requirement that no longer applies is marked *withdrawn*, not deleted. Other pages cite requirements by ID, for example in the *governance requirements* of a building block.
+**1.1 rows:** a short extract that *refers to* the requirements documents (the 1+MG Data Governance and the EHDS), not a copy of them. About 15 to 20 essential rows, one requirement per row, with the system as subject, in one of four patterns (ISO/IEC/IEEE 29148, EARS):
+
+- `The system shall <capability>.`
+- `The system shall let <actor> <action>.`
+- `When <trigger>, the system shall <response>.`
+- `Where <condition>, the system shall <response>.`
+
+*Shall* is mandatory, *should* recommended (only where the governance itself says "should"), *may* optional. Duties of organisations stay in the governance and in 3.3: write what the system must do to support them, and leave out duties with no consequence for the system. Leave procedural detail (stages, committee rules) to the chapter 6 scenario the row links to, and deadlines and other thresholds to chapter 10, as quality scenarios. Every row cites its source (`<GovRef>`, or the EHDS article); quote a short fragment where the exact words carry the meaning.
+
+**Requirement IDs:** `REQ-<phase>-<n>`, where the phase is `IN` (inclusion), `AC` (access), `US` (use) or `EH` (from the EHDS): for example REQ-AC-4. A row that is reworded keeps its ID. A new requirement gets the next number in its phase. A removed row's ID is retired and never reused; the retired IDs are listed in one line at the end of the page, with where their content went. A split row gets suffixes (REQ-AC-7a, REQ-AC-7b) only if both parts stay. Other pages cite requirements by ID, for example in the *governance requirements* of a building block.
 
 **1.3 headings:** a table *stakeholder · role in the governance · what they expect from the architecture · where the page answers it*. Then how to contact each group, and what readers need from the documentation.
 

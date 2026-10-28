@@ -21,7 +21,7 @@ last_reviewed:
 
 ## The quality goals
 
-The governance names eight principles <GovRef id="II.2" />, described in [2.2 Governance principles](/constraints/governance-principles). They can't all be top goals. The four quality goals below group them. arc42, the documentation template this architecture follows, recommends naming them with the terms of the ISO/IEC 25010 quality model <Cite id="arc42" /> <Cite id="iso-25010" />; those terms are in the last line of each cell.
+The governance names eight principles <GovRef id="II.2" />, described in [2.2 Governance principles](/constraints/governance-principles). The four quality goals below group them, categorised according to the ISO/IEC 25010 quality model <Cite id="arc42" /> <Cite id="iso-25010" />; those terms are in the last line of each cell.
 
 Each goal has an identifier, QG-1 to QG-4, which also gives its priority: QG-1 comes first. The priority decides which goal wins when two conflict. [Chapter 4](/solution-strategy) and [chapter 10](/quality) refer to the goals by these identifiers.
 
