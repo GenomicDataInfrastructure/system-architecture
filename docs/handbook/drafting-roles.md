@@ -15,8 +15,28 @@ Pages are drafted with AI assistance, wave by wave, and reviewed by people (deci
 2. **Draft.** The writer drafts every page of the wave on one branch, following the [page choreography](/handbook/choreography) (steps 4 to 8) and the [recipe](/handbook/recipes) for each page.
 3. **Review by the roles below.** The reviewers, the specialists the page's `audience` calls for, and the reader test run at the same time. Each returns a list of findings.
 4. **Fix.** The writer answers every finding: fixed, or declined with a reason. Disagreements go to the architecture lead.
-5. **Pull request.** One pull request per wave (wave 4: one per scope). The page `status` becomes `review`. The pull request says that the pages were drafted with AI assistance, which roles reviewed them, and what is still open.
-6. **Human review.** Taskforce reviewers and specialists comment on the pull request, using the [review checklists](/handbook/review-checklists). Their comments go back to the writer, and steps 4 to 6 repeat until a reviewer approves.
+5. **Pull request.** One pull request per wave (wave 4: one per scope). The page `status` becomes `in-review`. The pull request says that the pages were drafted with AI assistance, which roles reviewed them, and what is still open.
+6. **Human review, in rounds.** Taskforce reviewers and specialists review one fixed version of the pages, on the pull request or in a Word document, using the [review checklists](/handbook/review-checklists). The writer changes the pages again only when every reviewer has answered (see [Review rounds](#review-rounds)). Steps 4 to 6 repeat until a reviewer approves.
+
+## Review rounds {#review-rounds}
+
+A review round lets every reviewer comment on the same text, and gives the writer all comments at once (decision D-028).
+
+1. **Open the round on one version.** When the pages are ready, the architecture lead names the version under review: one commit on the wave's branch. A comment on the pull request opens the round ("Round 2 opened on version c45c887") and lists the reviewers. The Word export of the round shows the same version on every page.
+2. **The pages are frozen during the round.** Nobody changes the wave's pages on the branch until the round closes. A problem found on another page goes to that page's issue. Merging `main` into the branch is allowed if it doesn't change the wave's pages.
+3. **Reviewers comment** on the pull request or in the Word document ([below](#reviewing-in-word)), within 5 working days ([choreography](/handbook/choreography), step 9).
+4. **The round closes when every reviewer has answered:** with comments, an approval, or "no comments". "Every reviewer" means the reviewers named in the pages' front matter and the specialists requested on the pull request. If a reviewer hasn't answered after 5 working days, the architecture lead decides whether to wait or to close the round without them, and says so on the pull request.
+5. **Only then does the writer change the pages.** The writer answers all comments of the round together: fixed, recorded as an open point in chapter 11, or declined with a reason. A comment on the pull request closes the round with every comment, its reviewer and what happened to it.
+6. **The next round starts from the new version.** Human review has two rounds at most; after that, the architecture lead decides ([choreography](/handbook/choreography), step 9).
+
+## Reviewing in Word or Google Docs {#reviewing-in-word}
+
+Reviewers who don't use GitHub review a Word document of the round's version.
+
+- **Export.** `npm run export-docx -- --wave 1 --ref <commit> --pr 133 --round 2` writes `exports/wave-1-round-2-<commit>.docx` (not committed). `--pages <file,…>` exports chosen pages instead of a wave. It needs Pandoc (`brew install pandoc`, or `PANDOC` set to its path); diagrams are embedded as images when the draw.io desktop app is installed. Every page shows its status, owner, reviewers and the version; links point to the pull request's preview.
+- **Comment.** Reviewers use Word comments, or *Track changes* to suggest wording. Google Docs works too: upload the file to Google Drive, open it with Google Docs, and download it again as a Word file.
+- **Return.** Reviewers send the file back to the architecture lead. Their comments become findings under the reviewer's name, and the round's closing comment on the pull request lists them, so that everyone sees them. The returned files are kept outside the repository.
+- **What changed since the last round.** Keep the file of each round. Word's *Review › Compare* shows the changes between two rounds' files as tracked changes.
 
 ## Roles
 
@@ -48,7 +68,9 @@ The governance and legal reviews use the most capable model because their errors
 
 ### Architecture reviewer {#architecture-reviewer}
 
+- **Reads, before reviewing:** for each page, the arc42 documentation of its section in full: *Content*, *Motivation* and *Form* at `https://docs.arc42.org/section-N/`, and every tip that section links. Also the arc42 FAQ entries for the section (`https://faq.arc42.org`: category C covers sections 1 to 12, J large systems, K customisation), and the *Fit with arc42* table of agreed departures in the [recipes](/handbook/recipes). A plain-text copy of the arc42 documentation and FAQ is in the source collection. The reviewer doesn't judge arc42 fit from memory.
 - **Checks:** the general checklist of the [review checklists](/handbook/review-checklists), with most weight on: *fits arc42* (the recipe and the arc42 documentation for the section), *interfaces first*, *consistent* with neighbouring pages, approved pages and ADRs, *both axes covered* (types of use and types of dataset), *diagrams*, and the implementer checklist for chapters 5 to 8.
+- **Fit with arc42, section by section:** the page gives what arc42 asks for its section, in the form it suggests, or the departure is agreed in the recipes or explained in the pull request (decision D-024). For example: 1.2 names the top three to five quality goals; 3.1 shows every communication partner with its inputs and outputs; 5 describes each white box with an overview diagram, the reason for the decomposition and its building blocks; 10 has a quality tree and measurable scenarios. Every arc42 finding names the section and the tip or FAQ entry it rests on (for example "arc42 3.1, tip 3-5" or "FAQ C-3-3").
 
 ### Governance reviewer {#governance-reviewer}
 
