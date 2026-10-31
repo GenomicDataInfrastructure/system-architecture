@@ -2,8 +2,8 @@
 title: "ADR-0002 Support all three types of dataset; the Member Country chooses the 1+MG type"
 slug: /decisions/0002-disclosure-paths-per-dataset
 sidebar_position: 2
-owner: "@brunopacheco1"
-reviewers: ["@rwwh", "@kjellp", "@TroelsRasmussen"]
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Johan Viklund (UU)", "Rob Hooft (Health-RI)", "Regina Becker (LNDS, specialist)"]
 status: in-review
 wave: 1
 audience: [policy, legal, dpo, security, implementer]

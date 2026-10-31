@@ -3,8 +3,8 @@ title: "12. Glossary"
 sidebar_label: "12. Glossary"
 slug: /glossary
 sidebar_position: 12
-owner: "@brunopacheco1"
-reviewers: ["@rwwh", "@kjellp", "@TroelsRasmussen"]
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Jack Broeren (Health-RI)", "Jacek Lebioda (LNDS)"]
 status: in-review
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]

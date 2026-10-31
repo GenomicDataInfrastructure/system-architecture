@@ -2,8 +2,8 @@
 title: "3.3 European, national and User Organisation scopes"
 sidebar_position: 3
 slug: /context/scopes
-owner: "@brunopacheco1"
-reviewers: ["@rwwh", "@kjellp", "@TroelsRasmussen"]
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Johan Viklund (UU)", "Rob Hooft (Health-RI)", "Regina Becker (LNDS, specialist)"]
 status: in-review
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]

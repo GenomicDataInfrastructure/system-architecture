@@ -2,8 +2,8 @@
 title: "2.2 Governance principles"
 sidebar_position: 2
 slug: /constraints/governance-principles
-owner: "@brunopacheco1"
-reviewers: ["@rwwh", "@kjellp", "@TroelsRasmussen"]
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Juan Arenas (ELIXIR Hub)", "Troels Rasmussen (LNDS)"]
 status: in-review
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]

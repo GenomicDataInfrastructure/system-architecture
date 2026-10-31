@@ -2,8 +2,8 @@
 title: "1.3 Stakeholders"
 sidebar_position: 3
 slug: /introduction/stakeholders
-owner: "@brunopacheco1"
-reviewers: ["@rwwh", "@kjellp", "@TroelsRasmussen"]
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Griet De Clercq (VIB)", "Daniel Ciurea (ICDG)"]
 status: in-review
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]

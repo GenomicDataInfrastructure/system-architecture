@@ -2,8 +2,8 @@
 title: "ADR-0003 Build the system in steps, starting with externally governed datasets"
 slug: /decisions/0003-implementation-in-steps
 sidebar_position: 3
-owner: "@brunopacheco1"
-reviewers: ["@rwwh", "@kjellp", "@TroelsRasmussen"]
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Kjell Petersen (UiB)", "Dylan Spalding (CSC)"]
 status: in-review
 wave: 1
 audience: [policy, legal, dpo, security, implementer]
