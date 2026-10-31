@@ -2,8 +2,8 @@
 title: "1.1 Requirements overview"
 sidebar_position: 1
 slug: /introduction/requirements
-owner: "@brunopacheco1"
-reviewers: []
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Dylan Spalding (CSC)", "Kjell Petersen (UiB)", "Regina Becker (LNDS, specialist)"]
 status: draft
 wave: 2
 audience: [policy, legal, elsi, implementer]

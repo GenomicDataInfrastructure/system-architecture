@@ -2,8 +2,8 @@
 title: "8.12 Types of dataset"
 sidebar_position: 12
 slug: /concepts/dataset-types
-owner: "@brunopacheco1"
-reviewers: []
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Rob Hooft (Health-RI)", "Wasiu Akanni (DKFZ)"]
 status: draft
 wave: 2
 audience: [policy, legal, dpo, implementer]

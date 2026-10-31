@@ -2,8 +2,8 @@
 title: "ADR-0010 SPE providers are sub-processors for the User's data and controllers for their own platform processing"
 slug: /decisions/0010-spe-provider-role
 sidebar_position: 10
-owner: "@brunopacheco1"
-reviewers: []
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Troels Rasmussen (LNDS)", "Rose Pasigna (LNDS)", "Regina Becker (LNDS, specialist)"]
 status: draft
 wave: 2
 audience: [legal, dpo, security, implementer]

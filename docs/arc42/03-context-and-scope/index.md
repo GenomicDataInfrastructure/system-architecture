@@ -3,8 +3,8 @@ title: "3. Context and scope"
 sidebar_label: "3. Context and scope"
 sidebar_position: 3
 slug: /context
-owner: "@brunopacheco1"
-reviewers: []
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Kjell Petersen (UiB)", "Dylan Spalding (CSC)"]
 status: draft
 wave: 2
 audience: [policy, legal, elsi, security, dpo, implementer]

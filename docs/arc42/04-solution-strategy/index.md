@@ -3,8 +3,8 @@ title: "4. Solution strategy"
 sidebar_label: "4. Solution strategy"
 sidebar_position: 4
 slug: /solution-strategy
-owner: "@brunopacheco1"
-reviewers: []
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Dylan Spalding (CSC)", "Rob Hooft (Health-RI)"]
 status: draft
 wave: 2
 audience: [policy, legal, elsi, security, dpo, implementer]

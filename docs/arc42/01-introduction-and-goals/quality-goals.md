@@ -2,8 +2,8 @@
 title: "1.2 Quality goals"
 sidebar_position: 2
 slug: /introduction/quality-goals
-owner: "@brunopacheco1"
-reviewers: []
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Jonas Hagberg (SU)", "Alexandru Mahmoud (UL)", "Kjell Petersen (UiB, specialist)"]
 status: draft
 wave: 2
 audience: [policy, legal, elsi, security, dpo, implementer]

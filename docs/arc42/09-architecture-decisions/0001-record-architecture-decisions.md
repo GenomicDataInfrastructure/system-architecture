@@ -2,8 +2,8 @@
 title: "ADR-0001 Record architecture decisions"
 slug: /decisions/0001-record-architecture-decisions
 sidebar_position: 1
-owner: "@brunopacheco1"
-reviewers: []
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Dylan Spalding (CSC)", "Rob Hooft (Health-RI)"]
 status: draft
 wave: 2
 audience: [implementer, policy]
@@ -23,7 +23,7 @@ last_reviewed:
 |---|---|
 | Status | Proposed |
 | Date | 2026-10-27 (first proposed 2026-09-18) |
-| Deciders | B. Pacheco (architecture lead); to be confirmed by the taskforce |
+| Deciders | Proposed by B. Pacheco (architecture lead) for the architecture taskforce; to be reviewed by the GDI Management Board |
 
 ## Context
 
@@ -31,7 +31,7 @@ Many organisations in many countries will build and run the [Genome EDIC](/gloss
 
 The rules will change. The governance expects the Member Countries to keep defining the scope, conditions and requirements together <GovRef id="II.2" />, and leaves the technical requirements to committees and working groups <GovRef id="II.1" />. When a rule changes, it must be possible to find which decisions rested on it.
 
-The [Genome EDIC CC](/glossary#genome-edic-central-coordination-genome-edic-cc) is to be the one authoritative place for all relevant information across the federated system, including its own documentation website <GovRef id="V.1.2" />. Until it is operational, this documentation is a working draft of the architecture taskforce: experts from the GDI project and the 1+MG initiative who write and maintain it. The [Genome EDIC Assembly of Members](/glossary#genome-edic-assembly-of-members) decides on the principles and the minimum requirements <GovRef id="I" />, but no body has been named to adopt the system architecture.
+The [Genome EDIC CC](/glossary#genome-edic-central-coordination-genome-edic-cc) is to be the one authoritative place for all relevant information across the federated system, including its own documentation website <GovRef id="V.1.2" />. Until it is operational, this documentation is a working draft of the architecture taskforce: experts from the GDI project and the 1+MG initiative who write and maintain it. The [Genome EDIC Assembly of Members](/glossary#genome-edic-assembly-of-members) decides on the principles and the minimum requirements <GovRef id="I" />, but no Genome EDIC body has been named to adopt the system architecture. Within the GDI project, the taskforce recommends architecture decisions, and the GDI Management Board reviews them at its cross-pillar meetings.
 
 Two kinds of decision exist in this repository, and they are kept apart:
 
@@ -66,11 +66,11 @@ Option O3. Each significant architecture decision is recorded as an ADR in this 
 - **Status.** Proposed, accepted, deprecated (no longer valid), or superseded by a later ADR.
 - **Never deleted.** A decision that no longer holds is deprecated, or superseded by a new ADR. The superseded ADR keeps its text, and links to the ADR that supersedes it; the new ADR links back to the one it supersedes.
 - **Numbering.** ADRs are numbered in order: ADR-0001, ADR-0002, and so on. A number is never reused.
-- **Date and deciders.** Each ADR gives the date of its current version, the date it was first proposed, and who decided. Until the open point below is settled, the architecture lead proposes, and the taskforce confirms.
+- **Date and deciders.** Each ADR gives the date of its current version, the date it was first proposed, and who decided. The architecture lead proposes an ADR for the taskforce, and the taskforce recommends it. The GDI Management Board reviews it at a cross-pillar meeting; it is accepted after that review.
 - **Review.** An ADR goes through the same review as the pages (the writing guide, [page choreography](/handbook/choreography)). A disagreement about the architecture that review doesn't settle goes to the architecture lead, who may ask for an ADR ([drafting roles](/handbook/drafting-roles)).
 
 :::caution[Open point]
-No body has been named to adopt the system architecture, so who confirms an ADR, and when it binds Member Countries, is not decided. See [chapter 11](/risks#architecture-adoption).
+No Genome EDIC body has been named to adopt the system architecture. Until one is, the GDI Management Board reviews the ADRs; which body adopts them later, and when they bind Member Countries, is not decided. See [chapter 11](/risks#architecture-adoption).
 :::
 
 ## Consequences

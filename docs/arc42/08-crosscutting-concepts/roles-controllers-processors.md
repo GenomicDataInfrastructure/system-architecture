@@ -2,8 +2,8 @@
 title: "8.2 Controllers, processors and responsibilities"
 sidebar_position: 2
 slug: /concepts/roles
-owner: "@brunopacheco1"
-reviewers: []
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Troels Rasmussen (LNDS)", "Rose Pasigna (LNDS)"]
 status: draft
 wave: 2
 audience: [legal, dpo, implementer]

@@ -2,8 +2,8 @@
 title: "2.1 Legal and regulatory constraints"
 sidebar_position: 1
 slug: /constraints/legal
-owner: "@brunopacheco1"
-reviewers: []
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Regina Becker (LNDS)"]
 status: draft
 wave: 2
 audience: [policy, legal, security, dpo]

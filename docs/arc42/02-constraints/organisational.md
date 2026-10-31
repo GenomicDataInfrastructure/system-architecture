@@ -2,8 +2,8 @@
 title: "2.3 Organisational constraints"
 sidebar_position: 3
 slug: /constraints/organisational
-owner: "@brunopacheco1"
-reviewers: []
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Kjell Petersen (UiB)", "Iulia Maria Sabau (ICDG)"]
 status: draft
 wave: 2
 audience: [policy, legal, implementer]

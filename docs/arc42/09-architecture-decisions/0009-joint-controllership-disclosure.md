@@ -2,8 +2,8 @@
 title: "ADR-0009 The Genome EDIC and the 1+MG Data Holder are joint controllers for the disclosure of 1+MG compliant datasets"
 slug: /decisions/0009-joint-controllership-disclosure
 sidebar_position: 9
-owner: "@brunopacheco1"
-reviewers: []
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Troels Rasmussen (LNDS)", "Rose Pasigna (LNDS)", "Regina Becker (LNDS, specialist)"]
 status: draft
 wave: 2
 audience: [legal, dpo, policy, implementer]

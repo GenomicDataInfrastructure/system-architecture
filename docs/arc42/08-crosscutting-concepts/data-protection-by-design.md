@@ -2,8 +2,8 @@
 title: "8.1 Data protection by design and by default"
 sidebar_position: 1
 slug: /concepts/data-protection-by-design
-owner: "@brunopacheco1"
-reviewers: []
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Alexandru Mahmoud (UL)", "Jacek Lebioda (LNDS)", "Aleš Čep (UM)", "Regina Becker (LNDS, specialist)", "Rob Hooft (Health-RI, specialist)"]
 status: draft
 wave: 2
 audience: [legal, elsi, security, dpo, implementer]
