@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Taskforce meetings and decisions (decision D-030): the handbook's start page describes the monthly GDI Architecture Taskforce meeting (Pillar II slot, 14:00–15:00 CET), its agenda, the rolling minutes, and the GDI Management Board's review of ADRs; the ADR recipe says who accepts an ADR.
+- Wave targets (decision D-031): `target` in `src/data/waves.json`, shown on *Writing order*; waves 1 and 2 by December 2026.
+
 - Review rounds and reviews in Word (decision D-028): `npm run export-docx` exports a wave, or chosen pages, at one version to a Word document (Pandoc; styles in `scripts/export-docx-reference.docx`); the handbook's *Drafting and review roles* describes review rounds on a fixed version and how to review in Word or Google Docs.
 - Crosscutting decisions before the structure (decision D-027): placeholders for ADR-0004 to ADR-0008 (identity and authorisation, identity link, trust boundaries, catalogue metadata, connection to HealthData@EU) in wave 3; concept pages 8.3, 8.4, 8.7, 8.10 and 8.11 build on them in wave 5.
 - AI-assisted drafting (decision D-026): handbook page *Drafting and review roles* (source librarian, writer, architecture and governance reviewers, DPO, security, legal and ELSI specialists, reader test; the findings format; rules), and thin role wrappers in `.claude/agents/`.
@@ -35,6 +38,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - "Applies to" column on the governance traceability page: the notes in square brackets of the governance titles, with types of dataset highlighted.
 
 ### Changed
+
+- Review assignment per page (decision D-029): `owner` and `reviewers` give names and affiliations instead of GitHub accounts; the architecture lead assigns the reviewers of each page; reviewers with a GitHub account are requested on the pull request, the others review the Word export. CONTRIBUTING, the page choreography (steps 2 and 9), *Drafting and review roles* and the ADR template are updated.
 
 - Every ADR, like every page, has its `[page]` issue, created in the pull request that adds it; renamed pages have their issue renamed first; pull request descriptions name each page's issue (ADR recipe, *Page issues* in `CONTRIBUTING.md`, pull request template).
 - Architecture reviewer: reads the arc42 documentation of each section in full (content, motivation, form, every tip) and its FAQ entries before reviewing, and cites the section, tip or FAQ entry in each arc42 finding; a plain-text copy is kept in the source collection.
