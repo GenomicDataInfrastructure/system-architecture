@@ -11,8 +11,8 @@ Copy this page to `NNNN-short-title.md`, fill it in, and open a pull request.
 ---
 title: "ADR-NNNN Short title"
 slug: /decisions/NNNN-short-title
-owner: "@github-handle"
-reviewers: ["@github-handle"]
+owner: "Name (Institution)"
+reviewers: ["Name (Institution)"]
 status: draft
 audience: [implementer]
 governance_refs: []

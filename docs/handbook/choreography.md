@@ -18,7 +18,7 @@ flowchart LR
 | # | Step | Who | Typical effort |
 |---|---|---|---|
 | 1 | Claim the page | Owner | 5 min |
-| 2 | Agree reviewers | Owner, with the architecture lead | 1 day |
+| 2 | Agree reviewers | Architecture lead, with the owner | 1 day |
 | 3 | Kick-off | Owner + reviewers | 30 min |
 | 4 | Gather sources | Owner | 1–3 hours |
 | 5 | Look for examples and best practices | Owner | 1–2 hours |
@@ -44,12 +44,12 @@ flowchart LR
 
 ## 2. Agree reviewers
 
-**Who:** the owner, with the architecture lead.
+**Who:** the architecture lead assigns them; the owner records them.
 
-1. Choose **one or two reviewers** from the taskforce who know the subject. At least one should have written or reviewed a neighbouring page (same chapter or same scope).
-2. Check the page's `audience`. If it includes `dpo`, `security`, `legal` or `elsi`, and the page makes claims in that area, add the matching `needs-…` label to the issue. A specialist will then review it too.
-3. Comment in the issue: *"Reviewers: @a, @b. Specialist review: DPO."* Ask them to confirm.
-4. Set `reviewers: ["@a", "@b"]` in the front matter.
+1. The architecture lead assigns **one to three reviewers** per page from the taskforce, in the taskforce's assignment sheet, so that the load is spread and every page has someone who knows the subject. At least one should have written or reviewed a neighbouring page (same chapter or same scope).
+2. Check the page's `audience`. If it includes `dpo`, `security`, `legal` or `elsi`, and the page makes claims in that area, a specialist reviews it too: add them to the assignment and the matching `needs-…` label to the issue.
+3. Comment in the issue: *"Reviewers: Rob Hooft (Health-RI), Wasiu Akanni (DKFZ). Specialist: Regina Becker (LNDS)."*
+4. Set `reviewers` in the front matter, by name and affiliation: `reviewers: ["Rob Hooft (Health-RI)", "Wasiu Akanni (DKFZ)", "Regina Becker (LNDS, specialist)"]` (decision D-029).
 
 **Done when:** the reviewers have confirmed in the issue.
 
@@ -135,7 +135,7 @@ If you use an AI assistant, give it `AGENTS.md`, the page file, and the sources 
 **Who:** the owner starts it; the reviewers and specialists do it.
 
 1. Set `status: in-review`, mark the pull request *Ready for review*, and change `Refs` to `Closes #<issue number>`.
-2. Request the reviewers on the pull request.
+2. Request the reviewers on the pull request: those named in `reviewers` who have a GitHub account. The architecture lead sends the others a Word export ([review rounds](/handbook/drafting-roles#review-rounds)).
 3. Reviewers read the page in the pull request's preview (the link is in the preview comment), or in a Word export of the same version if they don't use GitHub, use the [review checklists](/handbook/review-checklists), and comment within **5 working days**.
 4. When every reviewer has answered, the owner answers every comment: either changes the text, or explains why not. The page doesn't change while reviewers are still reading it ([review rounds](/handbook/drafting-roles#review-rounds)).
 5. **Two review rounds at most.** If owner and reviewer still disagree, the architecture lead decides. If the disagreement is about the architecture itself, the decision becomes an ADR.

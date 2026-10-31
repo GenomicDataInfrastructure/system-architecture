@@ -9,7 +9,7 @@ This architecture is written by a taskforce. Every change goes through a pull re
 | What | Where it is recorded |
 |---|---|
 | Who is responsible for a page | The **assignee** of the page's GitHub issue, and `owner` in the page's front matter |
-| Who must review it | `reviewers` in the front matter; the owner requests them on the pull request |
+| Who must review it | `reviewers` in the front matter, by name and affiliation, as the architecture lead assigned them (decision D-029); reviewers with a GitHub account are requested on the pull request |
 | Where the page stands | `status` in the front matter: `placeholder` → `draft` → `in-review` → `approved` |
 | When it was last reviewed | `last_reviewed` in the front matter (set by the reviewer on approval) |
 | Who changed what, and when | Git history; each page shows its last author and date at the bottom |
@@ -25,8 +25,8 @@ The *Document status* page of the site (`docs/appendix/document-status.md`) list
 title: "6.2.2 Data discovery"
 slug: /runtime/access/discovery
 sidebar_position: 2
-owner: "@github-handle"
-reviewers: ["@github-handle", "@github-handle"]
+owner: "Name (Institution)"
+reviewers: ["Name (Institution)", "Name (Institution, specialist)"]
 status: draft                     # placeholder | draft | in-review | approved
 wave: 4                           # writing wave 1–6 (see docs/handbook/writing-order.md)
 audience: [elsi, dpo, implementer] # policy | legal | elsi | security | dpo | implementer
@@ -35,17 +35,19 @@ last_reviewed: 2026-10-15         # set when approved
 ---
 ```
 
+`owner` and `reviewers` give names and affiliations, not GitHub accounts: not every reviewer uses GitHub, and readers of the site and of the Word exports should see who reviewed a page. Mark a specialist reviewer with `specialist` after the affiliation (decision D-029).
+
 `npm run check` validates these fields. CI runs it on every pull request.
 
 ## Workflow for a page
 
 The full step-by-step version, with who does what and when each step is done, is the [page choreography](https://genomicdatainfrastructure.github.io/system-architecture/handbook/choreography).
 
-1. **Pick up the page.** Assign yourself the page's GitHub issue (titled `[page] <page title>`), or open one with the *Page task* template. Set `owner` and `status: draft` in the front matter, and name the reviewers in the issue.
+1. **Pick up the page.** Assign yourself the page's GitHub issue (titled `[page] <page title>`), or open one with the *Page task* template. Set `owner` and `status: draft` in the front matter. The architecture lead assigns the reviewers of each page; write them in `reviewers` by name and affiliation, as in the example above, and name them in the issue.
 2. **Write** on a branch. Keep the structure of every page:
    - the `<InShort>` box: at most three plain-language bullets;
    - the content, citing governance sections with `<GovRef id="VII.2.3" />` and other sources with `<Cite id="gdi-d3.4" />`.
-3. **Ask for review.** Set `status: in-review`, open a pull request that says `Closes #<issue number>`, and fill in the checklist. Request the reviewers listed in `reviewers` on the pull request. Add a `needs-dpo`, `needs-security`, `needs-legal` or `needs-elsi` label to the issue when a specialist must review.
+3. **Ask for review.** Set `status: in-review`, open a pull request that says `Closes #<issue number>`, and fill in the checklist. Request the reviewers listed in `reviewers` who have a GitHub account on the pull request; the others review a Word export ([Review rounds](https://genomicdatainfrastructure.github.io/system-architecture/handbook/drafting-roles#review-rounds)). Add a `needs-dpo`, `needs-security`, `needs-legal` or `needs-elsi` label to the issue when a specialist must review.
 4. **Review.** Reviewers read the page in the **preview** of the pull request: a rendered copy of the whole site at `https://genomicdatainfrastructure.github.io/system-architecture/pr-<number>/`, linked in a comment on the pull request and updated on every push (see [Previews and publication](#previews-and-publication)). Reviewers comment in the pull request. When satisfied, the reviewer sets `status: approved` and `last_reviewed` to today, and approves the pull request.
 5. **Merge.** `main` accepts a pull request once it has at least one approval and CI passes. Merging closes the issue.
 

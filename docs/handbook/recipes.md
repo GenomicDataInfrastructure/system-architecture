@@ -208,6 +208,8 @@ Use the [ADR template](/decisions/template). One decision per ADR. Keep it under
 
 **When to write one:** the decision affects more than one scope, changes an interface, implements a governance choice, or was disputed in a review.
 
+**Who accepts it:** the taskforce recommends the ADR; it stays *Proposed* while its pull request is reviewed. The GDI Management Board reviews it at a cross-pillar meeting, and the ADR becomes *Accepted* after that review (decision D-030). The monthly taskforce meeting lists the proposed ADRs that are ready for the Management Board.
+
 **Tracking issue:** every ADR has its `[page]` issue, like every page, for tracking. Create it in the same pull request that adds the ADR, with `scripts/github/setup.mjs issues` ([page issues](https://github.com/GenomicDataInfrastructure/system-architecture/blob/main/CONTRIBUTING.md#page-issues)). When an ADR's title changes, rename its issue to `[page] <new title>` first, so that the script doesn't create a second one. Name the issue in the pull request description, not on the page (decision D-023).
 
 **arc42:** only architecturally significant decisions, with context, decision, status (proposed, accepted, deprecated, superseded) and consequences. Give the criteria, the rejected alternatives and the date (docs.arc42.org/section-9).
