@@ -2,8 +2,8 @@
 title: "3.1 Business context"
 sidebar_position: 1
 slug: /context/business
-owner: "@brunopacheco1"
-reviewers: ["@rwwh", "@kjellp", "@TroelsRasmussen"]
+owner: "Bruno Pacheco (LNDS)"
+reviewers: ["Kjell Petersen (UiB)", "Dylan Spalding (CSC)"]
 status: in-review
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
