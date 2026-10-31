@@ -17,6 +17,7 @@
 - [ ] The first mention of each glossary term links to its glossary entry; the first use of each acronym is linked with `<Acronym>`.
 - [ ] The page covers what arc42 asks for its section (see the recipe), or this pull request explains the departure (decision D-024).
 - [ ] Open points, risks and technical debt raised here have an entry in chapter 11, and the page links each one to its entry (decision D-023).
+- [ ] New or renamed pages, including ADRs, have their `[page]` issue, named in this description (*Page issues* in `CONTRIBUTING.md`).
 - [ ] `npm run check` and `npm run build` pass locally (CI runs both).
 
 ## Sign-off needed
