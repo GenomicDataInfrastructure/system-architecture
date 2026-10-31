@@ -236,6 +236,8 @@ Chapter 11 is the one place that lists what is not decided yet, what could go wr
 - **Tracked in:** [issue #85](https://github.com/GenomicDataInfrastructure/system-architecture/issues/85).
 ```
 
+**Its GitHub issue.** Every entry has an issue, opened with the *Open point* or *Risk* template: titled `[open-point] <title>` or `[risk] <title>`, with the label `open-point` or `risk` and `chapter-11`. Dependencies are open points: they use `[open-point]` and the *Dependency* group of the template. Technical debt has no template yet (decision D-032).
+
 For a **risk**, use *What could happen*, *Probability* (low, medium or high), *Impact* (low, medium or high), *Mitigation*, *Owner* and *Tracked in*. For **technical debt**, use *What we owe*, *Why we took it*, *Impact* and *How to pay it back*, and *Tracked in*.
 
 On the page that raises the point, link each point to its entry:

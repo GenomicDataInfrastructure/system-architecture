@@ -1,0 +1,41 @@
+name: Risk
+description: A risk, recorded in chapter 11
+title: "[risk] "
+labels: ["risk", "chapter-11"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What could happen
+    validations:
+      required: true
+  - type: dropdown
+    id: probability
+    attributes:
+      label: Probability
+      options: [Low, Medium, High]
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options: [Low, Medium, High]
+    validations:
+      required: true
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Mitigation
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: Who watches this risk. Assign the issue to them.
+  - type: textarea
+    id: where
+    attributes:
+      label: Where it is marked
+      description: The chapter 11 entry (/risks#anchor) and the pages whose boxes link to it.

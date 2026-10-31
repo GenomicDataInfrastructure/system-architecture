@@ -8,7 +8,7 @@ This architecture is written by a taskforce. Every change goes through a pull re
 
 | What | Where it is recorded |
 |---|---|
-| Who is responsible for a page | The **assignee** of the page's GitHub issue, and `owner` in the page's front matter |
+| Who is responsible for a page | `owner` in the page's front matter, and the owner named in the issue's *Review assignment*; the owner is an assignee of the issue |
 | Who must review it | `reviewers` in the front matter, by name and affiliation, as the architecture lead assigned them (decision D-029); reviewers with a GitHub account are requested on the pull request |
 | Where the page stands | `status` in the front matter: `placeholder` → `draft` → `in-review` → `approved` |
 | When it was last reviewed | `last_reviewed` in the front matter (set by the reviewer on approval) |
@@ -65,17 +65,34 @@ The full step-by-step version, with who does what and when each step is done, is
 - Check each page against the arc42 documentation for its section. The [page recipe](https://genomicdatainfrastructure.github.io/system-architecture/handbook/recipes#fit-with-arc42) lists what arc42 asks and the departures we agreed; explain any other departure in the pull request (decision D-024).
 - Interfaces first: describe a component by its function, interfaces and standards, then name its reference implementation (GDI Starter Kit or GDI central service). A country may use other tools that meet the same interfaces (decisions D-007, D-020).
 
+## Issue titles and labels
+
+Every issue title starts with its main label in square brackets, `[label] Title`, and has that label (decision D-032). Each kind has an issue template.
+
+| Kind | Title | Labels | Template |
+|---|---|---|---|
+| A page or an ADR | `[page] <page title>` | `page`, chapter, wave, scope | *Page task* |
+| An open point, open question or dependency (chapter 11) | `[open-point] <title>` | `open-point`, `chapter-11` | *Open point* |
+| A risk (chapter 11) | `[risk] <title>` | `risk`, `chapter-11` | *Risk* |
+| An action point from a taskforce meeting | `[action] <title>` | `action` | *Action point* |
+| A question from a reader | `[reader-question] <title>` | `reader-question` | *Reader question* |
+
 ## Page issues
 
 Every page has one GitHub issue, titled `[page] <page title>`. Its labels give the chapter, scope, wave and any specialist review (`needs-dpo`, `needs-security`, `needs-legal`, `needs-elsi`). Useful searches:
 
 | To find | Search in *Issues* |
 |---|---|
-| Pages without an owner | `is:issue is:open label:page no:assignee` |
+| Pages without an owner or reviewers | `is:issue is:open label:page no:assignee` |
+| The pages you review or own | `is:issue is:open label:page assignee:@me` |
+| Open action points from taskforce meetings | `is:issue is:open label:action` |
+| Open points and risks | `is:issue is:open label:open-point,risk` |
 | The pages of a wave | `is:issue is:open label:page label:wave-1` |
 | The pages of a chapter | `is:issue label:page label:chapter-06` |
 | The pages of a scope | `is:issue label:page label:scope-national` |
 | Pages waiting for a DPO review | `is:issue is:open label:needs-dpo` |
+
+The issue's assignees are the owner and the reviewers of the page; its *Review assignment* section says who is who (decision D-032). The [taskforce board](https://github.com/orgs/GenomicDataInfrastructure/projects/12) shows the pages of the active waves, the pull requests and the action points.
 
 When pages are added, the architecture lead creates their issues with `scripts/github/setup.mjs`. The script skips issues that already exist, and its header lists all its commands.
 
