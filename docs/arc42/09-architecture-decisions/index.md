@@ -38,6 +38,8 @@ last_reviewed:
 | [ADR-0006](/decisions/0006-trust-boundaries) | Trust boundaries between operators and what each crossing requires | To be decided (wave 3) |
 | [ADR-0007](/decisions/0007-catalogue-metadata-and-federation) | Catalogue metadata standard and how catalogues are federated | To be decided (wave 3) |
 | [ADR-0008](/decisions/0008-connection-to-healthdata-eu) | How the system connects to HealthData@EU | To be decided (wave 3) |
+| [ADR-0009](/decisions/0009-joint-controllership-disclosure) | The Genome EDIC and the 1+MG Data Holder are joint controllers for the disclosure of 1+MG compliant datasets | Proposed |
+| [ADR-0010](/decisions/0010-spe-provider-role) | SPE providers are sub-processors for the User's data and controllers for their own platform processing | Proposed |
 
 ## Candidate decisions to record
 
