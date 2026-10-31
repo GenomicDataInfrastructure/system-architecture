@@ -22,16 +22,16 @@ Pages are drafted with AI assistance, wave by wave, and reviewed by people (deci
 
 A review round lets every reviewer comment on the same text, and gives the writer all comments at once (decision D-028).
 
-1. **Open the round on one version.** When the pages are ready, the architecture lead names the version under review: one commit on the wave's branch. A comment on the pull request opens the round ("Round 2 opened on version c45c887") and lists the reviewers. The Word export of the round shows the same version on every page.
+1. **Open the round on one version.** When the pages are ready, the architecture lead names the version under review: one commit on the wave's branch. A comment on the pull request opens the round ("Round 2 opened on version c45c887"). The pull request description lists the reviewers of each page, by name and affiliation, with the link to the page's preview; reviewers with a GitHub account are requested on the pull request. Each reviewer reviews the pages assigned to them (decision D-029). The Word export of the round shows the same version, and each page's reviewers, on every page.
 2. **The pages are frozen during the round.** Nobody changes the wave's pages on the branch until the round closes. A problem found on another page goes to that page's issue. Merging `main` into the branch is allowed if it doesn't change the wave's pages.
 3. **Reviewers comment** on the pull request or in the Word document ([below](#reviewing-in-word)), within 5 working days ([choreography](/handbook/choreography), step 9).
-4. **The round closes when every reviewer has answered:** with comments, an approval, or "no comments". "Every reviewer" means the reviewers named in the pages' front matter and the specialists requested on the pull request. If a reviewer hasn't answered after 5 working days, the architecture lead decides whether to wait or to close the round without them, and says so on the pull request.
+4. **The round closes when every reviewer has answered:** with comments, an approval, or "no comments". "Every reviewer" means the reviewers named in the front matter of the wave's pages, specialists included; each answers for their own pages. If a reviewer hasn't answered after 5 working days, the architecture lead decides whether to wait or to close the round without them, and says so on the pull request.
 5. **Only then does the writer change the pages.** The writer answers all comments of the round together: fixed, recorded as an open point in chapter 11, or declined with a reason. A comment on the pull request closes the round with every comment, its reviewer and what happened to it.
 6. **The next round starts from the new version.** Human review has two rounds at most; after that, the architecture lead decides ([choreography](/handbook/choreography), step 9).
 
 ## Reviewing in Word or Google Docs {#reviewing-in-word}
 
-Reviewers who don't use GitHub review a Word document of the round's version.
+Reviewers who don't use GitHub review a Word document of the round's version. The architecture lead sends it to them with the list of pages assigned to them.
 
 - **Export.** `npm run export-docx -- --wave 1 --ref <commit> --pr 133 --round 2` writes `exports/wave-1-round-2-<commit>.docx` (not committed). `--pages <file,…>` exports chosen pages instead of a wave. It needs Pandoc (`brew install pandoc`, or `PANDOC` set to its path); diagrams are embedded as images when the draw.io desktop app is installed. Every page shows its status, owner, reviewers and the version; links point to the pull request's preview.
 - **Comment.** Reviewers use Word comments, or *Track changes* to suggest wording. Google Docs works too: upload the file to Google Drive, open it with Google Docs, and download it again as a Word file.

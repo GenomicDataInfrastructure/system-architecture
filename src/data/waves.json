@@ -3,36 +3,42 @@
   "waves": [
     {
       "id": 1,
+      "target": "December 2026",
       "name": "Frame",
       "goal": "Agree on the words and the boundaries: scopes, actors, governance principles, glossary.",
       "depends_on": []
     },
     {
       "id": 2,
+      "target": "December 2026",
       "name": "Direction and legal frame",
       "goal": "Say what the system must achieve, under which laws, with which fundamental choices, and who is controller or processor.",
       "depends_on": [1]
     },
     {
       "id": 3,
+      "target": "to be set",
       "name": "Structure",
       "goal": "Draw the outline: technical context, technical constraints, the crosscutting decisions that shape the structure (ADR-0004 to ADR-0008: identity, identity link, trust boundaries, catalogue metadata, HealthData@EU connection), level-1 building blocks and the scope overviews.",
       "depends_on": [1, 2]
     },
     {
       "id": 4,
+      "target": "to be set",
       "name": "Behaviour and components",
       "goal": "Describe each lifecycle scenario and each level-2 building block. Scope teams work in parallel.",
       "depends_on": [3]
     },
     {
       "id": 5,
+      "target": "to be set",
       "name": "Crosscutting details",
       "goal": "Detail the concepts that the scenarios and components rely on, building on the wave 3 decisions: security, identity, logging, consent, identifiers, output control, versioning, metadata, EHDS.",
       "depends_on": [4]
     },
     {
       "id": 6,
+      "target": "to be set",
       "name": "Deployment, quality and consolidation",
       "goal": "Deployment at central, national and local level, quality scenarios, risks, national profile template, and a final check of the reader guides.",
       "depends_on": [4, 5]

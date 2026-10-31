@@ -242,7 +242,7 @@ export function SourceRegister() {
   );
 }
 
-type Wave = {id: number; name: string; goal: string; depends_on: number[]};
+type Wave = {id: number; name: string; goal: string; depends_on: number[]; target?: string};
 
 /** Pages grouped by writing wave, with progress per wave. Built from the `wave` front matter field. */
 export function WritingOrder() {
@@ -269,6 +269,7 @@ export function WritingOrder() {
               <span className="badge badge--success">Approved {done}</span>{' '}
               <span className="badge badge--info">In review {inReview}</span>{' '}
               <span className="muted">of {inWave.length} pages</span>
+              {w.target && <span className="muted"> · Target: {w.target}</span>}
             </p>
             <table>
               <thead>

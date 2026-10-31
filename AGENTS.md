@@ -39,7 +39,7 @@ Files outside `docs/` are not published on the site.
 
 When you help write a page, follow the steps in `docs/handbook/choreography.md` and the matching recipe in `docs/handbook/recipes.md`. Check the page against the arc42 documentation for its section (`https://docs.arc42.org/section-N/`) and its FAQ: the recipe lists what arc42 asks and the departures we agreed. Explain any other departure in the pull request (decision D-024).
 
-1. Every page has front matter: `title`, `slug`, `owner`, `reviewers`, `status`, `wave`, `audience`, `governance_refs`, `last_reviewed`. The metadata box at the top of the page is generated from it; do not write it by hand.
+1. Every page has front matter: `title`, `slug`, `owner`, `reviewers` (names and affiliations, decision D-029), `status`, `wave`, `audience`, `governance_refs`, `last_reviewed`. The metadata box at the top of the page is generated from it; do not write it by hand.
 2. Every page opens with `<InShort>` (at most three plain-language bullets).
 3. Cite governance sections as `<GovRef id="VII.2.3" />` (Roman section numbers from the governance master document, never page numbers) and list them in `governance_refs`. This feeds the traceability page.
 4. Cite other sources as `<Cite id="gdi-d3.4" />` and add new ones to `src/data/sources.json`.

@@ -26,6 +26,18 @@ flowchart LR
 3. **ADRs are written whenever a decision is taken,** in any wave. Chapter 9 is never "finished".
 4. **The architecture lead can move a page to another wave.** Change `wave` in its front matter and explain why in the page's issue.
 
+## Targets
+
+Agreed at the taskforce kick-off (decision D-031):
+
+| Wave | Target |
+|---|---|
+| 1 · Frame | December 2026 |
+| 2 · Direction and legal frame | December 2026 |
+| 3 to 6 | To be set; the monthly taskforce meeting reviews them |
+
+A target is the month by which the wave's pages should be approved. The targets are also shown under each wave below.
+
 ## Why this order
 
 - **Wave 1 fixes the vocabulary and the boundaries.** Every other page talks about scopes and actors. If 3.3 and 3.1 are unclear, every page after them will be unclear too.
