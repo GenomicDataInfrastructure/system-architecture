@@ -38,7 +38,7 @@ flowchart LR
 1. Check the [writing order](/handbook/writing-order): the waves this page depends on should be at least *in review*.
 2. Open the page's issue: search for `[page] <page title>`, or filter by `label:page`.
 3. **Assign the issue to yourself.**
-4. On a new branch, set `owner: "@your-handle"` in the page's front matter.
+4. On a new branch, set `owner: "Your Name (Institution)"` in the page's front matter (decision D-029).
 
 **Done when:** the issue has an assignee.
 
@@ -48,10 +48,10 @@ flowchart LR
 
 1. The architecture lead assigns **one to three reviewers** per page from the taskforce, in the taskforce's assignment sheet, so that the load is spread and every page has someone who knows the subject. At least one should have written or reviewed a neighbouring page (same chapter or same scope).
 2. Check the page's `audience`. If it includes `dpo`, `security`, `legal` or `elsi`, and the page makes claims in that area, a specialist reviews it too: add them to the assignment and the matching `needs-…` label to the issue.
-3. Comment in the issue: *"Reviewers: Rob Hooft (Health-RI), Wasiu Akanni (DKFZ). Specialist: Regina Becker (LNDS)."*
+3. In the issue, add a *Review assignment* section that names the owner and each reviewer with their affiliation, and **assign the issue to the reviewers** who have a GitHub account, next to the owner. Reviewers then find their pages under *Assigned to me* and on the [taskforce board](https://github.com/orgs/GenomicDataInfrastructure/projects/12) (decision D-032).
 4. Set `reviewers` in the front matter, by name and affiliation: `reviewers: ["Rob Hooft (Health-RI)", "Wasiu Akanni (DKFZ)", "Regina Becker (LNDS, specialist)"]` (decision D-029).
 
-**Done when:** the reviewers have confirmed in the issue.
+**Done when:** the reviewers are assigned on the issue, and have confirmed.
 
 ## 3. Kick-off
 

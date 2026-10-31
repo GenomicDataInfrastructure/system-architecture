@@ -1,0 +1,32 @@
+name: Action point
+description: An action point from a taskforce meeting
+title: "[action] "
+labels: ["action"]
+body:
+  - type: input
+    id: meeting
+    attributes:
+      label: From meeting
+      description: Date and name of the meeting, as in the rolling minutes (e.g. 2026-11-04 Taskforce meeting)
+    validations:
+      required: true
+  - type: input
+    id: due
+    attributes:
+      label: Due
+      description: YYYY-MM-DD. Also set *Due* on the taskforce board.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What
+      description: The action, and who does it. Assign the issue to them.
+    validations:
+      required: true
+  - type: input
+    id: done
+    attributes:
+      label: Done when
+    validations:
+      required: true

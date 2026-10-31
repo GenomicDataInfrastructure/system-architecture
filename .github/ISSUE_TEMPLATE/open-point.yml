@@ -1,0 +1,30 @@
+name: Open point
+description: An open point, open question or dependency, recorded in chapter 11
+title: "[open-point] "
+labels: ["open-point", "chapter-11"]
+body:
+  - type: dropdown
+    id: group
+    attributes:
+      label: Group in chapter 11
+      options: [Open in the governance, Open in the architecture, Dependency]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is open
+      description: Cite governance sections by number (e.g. VII.3.1).
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: Where it is marked
+      description: The chapter 11 entry (/risks#anchor) and the pages whose boxes link to it.
