@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Taskforce board and action points (decision D-032): the organisation project *GDI Architecture Taskforce* holds the page issues of the active waves, the wave pull requests and the action points; action points from meetings are issues with the label `action` (new *Action point* issue template); the handbook gives the standing agenda of the meeting invitation. Page issues are assigned to the owner and the reviewers. Issue titles follow `[label] Title`; new labels `open-point` and `risk`, new *Open point* and *Risk* templates; the reader question template uses `[reader-question]`.
 - Taskforce meetings and decisions (decision D-030): the handbook's start page describes the monthly GDI Architecture Taskforce meeting (Pillar II slot, 14:00–15:00 CET), its agenda, the rolling minutes, and the GDI Management Board's review of ADRs; the ADR recipe says who accepts an ADR.
 - Wave targets (decision D-031): `target` in `src/data/waves.json`, shown on *Writing order*; waves 1 and 2 by December 2026.
 

@@ -1,6 +1,6 @@
 name: Reader question
 description: A question the documentation does not answer (yet)
-title: "[question] "
+title: "[reader-question] "
 labels: ["reader-question"]
 body:
   - type: dropdown
