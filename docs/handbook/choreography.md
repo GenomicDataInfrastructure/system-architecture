@@ -38,7 +38,7 @@ flowchart LR
 1. Check the [writing order](/handbook/writing-order): the waves this page depends on should be at least *in review*.
 2. Open the page's issue: search for `[page] <page title>`, or filter by `label:page`.
 3. **Assign the issue to yourself.**
-4. On a new branch, set `owner: "@your-handle"` in the page's front matter.
+4. On a new branch, set `owner: "Your Name (Institution)"` in the page's front matter (decision D-029).
 
 **Done when:** the issue has an assignee.
 
@@ -48,10 +48,10 @@ flowchart LR
 
 1. The architecture lead assigns **one to three reviewers** per page from the taskforce, in the taskforce's assignment sheet, so that the load is spread and every page has someone who knows the subject. At least one should have written or reviewed a neighbouring page (same chapter or same scope).
 2. Check the page's `audience`. If it includes `dpo`, `security`, `legal` or `elsi`, and the page makes claims in that area, a specialist reviews it too: add them to the assignment and the matching `needs-…` label to the issue.
-3. Comment in the issue: *"Reviewers: Rob Hooft (Health-RI), Wasiu Akanni (DKFZ). Specialist: Regina Becker (LNDS)."*
-4. Set `reviewers` in the front matter, by name and affiliation: `reviewers: ["Rob Hooft (Health-RI)", "Wasiu Akanni (DKFZ)", "Regina Becker (LNDS, specialist)"]` (decision D-029).
+3. In the issue, add a *Review assignment* section that names the owner and each reviewer with their affiliation, and **assign the issue to the reviewers** who have a GitHub account, next to the owner. Reviewers then find their pages under *Assigned to me* and on the [taskforce board](https://github.com/orgs/GenomicDataInfrastructure/projects/12) (decision D-032).
+4. Set `reviewers` in the front matter, by name and affiliation: `reviewers: ["Rob Hooft (Health-RI)", "Wasiu Akanni (DKFZ)"]`; mark a specialist with "specialist" after the affiliation (decision D-029).
 
-**Done when:** the reviewers have confirmed in the issue.
+**Done when:** the reviewers are assigned on the issue, and have confirmed.
 
 ## 3. Kick-off
 
@@ -137,8 +137,8 @@ If you use an AI assistant, give it `AGENTS.md`, the page file, and the sources 
 1. Set `status: in-review`, mark the pull request *Ready for review*, and change `Refs` to `Closes #<issue number>`.
 2. Request the reviewers on the pull request: those named in `reviewers` who have a GitHub account. The architecture lead sends the others a Word export ([review rounds](/handbook/drafting-roles#review-rounds)).
 3. Reviewers read the page in the pull request's preview (the link is in the preview comment), or in a Word export of the same version if they don't use GitHub, use the [review checklists](/handbook/review-checklists), and comment within **5 working days**.
-4. When every reviewer has answered, the owner answers every comment: either changes the text, or explains why not. The page doesn't change while reviewers are still reading it ([review rounds](/handbook/drafting-roles#review-rounds)).
-5. **Two review rounds at most.** If owner and reviewer still disagree, the architecture lead decides. If the disagreement is about the architecture itself, the decision becomes an ADR.
+4. When the round's review date has passed, the owner answers every comment: either changes the text, or explains why not. Not before, even if every reviewer has already answered: the page doesn't change while reviewers may still be reading it ([review rounds](/handbook/drafting-roles#review-rounds); decision D-033).
+5. **Two review rounds at most.** If owner and reviewer still disagree, the architecture lead decides. A disagreement the review doesn't settle is recorded as an open point in [chapter 11](/risks); it becomes an ADR only if its answer changes the architecture (decision D-034).
 
 **Done when:** every review conversation is resolved.
 
@@ -156,7 +156,7 @@ If you use an AI assistant, give it `AGENTS.md`, the page file, and the sources 
 **Who:** the owner.
 
 - **New questions or gaps** found while writing: open an issue for each (template *Page task* or *Reader question*). If it is an open point, a risk or technical debt, it also gets an entry in chapter 11.
-- **Decisions taken** during writing or review: make sure each has an ADR.
+- **Open questions and risks** raised during writing or review: make sure each has a chapter 11 entry. Propose an ADR only when the answer to one of them, or the mitigation of a risk, changes the architecture (decision D-034).
 - **Reader guides:** if the page answers a question that isn't in the guides yet, add it to the matching guide.
 - **Tell the taskforce** in the regular meeting or channel that the page is approved, so that pages in the next wave can build on it.
 
