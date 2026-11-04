@@ -1,5 +1,5 @@
 {
- "_comment": "Sections of the 1+MG Data Governance master document, as published in the annex (section 7) of GDI D2.4. 'id' is the section number used in <GovRef id=\"…\" /> and in governance_refs. Always cross-reference the governance by section number, never by page number. Section IV (overview tables) and its subsections IV.1–IV.4 are numbered 'I.' and 'I.1'–'I.4' in the published document; 'printed_as' gives that number. The topic headings inside the overview tables are not numbered and are not listed: cite the matching sections in chapters V–VIII. Titles follow the published document; two obvious slips are corrected (VII.1.4 'Responsivity', VIII.4 missing 'the SPE'). 'pdf_page' is the page of the published PDF (pdf_url, checked against pdf_md5) where the section starts, taken from the PDF's bookmarks. It is used only as a link target (#page=N), so that <GovRef> opens the PDF at the section; the text still cites the section number, never the page (decision D-035).",
+ "_comment": "Sections of the 1+MG Data Governance master document, as published in the annex (section 7) of GDI D2.4. 'id' is the section number used in <GovRef id=\"…\" /> and in governance_refs. Always cross-reference the governance by section number, never by page number. Section IV (overview tables) and its subsections IV.1–IV.4 are numbered 'I.' and 'I.1'–'I.4' in the published document; 'printed_as' gives that number. The topic headings inside the overview tables are not numbered and are not listed: cite the matching sections in chapters V–VIII. Titles follow the published document; two obvious slips are corrected (VII.1.4 'Responsivity', VIII.4 missing 'the SPE'). 'pdf_url' is an unchanged copy of the published PDF (pdf_source on Zenodo, CC BY 4.0, same pdf_md5), served by this site because Zenodo sends the file as a download, which ignores #page. 'pdf_page' is the page of that PDF where the section starts, taken from the PDF's bookmarks. It is used only as a link target (#page=N), so that <GovRef> opens the PDF at the section; the text still cites the section number, never the page (decision D-035).",
  "document": "1+MG Data Governance master document (Genome EDIC Secondary Use Framework)",
  "version": "2025-12",
  "status": "published",
@@ -7,7 +7,8 @@
  "published": "2026-02-04",
  "doi": "10.5281/zenodo.19096953",
  "url": "https://zenodo.org/records/19096953",
- "pdf_url": "https://zenodo.org/records/19096953/files/202512%20-%20GDI%20D2.4%20Framework%20for%20data%20governance.pdf",
+ "pdf_url": "/governance/gdi-d2.4-framework-for-data-governance.pdf",
+ "pdf_source": "https://zenodo.org/records/19096953/files/202512%20-%20GDI%20D2.4%20Framework%20for%20data%20governance.pdf",
  "pdf_md5": "dc6f48f431719be7226ebe6f73735921",
  "license": "CC-BY-4.0",
  "sections": [

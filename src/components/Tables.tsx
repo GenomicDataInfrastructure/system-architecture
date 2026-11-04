@@ -7,6 +7,7 @@ import pages from '@site/src/data/pages.json';
 import waves from '@site/src/data/waves.json';
 import {AUDIENCES, STATUSES, govAnchor} from './vocab';
 import {govHref} from './GovRef';
+import {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
 
 type Page = {
   file: string;
@@ -79,6 +80,7 @@ const SCOPE_LABEL: Record<string, string> = {
  * The detailed responsibility sections (level 3, chapters V–VIII) are the requirements to cover.
  */
 export function TraceabilityMatrix() {
+  const {withBaseUrl} = useBaseUrlUtils();
   const requirementSections = SECTIONS.filter(
     (s) => s.level === 3 && /^(V|VI|VII|VIII)\./.test(s.id),
   );
@@ -119,7 +121,7 @@ export function TraceabilityMatrix() {
             return (
               <tr key={s.id} id={govAnchor(s.id)} className={`trace-level-${s.level}`}>
                 <td className="nowrap">
-                  <Link href={govHref(s.id)} title={`Open section ${s.id} in the published document`}>{s.id}</Link>
+                  <Link href={withBaseUrl(govHref(s.id))} target="_blank" rel="noopener" title={`Open section ${s.id} in the published document`}>{s.id}</Link>
                 </td>
                 <td>
                   {s.title.replace(QUALIFIERS, '').trim()}

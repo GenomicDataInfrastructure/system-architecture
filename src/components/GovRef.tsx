@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import governance from '@site/src/data/governance.json';
 import {govAnchor} from './vocab';
 
@@ -22,7 +23,7 @@ export default function GovRef({id, long = false}: {id: string; long?: boolean})
   const printed = section.printed_as ? ` (numbered ${section.printed_as} in the published document)` : '';
   const tooltip = `1+MG Data Governance (version ${governance.version}), section ${id}${printed}: ${section.title}`;
   return (
-    <Link className="govref" href={govHref(id)} title={tooltip}>
+    <Link className="govref" href={useBaseUrl(govHref(id))} target="_blank" rel="noopener" title={tooltip}>
       DG {id}
       {long ? ` — ${section.title}` : ''}
     </Link>
@@ -33,7 +34,7 @@ export function govSection(id: string): Section | undefined {
   return byId.get(id);
 }
 
-/** Link to the section in the published PDF, or to its traceability row if its page is not known. */
+/** Path to the section in the site's copy of the published PDF, or to its traceability row if its page is not known. Pass it through useBaseUrl. */
 export function govHref(id: string): string {
   const page = byId.get(id)?.pdf_page;
   return page ? `${governance.pdf_url}#page=${page}` : `/appendix/traceability#${govAnchor(id)}`;
