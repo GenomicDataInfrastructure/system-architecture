@@ -169,10 +169,11 @@
     {
       "id": "arc42",
       "short": "arc42",
-      "title": "arc42 template and FAQ J-1 (documenting large systems)",
+      "title": "arc42 documentation and FAQ",
       "publisher": "arc42",
-      "url": "https://faq.arc42.org/questions/J-1/",
-      "status": "published"
+      "url": "https://docs.arc42.org",
+      "status": "published",
+      "note": "Sections 1 to 12 with tips at docs.arc42.org; FAQ at faq.arc42.org (for example J-1, documenting large systems)."
     },
     {
       "id": "dddp",
@@ -211,6 +212,155 @@
       "date": "2023-08-24",
       "url": "https://zenodo.org/records/8279851",
       "status": "candidate"
+    },
+    {
+      "id": "gdi-ms12",
+      "short": "GDI MS12",
+      "title": "GDI MS12 Production user portal deployed, with discoverability and data access functionality",
+      "publisher": "GDI project",
+      "date": "2025-11-06",
+      "url": "https://zenodo.org/records/17641487",
+      "status": "candidate",
+      "note": "The production User Portal, access management (DAAMS) and dataset catalogue of the GDI MVP."
+    },
+    {
+      "id": "gdi-d5.5",
+      "short": "GDI D5.5",
+      "title": "GDI D5.5 Report outlining QoS metrics, reporting processes, and node TRLs defined",
+      "publisher": "GDI project",
+      "date": "2023-12-04",
+      "url": "https://zenodo.org/records/10256902",
+      "status": "candidate"
+    },
+    {
+      "id": "b1mg-dpbdd-it",
+      "short": "1+MG DPbDD IT requirements",
+      "title": "B1MG / 1+MG: IT infrastructure requirements based on a data protection by design and default approach",
+      "publisher": "B1MG project",
+      "date": "2023-10-02",
+      "url": "https://zenodo.org/records/8399424",
+      "status": "candidate",
+      "note": "Written before the decentralised model of the 2025-12 governance: use for the requirements per stage, not for the actors."
+    },
+    {
+      "id": "b1mg-d2.3",
+      "short": "B1MG D2.3",
+      "title": "B1MG D2.3 Report on legal set-up including DPIA",
+      "publisher": "B1MG project",
+      "date": "2023-10-05",
+      "url": "https://zenodo.org/records/8411067",
+      "status": "candidate",
+      "note": "National GDPR derogations and data subjects' rights for secondary use. Despite its title, it contains no DPIA."
+    },
+    {
+      "id": "b1mgplus-m2.11",
+      "short": "B1MG+ M2.11",
+      "title": "B1MGplus M2.11 Regulatory Sandbox Workshop Report (purpose definition and consent)",
+      "publisher": "B1MG+ project",
+      "date": "2025-11-26",
+      "url": "https://zenodo.org/records/21471397",
+      "status": "candidate"
+    },
+    {
+      "id": "b1mgplus-ms17",
+      "short": "B1MG+ MS17",
+      "title": "B1MGplus MS17 Regulatory Sandbox Workshop - Report (roles under the GDPR)",
+      "publisher": "B1MG+ project",
+      "date": "2026-09-18",
+      "url": "https://zenodo.org/records/22829701",
+      "status": "candidate",
+      "note": "Expert workshop votes and a proposed distribution of GDPR roles; not a decision of the Genome EDIC."
+    },
+    {
+      "id": "b1mgplus-d2.9",
+      "short": "B1MG+ D2.9",
+      "title": "B1MGplus D2.9 Risk management standard framework Genome-EDIC",
+      "publisher": "B1MG+ project",
+      "date": "2026-01-30",
+      "url": "https://zenodo.org/records/20039920",
+      "status": "candidate"
+    },
+    {
+      "id": "b1mgplus-d2.10",
+      "short": "B1MG+ D2.10",
+      "title": "B1MGplus D2.10 Acceptance criteria initial report",
+      "publisher": "B1MG+ project",
+      "date": "2026-02-13",
+      "url": "https://zenodo.org/records/20039509",
+      "status": "candidate"
+    },
+    {
+      "id": "b1mgplus-m4.6",
+      "short": "B1MG+ M4.6",
+      "title": "B1MGplus M4.6 Indicators to evaluate software content and metadata quality report",
+      "publisher": "B1MG+ project",
+      "date": "2026-07-31",
+      "url": "https://zenodo.org/records/22795886",
+      "status": "candidate"
+    },
+    {
+      "id": "tehdas2-d7.3",
+      "short": "TEHDAS2 D7.3",
+      "title": "Technical specification for Health Data Access Bodies on the implementation of the common IT infrastructure",
+      "publisher": "TEHDAS2 Joint Action",
+      "date": "2026-02-24",
+      "url": "https://zenodo.org/records/20266861",
+      "status": "candidate"
+    },
+    {
+      "id": "iso-25010",
+      "short": "ISO/IEC 25010:2023",
+      "title": "ISO/IEC 25010:2023 Systems and software engineering: product quality model",
+      "publisher": "ISO/IEC",
+      "date": "2023",
+      "url": "https://www.iso.org/standard/78176.html",
+      "status": "candidate"
+    },
+    {
+      "id": "edpb-gl-07-2020",
+      "short": "EDPB Guidelines 07/2020",
+      "title": "Guidelines 07/2020 on the concepts of controller and processor in the GDPR, version 2.0",
+      "publisher": "European Data Protection Board",
+      "date": "2021-07-07",
+      "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-072020-concepts-controller-and-processor-gdpr_en",
+      "status": "candidate"
+    },
+    {
+      "id": "edpb-gl-04-2019",
+      "short": "EDPB Guidelines 4/2019",
+      "title": "Guidelines 4/2019 on Article 25 Data Protection by Design and by Default, version 2.0",
+      "publisher": "European Data Protection Board",
+      "date": "2020-10-20",
+      "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-42019-article-25-data-protection-design-and_en",
+      "status": "candidate"
+    },
+    {
+      "id": "nygard-adr",
+      "short": "Nygard 2011",
+      "title": "Documenting Architecture Decisions (Michael Nygard)",
+      "publisher": "Cognitect blog",
+      "date": "2011-11-15",
+      "url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
+      "status": "candidate"
+    },
+    {
+      "id": "gdi-userportal-docs",
+      "short": "GDI User Portal documentation",
+      "title": "GDI User Portal documentation (user guide)",
+      "publisher": "GDI project",
+      "url": "https://genomicdatainfrastructure.github.io/gdi-userportal-frontend/",
+      "status": "candidate",
+      "note": "Linked from GDI MS12. Describes sign-in and data access applications as the GDI MVP works today."
+    },
+    {
+      "id": "gdi-ms13",
+      "short": "GDI MS13",
+      "title": "GDI MS13 The Compliance Framework for the European Genomic Data Infrastructure (GDI)",
+      "publisher": "GDI project",
+      "date": "2025-10-31",
+      "url": "https://zenodo.org/records/17610703",
+      "status": "candidate",
+      "note": "Compliance framework for GDI nodes; the first compliance assessment was postponed until nodes are operational."
     }
   ]
 }
