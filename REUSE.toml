@@ -14,3 +14,9 @@ path = ["**/*.md", "**/*.mdx", "docs/**", "planning/**", "static/**", "src/data/
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 GDI system architecture taskforce contributors"
 SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = ["static/governance/gdi-d2.4-framework-for-data-governance.pdf"]
+precedence = "override"
+SPDX-FileCopyrightText = "2026 GDI project, authors of GDI D2.4 Framework for data governance (https://doi.org/10.5281/zenodo.19096953)"
+SPDX-License-Identifier = "CC-BY-4.0"

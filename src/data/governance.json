@@ -1,5 +1,5 @@
 {
- "_comment": "Sections of the 1+MG Data Governance master document, as published in the annex (section 7) of GDI D2.4. 'id' is the section number used in <GovRef id=\"…\" /> and in governance_refs. Always cross-reference the governance by section number, never by page number. Section IV (overview tables) and its subsections IV.1–IV.4 are numbered 'I.' and 'I.1'–'I.4' in the published document; 'printed_as' gives that number. The topic headings inside the overview tables are not numbered and are not listed: cite the matching sections in chapters V–VIII. Titles follow the published document; two obvious slips are corrected (VII.1.4 'Responsivity', VIII.4 missing 'the SPE').",
+ "_comment": "Sections of the 1+MG Data Governance master document, as published in the annex (section 7) of GDI D2.4. 'id' is the section number used in <GovRef id=\"…\" /> and in governance_refs. Always cross-reference the governance by section number, never by page number. Section IV (overview tables) and its subsections IV.1–IV.4 are numbered 'I.' and 'I.1'–'I.4' in the published document; 'printed_as' gives that number. The topic headings inside the overview tables are not numbered and are not listed: cite the matching sections in chapters V–VIII. Titles follow the published document; two obvious slips are corrected (VII.1.4 'Responsivity', VIII.4 missing 'the SPE'). 'pdf_url' is an unchanged copy of the published PDF (pdf_source on Zenodo, CC BY 4.0, same pdf_md5), served by this site because Zenodo sends the file as a download, which ignores #page. 'pdf_page' is the page of that PDF where the section starts, taken from the PDF's bookmarks; 'pdf_dest' is the named destination at the section heading (the heading ids of the original document, matched to each heading by its position on the page). It is used only as a link target (#page=N), so that <GovRef> opens the PDF at the section; the text still cites the section number, never the page (decision D-035).",
  "document": "1+MG Data Governance master document (Genome EDIC Secondary Use Framework)",
  "version": "2025-12",
  "status": "published",
@@ -7,82 +7,113 @@
  "published": "2026-02-04",
  "doi": "10.5281/zenodo.19096953",
  "url": "https://zenodo.org/records/19096953",
+ "pdf_url": "/governance/gdi-d2.4-framework-for-data-governance.pdf",
+ "pdf_source": "https://zenodo.org/records/19096953/files/202512%20-%20GDI%20D2.4%20Framework%20for%20data%20governance.pdf",
+ "pdf_md5": "dc6f48f431719be7226ebe6f73735921",
  "license": "CC-BY-4.0",
  "sections": [
   {
    "id": "I",
    "title": "Reading Guide",
-   "level": 1
+   "level": 1,
+   "pdf_page": 12,
+   "pdf_dest": "h.5zafd2u6uzen"
   },
   {
    "id": "II",
    "title": "Introduction",
-   "level": 1
+   "level": 1,
+   "pdf_page": 13,
+   "pdf_dest": "h.c15l54ll3md2"
   },
   {
    "id": "II.1",
    "title": "Context",
-   "level": 2
+   "level": 2,
+   "pdf_page": 13,
+   "pdf_dest": "h.c15l54ll3md2"
   },
   {
    "id": "II.2",
    "title": "Principles guiding the data governance",
-   "level": 2
+   "level": 2,
+   "pdf_page": 14,
+   "pdf_dest": "h.t4ee0u4r5gcp"
   },
   {
    "id": "II.3",
    "title": "Scope of secondary use",
-   "level": 2
+   "level": 2,
+   "pdf_page": 15,
+   "pdf_dest": "h.jt3vtzj9ikib"
   },
   {
    "id": "II.4",
    "title": "Elements not covered in the data governance",
-   "level": 2
+   "level": 2,
+   "pdf_page": 18,
+   "pdf_dest": "h.w8jav0dw8wd2"
   },
   {
    "id": "III",
    "title": "Definitions and Qualification of Stakeholders",
-   "level": 1
+   "level": 1,
+   "pdf_page": 19,
+   "pdf_dest": "h.kb7tw4x279le"
   },
   {
    "id": "IV",
    "title": "Overview/summary",
    "level": 1,
-   "printed_as": "I"
+   "printed_as": "I",
+   "pdf_page": 22,
+   "pdf_dest": "h.slropa272py8"
   },
   {
    "id": "IV.1",
    "title": "Aspects relevant for all processes",
    "level": 2,
-   "printed_as": "I.1"
+   "printed_as": "I.1",
+   "pdf_page": 22,
+   "pdf_dest": "h.slropa272py8"
   },
   {
    "id": "IV.2",
    "title": "Data Inclusion Governance",
    "level": 2,
-   "printed_as": "I.2"
+   "printed_as": "I.2",
+   "pdf_page": 26,
+   "pdf_dest": "h.xen1lvwtpam6"
   },
   {
    "id": "IV.3",
    "title": "Data Access Governance",
    "level": 2,
-   "printed_as": "I.3"
+   "printed_as": "I.3",
+   "pdf_page": 35,
+   "pdf_dest": "h.s1con61m00hv"
   },
   {
    "id": "IV.4",
    "title": "Data Use Governance",
    "level": 2,
-   "printed_as": "I.4"
+   "printed_as": "I.4",
+   "pdf_page": 56,
+   "pdf_dest": "h.9l4deot6j9ee"
   },
   {
    "id": "V",
    "title": "General Aspects",
-   "level": 1
+   "level": 1,
+   "pdf_page": 79,
+   "pdf_dest": "h.ts97vfyl40h2"
   },
   {
    "id": "V.1",
    "title": "Measures for data protection, risk and quality management",
-   "level": 2
+   "level": 2,
+   "pdf_page": 79,
+   "pdf_dest": "h.ts97vfyl40h2"
   },
   {
    "id": "V.1.1",
@@ -91,7 +122,9 @@
    "actor": "Genome EDIC Assembly of Members",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 79,
+   "pdf_dest": "h.nb1e08bhjr2l"
   },
   {
    "id": "V.1.2",
@@ -100,7 +133,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 80,
+   "pdf_dest": "h.hs3ao5mpr7me"
   },
   {
    "id": "V.1.3",
@@ -110,7 +145,9 @@
    "scopes": [
     "european",
     "national"
-   ]
+   ],
+   "pdf_page": 81,
+   "pdf_dest": "h.uxo2sr77bc2c"
   },
   {
    "id": "V.1.4",
@@ -119,12 +156,16 @@
    "actor": "1+MG Member Countries",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 82,
+   "pdf_dest": "h.yn76woud4cb6"
   },
   {
    "id": "V.2",
    "title": "Data Subjects’ Rights",
-   "level": 2
+   "level": 2,
+   "pdf_page": 82,
+   "pdf_dest": "h.5trwcinm2wyx"
   },
   {
    "id": "V.2.1",
@@ -133,7 +174,9 @@
    "actor": "Genome EDIC Assembly of Members",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 82,
+   "pdf_dest": "h.5trwcinm2wyx"
   },
   {
    "id": "V.2.2",
@@ -142,7 +185,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 83,
+   "pdf_dest": "h.sm9y7i9s5w13"
   },
   {
    "id": "V.2.3",
@@ -151,7 +196,9 @@
    "actor": "1+MG Data Provider",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 84,
+   "pdf_dest": "h.dnf20rbvmz4d"
   },
   {
    "id": "V.2.4",
@@ -160,7 +207,9 @@
    "actor": "Genome EDIC Member Country",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 85,
+   "pdf_dest": "h.qyjyybjffqy3"
   },
   {
    "id": "V.2.5",
@@ -169,7 +218,9 @@
    "actor": "1+MG NCP",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 85,
+   "pdf_dest": "h.mv7y0p8zsd6u"
   },
   {
    "id": "V.2.6",
@@ -179,7 +230,9 @@
    "scopes": [
     "european",
     "national"
-   ]
+   ],
+   "pdf_page": 86,
+   "pdf_dest": "h.67pxn47slefz"
   },
   {
    "id": "V.2.7",
@@ -188,17 +241,23 @@
    "actor": "User",
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 87,
+   "pdf_dest": "h.p8utqjq7sgd9"
   },
   {
    "id": "VI",
    "title": "Data Inclusion Governance",
-   "level": 1
+   "level": 1,
+   "pdf_page": 87,
+   "pdf_dest": "h.ic6nfwtoh2i9"
   },
   {
    "id": "VI.1",
    "title": "Establish Principal Availability",
-   "level": 2
+   "level": 2,
+   "pdf_page": 87,
+   "pdf_dest": "h.lgl5njggpxvj"
   },
   {
    "id": "VI.1.1",
@@ -207,7 +266,9 @@
    "actor": "Genome EDIC General Assembly",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 87,
+   "pdf_dest": "h.lgl5njggpxvj"
   },
   {
    "id": "VI.1.2",
@@ -216,7 +277,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 88,
+   "pdf_dest": "h.s4bmpsbo5xc7"
   },
   {
    "id": "VI.1.3",
@@ -225,7 +288,9 @@
    "actor": "Genome EDIC Member Country",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 89,
+   "pdf_dest": "h.qu9saj8ozsi3"
   },
   {
    "id": "VI.1.4",
@@ -234,7 +299,9 @@
    "actor": "1+MG NCP",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 90,
+   "pdf_dest": "h.9zvddcxiydwc"
   },
   {
    "id": "VI.1.5",
@@ -243,12 +310,16 @@
    "actor": "1+MG Data Provider",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 91,
+   "pdf_dest": "h.uagfaxepl0a7"
   },
   {
    "id": "VI.2",
    "title": "Data Transformation",
-   "level": 2
+   "level": 2,
+   "pdf_page": 92,
+   "pdf_dest": "h.alwyjvv1xjle"
   },
   {
    "id": "VI.2.1",
@@ -257,7 +328,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 92,
+   "pdf_dest": "h.alwyjvv1xjle"
   },
   {
    "id": "VI.2.2",
@@ -266,7 +339,9 @@
    "actor": "1+MG Data Provider",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 93,
+   "pdf_dest": "h.cu5r6y7em2r"
   },
   {
    "id": "VI.2.3",
@@ -275,12 +350,16 @@
    "actor": "1+MG NCP or 1+MG IT Infrastructure Provider or other Genome EDIC national entity",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 93,
+   "pdf_dest": "h.nu6j7se3iz3n"
   },
   {
    "id": "VI.3",
    "title": "Data Documentation",
-   "level": 2
+   "level": 2,
+   "pdf_page": 94,
+   "pdf_dest": "h.5tc5wcldyhki"
   },
   {
    "id": "VI.3.1",
@@ -289,7 +368,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 94,
+   "pdf_dest": "h.5tc5wcldyhki"
   },
   {
    "id": "VI.3.2",
@@ -298,7 +379,9 @@
    "actor": "1+MG Data Provider",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 95,
+   "pdf_dest": "h.r3pm3s5na0gt"
   },
   {
    "id": "VI.3.3",
@@ -307,7 +390,9 @@
    "actor": "Genome EDIC Member Country",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 96,
+   "pdf_dest": "h.xre6wt8wssub"
   },
   {
    "id": "VI.3.4",
@@ -316,12 +401,16 @@
    "actor": "1+MG NCP",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 96,
+   "pdf_dest": "h.kg2yuyw08zme"
   },
   {
    "id": "VI.4",
    "title": "Establish Formal Availability",
-   "level": 2
+   "level": 2,
+   "pdf_page": 97,
+   "pdf_dest": "h.rclsjvadqfjx"
   },
   {
    "id": "VI.4.1",
@@ -330,7 +419,9 @@
    "actor": "Genome EDIC Member Countries",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 97,
+   "pdf_dest": "h.rclsjvadqfjx"
   },
   {
    "id": "VI.4.2",
@@ -339,7 +430,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 97,
+   "pdf_dest": "h.8ww267qoddjg"
   },
   {
    "id": "VI.4.3",
@@ -348,7 +441,9 @@
    "actor": "1+MG Data Providers",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 98,
+   "pdf_dest": "h.balltfb9ytza"
   },
   {
    "id": "VI.4.4",
@@ -357,7 +452,9 @@
    "actor": "1+MG NCP",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 98,
+   "pdf_dest": "h.o25mlgfvo2eq"
   },
   {
    "id": "VI.4.5",
@@ -369,7 +466,9 @@
    ],
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 100,
+   "pdf_dest": "h.ll62q7r6h5hr"
   },
   {
    "id": "VI.4.6",
@@ -379,17 +478,23 @@
    "scopes": [
     "european",
     "national"
-   ]
+   ],
+   "pdf_page": 100,
+   "pdf_dest": "h.xltsdq7aau4"
   },
   {
    "id": "VII",
    "title": "Data Access Governance",
-   "level": 1
+   "level": 1,
+   "pdf_page": 101,
+   "pdf_dest": "h.rv4q349jygv9"
   },
   {
    "id": "VII.1",
    "title": "Prior Registration of the User Organisation",
-   "level": 2
+   "level": 2,
+   "pdf_page": 101,
+   "pdf_dest": "h.rv4q349jygv9"
   },
   {
    "id": "VII.1.1",
@@ -401,7 +506,9 @@
    ],
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 101,
+   "pdf_dest": "h.c8t26zen185j"
   },
   {
    "id": "VII.1.2",
@@ -410,7 +517,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 102,
+   "pdf_dest": "h.qqgoft7ve5se"
   },
   {
    "id": "VII.1.3",
@@ -419,7 +528,9 @@
    "actor": "User Organisation",
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 102,
+   "pdf_dest": "h.hzs7fktpn5uw"
   },
   {
    "id": "VII.1.4",
@@ -428,12 +539,16 @@
    "actor": "Genome EDIC Member Country",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 104,
+   "pdf_dest": "h.78bhe87xx1ec"
   },
   {
    "id": "VII.2",
    "title": "Data Discovery",
-   "level": 2
+   "level": 2,
+   "pdf_page": 104,
+   "pdf_dest": "h.a8ab6fcm1h3s"
   },
   {
    "id": "VII.2.1",
@@ -442,7 +557,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 104,
+   "pdf_dest": "h.a8ab6fcm1h3s"
   },
   {
    "id": "VII.2.2",
@@ -455,7 +572,9 @@
    "scopes": [
     "european",
     "national"
-   ]
+   ],
+   "pdf_page": 106,
+   "pdf_dest": "h.majoecdaxau0"
   },
   {
    "id": "VII.2.3",
@@ -468,7 +587,9 @@
    "scopes": [
     "european",
     "national"
-   ]
+   ],
+   "pdf_page": 106,
+   "pdf_dest": "h.2kk7s9l8oq9f"
   },
   {
    "id": "VII.2.4",
@@ -480,7 +601,9 @@
    ],
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 107,
+   "pdf_dest": "h.kq8qipqr1q55"
   },
   {
    "id": "VII.2.5",
@@ -489,7 +612,9 @@
    "actor": "1+MG NCPs",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 108,
+   "pdf_dest": "h.8x0rzqm0wcm8"
   },
   {
    "id": "VII.2.6",
@@ -498,12 +623,16 @@
    "actor": "1+MG Data Providers",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 109,
+   "pdf_dest": "h.rstml8kojxoh"
   },
   {
    "id": "VII.3",
    "title": "Data Access Request",
-   "level": 2
+   "level": 2,
+   "pdf_page": 109,
+   "pdf_dest": "h.ycmmxut9tn35"
   },
   {
    "id": "VII.3.1",
@@ -512,7 +641,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 109,
+   "pdf_dest": "h.ycmmxut9tn35"
   },
   {
    "id": "VII.3.2",
@@ -524,7 +655,9 @@
    ],
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 112,
+   "pdf_dest": "h.3f21uzh4zpdc"
   },
   {
    "id": "VII.3.3",
@@ -536,7 +669,9 @@
    ],
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 113,
+   "pdf_dest": "h.cwmogi46tv03"
   },
   {
    "id": "VII.3.4",
@@ -548,7 +683,9 @@
    ],
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 115,
+   "pdf_dest": "h.kymsddkmh9rk"
   },
   {
    "id": "VII.3.5",
@@ -560,12 +697,16 @@
    ],
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 116,
+   "pdf_dest": "h.ostoztj6fv5e"
   },
   {
    "id": "VII.4",
    "title": "Data Access Review",
-   "level": 2
+   "level": 2,
+   "pdf_page": 117,
+   "pdf_dest": "h.t62keprrt93t"
   },
   {
    "id": "VII.4.1",
@@ -577,7 +718,9 @@
    ],
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 117,
+   "pdf_dest": "h.wrf4np56uc01"
   },
   {
    "id": "VII.4.2",
@@ -589,7 +732,9 @@
    ],
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 118,
+   "pdf_dest": "h.6mcriu9j2vjv"
   },
   {
    "id": "VII.4.3",
@@ -601,7 +746,9 @@
    ],
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 119,
+   "pdf_dest": "h.e6bdprk04fxb"
   },
   {
    "id": "VII.4.4",
@@ -613,7 +760,9 @@
    ],
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 121,
+   "pdf_dest": "h.4p95n4gnqpa5"
   },
   {
    "id": "VII.4.5",
@@ -625,7 +774,9 @@
    ],
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 121,
+   "pdf_dest": "h.gksl61i8t0c1"
   },
   {
    "id": "VII.4.6",
@@ -638,7 +789,9 @@
    ],
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 122,
+   "pdf_dest": "h.yiseqvr04go5"
   },
   {
    "id": "VII.4.7",
@@ -651,7 +804,9 @@
    ],
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 123,
+   "pdf_dest": "h.569kl8gpxqxd"
   },
   {
    "id": "VII.4.8",
@@ -663,12 +818,16 @@
    ],
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 124,
+   "pdf_dest": "h.jzkimzl2jww7"
   },
   {
    "id": "VII.5",
    "title": "Data Access Decision",
-   "level": 2
+   "level": 2,
+   "pdf_page": 125,
+   "pdf_dest": "h.ka8m0y1lxl4r"
   },
   {
    "id": "VII.5.1",
@@ -680,7 +839,9 @@
    ],
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 125,
+   "pdf_dest": "h.ko8cgr18a3sb"
   },
   {
    "id": "VII.5.2",
@@ -692,7 +853,9 @@
    ],
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 125,
+   "pdf_dest": "h.cehr6jhp1m2n"
   },
   {
    "id": "VII.5.3",
@@ -704,7 +867,9 @@
    ],
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 127,
+   "pdf_dest": "h.84zi64n64q8j"
   },
   {
    "id": "VII.5.4",
@@ -716,7 +881,9 @@
    ],
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 128,
+   "pdf_dest": "h.avc3m9rgv1og"
   },
   {
    "id": "VII.5.5",
@@ -725,7 +892,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 129,
+   "pdf_dest": "h.l8wcx8ed52cr"
   },
   {
    "id": "VII.5.6",
@@ -734,17 +903,23 @@
    "actor": "Genome EDIC General Assembly",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 132,
+   "pdf_dest": "h.ep6n2mx3u59w"
   },
   {
    "id": "VIII",
    "title": "Data Use",
-   "level": 1
+   "level": 1,
+   "pdf_page": 132,
+   "pdf_dest": "h.aje9hebln0pu"
   },
   {
    "id": "VIII.1",
    "title": "Transparency and Communication Data Use",
-   "level": 2
+   "level": 2,
+   "pdf_page": 132,
+   "pdf_dest": "h.2t77238pki5n"
   },
   {
    "id": "VIII.1.1",
@@ -753,7 +928,9 @@
    "actor": "Users",
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 132,
+   "pdf_dest": "h.2t77238pki5n"
   },
   {
    "id": "VIII.1.2",
@@ -762,7 +939,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 133,
+   "pdf_dest": "h.8fjm3zivjs9w"
   },
   {
    "id": "VIII.1.3",
@@ -771,12 +950,16 @@
    "actor": "1+MG NCP",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 135,
+   "pdf_dest": "h.siczxqk531c2"
   },
   {
    "id": "VIII.2",
    "title": "Data use agreement",
-   "level": 2
+   "level": 2,
+   "pdf_page": 136,
+   "pdf_dest": "h.5mcvsdg7la4d"
   },
   {
    "id": "VIII.2.1",
@@ -785,7 +968,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 136,
+   "pdf_dest": "h.5mcvsdg7la4d"
   },
   {
    "id": "VIII.2.2",
@@ -794,12 +979,16 @@
    "actor": "Users",
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 136,
+   "pdf_dest": "h.pb1ggzz0vizb"
   },
   {
    "id": "VIII.3",
    "title": "Processing in the SPE",
-   "level": 2
+   "level": 2,
+   "pdf_page": 137,
+   "pdf_dest": "h.md18artuenpv"
   },
   {
    "id": "VIII.3.1",
@@ -808,7 +997,9 @@
    "actor": "Users",
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 137,
+   "pdf_dest": "h.md18artuenpv"
   },
   {
    "id": "VIII.3.2",
@@ -817,7 +1008,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 139,
+   "pdf_dest": "h.4llfx1qbxfvu"
   },
   {
    "id": "VIII.3.3",
@@ -827,7 +1020,9 @@
    "scopes": [
     "european",
     "national"
-   ]
+   ],
+   "pdf_page": 140,
+   "pdf_dest": "h.fgnq4duz8rby"
   },
   {
    "id": "VIII.3.4",
@@ -839,7 +1034,9 @@
    ],
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 142,
+   "pdf_dest": "h.q34dae5mqy6t"
   },
   {
    "id": "VIII.4",
@@ -847,7 +1044,9 @@
    "level": 2,
    "applies_to": [
     "healthcare reuse only"
-   ]
+   ],
+   "pdf_page": 144,
+   "pdf_dest": "h.quz4m0fuyl40"
   },
   {
    "id": "VIII.4.1",
@@ -856,7 +1055,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 144,
+   "pdf_dest": "h.quz4m0fuyl40"
   },
   {
    "id": "VIII.4.2",
@@ -865,7 +1066,9 @@
    "actor": "Users",
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 144,
+   "pdf_dest": "h.es2xygbwqkby"
   },
   {
    "id": "VIII.4.3",
@@ -875,7 +1078,9 @@
    "scopes": [
     "european",
     "national"
-   ]
+   ],
+   "pdf_page": 145,
+   "pdf_dest": "h.udwp3kiaobbt"
   },
   {
    "id": "VIII.4.4",
@@ -884,7 +1089,9 @@
    "actor": "treating healthcare professionals",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 145,
+   "pdf_dest": "h.rxvrfoxtc1pu"
   },
   {
    "id": "VIII.4.5",
@@ -896,12 +1103,16 @@
    ],
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 146,
+   "pdf_dest": "h.skinmswg1x5n"
   },
   {
    "id": "VIII.5",
    "title": "Reaching Back to Data Subjects",
-   "level": 2
+   "level": 2,
+   "pdf_page": 146,
+   "pdf_dest": "h.3tf7w7c6jk88"
   },
   {
    "id": "VIII.5.1",
@@ -910,7 +1121,9 @@
    "actor": "Users",
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 146,
+   "pdf_dest": "h.3tf7w7c6jk88"
   },
   {
    "id": "VIII.5.2",
@@ -919,7 +1132,9 @@
    "actor": "1+MG NCP/1+MG Data Providers",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 148,
+   "pdf_dest": "h.7uj4e4hbe0ox"
   },
   {
    "id": "VIII.5.3",
@@ -928,7 +1143,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 149,
+   "pdf_dest": "h.i6t66ib07z7o"
   },
   {
    "id": "VIII.5.4",
@@ -937,12 +1154,16 @@
    "actor": "Genome EDIC Member Countries",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 150,
+   "pdf_dest": "h.vpakjexnbrlo"
   },
   {
    "id": "VIII.6",
    "title": "IP and Commercialisation",
-   "level": 2
+   "level": 2,
+   "pdf_page": 150,
+   "pdf_dest": "h.waqna5ayvopz"
   },
   {
    "id": "VIII.6.1",
@@ -954,7 +1175,9 @@
    ],
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 150,
+   "pdf_dest": "h.tinfggsj5cmz"
   },
   {
    "id": "VIII.6.2",
@@ -963,7 +1186,9 @@
    "actor": "1+MG Data Providers",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 151,
+   "pdf_dest": "h.6txos6gvvbgu"
   },
   {
    "id": "VIII.6.3",
@@ -975,12 +1200,16 @@
    ],
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 151,
+   "pdf_dest": "h.exa0ydjanvfu"
   },
   {
    "id": "VIII.7",
    "title": "Publications",
-   "level": 2
+   "level": 2,
+   "pdf_page": 151,
+   "pdf_dest": "h.n4t73b9pg1ml"
   },
   {
    "id": "VIII.7.1",
@@ -989,7 +1218,9 @@
    "actor": "Users",
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 151,
+   "pdf_dest": "h.n4t73b9pg1ml"
   },
   {
    "id": "VIII.7.2",
@@ -998,7 +1229,9 @@
    "actor": "Genome EDIC Assembly of Members",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 153,
+   "pdf_dest": "h.p97zis61jy9d"
   },
   {
    "id": "VIII.7.3",
@@ -1007,7 +1240,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 153,
+   "pdf_dest": "h.d8wbsgq5aups"
   },
   {
    "id": "VIII.7.4",
@@ -1016,7 +1251,9 @@
    "actor": "1+MG NCP",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 154,
+   "pdf_dest": "h.6xkytpwrs4dl"
   },
   {
    "id": "VIII.8",
@@ -1024,7 +1261,9 @@
    "level": 2,
    "applies_to": [
     "research and healthcare reuse only"
-   ]
+   ],
+   "pdf_page": 155,
+   "pdf_dest": "h.rgt1qycfsa01"
   },
   {
    "id": "VIII.8.1",
@@ -1033,7 +1272,9 @@
    "actor": "Users",
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 155,
+   "pdf_dest": "h.rgt1qycfsa01"
   },
   {
    "id": "VIII.8.2",
@@ -1042,7 +1283,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 155,
+   "pdf_dest": "h.crhi1ve1x614"
   },
   {
    "id": "VIII.8.3",
@@ -1051,7 +1294,9 @@
    "actor": "Genome EDIC Member Countries",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 156,
+   "pdf_dest": "h.55bdu6nkrtre"
   },
   {
    "id": "VIII.8.4",
@@ -1061,12 +1306,16 @@
    "scopes": [
     "european",
     "national"
-   ]
+   ],
+   "pdf_page": 156,
+   "pdf_dest": "h.hwghg897ez9a"
   },
   {
    "id": "VIII.9",
    "title": "Enriched and Improved Data",
-   "level": 2
+   "level": 2,
+   "pdf_page": 157,
+   "pdf_dest": "h.d59i0ppiqx6l"
   },
   {
    "id": "VIII.9.1",
@@ -1075,7 +1324,9 @@
    "actor": "Users",
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 157,
+   "pdf_dest": "h.d59i0ppiqx6l"
   },
   {
    "id": "VIII.9.2",
@@ -1084,7 +1335,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 158,
+   "pdf_dest": "h.14w0aueq4inz"
   },
   {
    "id": "VIII.10",
@@ -1092,7 +1345,9 @@
    "level": 2,
    "applies_to": [
     "healthcare only"
-   ]
+   ],
+   "pdf_page": 158,
+   "pdf_dest": "h.cvadm9x7z8qm"
   },
   {
    "id": "VIII.10.1",
@@ -1101,7 +1356,9 @@
    "actor": "Users",
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 158,
+   "pdf_dest": "h.cvadm9x7z8qm"
   },
   {
    "id": "VIII.10.2",
@@ -1110,12 +1367,16 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 159,
+   "pdf_dest": "h.ylgcpbw633s7"
   },
   {
    "id": "VIII.11",
    "title": "Incidental Findings",
-   "level": 2
+   "level": 2,
+   "pdf_page": 160,
+   "pdf_dest": "h.c0qqq2amoeej"
   },
   {
    "id": "VIII.11.1",
@@ -1124,7 +1385,9 @@
    "actor": "User",
    "scopes": [
     "user-organisation"
-   ]
+   ],
+   "pdf_page": 160,
+   "pdf_dest": "h.c0qqq2amoeej"
   },
   {
    "id": "VIII.11.2",
@@ -1133,7 +1396,9 @@
    "actor": "Genome EDIC CC",
    "scopes": [
     "european"
-   ]
+   ],
+   "pdf_page": 160,
+   "pdf_dest": "h.w7q2n5gvi8k4"
   },
   {
    "id": "VIII.11.3",
@@ -1142,7 +1407,9 @@
    "actor": "1+MG NCP",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 161,
+   "pdf_dest": "h.r4ul7z42po0q"
   },
   {
    "id": "VIII.11.4",
@@ -1151,7 +1418,9 @@
    "actor": "1+MG Data Provider",
    "scopes": [
     "national"
-   ]
+   ],
+   "pdf_page": 162,
+   "pdf_dest": "h.omrr6z92m0vt"
   }
  ]
 }
