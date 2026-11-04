@@ -61,6 +61,16 @@
       "note": "Zenodo record 17990533, published 2025-12-19. Cited with the section number in prose, e.g. (GDI D3.4, section 4.3)."
     },
     {
+      "id": "gdi-d4.4",
+      "short": "GDI D4.4",
+      "title": "GDI D4.4 Updated roadmap on helpdesk and European operations",
+      "publisher": "GDI project",
+      "date": "2026-08-05",
+      "url": "https://zenodo.org/records/21810229",
+      "status": "candidate",
+      "note": "Gives the end of the GDI project: March 2027."
+    },
+    {
       "id": "gdi-d6.3",
       "short": "GDI D6.3",
       "title": "GDI D6.3 Report on requirements for data quality and distributed analysis, as well as external resource interoperability",
@@ -163,6 +173,44 @@
       "publisher": "arc42",
       "url": "https://faq.arc42.org/questions/J-1/",
       "status": "published"
+    },
+    {
+      "id": "dddp",
+      "short": "Decision (EU) 2022/2481",
+      "title": "Decision (EU) 2022/2481 establishing the Digital Decade Policy Programme 2030",
+      "publisher": "European Parliament and Council",
+      "date": "2022-12-14",
+      "url": "http://data.europa.eu/eli/dec/2022/2481/oj",
+      "status": "adopted",
+      "note": "Articles 13 to 21 set up the European Digital Infrastructure Consortium (EDIC)."
+    },
+    {
+      "id": "gdi-d3.6",
+      "short": "GDI D3.6",
+      "title": "GDI D3.6 Video demonstrator showing data access based on a pillar III use case",
+      "publisher": "GDI project",
+      "date": "2025-03-21",
+      "url": "https://zenodo.org/records/15124377",
+      "status": "candidate",
+      "note": "Shows sign-in with LS Login, the identity federation used as reference implementation."
+    },
+    {
+      "id": "b1mg-special-subjects",
+      "short": "1+MG minimal standards for special subjects",
+      "title": "B1MG WP2 Recommendations for a 1+MG Minimal Standards for Inclusion of Special Subjects - version for 1+MG Framework",
+      "publisher": "B1MG project",
+      "date": "2023-08-24",
+      "url": "https://zenodo.org/records/8279861",
+      "status": "candidate"
+    },
+    {
+      "id": "1mg-consent-guidance",
+      "short": "1+MG Transparency and Consent Guidance",
+      "title": "1+MG Transparency and Consent Guidance - version for 1+MG Framework",
+      "publisher": "B1MG project",
+      "date": "2023-08-24",
+      "url": "https://zenodo.org/records/8279851",
+      "status": "candidate"
     }
   ]
 }

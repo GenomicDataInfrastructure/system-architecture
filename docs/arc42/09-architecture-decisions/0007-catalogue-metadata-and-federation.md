@@ -22,7 +22,7 @@ This decision is taken in wave 3, before the level-1 building blocks are drawn, 
 ## What this page must answer
 
 - Which metadata standard describes datasets in the national and central catalogues (for example HealthDCAT-AP), and which profile or extensions the system needs.
-- How national catalogues feed the central catalogue, and how the central catalogue feeds the HealthData@EU central platform.
+- How national catalogues feed the central catalogue, and how the catalogues feed HealthData@EU, through the route [ADR-0008](/decisions/0008-connection-to-healthdata-eu) decides.
 - How a dataset's type, and who reviews and decides on access to it, are recorded in its metadata.
 - The options considered, and what each one means for the building blocks of chapter 5.
 
