@@ -206,9 +206,11 @@ For **8.1 (data protection by design and by default)**, add a table *GDPR princi
 
 Use the [ADR template](/decisions/template). One decision per ADR. Keep it under one page. State the options you rejected, and why.
 
-**When to write one:** the decision affects more than one scope, changes an interface, implements a governance choice, or was disputed in a review.
+**When to write one:** only when the answer to an open question, or the mitigation of a risk, changes the architecture: its structure, interfaces, components or deployment, with real options to choose between. Record the question or risk in [chapter 11](#risks-and-technical-debt) first. A legal reading of the governance, a governance choice, or the order of delivery is not an ADR: it stays in chapter 11, and the page it concerns explains it (decision D-034).
 
-**Who accepts it:** the taskforce recommends the ADR; it stays *Proposed* while its pull request is reviewed. The GDI Management Board reviews it at a cross-pillar meeting, and the ADR becomes *Accepted* after that review (decision D-030). The monthly taskforce meeting lists the proposed ADRs that are ready for the Management Board.
+**How it is reviewed:** an ADR has its own evaluation and review flow, separate from the review rounds of the pages. The flow is still to be defined by the taskforce; until then, no ADR is proposed for acceptance.
+
+**Who accepts it:** the taskforce recommends the ADR; it stays *Proposed* while it is evaluated. The GDI Management Board reviews it at a cross-pillar meeting, and the ADR becomes *Accepted* after that review (decision D-030). The monthly taskforce meeting lists the proposed ADRs that are ready for the Management Board.
 
 **Tracking issue:** every ADR has its `[page]` issue, like every page, for tracking. Create it in the same pull request that adds the ADR, with `scripts/github/setup.mjs issues` ([page issues](https://github.com/GenomicDataInfrastructure/system-architecture/blob/main/CONTRIBUTING.md#page-issues)). When an ADR's title changes, rename its issue to `[page] <new title>` first, so that the script doesn't create a second one. Name the issue in the pull request description, not on the page (decision D-023).
 
