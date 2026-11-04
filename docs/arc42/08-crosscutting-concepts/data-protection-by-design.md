@@ -3,7 +3,7 @@ title: "8.1 Data protection by design and by default"
 sidebar_position: 1
 slug: /concepts/data-protection-by-design
 owner: "Bruno Pacheco (LNDS)"
-reviewers: ["Alexandru Mahmoud (UL)", "Jacek Lebioda (LNDS)", "Aleš Čep (UM)", "Regina Becker (LNDS, specialist)", "Rob Hooft (Health-RI, specialist)"]
+reviewers: ["Alexandru Mahmoud (UL)", "Jacek Lebioda (LNDS)", "Aleš Čep (UM)", "Rob Hooft (Health-RI, specialist)"]
 status: draft
 wave: 2
 audience: [legal, elsi, security, dpo, implementer]
@@ -127,7 +127,7 @@ Everywhere. Each building block in [chapter 5](/building-blocks) lists the perso
 - **<Acronym id="EHDS" />, for comparison:** SPEs used under the EHDS keep access logs for at least one year, and only non-personal data can be downloaded from them (EHDS Art. 73) <Cite id="ehds" />.
 
 :::caution[Open points]
-- Whether the Genome EDIC is joint controller with the 1+MG Data Holder, and so may prepare the DPIA for subject-level discovery on its behalf; [ADR-0009](/decisions/0009-joint-controllership-disclosure) proposes it. See [chapter 11](/risks#joint-controllership).
+- Whether the Genome EDIC is joint controller with the 1+MG Data Holder, and so may prepare the DPIA for subject-level discovery on its behalf; [8.2](/concepts/roles#joint-controllership) proposes it. See [chapter 11](/risks#joint-controllership).
 - Whether 1+MG IT infrastructure providers are processors or controllers for the TOMs in the use phase. See [chapter 11](/risks#it-provider-role).
 - How 1+MG IT infrastructure providers are accredited. See [chapter 11](/risks#accreditation).
 - Whether the filter list of subject-level discovery is public. See [chapter 11](/risks#discovery-filter-list).

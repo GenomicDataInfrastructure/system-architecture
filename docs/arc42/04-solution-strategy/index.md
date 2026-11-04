@@ -67,7 +67,7 @@ The governance provides for a few other exits, each controlled and logged: repor
 **A consequence for the roles:** because all analysis happens in SPEs that the Genome EDIC sets the rules for, the [Genome EDIC](/glossary#genome-edic) can act as processor for the User Organisation, under one data processing agreement, with the SPE providers as sub-processors <GovRef id="VIII.2.1" />. The governance chose this so that the User Organisation doesn't carry the responsibility for the federated SPE system <GovRef id="VIII.2.1" />.
 
 :::caution[Open point]
-Whether SPE providers are only sub-processors, or also controllers for their own platform processing; [ADR-0010](/decisions/0010-spe-provider-role) proposes the split. See [chapter 11](/risks#it-provider-role).
+Whether SPE providers are only sub-processors, or also controllers for their own platform processing; [8.2](/concepts/roles#the-role-of-spe-providers) proposes the split. See [chapter 11](/risks#it-provider-role).
 :::
 
 ## Data protection by design and by default
@@ -141,7 +141,7 @@ The three [scopes](/context/scopes) (European, national and User Organisation) a
 **Why:** responsibility in the Genome EDIC doesn't follow the system boundary. For 1+MG cohort datasets, for example, the Genome EDIC decides on access, but the data stay with a 1+MG Data Host in the country. Designing by responsibility makes every processing step traceable to a controller ([8.2](/concepts/roles)).
 
 :::caution[Open point]
-Whether the Genome EDIC is joint controller with the 1+MG Data Holder for 1+MG compliant datasets; [ADR-0009](/decisions/0009-joint-controllership-disclosure) proposes that it is. See [chapter 11](/risks#joint-controllership).
+Whether the Genome EDIC is joint controller with the 1+MG Data Holder for 1+MG compliant datasets; [8.2](/concepts/roles#joint-controllership) proposes that it is. See [chapter 11](/risks#joint-controllership).
 :::
 
 ## Build in steps

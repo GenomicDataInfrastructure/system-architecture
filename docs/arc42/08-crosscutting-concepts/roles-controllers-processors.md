@@ -3,7 +3,7 @@ title: "8.2 Controllers, processors and responsibilities"
 sidebar_position: 2
 slug: /concepts/roles
 owner: "Bruno Pacheco (LNDS)"
-reviewers: ["Troels Rasmussen (LNDS)", "Rose Pasigna (LNDS)"]
+reviewers: ["Rose Pasigna (LNDS)"]
 status: draft
 wave: 2
 audience: [legal, dpo, implementer]
@@ -53,7 +53,7 @@ The table follows the lifecycle. Where the governance doesn't assign a role, the
 | Central information database and portal components | All | Not assigned; the Genome EDIC CC performs their data protection impact assessment (<Acronym id="DPIA" />) ([see below](#who-performs-which-dpia)) <GovRef id="VII.5.5" /> | — | [5.1.4](/building-blocks/european/transparency-and-reporting), [5.2.4](/building-blocks/national/data-subject-services) <GovRef id="V.2.2" /> | To be set in [8.6](/concepts/legal-basis-and-consent) |
 | Analysis in a 1+MG secure processing environment (<Acronym id="SPE" />) | Use | The User Organisation, controller for the downstream use <GovRef id="VII.1.3" /> | The Genome EDIC, under a data processing agreement; the SPE providers as its sub-processors <GovRef id="VIII.2.1" /> | [5.2.3](/building-blocks/national/spe) | The User Organisation's own |
 | Linking 1+MG data with other data in the SPE, and reducing the risk after linkage | Use | The User Organisation <GovRef id="VIII.3.1" /> | The Genome EDIC's sub-processors, which take measures to reduce the risk <GovRef id="VIII.3.1" /> | [5.2.3](/building-blocks/national/spe) | The User Organisation's own |
-| Running the SPE platform: accounts, access control, logs about the User | Use | Not assigned; [ADR-0010](/decisions/0010-spe-provider-role) proposes the SPE provider (see [below](#the-role-of-spe-providers)) | — | [5.2.3](/building-blocks/national/spe), [8.5](/concepts/logging-and-audit) | To be set in [8.6](/concepts/legal-basis-and-consent) |
+| Running the SPE platform: accounts, access control, logs about the User | Use | Not assigned; the SPE provider is proposed (see [below](#the-role-of-spe-providers)) | — | [5.2.3](/building-blocks/national/spe), [8.5](/concepts/logging-and-audit) | To be set in [8.6](/concepts/legal-basis-and-consent) |
 | Disclosure of additional data by the treating healthcare professional (healthcare reuse) | Use | The treating healthcare professional, for its disclosure; the User Organisation, for the data received | Not assigned for the communication channel | [6.3.3](/runtime/use/healthcare-reuse) | Consent of the data subject, given in advance and recorded in the 1+MG metadata: the governance calls this disclosure new processing that needs a new legal basis <GovRef id="VIII.4.3" /> |
 | Reaching back to data subjects to recruit them into research | Use | Not assigned | Not assigned | [5.2.4](/building-blocks/national/data-subject-services) | To be set in [8.6](/concepts/legal-basis-and-consent) <GovRef id="VIII.5.1" /> <GovRef id="VIII.5.2" /> |
 | Archiving for reproducibility (research, healthcare reuse) | Use | The User Organisation <GovRef id="VIII.8.3" /> | The Genome EDIC national entities, as (sub-)processors <GovRef id="VIII.8.3" /> | [6.3.7](/runtime/use/archiving) | The User Organisation's own |
@@ -89,7 +89,7 @@ The roles above are set out in agreements. The diagram shows who signs what with
 | # | Agreement | Between | Role it sets up | Governance |
 |---|---|---|---|---|
 | 1 | Inclusion agreement | 1+MG Data Provider, Genome EDIC and, for 1+MG compliant datasets, the 1+MG Data Holder where it is not the 1+MG Data Provider. The Genome EDIC CC provides the agreement, and the 1+MG NCP, where applicable, its country-specific clauses | Rights and obligations for making data available | <GovRef id="VI.1.2" /> <GovRef id="VI.1.4" /> <GovRef id="VI.1.5" /> |
-| 2 | Participation agreement | 1+MG Data Holder and Genome EDIC | The 1+MG Data Holder adopts the harmonised rules; [ADR-0009](/decisions/0009-joint-controllership-disclosure) proposes adding the Art. 26 arrangement for the services the Genome EDIC runs for the 1+MG Data Holders (open point) | <GovRef id="VI.4.5" /> |
+| 2 | Participation agreement | 1+MG Data Holder and Genome EDIC | The 1+MG Data Holder adopts the harmonised rules; [below](#joint-controllership), adding the Art. 26 arrangement is proposed the Art. 26 arrangement for the services the Genome EDIC runs for the 1+MG Data Holders (open point) | <GovRef id="VI.4.5" /> |
 | 3 | Data processing agreement | 1+MG Data Holder (or Genome EDIC, for 1+MG cohort datasets) and 1+MG Data Host | The 1+MG Data Host is processor | <GovRef id="VI.4.6" /> |
 | 4 | Terms of use; for healthcare reuse, the framework data use agreement | User Organisation and Genome EDIC: for 1+MG compliant datasets under the mandate of the 1+MG Data Holders, for 1+MG cohort datasets in its own name as controller for the disclosure | Joint-controller arrangement for subject-level discovery between the User Organisation and the controller(s) for the disclosure | <GovRef id="VII.1.1" /> <GovRef id="VII.1.3" /> |
 | 5 | Data use agreement, per approved request | Genome EDIC CC and User Organisation; who signs for the 1+MG Data Holders is open | Conditions of use, and the controller for the disclosure | <GovRef id="VII.5.5" /> <GovRef id="VIII.2.1" /> |
@@ -126,7 +126,7 @@ The governance adds its own chain for misuse by a User. Users report data breach
 | Access request management | The controller for the access decision | The Genome EDIC CC informs the 1+MG Data Holder, where it acts for it |
 | Use in an SPE | The User Organisation | The SPE provider informs the Genome EDIC CC; the Genome EDIC, as processor, informs the User Organisation |
 | Registration of User Organisations and Users; identity link service; information portal and consent app | Not assigned ([chapter 11](/risks#unassigned-roles)) | To be set with the controller |
-| Platform data of the SPE provider (accounts, security logs) | The SPE provider, if it is controller for them ([ADR-0010](/decisions/0010-spe-provider-role), proposed) | — |
+| Platform data of the SPE provider (accounts, security logs) | The SPE provider, if it is controller for them (proposed, see [below](#the-role-of-spe-providers)) | — |
 
 A breach in an SPE can also affect the controller for the disclosure, whose data the SPE holds. The governance's chain through the Genome EDIC CC lets it inform both. NIS2 reporting, where it applies, comes on top ([2.1](/constraints/legal)).
 
@@ -143,7 +143,13 @@ The controller of each phase answers for the rights of data subjects in that pha
 
 ### Whether the Genome EDIC is joint controller with the 1+MG Data Holder {#joint-controllership}
 
-For 1+MG compliant datasets, the governance names the 1+MG Data Holder as controller for the disclosure <GovRef id="III" />, and mentions only conditionally that the Genome EDIC may be joint controller with it <GovRef id="VII.2.2" /> <GovRef id="VII.5.5" />. [ADR-0009](/decisions/0009-joint-controllership-disclosure) sets out the options and proposes that the two are joint controllers for the disclosure, including subject-level discovery, with the 1+MG Data Holder alone taking the access decision. Whatever the answer, the system must record for each dataset who the controller or controllers for the disclosure are, and show it to Users and data subjects.
+For 1+MG compliant datasets, the governance names the 1+MG Data Holder as controller for the disclosure <GovRef id="III" />, and mentions only conditionally that the Genome EDIC may be joint controller with it <GovRef id="VII.2.2" /> <GovRef id="VII.5.5" />. The options:
+
+- **A. The 1+MG Data Holder is sole controller,** and the Genome EDIC is its processor for registration, access request management and the data use agreement. This follows the primary wording, but the Genome EDIC sets the rules the 1+MG Data Holders follow, and under the EDPB test whoever decides on the essential means is a controller, not a processor <Cite id="edpb-gl-07-2020" />.
+- **B. Joint controllers for the disclosure,** including subject-level discovery, with the 1+MG Data Holder alone taking the access decision. One arrangement under GDPR Art. 26, added to the participation agreement each 1+MG Data Holder signs anyway <GovRef id="VI.4.5" />, allocates the responsibilities: the 1+MG Data Holder decides on access and owns the DPIA; the Genome EDIC prepares the DPIA and sets and runs the harmonised rules <GovRef id="VII.2.2" /> <GovRef id="VII.5.5" />.
+- **C. Joint controllers only for subject-level discovery,** and the 1+MG Data Holder sole controller for the rest. This fits VII.2.2 but not VII.5.5, and gives two allocations for one dataset.
+
+Option B is proposed, and an expert workshop of B1MG+ voted the same way <Cite id="b1mgplus-ms17" />. It is a legal reading of the governance, not an architecture decision, so it stays an open point until the legal specialist and the Genome EDIC confirm it. Whatever the answer, the system must record for each dataset who the controller or controllers for the disclosure are, and show it to Users and data subjects.
 
 :::caution[Open point]
 Whether the Genome EDIC is joint controller with the 1+MG Data Holder for 1+MG compliant datasets. See [chapter 11](/risks#joint-controllership).
@@ -151,7 +157,7 @@ Whether the Genome EDIC is joint controller with the 1+MG Data Holder for 1+MG c
 
 ### The role of SPE providers
 
-The governance makes the SPE providers sub-processors of the Genome EDIC <GovRef id="VIII.2.1" />, and also calls the 1+MG IT infrastructure providers "the controller for the technical and organisational measures to protect the data" <GovRef id="VIII.3.3" />. [ADR-0010](/decisions/0010-spe-provider-role) sets out the options and proposes that both hold, for different processing: sub-processor for the data the User analyses, and controller for the SPE provider's own platform processing, such as User accounts and security logs.
+The governance makes the SPE providers sub-processors of the Genome EDIC <GovRef id="VIII.2.1" />, and also calls the 1+MG IT infrastructure providers "the controller for the technical and organisational measures to protect the data" <GovRef id="VIII.3.3" />. The options are: sub-processor for everything; controller for everything in its SPE, which contradicts VIII.2.1; joint controller with the Genome EDIC, which can't work because the Genome EDIC is a processor here <GovRef id="VIII.2.1" />; or a split by processing operation. The split is proposed: both statements hold, for different processing: sub-processor for the data the User analyses, and controller for the SPE provider's own platform processing, such as User accounts and security logs.
 
 :::caution[Open point]
 Whether 1+MG IT infrastructure providers are only sub-processors in the use phase, or also controllers for their own platform processing. See [chapter 11](/risks#it-provider-role).
@@ -169,7 +175,7 @@ Whether 1+MG IT infrastructure providers are only sub-processors in the use phas
 - **GDPR:** controller and processor (Art. 4(7), 4(8)); responsibility of the controller (Art. 24); joint controllers (Art. 26); processors and sub-processors (Art. 28); records of processing (Art. 30); breach notification (Art. 33 and 34) <Cite id="gdpr" />. The guidelines of the European Data Protection Board (<Acronym id="EDPB" />) on the concepts of controller and processor, on which the governance itself relies <GovRef id="VII.2.2" /> <Cite id="edpb-gl-07-2020" />.
 - **Governance:** each phase with its own controller <GovRef id="II.1" />; the definitions of the actors and types of dataset <GovRef id="III" />; the agreements in the table above; the User Organisation as controller for the use <GovRef id="VII.1.3" />; the Genome EDIC as processor, with sub-processors <GovRef id="VIII.2.1" />.
 - **EHDS:** controllership in the EHDS (Art. 74); joint controllers and the Commission as processor in HealthData@EU and in the Commission's SPE (Art. 75(9), 75(10)). The responsibilities of controllers and processors in HealthData@EU will be set by the implementing act under Art. 75(12), still a draft <Cite id="ehds" /> <Cite id="hdeu-ia-draft" />.
-- **Expert input:** B1MG+, an EU-funded project that supports the 1+MG initiative, held an expert workshop on roles under the GDPR <Cite id="b1mgplus-ms17" />. It informs the proposals in ADR-0009 and ADR-0010; it is not a decision of the Genome EDIC.
+- **Expert input:** B1MG+, an EU-funded project that supports the 1+MG initiative, held an expert workshop on roles under the GDPR <Cite id="b1mgplus-ms17" />. It informs the proposals on joint controllership and on the role of SPE providers above; it is not a decision of the Genome EDIC.
 
 :::caution[Open point]
 Until the Genome EDIC is operational, who is controller and processor for the central services and the SPEs is not decided. See [chapter 11](/risks#genome-edic-operational).

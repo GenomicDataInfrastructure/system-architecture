@@ -4,7 +4,7 @@ sidebar_label: "1. Introduction and goals"
 sidebar_position: 1
 slug: /introduction
 owner: "Bruno Pacheco (LNDS)"
-reviewers: ["Juan Arenas (ELIXIR Hub)", "Troels Rasmussen (LNDS)", "Regina Becker (LNDS, specialist)"]
+reviewers: ["Juan Arenas (ELIXIR Hub)"]
 status: draft
 wave: 2
 audience: [policy, legal, elsi, security, dpo, implementer]

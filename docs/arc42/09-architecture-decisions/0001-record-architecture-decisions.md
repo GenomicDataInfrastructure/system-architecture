@@ -14,15 +14,15 @@ last_reviewed:
 <InShort>
 
 - This architecture decision record (ADR) decides that every significant architecture decision is recorded as a short ADR in chapter 9, with its context, the options considered, the decision and its consequences.
-- A decision is significant when it affects more than one scope, changes an interface, implements a governance choice, or was disputed in a review.
-- ADRs are never deleted. A later ADR can supersede an earlier one; both stay, and each links to the other.
+- Open questions and risks are recorded first, in chapter 11. An ADR is written only when the answer to an open question, or the mitigation of a risk, changes the architecture.
+- ADRs have their own evaluation and review, separate from the review rounds of the pages. An accepted ADR is never deleted: a later ADR supersedes it, and both stay.
 
 </InShort>
 
 | Field | Value |
 |---|---|
 | Status | Proposed |
-| Date | 2026-10-27 (first proposed 2026-09-18) |
+| Date | 2026-11-04 (first proposed 2026-09-18) |
 | Deciders | Proposed by B. Pacheco (architecture lead) for the architecture taskforce; to be reviewed by the GDI Management Board |
 
 ## Context
@@ -44,7 +44,7 @@ The criteria:
 
 1. **Reasons stay findable:** a reader can find why a decision was taken, by whom and when, years later.
 2. **Traceable:** each decision names the governance sections and legal acts it rests on, so that it can be reviewed when they change.
-3. **Reviewable:** decisions go through the same review as the pages, in a pull request.
+3. **Reviewable:** each decision goes through a recorded review, in a pull request.
 4. **Low effort:** recording a decision takes less than an hour.
 5. **Public:** Member Countries, implementers and the public can read the decisions next to the architecture.
 
@@ -61,13 +61,17 @@ arc42 recommends recording the important decisions in section 9, with their crit
 
 Option O3. Each significant architecture decision is recorded as an ADR in this chapter, using the [ADR template](/decisions/template). In detail:
 
-- **When to write one.** A decision is significant when it affects more than one scope, changes an interface, implements a governance choice, or was disputed in a review (as in the writing guide, [page recipes](/handbook/recipes#architecture-decision-record)).
+- **When to write one.** Open questions and risks are recorded in [chapter 11](/risks) first. An ADR is written only when the answer to an open question, or the mitigation of a risk, changes the architecture: its structure, its interfaces, its components or its deployment, and there are real options to choose between. A legal reading of the governance, a governance choice, or the order in which the system is delivered is not an ADR: it stays an open point in chapter 11, and the page it concerns explains it (decision of the architecture taskforce, 4 November 2026).
 - **What it contains.** Context, the criteria and the options considered, the decision, and its consequences for each scope. One decision per ADR, kept to about one page.
-- **Status.** Proposed, accepted, deprecated (no longer valid), or superseded by a later ADR.
-- **Never deleted.** A decision that no longer holds is deprecated, or superseded by a new ADR. The superseded ADR keeps its text, and links to the ADR that supersedes it; the new ADR links back to the one it supersedes.
+- **Status.** Proposed, accepted, deprecated (no longer valid), or superseded by a later ADR. A proposed ADR that doesn't meet the rule above is withdrawn: its content moves to chapter 11 and to the page it concerns, and its number isn't reused.
+- **Never deleted once accepted.** A decision that no longer holds is deprecated, or superseded by a new ADR. The superseded ADR keeps its text, and links to the ADR that supersedes it; the new ADR links back to the one it supersedes.
 - **Numbering.** ADRs are numbered in order: ADR-0001, ADR-0002, and so on. A number is never reused.
 - **Date and deciders.** Each ADR gives the date of its current version, the date it was first proposed, and who decided. The architecture lead proposes an ADR for the taskforce, and the taskforce recommends it. The GDI Management Board reviews it at a cross-pillar meeting; it is accepted after that review.
-- **Review.** An ADR goes through the same review as the pages (the writing guide, [page choreography](/handbook/choreography)). A disagreement about the architecture that review doesn't settle goes to the architecture lead, who may ask for an ADR ([drafting roles](/handbook/drafting-roles)).
+- **Review.** An ADR has its own evaluation and review flow, separate from the review rounds of the pages ([drafting roles](/handbook/drafting-roles#review-rounds)). A disagreement about the architecture that a page review doesn't settle is recorded as an open point in chapter 11; it becomes an ADR only under the rule above.
+
+:::caution[Open point]
+The evaluation and review flow for ADRs is not defined yet. See [chapter 11](/risks#adr-review-flow).
+:::
 
 :::caution[Open point]
 No Genome EDIC body has been named to adopt the system architecture. Until one is, the GDI Management Board reviews the ADRs; which body adopts them later, and when they bind Member Countries, is not decided. See [chapter 11](/risks#architecture-adoption).

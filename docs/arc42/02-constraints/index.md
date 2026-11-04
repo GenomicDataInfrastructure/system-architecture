@@ -4,7 +4,7 @@ sidebar_label: "2. Constraints"
 sidebar_position: 2
 slug: /constraints
 owner: "Bruno Pacheco (LNDS)"
-reviewers: ["Regina Becker (LNDS)", "Kjell Petersen (UiB)"]
+reviewers: ["Kjell Petersen (UiB)"]
 status: draft
 wave: 2
 audience: [policy, legal, elsi, security, dpo, implementer]
