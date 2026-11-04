@@ -3,7 +3,7 @@ title: "ADR-0002 Support all three types of dataset; the Member Country chooses 
 slug: /decisions/0002-disclosure-paths-per-dataset
 sidebar_position: 2
 owner: "Bruno Pacheco (LNDS)"
-reviewers: ["Johan Viklund (UU)", "Rob Hooft (Health-RI)", "Regina Becker (LNDS, specialist)"]
+reviewers: ["Johan Viklund (UU)", "Rob Hooft (Health-RI)"]
 status: in-review
 wave: 1
 audience: [policy, legal, dpo, security, implementer]
