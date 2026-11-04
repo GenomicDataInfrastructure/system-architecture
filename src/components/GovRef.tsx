@@ -4,7 +4,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import governance from '@site/src/data/governance.json';
 import {govAnchor} from './vocab';
 
-type Section = {id: string; title: string; printed_as?: string; pdf_page?: number};
+type Section = {id: string; title: string; printed_as?: string; pdf_page?: number; pdf_dest?: string};
 const byId = new Map<string, Section>(
   (governance.sections as Section[]).map((s) => [s.id, s]),
 );
@@ -36,6 +36,9 @@ export function govSection(id: string): Section | undefined {
 
 /** Path to the section in the site's copy of the published PDF, or to its traceability row if its page is not known. Pass it through useBaseUrl. */
 export function govHref(id: string): string {
-  const page = byId.get(id)?.pdf_page;
-  return page ? `${governance.pdf_url}#page=${page}` : `/appendix/traceability#${govAnchor(id)}`;
+  const section = byId.get(id);
+  if (!section?.pdf_page) return `/appendix/traceability#${govAnchor(id)}`;
+  // nameddest jumps to the heading in viewers that support it (Chrome, Edge, Firefox); page is the fallback.
+  const dest = section.pdf_dest ? `&nameddest=${section.pdf_dest}` : '';
+  return `${governance.pdf_url}#page=${section.pdf_page}${dest}`;
 }
