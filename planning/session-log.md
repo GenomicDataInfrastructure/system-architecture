@@ -2,6 +2,11 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-11-04 — Architecture taskforce action points (B. Pacheco with Claude)
+- Decided D-033 (react to review feedback only after the review date; wave 1 round 2 now closes 13 November) and D-034 (open questions and risks first; ADRs only when the architecture changes; own ADR review flow, to be defined).
+- Done: Troels Rasmussen and Regina Becker removed as reviewers in #133 and #150; Daniel Ciurea (`daniel-ciurea`) and Aleš Čep (`AlesCUMSI`) added to the review tables; ADR-0009 and ADR-0010 withdrawn in #150 (content to 8.2); ADR-0001 rewritten; handbook note on finding what changed since a review on GitHub.
+- Next: after 13 November, withdraw ADR-0002 and ADR-0003 in #133 (content to chapter 11, 1.1, 8.12, chapter 4) and turn ADR-0004 to ADR-0008 into chapter 11 open questions; name Security, ELSI and Legal reviewers; define the ADR review flow.
+
 ## 2026-10-27 — AI-assisted drafting set up; wave 1 through its first agent review round (B. Pacheco with Claude)
 - Decided D-026: agents draft and review wave by wave; people own and approve. Handbook page *Drafting and review roles* (source librarian, writer, architecture and governance reviewers, legal, DPO, security and ELSI specialists, reader test; one findings format); thin wrappers in `.claude/agents/`. Models: Claude Opus 5.5, high effort; Claude Fable 5.1, high effort, for the governance reviewer and the legal specialist. Merged in #132.
 - Source collection kept outside the repository (`~/Documents/gdi-system-architecture/sources/`, on the architecture lead's machine): GDI, B1MG, B1MG+, TEHDAS and TEHDAS2, HealthData@EU pilot, EOSC-ENTRUST deliverables; HealthData@EU Central Platform and Infrastructure documentation (Release 8); the EHDS regulation. Index `deliverables.md` with each Zenodo or Publications Office link; plain-text copies for searching. TEHDAS2 deliverables are published on tehdas.eu with Zenodo DOIs; EOSC-ENTRUST's also on CORDIS. Pages cite public records only.

@@ -26,7 +26,7 @@ This handbook is for the members of the system architecture taskforce: the peopl
 | **Owner** | One taskforce member per page | Writes the page, finds the sources, organises the review, and answers reviewers' comments. Is an assignee of the page's GitHub issue, named as owner in its *Review assignment*, and the `owner` in its front matter. |
 | **Reviewer** | One to three taskforce members per page, assigned by the architecture lead | Checks that the page is correct, complete and readable, then approves the pull request. Listed in `reviewers` by name and affiliation, and an assignee of the page's issue. |
 | **Specialist reviewer** | A DPO, security advisor, legal expert or ELSI specialist, when needed | Checks the page against their own requirements, using the matching [review checklist](/handbook/review-checklists). Listed in `reviewers` with `specialist`, and requested with a `needs-…` label. |
-| **Architecture lead** | Coordinates the taskforce | Plans the waves, assigns the owner and reviewers of each page, settles disagreements, keeps pages consistent, decides when an ADR is needed, chairs the monthly meeting, keeps the minutes, and tags releases. |
+| **Architecture lead** | Coordinates the taskforce | Plans the waves, assigns the owner and reviewers of each page, settles disagreements, keeps pages consistent, decides when an open question or risk needs an ADR, chairs the monthly meeting, keeps the minutes, and tags releases. |
 
 A person can own some pages and review others. Nobody reviews their own page.
 

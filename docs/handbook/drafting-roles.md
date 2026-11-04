@@ -25,8 +25,8 @@ A review round lets every reviewer comment on the same text, and gives the write
 1. **Open the round on one version.** When the pages are ready, the architecture lead names the version under review: one commit on the wave's branch. A comment on the pull request opens the round ("Round 2 opened on version c45c887"). The pull request description lists the reviewers of each page, by name and affiliation, with the link to the page's preview; reviewers with a GitHub account are requested on the pull request. Each reviewer reviews the pages assigned to them (decision D-029). The Word export of the round shows the same version, and each page's reviewers, on every page.
 2. **The pages are frozen during the round.** Nobody changes the wave's pages on the branch until the round closes. A problem found on another page goes to that page's issue. Merging `main` into the branch is allowed if it doesn't change the wave's pages.
 3. **Reviewers comment** on the pull request or in the Word document ([below](#reviewing-in-word)), within 5 working days ([choreography](/handbook/choreography), step 9).
-4. **The round closes when every reviewer has answered:** with comments, an approval, or "no comments". "Every reviewer" means the reviewers named in the front matter of the wave's pages, specialists included; each answers for their own pages. If a reviewer hasn't answered after 5 working days, the architecture lead decides whether to wait or to close the round without them, and says so on the pull request.
-5. **Only then does the writer change the pages.** The writer answers all comments of the round together: fixed, recorded as an open point in chapter 11, or declined with a reason. A comment on the pull request closes the round with every comment, its reviewer and what happened to it.
+4. **The round has a review date, and closes when it has passed.** The comment that opens the round gives the date. Every reviewer answers by then: with comments, an approval, or "no comments". "Every reviewer" means the reviewers named in the front matter of the wave's pages, specialists included; each answers for their own pages. If a reviewer hasn't answered by the review date, the architecture lead decides whether to wait or to close the round without them, and says so on the pull request. The architecture lead may move the review date; the opening comment then says so.
+5. **Only after the review date does the writer react,** even if every reviewer answered earlier, so that a late reviewer still reads the same text and nobody reads a half-fixed page (decision D-033). The writer answers all comments of the round together: fixed, recorded as an open point in chapter 11, or declined with a reason. A comment on the pull request closes the round with every comment, its reviewer, what happened to it, and the commit that handles it.
 6. **The next round starts from the new version.** Human review has two rounds at most; after that, the architecture lead decides ([choreography](/handbook/choreography), step 9).
 
 ## Reviewing in Word or Google Docs {#reviewing-in-word}
@@ -37,6 +37,14 @@ Reviewers who don't use GitHub review a Word document of the round's version. Th
 - **Comment.** Reviewers use Word comments, or *Track changes* to suggest wording. Google Docs works too: upload the file to Google Drive, open it with Google Docs, and download it again as a Word file.
 - **Return.** Reviewers send the file back to the architecture lead. Their comments become findings under the reviewer's name, and the round's closing comment on the pull request lists them, so that everyone sees them. The returned files are kept outside the repository.
 - **What changed since the last round.** Keep the file of each round. Word's *Review › Compare* shows the changes between two rounds' files as tracked changes.
+
+## What changed since your review, on GitHub {#changes-since-review}
+
+GitHub has no view of the changes made after one comment. A reviewer finds them in three ways:
+
+- **The round's closing comment** lists each comment with the commit that handles it. Open the commit to see exactly what changed for your comment.
+- **Your review as you saw it.** On the *Conversation* tab, *View reviewed changes* on your review shows the pull request as it was when you reviewed it ([GitHub documentation](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/viewing-a-pull-request-review)).
+- **Only the new commits.** On *Files changed*, the commit filter shows one commit or a range, for example the commits after the round's version ([GitHub changelog](https://github.blog/changelog/2025-12-11-review-commit-by-commit-improved-filtering-and-more-in-the-pull-request-files-changed-public-preview/)). A file you marked *Viewed* is unmarked when it changes again ([GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)).
 
 ## Roles
 
