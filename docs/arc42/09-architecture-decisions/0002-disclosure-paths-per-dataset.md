@@ -130,11 +130,11 @@ In detail:
 
 How the three types work in each phase of the lifecycle is described in [8.12 Types of dataset](/concepts/dataset-types).
 
-### Per scope
+### Per responsible party
 
-- **[European scope](/glossary#european-scope):** [5.1.2 Access request management](/building-blocks/genome-edic/access-request-management) handles both 1+MG paths in one request. For 1+MG cohort data, the Genome EDIC decides; the Genome EDIC CC adopts and documents the decision, and carries out the data protection impact assessment. The Genome EDIC CC remains the one-stop shop: the User follows the same procedure whatever the path.
-- **[National scope](/glossary#national-scope):** [5.2.2 Access review and decision support](/building-blocks/member-country/access-decision-support) serves 1+MG Data Holders and Local DACs. Each Member Country records its choices in its [national implementation profile](/appendix/national-profile-template).
-- **[User Organisation scope](/glossary#user-organisation-scope):** no difference in how to apply.
+- **[Genome EDIC](/glossary#genome-edic):** [5.1.2 Access request management](/building-blocks/genome-edic/access-request-management) handles both 1+MG paths in one request. For 1+MG cohort data, the Genome EDIC decides; the Genome EDIC CC adopts and documents the decision, and carries out the data protection impact assessment. The Genome EDIC CC remains the one-stop shop: the User follows the same procedure whatever the path.
+- **[Genome EDIC Member Country](/glossary#genome-edic-member-country):** [5.2.2 Access review and decision support](/building-blocks/member-country/access-decision-support) serves 1+MG Data Holders and Local DACs. Each Member Country records its choices in its [national implementation profile](/appendix/national-profile-template).
+- **[User Organisation](/glossary#user-organisation):** no difference in how to apply.
 - **Catalogue** ([5.1.1](/building-blocks/genome-edic/user-portal-and-catalogue), [5.2.1](/building-blocks/member-country/ncp-node)): every dataset carries its type and its reviewers.
 - **Controllers** ([8.2](/concepts/roles)): the controller for the access decision differs per path.
 - **[Healthcare reuse](/runtime/use/healthcare-reuse) fast track:** the four-eyes check is organised differently per path <GovRef id="VII.4.3" />.
