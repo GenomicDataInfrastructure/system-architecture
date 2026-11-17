@@ -3,7 +3,7 @@ title: "2.2 Governance principles"
 sidebar_position: 2
 slug: /constraints/governance-principles
 owner: "Bruno Pacheco (LNDS)"
-reviewers: ["Juan Arenas (ELIXIR Hub)"]
+reviewers: ["Rob Hooft (Health-RI)", "Dylan Spalding (CSC)"]
 status: in-review
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
@@ -85,7 +85,7 @@ Member Countries keep defining the scope, conditions, minimum requirements and w
 
 Member Countries choose how they fit the infrastructure into their national infrastructure, as long as they meet the requirements and implement the common functions <GovRef id="II.2" />. The governance gives national implementation as much flexibility as possible, while the system stays homogeneous for the User <GovRef id="I" />.
 
-- **Interfaces first.** Each component is described by its function, interfaces and standards. The [reference implementation](/glossary#reference-implementation) is named: the <Acronym id="GDI" /> Starter Kit component for national nodes, or the GDI central service for the European scope <Cite id="gdi-starter-kit" />. A Member Country may use other tools that meet the same interfaces. See [4. Solution strategy](/solution-strategy).
+- **Interfaces first.** Each component is described by its function, interfaces and standards. The [reference implementation](/glossary#reference-implementation) is named: the <Acronym id="GDI" /> Starter Kit component for national nodes, or the GDI central service for the Genome EDIC <Cite id="gdi-starter-kit" />. A Member Country may use other tools that meet the same interfaces. See [4. Solution strategy](/solution-strategy).
 - **Each country distributes the national roles.** One organisation can hold several roles <GovRef id="III" />, and countries should be as free as possible in how they share tasks <GovRef id="VIII.3.3" />. Where one organisation holds several roles, the Member Country mitigates conflicts of interest: for example, a [1+MG NCP](/glossary#1mg-national-coordination-point-1mg-ncp) that checks compliance must not assess its own IT infrastructure <GovRef id="V.1.4" />. Each Member Country records its choices in its [national implementation profile](/appendix/national-profile-template). See [3.3](/context/responsible-parties).
 - **Some choices are national by design.** For example, whether data may be pooled for research <GovRef id="VIII.3.4" />, or who reviews access requests for [1+MG cohort datasets](/concepts/dataset-types) <GovRef id="VII.4.7" />. Who decides on pooling for [1+MG compliant datasets](/concepts/dataset-types) is still open (see below). The system must support every option the governance allows, and show Users which one applies.
 - **Common minimum requirements, checked by audit or certification.** The freedom ends where the common requirements start. All SPEs meet the same minimum requirements <GovRef id="VIII.3.3" />, and national entities are audited against them by an external body, and/or work towards certification <GovRef id="V.1.2" /> <GovRef id="V.1.3" />.
