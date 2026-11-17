@@ -2,7 +2,7 @@
 title: "5.2 Genome EDIC Member Country"
 sidebar_label: "5.2 Member Country"
 sidebar_position: 2
-slug: /building-blocks/national
+slug: /building-blocks/member-country
 owner: TBD
 reviewers: []
 status: placeholder

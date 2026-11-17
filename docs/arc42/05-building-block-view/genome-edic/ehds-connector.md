@@ -1,7 +1,7 @@
 ---
 title: "5.1.5 Connection to HealthData@EU"
 sidebar_position: 5
-slug: /building-blocks/european/ehds-connector
+slug: /building-blocks/genome-edic/ehds-connector
 owner: TBD
 reviewers: []
 status: placeholder

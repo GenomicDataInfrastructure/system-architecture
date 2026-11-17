@@ -1,7 +1,7 @@
 ---
 title: "5.1.1 1+MG User Portal and central data catalogue"
 sidebar_position: 1
-slug: /building-blocks/european/user-portal-and-catalogue
+slug: /building-blocks/genome-edic/user-portal-and-catalogue
 owner: TBD
 reviewers: []
 status: placeholder

@@ -2,7 +2,7 @@
 title: "5.1 Genome EDIC"
 sidebar_label: "5.1 Genome EDIC"
 sidebar_position: 1
-slug: /building-blocks/european
+slug: /building-blocks/genome-edic
 owner: TBD
 reviewers: []
 status: placeholder

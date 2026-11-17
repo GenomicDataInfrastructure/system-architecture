@@ -80,9 +80,10 @@ function chapterKey(rel) {
 }
 function scopeKey(rel) {
   // The responsible party of a chapter 5 page: the Genome EDIC, the Member Country or the
-  // User Organisation (decision D-036). The label names keep the older "scope-" prefix.
-  const m = rel.match(/05-building-block-view\/(european|national|user-organisation)\//);
-  return m ? m[1] : null;
+  // User Organisation (decision D-036).
+  const m = rel.match(/05-building-block-view\/(genome-edic|member-country|user-organisation)\//);
+  // Label names keep the older words: scope-european, scope-national, scope-user-organisation.
+  return m ? {'genome-edic': 'european', 'member-country': 'national', 'user-organisation': 'user-organisation'}[m[1]] : null;
 }
 
 /** Anchor of the page recipe in docs/handbook/recipes.md that fits this page. */
@@ -122,7 +123,7 @@ function trackedPages() {
   const rank = (f) => (f.includes('/arc42/') ? 0 : f.includes('/readers/') ? 1 : 2);
   const key = (p) => [
     rank(p.rel),
-    path.dirname(p.rel).replace('/european', '/1').replace('/national', '/2').replace('/user-organisation', '/3'),
+    path.dirname(p.rel).replace('/genome-edic', '/1').replace('/member-country', '/2').replace('/user-organisation', '/3'),
     path.basename(p.rel).startsWith('index.') ? 0 : 1,
     Number(p.data.sidebar_position ?? 99),
   ];

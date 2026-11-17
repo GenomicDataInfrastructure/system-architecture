@@ -11,7 +11,7 @@ Readers look at the picture first. These rules make every diagram readable in li
 
 ## Rules
 
-1. **Draw it in draw.io and save it as `.drawio.svg`.** One file is both the editable source and the image. Put it in `static/diagrams/`, and start its name with its section: `3.3-scopes.drawio.svg`, `5.2-national-scope.drawio.svg` (file names keep the older word "scope", decision D-036).
+1. **Draw it in draw.io and save it as `.drawio.svg`.** One file is both the editable source and the image. Put it in `static/diagrams/`, and start its name with its section: `3.3-responsible-parties.drawio.svg`, `5.2-member-country.drawio.svg`.
 2. **Choose the notation that fits the diagram,** and name it in the legend:
    - structure (context, responsible parties, building blocks, deployment): the [C4 model](https://c4model.com);
    - runtime scenarios: UML sequence diagrams;
@@ -25,7 +25,7 @@ Readers look at the picture first. These rules make every diagram readable in li
 6. **Show it with `<Diagram>`,** and say in the alt text what the diagram shows, for readers who can't see it:
 
    ```md
-   <Diagram src="3.3-scopes.drawio.svg" alt="Diagram of the three responsible parties. …" />
+   <Diagram src="3.3-responsible-parties.drawio.svg" alt="Diagram of the three responsible parties. …" />
    ```
 
 7. **One diagram, one message.** Keep it readable at page width: about 960 pixels wide, text of 12 pixels or more. Readers can select a diagram to open it full size.
