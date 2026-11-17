@@ -158,7 +158,7 @@ Use of the data to support the care of a current patient, by comparing them with
 
 ## Architecture terms
 
-The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run, and to name ideas the pages use often. [3.3 European, national and User Organisation scopes](/context/scopes) explains the scopes in more depth, with a diagram of which actor belongs to which scope. Two actors are not tied to one scope. A 1+MG IT infrastructure provider can work for the European or the national scope, at central, national or local level. Data subjects are the people the data are about. They are outside every scope: they have rights, not duties, in the system, and its rules exist to protect them. The scopes and the levels come first; the other terms follow in alphabetical order, ignoring the prefix "1+MG".
+The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run, and to name ideas the pages use often. [3.3 European, national and User Organisation scopes](/context/responsible-parties) explains the scopes in more depth, with a diagram of which actor belongs to which scope. Two actors are not tied to one scope. A 1+MG IT infrastructure provider can work for the European or the national scope, at central, national or local level. Data subjects are the people the data are about. They are outside every scope: they have rights, not duties, in the system, and its rules exist to protect them. The scopes and the levels come first; the other terms follow in alphabetical order, ignoring the prefix "1+MG".
 
 ### European scope
 
@@ -222,11 +222,11 @@ Software that implements a component's interfaces and that Member Countries may 
 
 ### Secure processing environment (SPE)
 
-A protected IT environment where Users analyse the data without being able to download personal data. A **1+MG SPE** is run by a 1+MG IT infrastructure provider and meets the minimum requirements of the Genome EDIC <GovRef id="VIII.3.3" />. The **SPE provided by the European Commission** is run by the Commission under the EHDS; 1+MG data may be processed there only "where applicable" <GovRef id="VIII.2.2" />. See [5.2.3](/building-blocks/national/spe). _Architecture term._
+A protected IT environment where Users analyse the data without being able to download personal data. A **1+MG SPE** is run by a 1+MG IT infrastructure provider and meets the minimum requirements of the Genome EDIC <GovRef id="VIII.3.3" />. The **SPE provided by the European Commission** is run by the Commission under the EHDS; 1+MG data may be processed there only "where applicable" <GovRef id="VIII.2.2" />. See [5.2.3](/building-blocks/member-country/spe). _Architecture term._
 
 ### Subject-level data discovery
 
-A search over the individual records held in the system, which returns to the User only the number of records that match the criteria <GovRef id="VII.2.3" />. It processes personal data, under the joint controllership of the User Organisation and the controller for the disclosure <GovRef id="VII.1.3" />. See [5.2.7](/building-blocks/national/subject-level-discovery). _Summary._
+A search over the individual records held in the system, which returns to the User only the number of records that match the criteria <GovRef id="VII.2.3" />. It processes personal data, under the joint controllership of the User Organisation and the controller for the disclosure <GovRef id="VII.1.3" />. See [5.2.7](/building-blocks/member-country/subject-level-discovery). _Summary._
 
 ### Trust boundary
 

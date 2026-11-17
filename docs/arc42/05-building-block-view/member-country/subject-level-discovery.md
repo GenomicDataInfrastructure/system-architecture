@@ -1,7 +1,7 @@
 ---
 title: "5.2.7 Subject-level discovery endpoint"
 sidebar_position: 7
-slug: /building-blocks/national/subject-level-discovery
+slug: /building-blocks/member-country/subject-level-discovery
 owner: TBD
 reviewers: []
 status: placeholder

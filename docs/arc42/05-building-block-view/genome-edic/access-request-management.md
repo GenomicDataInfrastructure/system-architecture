@@ -1,7 +1,7 @@
 ---
 title: "5.1.2 Access request management and 1+MG DAC support"
 sidebar_position: 2
-slug: /building-blocks/european/access-request-management
+slug: /building-blocks/genome-edic/access-request-management
 owner: TBD
 reviewers: []
 status: placeholder

@@ -1,6 +1,6 @@
 ---
-title: "5.3 User Organisation scope"
-sidebar_label: "5.3 User Organisation scope"
+title: "5.3 User Organisation"
+sidebar_label: "5.3 User Organisation"
 sidebar_position: 3
 slug: /building-blocks/user-organisation
 owner: TBD
@@ -20,7 +20,7 @@ last_reviewed:
 
 ## What this page must answer
 
-- Level 2 of the User Organisation scope: what a User Organisation and its Users must provide to the European and national scopes, and through which interfaces.
+- Level 2 of the User Organisation: what a User Organisation and its Users must provide to the Genome EDIC and the Member Countries, and through which interfaces.
 - Which processes start on the User Organisation side (registration, onboarding and offboarding of Users, access requests, review for healthcare reuse)?
 - What does the architecture require from the User Organisation's own systems, and what does it leave to the User Organisation?
 

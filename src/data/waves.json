@@ -5,7 +5,7 @@
       "id": 1,
       "target": "December 2026",
       "name": "Frame",
-      "goal": "Agree on the words and the boundaries: scopes, actors, governance principles, glossary.",
+      "goal": "Agree on the words and the boundaries: responsible parties, actors, governance principles, glossary.",
       "depends_on": []
     },
     {
@@ -19,14 +19,14 @@
       "id": 3,
       "target": "to be set",
       "name": "Structure",
-      "goal": "Draw the outline: technical context, technical constraints, the crosscutting decisions that shape the structure (ADR-0004 to ADR-0008: identity, identity link, trust boundaries, catalogue metadata, HealthData@EU connection), level-1 building blocks and the scope overviews.",
+      "goal": "Draw the outline: technical context, technical constraints, the crosscutting decisions that shape the structure (ADR-0004 to ADR-0008: identity, identity link, trust boundaries, catalogue metadata, HealthData@EU connection), level-1 building blocks and the overviews per responsible party.",
       "depends_on": [1, 2]
     },
     {
       "id": 4,
       "target": "to be set",
       "name": "Behaviour and components",
-      "goal": "Describe each lifecycle scenario and each level-2 building block. Scope teams work in parallel.",
+      "goal": "Describe each lifecycle scenario and each level-2 building block. The teams per responsible party work in parallel.",
       "depends_on": [3]
     },
     {

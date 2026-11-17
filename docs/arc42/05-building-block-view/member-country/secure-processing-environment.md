@@ -1,7 +1,7 @@
 ---
 title: "5.2.3 Secure processing environment (SPE)"
 sidebar_position: 3
-slug: /building-blocks/national/spe
+slug: /building-blocks/member-country/spe
 owner: TBD
 reviewers: []
 status: placeholder

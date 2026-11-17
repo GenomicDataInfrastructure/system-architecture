@@ -1,7 +1,7 @@
 ---
 title: "3.3 European, national and User Organisation scopes"
 sidebar_position: 3
-slug: /context/scopes
+slug: /context/responsible-parties
 owner: "Bruno Pacheco (LNDS)"
 reviewers: ["Johan Viklund (UU)", "Rob Hooft (Health-RI)"]
 status: in-review
@@ -55,7 +55,7 @@ The actors and their names come from the governance definitions <GovRef id="III"
 | Treating healthcare professionals | None | The doctors of the patients concerned. For healthcare reuse, they may answer Users' questions, within their patient's consent. They don't act as Genome EDIC national entities <GovRef id="VIII.5.3" />, and are reached through the 1+MG NCP <GovRef id="VIII.4.5" />. |
 | [1+MG IT infrastructure provider](/glossary#1mg-it-infrastructure-provider) | European or national (a role) | A role, not a scope. See [below](#the-1mg-it-infrastructure-provider-a-role-not-a-scope). |
 
-[Data subjects](/glossary#data-subject) are the people the data are about. They are outside every scope: they have rights, not duties, in the system, and its rules exist to protect them <GovRef id="VII.5.1" />. As a rule, they deal with their own country: information, consent and objection are national tasks <GovRef id="I" />, supported by the national [data subject services](/building-blocks/national/data-subject-services). The exceptions are a Genome EDIC information portal where a country can't serve its data subjects <GovRef id="V.2.2" />, and the Genome EDIC CC communicating results to them <GovRef id="VIII.1.2" />. Treating healthcare professionals are not part of any scope either.
+[Data subjects](/glossary#data-subject) are the people the data are about. They are outside every scope: they have rights, not duties, in the system, and its rules exist to protect them <GovRef id="VII.5.1" />. As a rule, they deal with their own country: information, consent and objection are national tasks <GovRef id="I" />, supported by the national [data subject services](/building-blocks/member-country/data-subject-services). The exceptions are a Genome EDIC information portal where a country can't serve its data subjects <GovRef id="V.2.2" />, and the Genome EDIC CC communicating results to them <GovRef id="VIII.1.2" />. Treating healthcare professionals are not part of any scope either.
 
 ## Why there is no local scope
 
@@ -133,6 +133,6 @@ A level is not a scope: a 1+MG Data Host belongs to the national scope and runs 
 
 ## How to read chapters 5 to 7
 
-- **[Chapter 5, building blocks](/building-blocks)** has one section per scope: [5.1 European](/building-blocks/european), [5.2 national](/building-blocks/national) and [5.3 User Organisation](/building-blocks/user-organisation).
+- **[Chapter 5, building blocks](/building-blocks)** has one section per scope: [5.1 European](/building-blocks/genome-edic), [5.2 national](/building-blocks/member-country) and [5.3 User Organisation](/building-blocks/user-organisation).
 - **[Chapter 6, runtime](/runtime)** follows the lifecycle. Each step names its actor and that actor's scope.
 - **[Chapter 7, deployment](/deployment)** has one section per level: [7.1 central](/deployment/central), [7.2 national](/deployment/national) and [7.3 local](/deployment/local).

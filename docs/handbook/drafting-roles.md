@@ -15,7 +15,7 @@ Pages are drafted with AI assistance, wave by wave, and reviewed by people (deci
 2. **Draft.** The writer drafts every page of the wave on one branch, following the [page choreography](/handbook/choreography) (steps 4 to 8) and the [recipe](/handbook/recipes) for each page.
 3. **Review by the roles below.** The reviewers, the specialists the page's `audience` calls for, and the reader test run at the same time. Each returns a list of findings.
 4. **Fix.** The writer answers every finding: fixed, or declined with a reason. Disagreements go to the architecture lead.
-5. **Pull request.** One pull request per wave (wave 4: one per scope). The page `status` becomes `in-review`. The pull request says that the pages were drafted with AI assistance, which roles reviewed them, and what is still open.
+5. **Pull request.** One pull request per wave (wave 4: one per responsible party). The page `status` becomes `in-review`. The pull request says that the pages were drafted with AI assistance, which roles reviewed them, and what is still open.
 6. **Human review, in rounds.** Taskforce reviewers and specialists review one fixed version of the pages, on the pull request or in a Word document, using the [review checklists](/handbook/review-checklists). The writer changes the pages again only when every reviewer has answered (see [Review rounds](#review-rounds)). Steps 4 to 6 repeat until a reviewer approves.
 
 ## Review rounds {#review-rounds}

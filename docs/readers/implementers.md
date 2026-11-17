@@ -19,9 +19,9 @@ You build or operate a component: a Genome EDIC service, a national node, a secu
 |---|---|
 | What are the building blocks and their interfaces? | [5. Building block view (level 1)](/building-blocks) |
 | Which people, organisations and external systems exchange data with the system? | [3.1 Business context](/context/business), [3.2 Technical context](/context/technical) |
-| What must the European services provide? | [5.1 European scope](/building-blocks/european) |
-| What must a national node provide? | [5.2 National scope](/building-blocks/national) |
-| What must a local data host provide? | [5.2.5 1+MG compliant local IT infrastructure (Data Host)](/building-blocks/national/data-host) |
+| What must the European services provide? | [5.1 European scope](/building-blocks/genome-edic) |
+| What must a national node provide? | [5.2 National scope](/building-blocks/member-country) |
+| What must a local data host provide? | [5.2.5 1+MG compliant local IT infrastructure (Data Host)](/building-blocks/member-country/data-host) |
 | What must a User Organisation provide? | [5.3 User Organisation scope](/building-blocks/user-organisation) |
 | How do the components interact along the data lifecycle? | [6. Runtime view](/runtime) |
 | Which standards and data models must I use? | [8.10 Metadata and semantic interoperability](/concepts/metadata-and-interoperability) |

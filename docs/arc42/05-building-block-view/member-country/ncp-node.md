@@ -1,7 +1,7 @@
 ---
 title: "5.2.1 1+MG NCP node and national catalogue"
 sidebar_position: 1
-slug: /building-blocks/national/ncp-node
+slug: /building-blocks/member-country/ncp-node
 owner: TBD
 reviewers: []
 status: placeholder
