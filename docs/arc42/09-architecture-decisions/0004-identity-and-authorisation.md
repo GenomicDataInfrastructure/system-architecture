@@ -1,5 +1,5 @@
 ---
-title: "ADR-0004 Identity federation and authorisation across scopes"
+title: "ADR-0004 Identity federation and authorisation across responsible parties"
 slug: /decisions/0004-identity-and-authorisation
 sidebar_position: 4
 owner: TBD
@@ -23,7 +23,7 @@ This decision is taken in wave 3, before the level-1 building blocks are drawn, 
 
 - Which identity federation or federations authenticate Users (for example LS Login), and what level of assurance they must give.
 - How the User Organisation confirms that a User belongs to it, and how a User's status as a healthcare professional is checked (healthcare reuse).
-- Who authorises access in each scope (European, national, User Organisation), and how the rights in the data use agreement reach each SPE.
+- Who authorises access for each responsible party (the Genome EDIC, the Member Country, the User Organisation), and how the rights in the data use agreement reach each SPE.
 - The options considered, and what each one means for the building blocks of chapter 5.
 
 ## Sources to start from

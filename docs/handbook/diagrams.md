@@ -11,21 +11,21 @@ Readers look at the picture first. These rules make every diagram readable in li
 
 ## Rules
 
-1. **Draw it in draw.io and save it as `.drawio.svg`.** One file is both the editable source and the image. Put it in `static/diagrams/`, and start its name with its section: `3.3-scopes.drawio.svg`, `5.2-national-scope.drawio.svg`.
+1. **Draw it in draw.io and save it as `.drawio.svg`.** One file is both the editable source and the image. Put it in `static/diagrams/`, and start its name with its section: `3.3-scopes.drawio.svg`, `5.2-national-scope.drawio.svg` (file names keep the older word "scope", decision D-036).
 2. **Choose the notation that fits the diagram,** and name it in the legend:
-   - structure (context, scopes, building blocks, deployment): the [C4 model](https://c4model.com);
+   - structure (context, responsible parties, building blocks, deployment): the [C4 model](https://c4model.com);
    - runtime scenarios: UML sequence diagrams;
    - another notation where it explains the subject better.
 3. **White background.** Every diagram has a white background, so it looks the same in light and dark mode.
 4. **Legend.** Every diagram has a legend with:
    - the notation, and what its symbols mean;
-   - the section it belongs to, for example *Section 3.3 European, national and User Organisation scopes*;
+   - the section it belongs to, for example *Section 3.3 Responsible parties*;
    - the date of the last edit: *Last edited: YYYY-MM-DD*. **Update it every time you change the diagram.**
-5. **Same colours for the same scopes** (see below).
+5. **Same colours for the same responsible parties** (see below).
 6. **Show it with `<Diagram>`,** and say in the alt text what the diagram shows, for readers who can't see it:
 
    ```md
-   <Diagram src="3.3-scopes.drawio.svg" alt="Diagram of the three scopes. …" />
+   <Diagram src="3.3-scopes.drawio.svg" alt="Diagram of the three responsible parties. …" />
    ```
 
 7. **One diagram, one message.** Keep it readable at page width: about 960 pixels wide, text of 12 pixels or more. Readers can select a diagram to open it full size.
@@ -34,15 +34,15 @@ There is no template: each diagram has its own structure. To start a new diagram
 
 Mermaid is not used in the architecture pages any more: it gave no control over the layout, and its diagrams were hard to read in dark mode and on small screens. The handbook keeps a few simple Mermaid flowcharts.
 
-## Scope colours
+## Colours of the responsible parties
 
-| Scope | Fill | Border |
+| Responsible party | Fill | Border |
 |---|---|---|
-| European | `#EAF2FB` | `#1168BD` |
-| National | `#EAF6EC` | `#2E7D32` |
+| Genome EDIC | `#EAF2FB` | `#1168BD` |
+| Member Country | `#EAF6EC` | `#2E7D32` |
 | User Organisation | `#FFF3E0` | `#B26A00` |
 
-People and things outside every scope are grey (`#6B6B6B`). In C4 diagrams, organisations, bodies and software systems are blue (`#1168BD`) with white text.
+Other actors, responsible for no part of the system, are grey (`#6B6B6B`); a diagram groups them as *Other actors*. In C4 diagrams, organisations, bodies and software systems are blue (`#1168BD`) with white text.
 
 ## Create or edit a diagram
 

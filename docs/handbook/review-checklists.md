@@ -16,7 +16,7 @@ Comment in the pull request. Suggest concrete wording where you can (GitHub's *s
 - [ ] **Correct:** every claim matches its source; the governance references point to the right sections.
 - [ ] **Complete:** every question in the page's scope note is answered, or moved to another page with an issue.
 - [ ] **Traceable:** `governance_refs` lists every governance section the page implements, and the page cites them where they apply.
-- [ ] **Consistent:** scopes, actors and terms match the glossary and neighbouring pages. The page doesn't contradict an approved page or an ADR.
+- [ ] **Consistent:** responsible parties, actors and terms match the glossary and neighbouring pages. The page doesn't contradict an approved page or an ADR.
 - [ ] **Both axes covered:** where the page's content differs per type of use or per type of dataset (1+MG compliant, 1+MG cohort, externally governed), it says so. Nothing assumes a single path.
 - [ ] **Readable:** a non-specialist understands the *In short* box. Sentences are short. The first mention of each glossary term links to its glossary entry (or to the concept page that explains it), and the first use of each acronym is linked with `<Acronym>`. Diagrams have a sentence saying what they show.
 - [ ] **Diagrams:** each follows the [diagram rules](/handbook/diagrams): the notation is right and named in the legend, the section and the *Last edited* date are up to date, the alt text says what the diagram shows, and it reads well in dark mode and on a phone.
@@ -37,7 +37,7 @@ Comment in the pull request. Suggest concrete wording where you can (GitHub's *s
 
 ## Security advisor (`needs-security`)
 
-- [ ] Trust boundaries between scopes are clear, and each crossing is authenticated and encrypted.
+- [ ] Trust boundaries between responsible parties, and between operators, are clear, and each crossing is authenticated and encrypted.
 - [ ] Authentication and authorisation of natural persons and organisations are described, or linked to 8.4.
 - [ ] Logging, monitoring and incident handling are covered, or linked to 8.5 and 6.5.
 - [ ] Security requirements are measurable (link to chapter 10 scenarios).

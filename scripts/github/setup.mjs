@@ -79,7 +79,8 @@ function chapterKey(rel) {
   return null;
 }
 function scopeKey(rel) {
-  // Scopes are responsibility scopes of the building block view (chapter 5).
+  // The responsible party of a chapter 5 page: the Genome EDIC, the Member Country or the
+  // User Organisation (decision D-036). The label names keep the older "scope-" prefix.
   const m = rel.match(/05-building-block-view\/(european|national|user-organisation)\//);
   return m ? m[1] : null;
 }
@@ -150,9 +151,9 @@ function labels() {
     ['page', '1f5f8b', 'Write, review or update a page of the architecture'],
     ['documentation', '0075ca', 'Documentation work'],
     ['reader-question', 'd4c5f9', 'A question the documentation does not answer yet'],
-    ['scope-european', 'bfdadc', 'European scope (Genome EDIC)'],
-    ['scope-national', 'c2e0c6', 'National scope (Genome EDIC Member Country)'],
-    ['scope-user-organisation', 'fef2c0', 'User Organisation scope (User Organisation and its Users)'],
+    ['scope-european', 'bfdadc', 'Responsible party: the Genome EDIC'],
+    ['scope-national', 'c2e0c6', 'Responsible party: the Genome EDIC Member Country'],
+    ['scope-user-organisation', 'fef2c0', 'Responsible party: the User Organisation and its Users'],
     ['needs-dpo', 'e99695', 'Needs review by a data protection officer'],
     ['needs-security', 'e99695', 'Needs review by a security advisor'],
     ['needs-legal', 'e99695', 'Needs review by a legal expert'],

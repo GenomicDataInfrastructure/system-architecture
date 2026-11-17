@@ -46,7 +46,7 @@ flowchart LR
 
 **Who:** the architecture lead assigns them; the owner records them.
 
-1. The architecture lead assigns **one to three reviewers** per page from the taskforce, in the taskforce's assignment sheet, so that the load is spread and every page has someone who knows the subject. At least one should have written or reviewed a neighbouring page (same chapter or same scope).
+1. The architecture lead assigns **one to three reviewers** per page from the taskforce, in the taskforce's assignment sheet, so that the load is spread and every page has someone who knows the subject. At least one should have written or reviewed a neighbouring page (same chapter or same responsible party).
 2. Check the page's `audience`. If it includes `dpo`, `security`, `legal` or `elsi`, and the page makes claims in that area, a specialist reviews it too: add them to the assignment and the matching `needs-…` label to the issue.
 3. In the issue, add a *Review assignment* section that names the owner and each reviewer with their affiliation, and **assign the issue to the reviewers** who have a GitHub account, next to the owner. Reviewers then find their pages under *Assigned to me* and on the [taskforce board](https://github.com/orgs/GenomicDataInfrastructure/projects/12) (decision D-032).
 4. Set `reviewers` in the front matter, by name and affiliation: `reviewers: ["Rob Hooft (Health-RI)", "Wasiu Akanni (DKFZ)"]`; mark a specialist with "specialist" after the affiliation (decision D-029).
@@ -107,7 +107,7 @@ Early feedback on the outline is cheaper than rewriting a finished page.
 
 - **Start with the diagram or the table,** then explain it. Readers look at the picture first.
 - **Cite as you go.** Each claim that comes from the governance gets `<GovRef id="…" />`, and each claim from another source gets `<Cite id="…" />`. List every governance section you implement in `governance_refs`.
-- **Name the scope and the actor** for every component and every step.
+- **Name the responsible party and the actor** for every component and every step.
 - **Say what is not decided,** and what could go wrong. Record each open point, risk or piece of technical debt as an entry in [chapter 11](/risks), in this pull request, with its issue ([recipe](/handbook/recipes#risks-and-technical-debt)). On the page, mark it in a `:::caution[Open point]`, `:::caution[Risk]` or `:::caution[Technical debt]` box that links to its entry (decision D-023).
 - **Link, don't repeat.** If another page explains something, link to it.
 
@@ -123,7 +123,7 @@ If you use an AI assistant, give it `AGENTS.md`, the page file, and the sources 
 - [ ] Every question in the scope note is answered, or explicitly moved to another page.
 - [ ] `governance_refs` lists every governance section the page implements.
 - [ ] **Fits arc42:** the page covers what arc42 asks for its section, or the pull request says why not.
-- [ ] Every scope, actor and governance term matches the glossary. Its first mention on the page links to its glossary entry, and the first use of each acronym is linked with `<Acronym>`.
+- [ ] Every responsible party, actor and governance term matches the glossary. Its first mention on the page links to its glossary entry, and the first use of each acronym is linked with `<Acronym>`.
 - [ ] Open points, risks and technical debt are marked on the page, each linked to its entry in chapter 11, and each entry names its issue.
 - [ ] `npm run check` and `npm run build` pass. You checked the page in the local preview (`npm start`).
 - [ ] **Reader test:** give the page to someone outside the subject, or to an AI assistant with no other context, together with the questions from the page's reader guides. Fix what they got wrong.

@@ -25,7 +25,7 @@ The box with owner, reviewers, audiences and governance references is generated 
 
 | Pages | Recipe |
 |---|---|
-| Chapter overview pages (`index.md` of each chapter or scope) | [Chapter overview](#chapter-overview) |
+| Chapter overview pages (`index.md` of each chapter or responsible party) | [Chapter overview](#chapter-overview) |
 | 1.1, 1.3 | [Requirements and stakeholders](#requirements-and-stakeholders) |
 | 1.2, 10 | [Quality goals and quality scenarios](#quality-goals-and-quality-scenarios) |
 | 2.x | [Constraints](#constraints) |
@@ -47,13 +47,13 @@ arc42 may be customised (FAQ K-1). These departures are agreed, and don't need t
 
 | Where | arc42 | What we do, and why |
 |---|---|---|
-| The whole document | One arc42 per system; very large systems are split into modules linked together (FAQ J-1) | One arc42 for the Genome EDIC. Chapters 5 and 7 are split by scope and by level, and each Member Country describes its choices in a national implementation profile (decisions D-005, D-018). |
+| The whole document | One arc42 per system; very large systems are split into modules linked together (FAQ J-1) | One arc42 for the Genome EDIC. Chapter 5 is split by responsible party and chapter 7 by level, and each Member Country describes its choices in a national implementation profile (decisions D-005, D-018, D-036). |
 | Every page | Only the sections | An *In short* box, and a box with owner, reviewers, status and governance references. These help readers who aren't architects, and make review and traceability visible. |
 | 1.3 | A table *role · contact · expectations* | Contacts are roles, not named people: the Genome EDIC CC and each 1+MG NCP. The site is public. What readers need from the documentation is in the reader guides. |
 | Chapter 2 | Organisational and political constraints, technical constraints, conventions (FAQ C-2-2) | Pages by source: legal (2.1), governance (2.2), organisational (2.3), technical (2.4). The conventions (terminology, diagram notation, ADRs) are in this handbook, and the chapter overview links to them. |
-| 3.1 | The system as one black box; no internal components in the context view, except for large heterogeneous systems (FAQ C-3-3) | The system is shown with its European and national parts, so that the diagram shows which scope handles each exchange. |
+| 3.1 | The system as one black box; no internal components in the context view, except for large heterogeneous systems (FAQ C-3-3) | The system is shown with its European and national parts, so that the diagram shows which responsible party handles each exchange. |
 | 3.2 | Technical context; for information systems, often better in the deployment view (FAQ C-3-2) | Kept short: the channels and standards of each exchange. Hosting and networks are in chapter 7. |
-| 3.3 | Not an arc42 section | Added: the scopes of responsibility (decision D-018), because responsibility in the Genome EDIC doesn't follow the system boundary. |
+| 3.3 | Not an arc42 section | Added: the three responsible parties, the Genome EDIC, the Member Country and the User Organisation (decisions D-018, D-036), because responsibility in the Genome EDIC doesn't follow the system boundary. |
 | Chapter 11 | Risks and technical debt, ordered by priority | Also the register of open points and open questions (decision D-023). Open points are listed alphabetically within their group; risks and debt by priority. |
 | Chapter 12 | A table *term · definition* | One heading per term, so that each term has a stable anchor for links (decision D-022). The acronyms are a table. |
 
@@ -118,10 +118,10 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 
 **Headings:**
 
-1. **Context diagram** (a C4 system context diagram, see [Diagrams](/handbook/diagrams)): the system in the middle as one box, the people, organisations and external systems around it, one arrow per exchange. For 3.3, a diagram of the scopes and who belongs to each.
-2. **Table of partners:** *actor or external system · scope it talks to · what it sends · what it receives · governance section*.
+1. **Context diagram** (a C4 system context diagram, see [Diagrams](/handbook/diagrams)): the system in the middle as one box, the people, organisations and external systems around it, one arrow per exchange. For 3.3, a diagram of the responsible parties and who belongs to each.
+2. **Table of partners:** *actor or external system · responsible party it talks to · what it sends · what it receives · governance section*.
 3. For 3.2 only: **channels and protocols** per interface.
-4. For 3.3 only: **which governance actor operates which scope**, and how to read the scoped chapters 5 and 7.
+4. For 3.3 only: **which governance actor belongs to which responsible party**, and how to read chapters 5 and 7, which are split by responsible party and by level.
 
 **arc42:** 3.1 shows the system as a black box, and every communication partner with its domain inputs and outputs. Combine a diagram with a table, keep it at overview level, and group similar partners. 3.2 maps those exchanges to technical channels (docs.arc42.org/section-3, FAQ C-3-1 and C-3-2). Don't show internal components in the context view (FAQ C-3-3); for our agreed exception, see [Fit with arc42](#fit-with-arc42).
 
@@ -140,13 +140,13 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 **Headings:**
 
 1. **Responsibility:** what it does, in two or three sentences.
-2. **Operated by:** the governance actor and the scope (European, national or User Organisation). Say when a 1+MG IT infrastructure provider operates it on the actor's behalf.
+2. **Operated by:** the governance actor and its responsible party (the Genome EDIC, the Member Country or the User Organisation). Say when a 1+MG IT infrastructure provider operates it on the actor's behalf.
 3. **Interfaces:** a table *interface · provided or required · partner · standard or protocol · data exchanged*.
 4. **Data it handles:** personal data? Which categories? Stored, or only passed through? Which retention?
 5. **Quality and security needs:** link to the relevant quality scenarios and concepts in chapter 8.
 6. **Governance requirements:** for each `GovRef`, one line on how this component meets it.
 7. **Differences per type of dataset** (1+MG compliant, 1+MG cohort, externally governed), where there are any. See [8.12 Types of dataset](/concepts/dataset-types).
-8. **Reference implementation:** the matching GDI Starter Kit component (national scope) or GDI central service (European scope). A country that uses other tools must meet the interfaces above (decisions D-007, D-020).
+8. **Reference implementation:** the matching GDI Starter Kit component (Member Country) or GDI central service (Genome EDIC). A country that uses other tools must meet the interfaces above (decisions D-007, D-020).
 9. **Open points,** each linked to its entry in [chapter 11](/risks#open-points).
 
 **arc42:** each building block is described as a *black box*: purpose and responsibility, interfaces, quality and performance characteristics, location (for us, the reference implementation), the requirements it fulfils, and open issues (docs.arc42.org/section-5). The headings above follow that template.
@@ -160,9 +160,9 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 **Headings:**
 
 1. **Trigger and outcome:** what starts the scenario, and what is true at the end.
-2. **Actors and building blocks involved,** with their scope.
-3. **Sequence diagram** (UML notation, see [Diagrams](/handbook/diagrams)). Each participant is an actor or a building block, with its scope in brackets: for example *1+MG User Portal (European)* or *1+MG Data Host (national)*.
-4. **Steps:** a table *# · step · actor · building block · scope · governance section · personal data involved?*
+2. **Actors and building blocks involved,** with their responsible party.
+3. **Sequence diagram** (UML notation, see [Diagrams](/handbook/diagrams)). Each participant is an actor or a building block, with its responsible party in brackets: for example *1+MG User Portal (Genome EDIC)* or *1+MG Data Host (Member Country)*.
+4. **Steps:** a table *# · step · actor · building block · responsible party · governance section · personal data involved?*
 5. **Alternatives and exceptions:** refusal, withdrawal of consent, errors.
 6. **Data protection notes:** what is minimised, logged, or checked in this scenario, with links to chapter 8.
 7. **Differences per type of use** (research, policy development, QM, healthcare reuse), where there are any.
@@ -181,7 +181,7 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 1. **Deployment diagram** (a C4 deployment diagram, see [Diagrams](/handbook/diagrams)), with the central, national and local levels.
 2. **Nodes:** a table *node · hosted by · building blocks deployed · security zone*.
 3. For 7.2: **deployment patterns.** For each pattern: when it fits (national situation), pros, cons, and an example country, if one is willing to be named.
-4. **Trust boundaries and network connections** between scopes.
+4. **Trust boundaries and network connections** between responsible parties and between operators.
 
 **arc42:** the infrastructure in levels (level 1: locations and environments; level 2: inside selected nodes), and which building blocks run where, with the reasons (docs.arc42.org/section-7). Say which environments each level needs (for example test and production) where it matters.
 
