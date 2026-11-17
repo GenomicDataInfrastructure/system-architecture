@@ -20,7 +20,7 @@ last_reviewed:
 
 ## What this page must answer
 
-- Rules that apply across all scopes and building blocks.
+- Rules that apply to all responsible parties and building blocks.
 
 ## Sources to start from
 

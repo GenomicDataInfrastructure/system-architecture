@@ -1,8 +1,8 @@
 ---
-title: "5.1 European scope"
-sidebar_label: "5.1 European scope"
+title: "5.1 Genome EDIC"
+sidebar_label: "5.1 Genome EDIC"
 sidebar_position: 1
-slug: /building-blocks/european
+slug: /building-blocks/genome-edic
 owner: TBD
 reviewers: []
 status: placeholder
@@ -20,7 +20,7 @@ last_reviewed:
 
 ## What this page must answer
 
-- Level 2 of the European scope: the services of the Genome EDIC, operated by the Genome EDIC CC, including the support for the 1+MG DAC.
+- Level 2 of the Genome EDIC: the services of the Genome EDIC, operated by the Genome EDIC CC, including the support for the 1+MG DAC.
 
 ## Sources to start from
 

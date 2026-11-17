@@ -28,7 +28,7 @@ type Section = {
   printed_as?: string;
   actor?: string;
   applies_to?: string[];
-  scopes?: string[];
+  parties?: string[];
 };
 
 const PAGES = pages as Page[];
@@ -69,9 +69,9 @@ function AppliesTo({qualifiers}: {qualifiers?: string[]}) {
   );
 }
 
-const SCOPE_LABEL: Record<string, string> = {
-  european: 'European',
-  national: 'National',
+const PARTY_LABEL: Record<string, string> = {
+  'genome-edic': 'Genome EDIC',
+  'member-country': 'Member Country',
   'user-organisation': 'User Organisation',
 };
 
@@ -110,7 +110,7 @@ export function TraceabilityMatrix() {
             <th>DG section</th>
             <th>Title</th>
             <th>Applies to</th>
-            <th>Scope</th>
+            <th>Responsible party</th>
             <th>Implemented in</th>
           </tr>
         </thead>
@@ -130,7 +130,7 @@ export function TraceabilityMatrix() {
                 <td>
                   <AppliesTo qualifiers={s.applies_to} />
                 </td>
-                <td>{(s.scopes ?? []).map((x) => SCOPE_LABEL[x] ?? x).join(', ')}</td>
+                <td>{(s.parties ?? []).map((x) => PARTY_LABEL[x] ?? x).join(', ')}</td>
                 <td>
                   {impl.map((p, i) => (
                     <span key={p.slug} className={hasContent(p) ? undefined : 'muted'}>

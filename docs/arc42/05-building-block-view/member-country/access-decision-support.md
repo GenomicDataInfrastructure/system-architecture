@@ -1,7 +1,7 @@
 ---
 title: "5.2.2 Access review and decision support"
 sidebar_position: 2
-slug: /building-blocks/national/access-decision-support
+slug: /building-blocks/member-country/access-decision-support
 owner: TBD
 reviewers: []
 status: placeholder

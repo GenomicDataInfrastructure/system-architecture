@@ -1,7 +1,7 @@
 ---
 title: "5.1.3 User Organisation registry"
 sidebar_position: 3
-slug: /building-blocks/european/user-organisation-registry
+slug: /building-blocks/genome-edic/user-organisation-registry
 owner: TBD
 reviewers: []
 status: placeholder

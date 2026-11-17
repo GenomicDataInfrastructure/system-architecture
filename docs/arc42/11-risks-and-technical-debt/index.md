@@ -115,7 +115,7 @@ Work outside this architecture that it depends on.
 
 #### EHDS requirements for health data access applications {#ehds-access-applications}
 
-- **What is open:** under the European Health Data Space (<Acronym id="EHDS" />), the requirements for health data access applications are still under discussion. The European Commission will set them in implementing decisions <GovRef id="VII.3.3" />. The access request form of the [1+MG User Portal](/building-blocks/european/user-portal-and-catalogue) must integrate into the EHDS form <GovRef id="VII.3.1" />.
+- **What is open:** under the European Health Data Space (<Acronym id="EHDS" />), the requirements for health data access applications are still under discussion. The European Commission will set them in implementing decisions <GovRef id="VII.3.3" />. The access request form of the [1+MG User Portal](/building-blocks/genome-edic/user-portal-and-catalogue) must integrate into the EHDS form <GovRef id="VII.3.1" />.
 - **Why it matters:** the 1+MG access request form may have to change when these requirements are set.
 - **Tracked in:** [issue #106](https://github.com/GenomicDataInfrastructure/system-architecture/issues/106).
 

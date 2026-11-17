@@ -1,7 +1,7 @@
 ---
 title: "5.1.4 Transparency and reporting services"
 sidebar_position: 4
-slug: /building-blocks/european/transparency-and-reporting
+slug: /building-blocks/genome-edic/transparency-and-reporting
 owner: TBD
 reviewers: []
 status: placeholder

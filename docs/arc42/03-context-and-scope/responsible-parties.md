@@ -1,7 +1,7 @@
 ---
 title: "3.3 European, national and User Organisation scopes"
 sidebar_position: 3
-slug: /context/scopes
+slug: /context/responsible-parties
 owner: TBD
 reviewers: []
 status: placeholder

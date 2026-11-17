@@ -1,7 +1,7 @@
 ---
 title: "5.2.6 Data transformation and documentation"
 sidebar_position: 6
-slug: /building-blocks/national/data-transformation
+slug: /building-blocks/member-country/data-transformation
 owner: TBD
 reviewers: []
 status: placeholder

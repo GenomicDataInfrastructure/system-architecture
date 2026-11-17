@@ -1,7 +1,7 @@
 ---
 title: "5.2.4 Data subject services"
 sidebar_position: 4
-slug: /building-blocks/national/data-subject-services
+slug: /building-blocks/member-country/data-subject-services
 owner: TBD
 reviewers: []
 status: placeholder

@@ -79,9 +79,11 @@ function chapterKey(rel) {
   return null;
 }
 function scopeKey(rel) {
-  // Scopes are responsibility scopes of the building block view (chapter 5).
-  const m = rel.match(/05-building-block-view\/(european|national|user-organisation)\//);
-  return m ? m[1] : null;
+  // The responsible party of a chapter 5 page: the Genome EDIC, the Member Country or the
+  // User Organisation (decision D-036).
+  const m = rel.match(/05-building-block-view\/(genome-edic|member-country|user-organisation)\//);
+  // Label names keep the older words: scope-european, scope-national, scope-user-organisation.
+  return m ? {'genome-edic': 'european', 'member-country': 'national', 'user-organisation': 'user-organisation'}[m[1]] : null;
 }
 
 /** Anchor of the page recipe in docs/handbook/recipes.md that fits this page. */
@@ -121,7 +123,7 @@ function trackedPages() {
   const rank = (f) => (f.includes('/arc42/') ? 0 : f.includes('/readers/') ? 1 : 2);
   const key = (p) => [
     rank(p.rel),
-    path.dirname(p.rel).replace('/european', '/1').replace('/national', '/2').replace('/user-organisation', '/3'),
+    path.dirname(p.rel).replace('/genome-edic', '/1').replace('/member-country', '/2').replace('/user-organisation', '/3'),
     path.basename(p.rel).startsWith('index.') ? 0 : 1,
     Number(p.data.sidebar_position ?? 99),
   ];
@@ -150,9 +152,9 @@ function labels() {
     ['page', '1f5f8b', 'Write, review or update a page of the architecture'],
     ['documentation', '0075ca', 'Documentation work'],
     ['reader-question', 'd4c5f9', 'A question the documentation does not answer yet'],
-    ['scope-european', 'bfdadc', 'European scope (Genome EDIC)'],
-    ['scope-national', 'c2e0c6', 'National scope (Genome EDIC Member Country)'],
-    ['scope-user-organisation', 'fef2c0', 'User Organisation scope (User Organisation and its Users)'],
+    ['scope-european', 'bfdadc', 'Responsible party: the Genome EDIC'],
+    ['scope-national', 'c2e0c6', 'Responsible party: the Genome EDIC Member Country'],
+    ['scope-user-organisation', 'fef2c0', 'Responsible party: the User Organisation and its Users'],
     ['needs-dpo', 'e99695', 'Needs review by a data protection officer'],
     ['needs-security', 'e99695', 'Needs review by a security advisor'],
     ['needs-legal', 'e99695', 'Needs review by a legal expert'],

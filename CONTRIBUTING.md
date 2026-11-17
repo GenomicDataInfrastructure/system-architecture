@@ -58,7 +58,7 @@ The full step-by-step version, with who does what and when each step is done, is
 - Link the first mention of each glossary term on a page to its entry: `[1+MG Data Holder](/glossary#1mg-data-holder)`. Readers often land on a page directly, and these terms say who is responsible. Where a concept page explains a term in more depth, link to it instead (the types of dataset link to 8.12). Leave headings and the *In short* box without links (decision D-022).
   - The anchor is the glossary heading in lower case, with spaces turned into hyphens and other characters dropped: *1+MG Data Holder* → `1mg-data-holder`. `npm run build` fails on a link to an anchor that doesn't exist.
 - Link the first use of each acronym on a page with `<Acronym id="SPE" />`: readers see its meaning as a tooltip, and it links to the glossary's acronym table. Add new acronyms to `src/data/acronyms.json` (decision D-021). `<Acronym>` is for acronyms only; an acronym inside a glossary term (*1+MG NCP*) is covered by the term's link.
-- Say which scope (European, national, User Organisation) a component or step belongs to. In chapter 7, say at which level (central, national, local) it runs.
+- Say which responsible party (the Genome EDIC, the Member Country, the User Organisation) a component or step belongs to (decision D-036). In chapter 7, say at which level (central, national, local) it runs.
 - Prefer a diagram plus a short text over long prose. Diagrams follow the [diagram rules](https://genomicdatainfrastructure.github.io/system-architecture/handbook/diagrams) (decision D-019): draw.io, a white background, and a legend with the section and the date of the last edit. Run `npm run diagrams` after editing one.
 - Record open points and open questions, risks and technical debt in [chapter 11](https://genomicdatainfrastructure.github.io/system-architecture/risks), in the same pull request that raises them: one entry each, with a fixed anchor. On the page, mark each point in a `:::caution[Open point]`, `:::caution[Risk]` or `:::caution[Technical debt]` box that links to its entry (`[chapter 11](/risks#dataset-type-choice)`). Only the entry links to the GitHub issue. `npm run check` enforces the links (decision D-023). The [page recipe](https://genomicdatainfrastructure.github.io/system-architecture/handbook/recipes#risks-and-technical-debt) gives the format of an entry.
   - If two pull requests add entries at the same place in chapter 11, Git reports a conflict. Keep both entries.
@@ -71,7 +71,7 @@ Every issue title starts with its main label in square brackets, `[label] Title`
 
 | Kind | Title | Labels | Template |
 |---|---|---|---|
-| A page or an ADR | `[page] <page title>` | `page`, chapter, wave, scope | *Page task* |
+| A page or an ADR | `[page] <page title>` | `page`, chapter, wave, party | *Page task* |
 | An open point, open question or dependency (chapter 11) | `[open-point] <title>` | `open-point`, `chapter-11` | *Open point* |
 | A risk (chapter 11) | `[risk] <title>` | `risk`, `chapter-11` | *Risk* |
 | An action point from a taskforce meeting | `[action] <title>` | `action` | *Action point* |
@@ -79,7 +79,7 @@ Every issue title starts with its main label in square brackets, `[label] Title`
 
 ## Page issues
 
-Every page has one GitHub issue, titled `[page] <page title>`. Its labels give the chapter, scope, wave and any specialist review (`needs-dpo`, `needs-security`, `needs-legal`, `needs-elsi`). Useful searches:
+Every page has one GitHub issue, titled `[page] <page title>`. Its labels give the chapter, responsible party, wave and any specialist review (`needs-dpo`, `needs-security`, `needs-legal`, `needs-elsi`). Useful searches:
 
 | To find | Search in *Issues* |
 |---|---|
@@ -89,7 +89,7 @@ Every page has one GitHub issue, titled `[page] <page title>`. Its labels give t
 | Open points and risks | `is:issue is:open label:open-point,risk` |
 | The pages of a wave | `is:issue is:open label:page label:wave-1` |
 | The pages of a chapter | `is:issue label:page label:chapter-06` |
-| The pages of a scope | `is:issue label:page label:scope-national` |
+| The pages of a responsible party | `is:issue label:page label:scope-national` |
 | Pages waiting for a DPO review | `is:issue is:open label:needs-dpo` |
 
 The issue's assignees are the owner and the reviewers of the page; its *Review assignment* section says who is who (decision D-032). The [taskforce board](https://github.com/orgs/GenomicDataInfrastructure/projects/12) shows the pages of the active waves, the pull requests and the action points.
