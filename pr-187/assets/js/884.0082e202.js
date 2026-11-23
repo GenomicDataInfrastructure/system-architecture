@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunksystem_architecture||=[]).push([[884],{884(e,r,s){s.d(r,{createTreemapServices:()=>a.d});var a=s(6527);s(4954)}}]);
