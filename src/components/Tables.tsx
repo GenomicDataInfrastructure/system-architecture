@@ -29,6 +29,7 @@ type Section = {
   actor?: string;
   applies_to?: string[];
   parties?: string[];
+  pdf_page?: number;
 };
 
 const PAGES = pages as Page[];
@@ -121,7 +122,7 @@ export function TraceabilityMatrix() {
             return (
               <tr key={s.id} id={govAnchor(s.id)} className={`trace-level-${s.level}`}>
                 <td className="nowrap">
-                  <Link href={withBaseUrl(govHref(s.id))} target="_blank" rel="noopener" title={`Open section ${s.id} in the published document`}>{s.id}</Link>
+                  <Link href={withBaseUrl(govHref(s.id))} target="_blank" rel="noopener" title={`Open section ${s.id} in the published document${s.pdf_page ? `, page ${s.pdf_page} of the PDF` : ''}`}>{s.id}</Link>
                 </td>
                 <td>
                   {s.title.replace(QUALIFIERS, '').trim()}

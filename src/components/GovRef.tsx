@@ -21,7 +21,8 @@ export default function GovRef({id, long = false}: {id: string; long?: boolean})
     return <span className="govref govref--unknown" title="Unknown governance section">DG {id} (?)</span>;
   }
   const printed = section.printed_as ? ` (numbered ${section.printed_as} in the published document)` : '';
-  const tooltip = `1+MG Data Governance (version ${governance.version}), section ${id}${printed}: ${section.title}`;
+  const page = section.pdf_page ? `, page ${section.pdf_page} of the PDF` : '';
+  const tooltip = `1+MG Data Governance (version ${governance.version}), section ${id}${printed}: ${section.title}${page}`;
   return (
     <Link className="govref" href={useBaseUrl(govHref(id))} target="_blank" rel="noopener" title={tooltip}>
       DG {id}
@@ -38,7 +39,9 @@ export function govSection(id: string): Section | undefined {
 export function govHref(id: string): string {
   const section = byId.get(id);
   if (!section?.pdf_page) return `/appendix/traceability#${govAnchor(id)}`;
-  // nameddest jumps to the heading in viewers that support it (Chrome, Edge, Firefox); page is the fallback.
+  // nameddest jumps to the heading in viewers that support it (Edge, Firefox); Chrome ignores it and uses page.
+  // PDF viewers outside the browser (Adobe Acrobat and its Chrome extension, macOS Preview) may ignore both;
+  // the tooltip then gives the page to go to.
   const dest = section.pdf_dest ? `&nameddest=${section.pdf_dest}` : '';
   return `${governance.pdf_url}#page=${section.pdf_page}${dest}`;
 }
