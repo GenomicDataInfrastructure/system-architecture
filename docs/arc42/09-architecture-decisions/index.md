@@ -31,24 +31,5 @@ last_reviewed:
 | ADR | Title | Status |
 |---|---|---|
 | [ADR-0001](/decisions/0001-record-architecture-decisions) | Record architecture decisions | Proposed |
-| [ADR-0004](/decisions/0004-identity-and-authorisation) | Identity federation and authorisation across scopes | To be decided (wave 3) |
-| [ADR-0005](/decisions/0005-identity-link-and-key-coded-identifiers) | Where the link between identity and key-coded identifiers is held | To be decided (wave 3) |
-| [ADR-0006](/decisions/0006-trust-boundaries) | Trust boundaries between operators and what each crossing requires | To be decided (wave 3) |
-| [ADR-0007](/decisions/0007-catalogue-metadata-and-federation) | Catalogue metadata standard and how catalogues are federated | To be decided (wave 3) |
-| [ADR-0008](/decisions/0008-connection-to-healthdata-eu) | How the system connects to HealthData@EU | To be decided (wave 3) |
 
-ADR-0002 (types of dataset) and ADR-0003 (building the system in steps) were withdrawn on 4 November 2026 (decision D-034). Who chooses the type of a dataset is an open point in [chapter 11](/risks#dataset-type-choice); how the system grows is part of [chapter 4](/solution-strategy). Their numbers are not reused.
-
-## Candidate decisions to record
-
-These choices are already made in the governance or in GDI. They should become ADRs so that their reasons are visible:
-
-- Consent (or a specific legislative act) as the legal basis for making data available <GovRef id="III" />.
-- Federated processing in national SPEs instead of pooling data centrally <GovRef id="II.2" />.
-- No download of personal data; only non-personal results leave the SPE <GovRef id="II.2" />.
-- "Key-coded identifier" instead of "pseudonym" <GovRef id="I" />.
-- Interfaces first: components described by function, interfaces and standards, with the GDI Starter Kit and the GDI central services as reference implementation (documentation decisions D-007, D-020).
-
-:::note[Placeholder]
-This page has no content yet. The owner replaces this note and the questions above with the content.
-:::
+ADR-0002 to ADR-0010 were withdrawn on 4 November 2026: an ADR is written only when the answer to an open question, or the mitigation of a risk, changes the architecture. Their questions are open points in [chapter 11](/risks), and their content moved to the pages concerned. Their numbers are not reused.

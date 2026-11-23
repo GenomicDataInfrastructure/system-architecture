@@ -176,7 +176,7 @@ Results about a data subject's health that a User finds by chance, while working
 
 ### Key-coded identifier
 
-The identifier that replaces a data subject's name and other direct identifiers in the data. The link back to the person is held nationally, and each Member Country enables it <GovRef id="V.2.4" />. Data with key-coded identifiers are pseudonymised data under the GDPR (Art. 4(5)), and so still personal data. This documentation uses the governance's term, "key-coded identifier", and not "pseudonym". Where the link is held is decided in [ADR-0005](/decisions/0005-identity-link-and-key-coded-identifiers); see [8.7](/concepts/identifiers-and-linkage). _Summary._
+The identifier that replaces a data subject's name and other direct identifiers in the data. The link back to the person is held nationally, and each Member Country enables it <GovRef id="V.2.4" />. Data with key-coded identifiers are pseudonymised data under the GDPR (Art. 4(5)), and so still personal data. This documentation uses the governance's term, "key-coded identifier", and not "pseudonym". Where the link is held is a national choice, and its interfaces are open ([chapter 11](/risks#identity-link-interfaces)); see [8.7](/concepts/identifiers-and-linkage). _Summary._
 
 ### 1+MG minimum dataset
 
@@ -218,7 +218,7 @@ What the Genome EDIC and the Genome EDIC Member Countries run, and the bodies th
 
 ### Identity federation
 
-A service that connects the sign-in services of many organisations, so that Users sign in with their own organisation's account and the system receives their identity and affiliation. See [ADR-0004](/decisions/0004-identity-and-authorisation) and [8.4](/concepts/identity-and-access). _Architecture term._
+A service that connects the sign-in services of many organisations, so that Users sign in with their own organisation's account and the system receives their identity and affiliation. See [chapter 11](/risks#identity-and-authorisation) and [8.4](/concepts/identity-and-access). _Architecture term._
 
 ### National implementation profile
 
@@ -230,7 +230,7 @@ Software that implements a component's interfaces and that Member Countries may 
 
 ### Trust boundary
 
-A line between two operators, or two responsible parties, that data or requests cross. Each crossing is authenticated and encrypted. See [ADR-0006](/decisions/0006-trust-boundaries) and [8.3](/concepts/security). _Architecture term._
+A line between two operators, or two responsible parties, that data or requests cross. Each crossing is authenticated and encrypted. See [chapter 11](/risks#trust-boundary-requirements) and [8.3](/concepts/security). _Architecture term._
 
 ## Legal terms from the GDPR and the EHDS
 
