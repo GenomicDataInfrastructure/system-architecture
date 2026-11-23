@@ -123,6 +123,7 @@ If you use an AI assistant, give it `AGENTS.md`, the page file, and the sources 
 - [ ] Every question in the scope note is answered, or explicitly moved to another page.
 - [ ] `governance_refs` lists every governance section the page implements.
 - [ ] **Fits arc42:** the page covers what arc42 asks for its section, or the pull request says why not.
+- [ ] Other chapters are named by chapter, linked to their overview, and no page links to a single page of another chapter or to an ADR (decision D-038); `npm run check` shows no warning for the page.
 - [ ] Every responsible party, actor and governance term matches the glossary. Its first mention on the page links to its glossary entry, and the first use of each acronym is linked with `<Acronym>`.
 - [ ] Open points, risks and technical debt are marked on the page, each linked to its entry in chapter 11, and each entry names its issue.
 - [ ] `npm run check` and `npm run build` pass. You checked the page in the local preview (`npm start`).
