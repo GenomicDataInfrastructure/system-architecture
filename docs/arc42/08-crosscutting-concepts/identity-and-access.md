@@ -24,7 +24,7 @@ last_reviewed:
 
 ## Sources to start from
 
-- Builds on [ADR-0004 Identity federation and authorisation across responsible parties](/decisions/0004-identity-and-authorisation), decided in wave 3 (decision D-027).
+- Builds on the answer to the open question [How Users are authenticated and authorised](/risks#identity-and-authorisation) in chapter 11.
 - Governance: <GovRef id="VII.1.3" />, <GovRef id="VIII.3.1" />
 - Other: <Cite id="gdi-starter-kit" />
 

@@ -19,7 +19,7 @@
       "id": 3,
       "target": "to be set",
       "name": "Structure",
-      "goal": "Draw the outline: technical context, technical constraints, the crosscutting decisions that shape the structure (ADR-0004 to ADR-0008: identity, identity link, trust boundaries, catalogue metadata, HealthData@EU connection), level-1 building blocks and the overviews per responsible party.",
+      "goal": "Draw the outline: technical context, technical constraints, the crosscutting open questions that shape the structure (chapter 11: identity, identity link, trust boundaries, catalogue metadata, HealthData@EU connection), level-1 building blocks and the overviews per responsible party.",
       "depends_on": [1, 2]
     },
     {
