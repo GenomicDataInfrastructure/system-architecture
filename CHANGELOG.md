@@ -41,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- 3.3 folds into 3.1 (decision D-037): the page recipes, the diagram rules and the writing order no longer list 3.3, and the example diagram is `3.1-responsible-parties.drawio.svg`. Wave 1 moves the content of 3.3 to 3.1 and removes the page.
 - Responsible parties instead of scopes (decision D-036, refines D-018): the architecture names who is responsible (the Genome EDIC, the Genome EDIC Member Country, the User Organisation) instead of the European, national and User Organisation scopes. AGENTS.md, CONTRIBUTING, the handbook (diagram colours, recipes, checklists), the placeholders of chapter 5, 7.1, 8.4 and ADR-0004, the traceability table (column *Responsible party*, field `parties` in `src/data/governance.json`) and the issue label descriptions follow. Page files, URLs and diagram file names follow: 3.3 is now at `/context/responsible-parties`, chapter 5 at `/building-blocks/genome-edic` and `/building-blocks/member-country`. Issue label names stay. The wave branches apply the rename to their pages when they next merge `main`.
 - Review assignment per page (decision D-029): `owner` and `reviewers` give names and affiliations instead of GitHub accounts; the architecture lead assigns the reviewers of each page; reviewers with a GitHub account are requested on the pull request, the others review the Word export. CONTRIBUTING, the page choreography (steps 2 and 9), *Drafting and review roles* and the ADR template are updated.
 

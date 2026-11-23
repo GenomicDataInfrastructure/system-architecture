@@ -4,7 +4,7 @@
 // (uncompressed), no embedded fonts. Run it after editing a diagram. Needs the draw.io desktop app.
 //
 //   npm run diagrams                          every diagram
-//   npm run diagrams -- 3.3-responsible-parties.drawio.svg one diagram
+//   npm run diagrams -- 3.1-responsible-parties.drawio.svg one diagram
 //
 // Set DRAWIO to the draw.io executable if it is not found automatically.
 
