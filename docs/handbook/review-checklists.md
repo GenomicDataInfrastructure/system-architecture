@@ -48,7 +48,7 @@ Comment in the pull request. Suggest concrete wording where you can (GitHub's *s
 
 - [ ] Every legal act cited is correct, and its status (adopted or draft) is stated.
 - [ ] Responsibilities match the governance and the legal acts. No actor gets a task that the law gives to another.
-- [ ] Access decisions are attributed to the right actor: the 1+MG Data Holder for 1+MG compliant data, the Genome EDIC for 1+MG cohort data ([ADR-0002](/decisions/0002-disclosure-paths-per-dataset)).
+- [ ] Access decisions are attributed to the right actor: the 1+MG Data Holder for 1+MG compliant data, the Genome EDIC CC for 1+MG cohort data (decision on behalf of the Genome EDIC, the controller).
 - [ ] Contracts and agreements (terms of use, data use agreement, data processing agreements) are named where they apply.
 - [ ] Draft or undecided legal points are marked as such.
 
