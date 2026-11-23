@@ -28,6 +28,12 @@ A review round lets every reviewer comment on the same text, and gives the write
 4. **The round has a review date, and closes when it has passed.** The comment that opens the round gives the date. Every reviewer answers by then: with comments, an approval, or "no comments". "Every reviewer" means the reviewers named in the front matter of the wave's pages, specialists included; each answers for their own pages. If a reviewer hasn't answered by the review date, the architecture lead decides whether to wait or to close the round without them, and says so on the pull request. The architecture lead may move the review date; the opening comment then says so.
 5. **Only after the review date does the writer react,** even if every reviewer answered earlier, so that a late reviewer still reads the same text and nobody reads a half-fixed page (decision D-033). The writer answers all comments of the round together: fixed, recorded as an open point in chapter 11, or declined with a reason. A comment on the pull request closes the round with every comment, its reviewer, what happened to it, and the commit that handles it.
 6. **The next round starts from the new version.** Human review has two rounds at most; after that, the architecture lead decides ([choreography](/handbook/choreography), step 9).
+   - **One draft pull request per theme,** into the wave's branch. Comments that touch the same question form a theme. Each pull request quotes, with a link, the comments it answers, and has one commit. The architecture lead reviews it before it is merged, with a merge commit.
+   - **A reply in every thread** once its theme is merged: what changed, with a link to the commit, or why not.
+   - **No rewriting after review.** Changes reviewers have seen are never amended or force-pushed: a correction is a new commit.
+   - **The reviewers of each page** are those who answered in the round. A reviewer who didn't answer is taken off the page's `reviewers`, and comes back on it when they review in a later round. A page left with no reviewer gets one from the architecture lead.
+   - The round may close at the taskforce meeting, so that what is still open is settled there.
+7. **A close-out pull request ends the wave.** After the last round, it sets the pages to approved and adds their owner and reviewers to `CONTRIBUTORS.md`; the reviewers approve it on GitHub ([choreography](/handbook/choreography), step 10; decision D-040).
 
 ## Reviewing in Word or Google Docs {#reviewing-in-word}
 
@@ -121,7 +127,7 @@ A role that finds nothing says so.
 
 ## Rules for AI-assisted drafting
 
-- A person is the `owner` of every page and answers for it. Only a human reviewer sets `status: approved`.
+- A person is the `owner` of every page and answers for it. Only human reviewers approve a page: they approve the close-out pull request of its wave (decision D-040).
 - Every claim is traceable to a cited source. An agent that can't find a source for a claim marks it as an open point instead of guessing.
 - The source collection is kept outside the repository. Pages cite the public record (Zenodo or official URL), never a local file. Drafts and internal documents in the collection are background only, unless the taskforce agrees to cite them.
 - Sources are summarised in our own words. Only definitions and short passages are quoted, with attribution.

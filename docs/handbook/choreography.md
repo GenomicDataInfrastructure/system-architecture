@@ -145,12 +145,13 @@ If you use an AI assistant, give it `AGENTS.md`, the page file, and the sources 
 
 ## 10. Approve and merge
 
-**Who:** a reviewer.
+**Who:** the architecture lead opens a close-out pull request; the reviewers approve it.
 
-1. On the pull request branch, set `status: approved` and `last_reviewed: <today>`, and commit.
-2. Approve the pull request. Once CI passes, merge it. This closes the issue.
+1. After the last review round of the wave, the architecture lead opens a **close-out pull request** into the wave's branch. It changes no text. It sets `status: approved` and `last_reviewed: <date>` on each page whose reviewers have no more comments, and adds the wave's owner and reviewers to `CONTRIBUTORS.md`, with the pages they reviewed.
+2. The reviewers of each page approve the close-out pull request on GitHub. This is their approval of the page, with its date. A reviewer who doesn't use GitHub approves by e-mail, and the architecture lead says so on the pull request.
+3. The close-out pull request is merged into the wave's branch. Then the architecture lead merges the wave's pull request into `main`, with a merge commit that has a `Co-authored-by:` line for each reviewer of the wave (decision D-040). This closes the page issues.
 
-**Done when:** the pull request is merged. The page shows *Approved* on the site.
+**Done when:** the wave's pull request is merged. The pages show *Approved* on the site, and their reviewers are in `CONTRIBUTORS.md`.
 
 ## 11. Follow-up
 

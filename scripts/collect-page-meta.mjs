@@ -156,6 +156,21 @@ for (const p of crossRefs) {
   }
 }
 
+// Credit (decision D-040): the owner and the reviewers of every approved page are listed in
+// CONTRIBUTORS.md, which the close-out pull request of each wave updates. Names are matched without
+// the affiliation in brackets.
+const approved = pages.filter((p) => p.status === 'approved');
+if (approved.length) {
+  const file = path.join(ROOT, 'CONTRIBUTORS.md');
+  const credits = fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : '';
+  for (const p of approved) {
+    for (const person of [p.owner, ...p.reviewers]) {
+      const name = String(person).replace(/\s*\(.*\)\s*$/, '').trim();
+      if (name && !credits.includes(name)) errors.push(`${p.file}: ${name} is not in CONTRIBUTORS.md; add the wave's owner and reviewers in its close-out pull request (decision D-040)`);
+    }
+  }
+}
+
 fs.writeFileSync(OUT, JSON.stringify(pages, null, 1) + '\n');
 console.log(`collect-page-meta: ${pages.length} pages written to ${path.relative(ROOT, OUT)}`);
 
