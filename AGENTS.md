@@ -25,6 +25,7 @@ Primary audience: implementers. Also read by ministries, legal experts, ELSI spe
 | `src/data/sources.json` | Source register (IDs for `<Cite>`) | A new source is cited |
 | `src/data/acronyms.json` | Acronyms and their meaning (IDs for `<Acronym>`; generates the glossary's acronym table) | A new acronym is used |
 | `static/diagrams/` | Diagrams (draw.io, `.drawio.svg`), shown with `<Diagram>`; rules in `docs/handbook/diagrams.md` | A diagram is added or changed |
+| `CONTRIBUTORS.md` | Owners and reviewers of the approved pages, by wave (created with the first close-out pull request) | A wave is approved (decision D-040) |
 
 Files outside `docs/` are not published on the site.
 
@@ -56,4 +57,4 @@ When you help write a page, follow the steps in `docs/handbook/choreography.md` 
 - The HealthData@EU implementing regulation is a Commission **draft** (Ref. Ares(2026)8339104), published for feedback on the Have your say portal: https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16155-European-Health-Data-Space-technical-requirements-for-HealthData@EU_en. Cite it as a draft with `<Cite id="hdeu-ia-draft" />` (decisions D-008, D-017). Do not copy its text into this repository; link to it.
 - The governance master document is **published** under CC BY 4.0 as the annex of GDI D2.4 (decision D-016). Cite the document with `<Cite id="dg" />` and its sections by number with `<GovRef>`, never by page. Summarise in your own words, and quote only definitions and short passages, with attribution. The published document numbers the overview section as "I."; its ID here is `IV`.
 - The published governance has no "under discussion" marking. Where a section says a point is still open (for example "to be discussed" or "still to be clarified"), record it in chapter 11 as an open point in the governance (rule 10) and do not present it as settled.
-- Do not change a page's `status` to `approved` yourself; only a reviewer does that, in a pull request.
+- Do not change a page's `status` to `approved` yourself. Pages are approved only in the close-out pull request of their wave, which the architecture lead asks for and the page's reviewers approve on GitHub (decision D-040).

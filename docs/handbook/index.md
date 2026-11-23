@@ -54,5 +54,5 @@ The [Document status](/appendix/document-status) and [Writing order](/handbook/w
   5. Action points and next meeting
 
   The links: the rolling minutes and the meeting folder (Google Drive), the [taskforce board](https://github.com/orgs/GenomicDataInfrastructure/projects/12), the [open action points](https://github.com/GenomicDataInfrastructure/system-architecture/issues?q=is%3Aissue+is%3Aopen+label%3Aaction), the pull requests, and [your pages to review](https://github.com/GenomicDataInfrastructure/system-architecture/issues?q=is%3Aissue+is%3Aopen+label%3Apage+assignee%3A%40me).
-- **Pages are approved in pull requests,** by their reviewers ([page choreography](/handbook/choreography)).
+- **Pages are approved in pull requests,** by their reviewers: in the close-out pull request of each wave, which also adds them to `CONTRIBUTORS.md` ([page choreography](/handbook/choreography), step 10).
 - **Architecture decisions** are recommended by the taskforce as ADRs. The GDI Management Board reviews them at its cross-pillar meetings ([page recipes](/handbook/recipes#architecture-decision-record); decision D-030).

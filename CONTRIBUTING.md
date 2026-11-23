@@ -11,9 +11,10 @@ This architecture is written by a taskforce. Every change goes through a pull re
 | Who is responsible for a page | `owner` in the page's front matter, and the owner named in the issue's *Review assignment*; the owner is an assignee of the issue |
 | Who must review it | `reviewers` in the front matter, by name and affiliation, as the architecture lead assigned them (decision D-029); reviewers with a GitHub account are requested on the pull request |
 | Where the page stands | `status` in the front matter: `placeholder` → `draft` → `in-review` → `approved` |
-| When it was last reviewed | `last_reviewed` in the front matter (set by the reviewer on approval) |
+| When it was last reviewed | `last_reviewed` in the front matter (set in the wave's close-out pull request) |
 | Who changed what, and when | Git history; each page shows its last author and date at the bottom |
-| Who approved a change, and when | Pull request approvals on GitHub (timestamped) |
+| Who approved a page, and when | Approvals of the wave's close-out pull request on GitHub (timestamped) |
+| Who contributed | `CONTRIBUTORS.md`, by wave, and a `Co-authored-by:` line for each reviewer in the wave's merge commit (decision D-040) |
 | Which version readers see | Tagged releases (`v0.1`, `v0.2`, … `v1.0`) |
 
 The *Document status* page of the site (`docs/appendix/document-status.md`) lists all pages with their owner, reviewers and status. It is generated from the front matter.
@@ -48,8 +49,8 @@ The full step-by-step version, with who does what and when each step is done, is
    - the `<InShort>` box: at most three plain-language bullets;
    - the content, citing governance sections with `<GovRef id="VII.2.3" />` and other sources with `<Cite id="gdi-d3.4" />`.
 3. **Ask for review.** Set `status: in-review`, open a pull request that says `Closes #<issue number>`, and fill in the checklist. Request the reviewers listed in `reviewers` who have a GitHub account on the pull request; the others review a Word export ([Review rounds](https://genomicdatainfrastructure.github.io/system-architecture/handbook/drafting-roles#review-rounds)). Add a `needs-dpo`, `needs-security`, `needs-legal` or `needs-elsi` label to the issue when a specialist must review.
-4. **Review.** Reviewers read the page in the **preview** of the pull request: a rendered copy of the whole site at `https://genomicdatainfrastructure.github.io/system-architecture/pr-<number>/`, linked in a comment on the pull request and updated on every push (see [Previews and publication](#previews-and-publication)). Reviewers comment in the pull request. When satisfied, the reviewer sets `status: approved` and `last_reviewed` to today, and approves the pull request.
-5. **Merge.** `main` accepts a pull request once it has at least one approval and CI passes. Merging closes the issue.
+4. **Review.** Reviewers read the page in the **preview** of the pull request: a rendered copy of the whole site at `https://genomicdatainfrastructure.github.io/system-architecture/pr-<number>/`, linked in a comment on the pull request and updated on every push (see [Previews and publication](#previews-and-publication)). Reviewers comment in the pull request. When satisfied, the reviewer says so on the pull request.
+5. **Approve and merge.** After the last review round, the architecture lead opens a close-out pull request into the wave's branch: it sets `status: approved` and `last_reviewed`, and adds the wave's owner and reviewers to `CONTRIBUTORS.md`. The reviewers approve it on GitHub. Then the wave's pull request is merged into `main`, with a `Co-authored-by:` line for each reviewer in the merge commit ([choreography](https://genomicdatainfrastructure.github.io/system-architecture/handbook/choreography), step 10; decision D-040). `main` accepts a pull request once it has at least one approval and CI passes. Merging closes the issue.
 
 ## Writing rules
 
