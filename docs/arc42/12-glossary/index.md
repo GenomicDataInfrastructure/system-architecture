@@ -158,7 +158,7 @@ Use of the data to support the care of a current patient, by comparing them with
 
 ## Architecture terms
 
-The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run, and to name ideas the pages use often. [3.3 Responsible parties](/context/responsible-parties) explains the responsible parties in more depth, with a diagram of which actor belongs to which. Two actors are not tied to one responsible party. A 1+MG IT infrastructure provider can work for the Genome EDIC or for a Member Country, at central, national or local level. Data subjects are the people the data are about. They are other actors: they have rights, not duties, in the system, and its rules exist to protect them. The responsible party, the other actor and the levels come first; the other terms follow in alphabetical order, ignoring the prefix "1+MG".
+The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run, and to name ideas the pages use often. [3.1 Business context](/context/business#responsible-parties-and-the-system-boundary) explains the responsible parties in more depth, with a diagram of which actor belongs to which. Two actors are not tied to one responsible party. A 1+MG IT infrastructure provider can work for the Genome EDIC or for a Member Country, at central, national or local level. Data subjects are the people the data are about. They are other actors: they have rights, not duties, in the system, and its rules exist to protect them. The responsible party, the other actor and the levels come first; the other terms follow in alphabetical order, ignoring the prefix "1+MG".
 
 ### Responsible party
 

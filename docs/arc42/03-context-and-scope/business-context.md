@@ -7,7 +7,7 @@ reviewers: ["Kjell Petersen (UiB)", "Dylan Spalding (CSC)", "Rob Hooft (Health-R
 status: in-review
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
-governance_refs: ["I", "II.2", "II.3", "III", "V.1.3", "V.2.2", "V.2.4", "V.2.6", "VI.1.1", "VI.1.5", "VI.2.2", "VI.3.2", "VII.1.2", "VII.1.3", "VII.1.4", "VII.2.1", "VII.2.2", "VII.2.3", "VII.2.4", "VII.3.1", "VII.3.3", "VII.3.5", "VII.4.3", "VII.5.1", "VII.5.2", "VII.5.3", "VII.5.4", "VII.5.5", "VIII.1.1", "VIII.1.2", "VIII.1.3", "VIII.2.1", "VIII.2.2", "VIII.3.1", "VIII.3.2", "VIII.3.3", "VIII.4.1", "VIII.4.2", "VIII.4.4", "VIII.4.5", "VIII.5.1", "VIII.5.2", "VIII.5.3", "VIII.7.1", "VIII.9.1", "VIII.11.1", "VIII.11.2", "VIII.11.3", "VIII.11.4"]
+governance_refs: ["I", "II.2", "II.3", "III", "V.1.3", "V.1.4", "V.2.2", "V.2.4", "V.2.6", "VI.1.1", "VI.1.3", "VI.1.5", "VI.2.2", "VI.3.2", "VII.1.2", "VII.1.3", "VII.1.4", "VII.2.1", "VII.2.2", "VII.2.3", "VII.2.4", "VII.3.1", "VII.3.3", "VII.3.5", "VII.4.3", "VII.5.1", "VII.5.2", "VII.5.3", "VII.5.4", "VII.5.5", "VIII.1.1", "VIII.1.2", "VIII.1.3", "VIII.2.1", "VIII.2.2", "VIII.3.1", "VIII.3.2", "VIII.3.3", "VIII.4.1", "VIII.4.2", "VIII.4.4", "VIII.4.5", "VIII.5.1", "VIII.5.2", "VIII.5.3", "VIII.7.1", "VIII.9.1", "VIII.11.1", "VIII.11.2", "VIII.11.3", "VIII.11.4"]
 last_reviewed:
 ---
 
@@ -21,7 +21,7 @@ last_reviewed:
 
 ## The system as a black box
 
-This page looks at the [Genome EDIC system](/glossary#genome-edic-system) from outside, as a single unit. The system is what the [Genome EDIC](/glossary#genome-edic) and the [Genome EDIC Member Countries](/glossary#genome-edic-member-country) run, and the bodies that run it or take decisions with it. It has a European part, run for the Genome EDIC, and a national part in each Member Country. With the User Organisation, they are the three [responsible parties](/glossary#responsible-party) ([3.3 Responsible parties](/context/responsible-parties)). Together they let Users find data, apply for access and analyse the data in secure processing environments (<Acronym id="SPE">SPEs</Acronym>), and let data subjects be informed and exercise their rights. [Chapter 5](/building-blocks) shows what each part contains.
+This page looks at the [Genome EDIC system](/glossary#genome-edic-system) from outside, as a single unit. The system is what the [Genome EDIC](/glossary#genome-edic) and the [Genome EDIC Member Countries](/glossary#genome-edic-member-country) run, and the bodies that run it or take decisions with it. It has a European part, run for the Genome EDIC, and a national part in each Member Country. With the User Organisation, they are the three responsible parties ([see below](#responsible-parties-and-the-system-boundary)). Together they let Users find data, apply for access and analyse the data in secure processing environments (<Acronym id="SPE">SPEs</Acronym>), and let data subjects be informed and exercise their rights. [Chapter 5](/building-blocks) shows what each part contains.
 
 **Inside the boundary** are the bodies that run the system or take decisions with it: the [Genome EDIC CC](/glossary#genome-edic-central-coordination-genome-edic-cc), the [1+MG DAC](/glossary#1mg-dac), the [1+MG NCPs](/glossary#1mg-national-coordination-point-1mg-ncp), the [1+MG Data Holders](/glossary#1mg-data-holder), the [Local DACs](/glossary#local-dac), the [1+MG Data Hosts](/glossary#1mg-data-host), the [1+MG IT infrastructure providers](/glossary#1mg-it-infrastructure-provider) that run its platforms and SPEs, and other [Genome EDIC national entities](/glossary#genome-edic-national-entities). Their exchanges are steps inside the system, which [chapter 6](/runtime) describes. The [Genome EDIC Assembly of Members](/glossary#genome-edic-assembly-of-members) adopts the rules, models and minimum requirements the system follows; it doesn't exchange data with it ([1.3](/introduction/stakeholders)).
 
@@ -94,14 +94,52 @@ How the data are protected on the way in and inside the system ([key-coded ident
 
 ## Responsible parties and the system boundary
 
-The responsible parties say **who is responsible**. The system boundary says **what runs inside the Genome EDIC system**. They are not the same line ([3.3 Responsible parties](/context/responsible-parties)).
+The governance gives each actor rights and duties in each phase of the data lifecycle <GovRef id="I" />. Those duties come together in three parties, each answerable for its own part of the system: the Genome EDIC, each Genome EDIC Member Country and each User Organisation. This documentation calls them the [responsible parties](/glossary#responsible-party). [Chapter 5](/building-blocks) has one section per responsible party, and the diagrams give each its own colour.
+
+<Diagram src="3.1-responsible-parties.drawio.svg" alt="Diagram of the three responsible parties. User Organisation, one per User Organisation: User Organisation and User. Genome EDIC: Genome EDIC Assembly of Members, Genome EDIC CC and 1+MG DAC. Genome EDIC Member Country, one per country: Genome EDIC Member Country, 1+MG NCP, 1+MG Data Holder, Local DAC, 1+MG Data Provider, 1+MG Data Host and Genome EDIC national entities. Other actors, responsible for no part of the system, in grey: data subjects (who have rights, not duties), providers of externally governed datasets, and treating healthcare professionals. The 1+MG IT infrastructure provider is a role, not a responsible party." />
+
+The diagram shows who belongs to which responsible party (select it to open it full size).
+
+| Responsible party | How many | What it is responsible for |
+|---|---|---|
+| **[Genome EDIC](/glossary#genome-edic)** | One | Sets the common rules <GovRef id="I" /> and runs the services shared by all Member Countries. It is the one-stop shop for Users <GovRef id="III" />. |
+| **[Genome EDIC Member Country](/glossary#genome-edic-member-country)** | One per country | Brings data in, keeps them in the country <GovRef id="I" />, and reviews or decides on access to them, depending on the type of dataset ([see below](#who-decides-on-access)). Each Member Country is responsible for its own part. |
+| **[User Organisation](/glossary#user-organisation)** | One per organisation that uses the data | Registers, applies for access, and is responsible for how its Users use the data <GovRef id="VII.1.3" />. |
+
+[Other actors](/glossary#other-actor) take part in the processes of the system, and the system must serve them, but they are responsible for no part of it: data subjects, treating healthcare professionals, providers of externally governed datasets, and the other partners marked "other actor" in [the table of partners](#partners-and-what-they-exchange).
+
+### Local responsibilities fall to the Member Country
+
+Inside a country, many organisations share the work: 1+MG Data Providers, 1+MG Data Hosts, Local DACs and others. These local responsibilities are real, but each Member Country divides them in its own way, for two reasons.
+
+- **The Member Country organises the national roles.** The governance leaves the national implementation as free as possible, as long as the common requirements are met <GovRef id="II.2" />. It makes each country's government responsible for having the necessary structures in place <GovRef id="I" />.
+- **One organisation can hold several roles.** A 1+MG Data Provider may also be the 1+MG Data Holder, and a 1+MG NCP may also provide the local IT infrastructure <GovRef id="III" />. Where one organisation holds several roles, the Member Country mitigates conflicts of interest: for example, a 1+MG NCP that checks compliance must not assess its own IT infrastructure <GovRef id="V.1.4" />.
+
+A line between national and local responsibilities would therefore fall in a different place in each country. So the architecture places all of them with the Member Country. Each Member Country records which organisation takes which role in its [national implementation profile](/appendix/national-profile-template): readers who need to know who does what in a given country find it there. [5.2 Genome EDIC Member Country](/building-blocks/member-country) describes the building blocks every country must provide, whoever runs them.
+
+### Who decides on access
+
+Who takes the access decision depends on the [type of dataset](/concepts/dataset-types). The governance defines three types, by who is responsible for the data <GovRef id="III" />: 1+MG compliant datasets, 1+MG cohort datasets and externally governed datasets. For 1+MG compliant datasets, a 1+MG Data Holder in the Member Country decides, as controller <GovRef id="VII.5.4" />. For 1+MG cohort datasets, the Genome EDIC decides, as controller: the Genome EDIC CC adopts and documents the decision <GovRef id="VII.5.5" />. Access to externally governed datasets follows the rules of their own provider, outside the system <GovRef id="VII.3.1" />. [8.12 Types of dataset](/concepts/dataset-types) gives the rules for each type and each phase, and [8.2 Controllers, processors and responsibilities](/concepts/roles) the controller for each processing operation.
+
+A responsible party is not the same as a controller. For 1+MG cohort datasets, the Genome EDIC decides on access, but the data stay with a 1+MG Data Host in the Member Country.
+
+### The 1+MG IT infrastructure provider: a role
+
+A [1+MG IT infrastructure provider](/glossary#1mg-it-infrastructure-provider) runs an IT environment at [central, national or local level](/glossary#central-national-and-local-level), for the Genome EDIC or for a Member Country: for example the services of the Genome EDIC CC, or a national 1+MG SPE. Its IT infrastructure must be accredited for service provision in the Genome EDIC <GovRef id="III" />. It is a role, not a responsible party: each building block in chapter 5 names its responsible actor and, where another organisation operates it, its 1+MG IT infrastructure provider. [8.2 Controllers, processors and responsibilities](/concepts/roles) gives its role towards the controllers.
+
+### The system boundary
+
+The responsible parties say **who is responsible**. The system boundary says **what runs inside the Genome EDIC system**. They are not the same line. Where each part runs, at central, national or local level, is a third question, which [chapter 7](/deployment) answers.
 
 - **The User Organisation is outside the system.** The [User Organisation](/glossary#user-organisation) is [controller](/concepts/roles) for the downstream use of the data, that is, for what its Users do with the data in the SPE <GovRef id="VII.1.3" />, but its people and its IT stay outside. Its Users work on the data inside an SPE run for a Member Country, and take out only non-personal results <GovRef id="II.2" />. The User Organisation's IT touches the system in three places: its identity provider (through the identity federation), the devices its Users connect from (Users may not download personal data to them <GovRef id="II.2" />), and the data and software it imports into an SPE after a security review <GovRef id="VIII.3.1" />.
 - **Some of what a Member Country is responsible for is outside the system too.** The 1+MG Data Providers are responsible for including their data <GovRef id="VI.2.2" />, but their own systems, where the data come from, are outside. So are the registry of healthcare professionals, if a Member Country provides one <GovRef id="VII.4.3" />, and national identity services.
 - **Treating healthcare professionals are other actors.** They are not Genome EDIC national entities <GovRef id="VIII.5.3" />, and are reached through the 1+MG NCP's communication chain <GovRef id="VIII.4.5" />.
-- **Data subjects are other actors:** they have rights, not duties, in the system, and its rules exist to protect them <GovRef id="VII.5.1" />. Contact with them is a national task as a rule <GovRef id="I" />.
+- **Data subjects are other actors:** they have rights, not duties, in the system, and its rules exist to protect them <GovRef id="VII.5.1" />. As a rule, they deal with their own country: information, consent and objection are national tasks <GovRef id="I" />, supported by the national [data subject services](/building-blocks/member-country/data-subject-services). The exceptions are a Genome EDIC information portal where a country can't serve its data subjects <GovRef id="V.2.2" />, and the Genome EDIC CC communicating results to them <GovRef id="VIII.1.2" />.
 
 :::caution[Open points]
+- **At which level the type of a dataset is chosen,** and so who takes the access decision: the Member Country decides who is responsible for disclosing its data <GovRef id="VI.1.3" />, but whether it chooses once for the country, per 1+MG Data Provider or per dataset is open. See [chapter 11](/risks#dataset-type-choice).
+- **Whether the Genome EDIC is joint controller with the 1+MG Data Holder** for 1+MG compliant datasets <GovRef id="VII.2.2" /> <GovRef id="VII.5.5" />. See [chapter 11](/risks#joint-controllership).
+- **How 1+MG IT infrastructure providers are accredited,** to be defined with 1+MG Working Group 5 and GDI Pillar II <GovRef id="III" />, and whether they are sub-processors or controllers in the use phase <GovRef id="VIII.2.1" /> <GovRef id="VIII.3.3" />. See [chapter 11](/risks#accreditation) and [chapter 11](/risks#it-provider-role).
 - **When 1+MG data may be processed in the SPE of the European Commission,** "where applicable" <GovRef id="VIII.2.2" />, and who would then be controller. The governance prefers federation to pooling in that SPE <GovRef id="V.1.3" />. See [chapter 11](/risks#commission-spe).
 - **How a User's status as a healthcare professional is checked,** and so whether a national registry is a partner <GovRef id="VII.4.3" />. See [chapter 11](/risks#healthcare-professional-check).
 - **Who informs data subjects** after an access decision: the 1+MG NCP, or another national body <GovRef id="VII.5.3" />. See [chapter 11](/risks#national-information-flow).

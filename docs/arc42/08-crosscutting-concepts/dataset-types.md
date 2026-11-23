@@ -60,7 +60,7 @@ The glossary gives the governance definitions word for word. In short:
 
 These pages ask *what differs per type of dataset?* and build on this page:
 
-- **Context:** [3.3 European, national and User Organisation scopes](/context/responsible-parties).
+- **Context:** [3.1 Business context](/context/business#responsible-parties-and-the-system-boundary).
 - **Building blocks:** [5.1.1 User Portal and central data catalogue](/building-blocks/genome-edic/user-portal-and-catalogue), [5.1.2 Access request management](/building-blocks/genome-edic/access-request-management), [5.2.2 Access review and decision support](/building-blocks/member-country/access-decision-support).
 - **Runtime:** [6.1 Data inclusion](/runtime/data-inclusion), [6.2.1 Registration of the User Organisation](/runtime/access/registration), [6.2.3 Data access request](/runtime/access/request), [6.2.4 Review and decision](/runtime/access/review-and-decision), [6.3.1 Data use agreement](/runtime/use/data-use-agreement), [6.3.3 Healthcare reuse](/runtime/use/healthcare-reuse).
 - **Concepts:** [8.2 Controllers, processors and responsibilities](/concepts/roles), [8.6 Legal basis, consent and objection](/concepts/legal-basis-and-consent), [8.10 Metadata and semantic interoperability](/concepts/metadata-and-interoperability).
