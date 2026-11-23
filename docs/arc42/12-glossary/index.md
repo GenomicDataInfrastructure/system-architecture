@@ -4,7 +4,7 @@ sidebar_label: "12. Glossary"
 slug: /glossary
 sidebar_position: 12
 owner: "Bruno Pacheco (LNDS)"
-reviewers: ["Jack Broeren (Health-RI)", "Jacek Lebioda (LNDS)"]
+reviewers: ["Griet De Clercq (VIB)", "Daniel Ciurea (ICDG)"]
 status: in-review
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
@@ -102,7 +102,7 @@ The details of the 1+MG IT infrastructure, including how it is accredited, are s
 
 Group of natural or legal persons that reviews the access requests and the opinion by the 1+MG DAC relevant for the datasets for which it is in charge to come to a recommendation on the access request for the data it oversees.
 
-_In plain words: a committee that reviews access requests for the data it is in charge of, and recommends a decision. Despite its name, a Local DAC sits in the national scope, and may be internal or external to the 1+MG Data Holder <GovRef id="VII.4.6" />. The reading guide of the governance calls it "the national DAC who supports the 1+MG Data Holders in their access decision" <GovRef id="I" />. For 1+MG cohort datasets, it may also be the body the Member Country names for the national review <GovRef id="VII.4.7" />._
+_In plain words: a committee that reviews access requests for the data it is in charge of, and recommends a decision. Despite its name, a Local DAC belongs to the Member Country, and may be internal or external to the 1+MG Data Holder <GovRef id="VII.4.6" />. The reading guide of the governance calls it "the national DAC who supports the 1+MG Data Holders in their access decision" <GovRef id="I" />. For 1+MG cohort datasets, it may also be the body the Member Country names for the national review <GovRef id="VII.4.7" />._
 
 ### Genome EDIC Member Country
 
@@ -158,23 +158,25 @@ Use of the data to support the care of a current patient, by comparing them with
 
 ## Architecture terms
 
-The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run, and to name ideas the pages use often. [3.3 European, national and User Organisation scopes](/context/responsible-parties) explains the scopes in more depth, with a diagram of which actor belongs to which scope. Two actors are not tied to one scope. A 1+MG IT infrastructure provider can work for the European or the national scope, at central, national or local level. Data subjects are the people the data are about. They are outside every scope: they have rights, not duties, in the system, and its rules exist to protect them. The scopes and the levels come first; the other terms follow in alphabetical order, ignoring the prefix "1+MG".
+The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run, and to name ideas the pages use often. [3.3 Responsible parties](/context/responsible-parties) explains the responsible parties in more depth, with a diagram of which actor belongs to which. Two actors are not tied to one responsible party. A 1+MG IT infrastructure provider can work for the Genome EDIC or for a Member Country, at central, national or local level. Data subjects are the people the data are about. They are other actors: they have rights, not duties, in the system, and its rules exist to protect them. The responsible party, the other actor and the levels come first; the other terms follow in alphabetical order, ignoring the prefix "1+MG".
 
-### European scope
+### Responsible party
 
-What the Genome EDIC is responsible for: its bodies (the Genome EDIC Assembly of Members, the Genome EDIC Central Coordination and the 1+MG DAC), the common rules, and the services the Genome EDIC Central Coordination runs for all Member Countries. _Architecture term._
+One of the three parties that answer for a part of the system:
 
-### National scope
+- the **Genome EDIC**: its bodies (the Genome EDIC Assembly of Members, the Genome EDIC Central Coordination and the 1+MG DAC), the common rules, and the services the Genome EDIC Central Coordination runs for all Member Countries;
+- each **Genome EDIC Member Country**: its 1+MG NCP, 1+MG Data Holders, 1+MG Data Providers, 1+MG Data Hosts, Local DACs and other Genome EDIC national entities, and the building blocks they run. The Member Country decides which organisations take these roles;
+- each **User Organisation**, for itself and for the Users acting on its behalf: its registration, the onboarding and offboarding of its Users, its access requests and the use of the data.
 
-What a Genome EDIC Member Country is responsible for: its 1+MG NCP, 1+MG Data Holders, 1+MG Data Providers, 1+MG Data Hosts, Local DACs and other Genome EDIC national entities, and the building blocks they run. The Member Country decides which organisations take these roles. _Architecture term._
+Chapter 5 has one section per responsible party. _Architecture term._
 
-### User Organisation scope
+### Other actor
 
-What a User Organisation is responsible for, for itself and for the Users acting on its behalf: its registration, the onboarding and offboarding of its Users, its access requests and the use of the data. _Architecture term._
+An actor that takes part in the processes of the system, but is responsible for no part of it: for example data subjects, treating healthcare professionals, providers of externally governed datasets, and the supervisory bodies and European services that exchange information with the system ([3.1](/context/business)). _Architecture term._
 
 ### Central, national and local level
 
-Where an IT environment runs, as in the definition of the 1+MG IT infrastructure provider. The deployment view (chapter 7) uses these levels. A level is not a scope: a 1+MG Data Host, for example, belongs to the national scope and runs at local level. _Architecture term._
+Where an IT environment runs, as in the definition of the 1+MG IT infrastructure provider. The deployment view (chapter 7) uses these levels. A level is not a responsible party: a 1+MG Data Host, for example, belongs to the Member Country and runs at local level. _Architecture term._
 
 ### 1+MG Data Governance
 
@@ -186,7 +188,7 @@ The agreement that sets the conditions under which a User Organisation and its U
 
 ### Genome EDIC system
 
-What the European scope and the national scopes run, and the bodies that run it or take decisions with it. [3.1](/context/business) draws its boundary. _Architecture term._
+What the Genome EDIC and the Genome EDIC Member Countries run, and the bodies that run it or take decisions with it. [3.1](/context/business) draws its boundary. _Architecture term._
 
 ### HealthData@EU
 
@@ -218,7 +220,7 @@ Bringing data from several countries together, for a time, in one secure process
 
 ### Reference implementation
 
-Software that implements a component's interfaces and that Member Countries may use: the GDI Starter Kit component for national nodes, or the GDI central service for the European scope. A Member Country may use other tools that meet the same interfaces <GovRef id="II.2" />. See [4. Solution strategy](/solution-strategy). _Architecture term._
+Software that implements a component's interfaces and that Member Countries may use: the GDI Starter Kit component for national nodes, or the GDI central service for the Genome EDIC. A Member Country may use other tools that meet the same interfaces <GovRef id="II.2" />. See [4. Solution strategy](/solution-strategy). _Architecture term._
 
 ### Secure processing environment (SPE)
 
@@ -230,7 +232,7 @@ A search over the individual records held in the system, which returns to the Us
 
 ### Trust boundary
 
-A line between two operators, or two scopes, that data or requests cross. Each crossing is authenticated and encrypted. See [ADR-0006](/decisions/0006-trust-boundaries) and [8.3](/concepts/security). _Architecture term._
+A line between two operators, or two responsible parties, that data or requests cross. Each crossing is authenticated and encrypted. See [ADR-0006](/decisions/0006-trust-boundaries) and [8.3](/concepts/security). _Architecture term._
 
 ## Legal terms from the GDPR and the EHDS
 
