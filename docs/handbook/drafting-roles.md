@@ -71,7 +71,7 @@ The governance and legal reviews use the most capable model because their errors
 ### Writer {#writer}
 
 - **Reads:** the source lists, the recipe, `AGENTS.md`, the neighbouring pages, and chapter 11.
-- **Does:** drafts the pages. Follows the writing rules in `AGENTS.md`: front matter, *In short* box, `<GovRef>` and `<Cite>`, glossary and acronym links, interfaces first, the target state with what the GDI MVP already delivers, diagrams in draw.io, open points in chapter 11. Summarises sources in its own words. Sets `owner` to the person responsible for the page, never to an agent. Runs `npm run check` and `npm run build`.
+- **Does:** drafts the pages. Follows the writing rules in `AGENTS.md`: front matter, *In short* box, `<GovRef>` and `<Cite>`, glossary and acronym links, interfaces first, the target state only (decision D-039), diagrams in draw.io, open points in chapter 11. Summarises sources in its own words. Sets `owner` to the person responsible for the page, never to an agent. Runs `npm run check` and `npm run build`.
 - **Returns:** the drafted pages, and an answer to each finding.
 
 ### Architecture reviewer {#architecture-reviewer}
