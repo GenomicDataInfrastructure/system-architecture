@@ -47,7 +47,7 @@ toc_max_heading_level: 4
 
 <InShort>
 
-- This page lists what is not decided yet: points the governance itself leaves open, questions it doesn't answer, and outside work the architecture depends on. It also records the risks and the technical debt of the architecture.
+- This page lists what is still open: points the governance itself leaves open, questions it doesn't answer, and outside work the architecture depends on. It also records the risks and the technical debt of the architecture.
 - Other pages mark each open point, risk or piece of technical debt in a box, and link to its entry here. Each entry says what is open, why it matters, and where it is tracked.
 - Risks and technical debt are added as they are found. This page is completed in writing wave 6.
 
@@ -55,7 +55,7 @@ toc_max_heading_level: 4
 
 ## Open points and open questions {#open-points}
 
-Every page that depends on an undecided point marks it in an *Open point* box, and links to its entry below. When a point is settled, its entry is removed and the pages that link to it are updated.
+Every page that depends on an open point marks it in an *Open point* box, and links to its entry below. When a point is settled, its entry is removed and the pages that link to it are updated.
 
 ### Open in the governance {#open-in-the-governance}
 
@@ -166,12 +166,6 @@ The governance doesn't answer these questions, but the architecture needs an ans
 - **What is open:** the governance names the [1+MG Data Holder](/glossary#1mg-data-holder) as controller for the disclosure of 1+MG compliant datasets <GovRef id="III" />. It also mentions, twice and conditionally, that the Genome EDIC may be joint controller with it: for subject-level data discovery <GovRef id="VII.2.2" />, and for the data protection impact assessment on disclosure <GovRef id="VII.5.5" />. It doesn't say when that is the case.
 - **Why it matters:** joint controllers need an arrangement that sets out their responsibilities (<Acronym id="GDPR" /> Art. 26) <Cite id="gdpr" />, and data subjects must be told who is responsible. [8.2](/concepts/roles) must answer it; [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) doesn't depend on it.
 - **Tracked in:** [issue #138](https://github.com/GenomicDataInfrastructure/system-architecture/issues/138).
-
-#### Who adopts the system architecture {#architecture-adoption}
-
-- **What is open:** the governance says that the Genome EDIC Assembly of Members decides on the principles and sets the minimum requirements <GovRef id="I" />, and that committees and working groups turn the principles into technical requirements <GovRef id="II.1" />. It doesn't say which body adopts the system architecture, or how changes to it are decided. This site is a working draft of the architecture taskforce, and its architecture decision records name their deciders as "to be confirmed by the taskforce".
-- **Why it matters:** Member Countries and implementers need to know when the architecture binds them, and who can change it.
-- **Tracked in:** [issue #113](https://github.com/GenomicDataInfrastructure/system-architecture/issues/113).
 
 #### Who chooses the type of a dataset {#dataset-type-choice}
 
