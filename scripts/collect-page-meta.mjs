@@ -67,11 +67,13 @@ function checkDiagram(rel, data, src) {
   }
 }
 const pages = [];
+const crossRefs = []; // links per page, for the cross-reference rule (decision D-038)
 
 for (const file of walk(DOCS).sort()) {
   const rel = path.relative(ROOT, file);
   const {data, content} = matter(fs.readFileSync(file, 'utf8'));
   const prose = content.replace(/```[\s\S]*?```/g, '').replace(/`[^`\n]*`/g, ''); // examples in code are not checked
+  crossRefs.push({rel, slug: data.slug, links: [...prose.matchAll(/\]\((\/[^)\s#]*)/g)].map((m) => m[1].replace(/\/$/, ''))});
   for (const m of prose.matchAll(/<Diagram\b[^>]*\bsrc="([^"]+)"/g)) checkDiagram(rel, data, m[1]);
   for (const m of prose.matchAll(/<Acronym\b[^>]*\bid="([^"]+)"/g)) {
     if (!ACRONYMS.has(m[1])) errors.push(`${rel}: <Acronym id="${m[1]}"> is not in src/data/acronyms.json`);
@@ -132,6 +134,26 @@ for (const file of walk(DOCS).sort()) {
     governance_refs: (data.governance_refs ?? []).map(String),
     last_reviewed: data.last_reviewed ? new Date(data.last_reviewed).toISOString().slice(0, 10) : '',
   });
+}
+
+// Cross-references (decision D-038): a page in an arc42 chapter names other chapters by linking to
+// their overview page, never to a single page of another chapter (ADRs included). Pages within one
+// chapter may link to each other. Warning for now; it becomes an error once the wave pages follow it.
+const chapterOf = (rel) => {
+  const m = rel.match(/^docs\/arc42\/(\d\d)-[^/]+\/(.+)$/);
+  return m ? {chapter: m[1], overview: /^index\.mdx?$/.test(m[2])} : null;
+};
+const bySlug = new Map(crossRefs.filter((p) => p.slug).map((p) => [p.slug.replace(/\/$/, ''), chapterOf(p.rel)]));
+for (const p of crossRefs) {
+  const from = chapterOf(p.rel);
+  if (!from || from.overview) continue; // chapter overviews and pages outside arc42 help readers navigate
+  const bad = [...new Set(p.links.filter((l) => {
+    const to = bySlug.get(l);
+    return to && !to.overview && to.chapter !== from.chapter;
+  }))];
+  if (bad.length) {
+    warnings.push(`${p.rel}: ${bad.length} link(s) to single pages of other chapters; link the chapter overview, the glossary or the source instead (decision D-038): ${bad.slice(0, 3).join(', ')}${bad.length > 3 ? ', …' : ''}`);
+  }
 }
 
 fs.writeFileSync(OUT, JSON.stringify(pages, null, 1) + '\n');

@@ -48,6 +48,7 @@ arc42 may be customised (FAQ K-1). These departures are agreed, and don't need t
 | Where | arc42 | What we do, and why |
 |---|---|---|
 | The whole document | One arc42 per system; very large systems are split into modules linked together (FAQ J-1) | One arc42 for the Genome EDIC. Chapter 5 is split by responsible party and chapter 7 by level, and each Member Country describes its choices in a national implementation profile (decisions D-005, D-018, D-036). |
+| Every page | Cross-references are free; chapter 4 often points to the decisions behind the strategy | Pages name other chapters, linking the chapter overview, never a single page of another chapter, and never an ADR: links between pages go stale when pages move. Claims cite their source. An ADR names the chapters it changes (decision D-038). |
 | Every page | Only the sections | An *In short* box, and a box with owner, reviewers, status and governance references. These help readers who aren't architects, and make review and traceability visible. |
 | 1.3 | A table *role · contact · expectations* | Contacts are roles, not named people: the Genome EDIC CC and each 1+MG NCP. The site is public. What readers need from the documentation is in the reader guides. |
 | Chapter 2 | Organisational and political constraints, technical constraints, conventions (FAQ C-2-2) | Pages by source: legal (2.1), governance (2.2), organisational (2.3), technical (2.4). The conventions (terminology, diagram notation, ADRs) are in this handbook, and the chapter overview links to them. |
@@ -128,7 +129,7 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 
 **Purpose:** the few fundamental choices, and why.
 
-**Headings:** a table *goal or constraint · approach we chose · where it is detailed*. Then, for each major choice, one short paragraph with the reason and a link to its ADR.
+**Headings:** a table *goal or constraint · approach we chose · chapter where it is detailed*. Then, for each major choice, one short paragraph with the reason and its source.
 
 **arc42:** the fundamental decisions (technology, decomposition, how the quality goals are reached, organisation), kept compact. Link each approach to the quality goals of 1.2, and always give the reason (docs.arc42.org/section-4).
 
@@ -193,7 +194,7 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 1. **The problem:** why this concept is needed, in plain language.
 2. **The rule:** what every component must do. Use "must" and "should" consistently.
 3. **How it works:** mechanism, standards, diagram if useful.
-4. **Where it applies:** links to the building blocks and scenarios.
+4. **Where it applies:** the chapters where it applies (5, 6, 7), each linked to its overview (decision D-038).
 5. **Legal and governance basis:** GDPR articles, governance sections, EHDS articles.
 6. **Open points,** each linked to its entry in [chapter 11](/risks#open-points).
 
@@ -203,7 +204,7 @@ For **8.1 (data protection by design and by default)**, add a table *GDPR princi
 
 ## Architecture decision record
 
-Use the [ADR template](/decisions/template). One decision per ADR. Keep it under one page. State the options you rejected, and why.
+Use the [ADR template](/decisions/template). One decision per ADR. Keep it under one page. State the options you rejected, and why. Under *Consequences*, name the chapters the decision changes, each linked to its overview. Architecture pages don't link back to ADRs (decision D-038).
 
 **When to write one:** only when the answer to an open question, or the mitigation of a risk, changes the architecture: its structure, interfaces, components or deployment, with real options to choose between. Record the question or risk in [chapter 11](#risks-and-technical-debt) first. A legal reading of the governance, a governance choice, or the order of delivery is not an ADR: it stays in chapter 11, and the page it concerns explains it (decision D-034).
 
