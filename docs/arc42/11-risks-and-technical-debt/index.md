@@ -131,6 +131,12 @@ The governance doesn't answer these questions, but the architecture needs an ans
 - **Why it matters:** it decides which agreements the SPE providers sign, and who answers for the security of the SPE.
 - **Tracked in:** [issue #137](https://github.com/GenomicDataInfrastructure/system-architecture/issues/137).
 
+
+#### SPE access for projects that use only externally governed data {#external-only-projects}
+
+- **What is open:** [externally governed datasets](/concepts/dataset-types) "will be made available to Users in the 1+MG IT infrastructure" <GovRef id="III" />, and Users may bring them into a 1+MG secure processing environment (<Acronym id="SPE" />) after a security review <GovRef id="VIII.3.1" /> <GovRef id="VIII.3.3" />. But a User gets an SPE through the data use agreement that the Genome EDIC CC issues for an approved access request <GovRef id="VII.5.5" />. The governance doesn't say on what basis a User gets a 1+MG SPE for a project that uses only externally governed data: which request, which review, which agreement.
+- **Why it matters:** until the Genome EDIC is operational, externally governed datasets are the only data the system offers ([The Genome EDIC must be operational](#genome-edic-operational)), so every project in that period is such a project. The access path to the SPE, the agreements and the controller for the processing must be defined for the first version of the system.
+- **Tracked in:** [issue #181](https://github.com/GenomicDataInfrastructure/system-architecture/issues/181).
 #### When 1+MG data may be processed in the SPE of the European Commission {#commission-spe}
 
 - **What is open:** Users must process 1+MG data in a 1+MG SPE or, "where applicable", in the SPE provided by the European Commission under the EHDS <GovRef id="VIII.2.2" />. The governance doesn't say when that applies. It prefers federation to pooling data in the Commission's SPE <GovRef id="V.1.3" />.
@@ -175,7 +181,7 @@ The governance doesn't answer these questions, but the architecture needs an ans
 
 #### Who sets and checks the inclusion criteria for externally governed datasets {#external-inclusion-criteria}
 
-- **What is open:** [externally governed datasets](/concepts/dataset-types) "should meet certain inclusion criteria on quality and ELSI" to be listed in the catalogue <GovRef id="III" />. The governance doesn't define the criteria, or say who sets and checks them. Nor is it clear whether Genome of Europe data, which GDI frames as primary use <Cite id="gdi-d3.4" />, fit them.
+- **What is open:** [externally governed datasets](/concepts/dataset-types) "should meet certain inclusion criteria on quality and ELSI" to be listed in the catalogue <GovRef id="III" />. Listing a dataset is the Genome EDIC CC's decision, as it runs the catalogue <GovRef id="VII.2.1" />, but the governance doesn't define the criteria, or say who sets and checks them, or who removes a listing. Nor is it clear whether Genome of Europe data, which GDI frames as primary use <Cite id="gdi-d3.4" />, fit them.
 - **Why it matters:** in the first step of [ADR-0003](/decisions/0003-implementation-in-steps), externally governed datasets are the only ones Users can get access to.
 - **Tracked in:** [issue #139](https://github.com/GenomicDataInfrastructure/system-architecture/issues/139).
 
