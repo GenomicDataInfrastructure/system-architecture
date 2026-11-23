@@ -22,8 +22,8 @@ You represent a ministry or public body backing the Genome EDIC. You want to kno
 | What must my country put in place (organisation, infrastructure, people)? | [2.3 Organisational constraints](/constraints/organisational) |
 | What stays under national control, and what is done at European level? | [3.1 Business context](/context/business#responsible-parties-and-the-system-boundary) |
 | Who in my country exchanges information with the system, and what? | [3.1 Business context](/context/business#stakeholders-external-systems-and-what-they-exchange) |
-| Who decides on access to which data: my country or the Genome EDIC? | [3.1 Business context](/context/business#who-decides-on-access), [8.12 Types of dataset](/concepts/dataset-types), [ADR-0002 Support all three types of dataset; the Member Country chooses the 1+MG type](/decisions/0002-disclosure-paths-per-dataset) |
-| When can my country offer its data through the system, and of which type? | [ADR-0003 Build the system in steps, starting with externally governed datasets](/decisions/0003-implementation-in-steps) |
+| Who decides on access to which data: my country or the Genome EDIC? | [3.1 Business context](/context/business#who-decides-on-access), [8.12 Types of dataset](/concepts/dataset-types), [Who chooses the type of a dataset](/risks#dataset-type-choice) |
+| When can my country offer its data through the system, and of which type? | [4. Solution strategy](/solution-strategy), [The Genome EDIC must be operational](/risks#genome-edic-operational) |
 | Do genomic data leave my country? | [2.2 Governance principles](/constraints/governance-principles#federated), [4. Solution strategy](/solution-strategy) |
 | Must my country use specific products, and what can it decide itself? | [2.2 Governance principles](/constraints/governance-principles#implementation-freedom) |
 | How does this fit the European Health Data Space (EHDS)? | [8.11 EHDS integration](/concepts/ehds-integration) |

@@ -75,7 +75,7 @@ The governance is a "living document" <Cite id="dg" />. In these sections, it sa
 
 #### Data from countries that are not members of the Genome EDIC {#non-member-country-data}
 
-- **What is open:** the governance only considers 1+MG compliant and 1+MG cohort data from Genome EDIC Member Countries. Models for including data from other countries "could be considered", subject to a decision of the Member Countries <GovRef id="II.4" />. Until then, [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) reads such data as externally governed: 1+MG Data Providers must be based in a full member country <GovRef id="III" />.
+- **What is open:** the governance only considers 1+MG compliant and 1+MG cohort data from Genome EDIC Member Countries. Models for including data from other countries "could be considered", subject to a decision of the Member Countries <GovRef id="II.4" />. Until then, the architecture treats such data as externally governed: 1+MG Data Providers must be based in a full member country <GovRef id="III" />.
 - **Why it matters:** it decides whether data from such countries can ever follow the 1+MG paths, and so what the catalogue and access request management must support for them.
 - **Tracked in:** [issue #134](https://github.com/GenomicDataInfrastructure/system-architecture/issues/134).
 
@@ -164,19 +164,19 @@ The governance doesn't answer these questions, but the architecture needs an ans
 #### Whether the Genome EDIC is joint controller with the 1+MG Data Holder {#joint-controllership}
 
 - **What is open:** the governance names the [1+MG Data Holder](/glossary#1mg-data-holder) as controller for the disclosure of 1+MG compliant datasets <GovRef id="III" />. It also mentions, twice and conditionally, that the Genome EDIC may be joint controller with it: for subject-level data discovery <GovRef id="VII.2.2" />, and for the data protection impact assessment on disclosure <GovRef id="VII.5.5" />. It doesn't say when that is the case.
-- **Why it matters:** joint controllers need an arrangement that sets out their responsibilities (<Acronym id="GDPR" /> Art. 26) <Cite id="gdpr" />, and data subjects must be told who is responsible. [8.2](/concepts/roles) must answer it; [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) doesn't depend on it.
+- **Why it matters:** joint controllers need an arrangement that sets out their responsibilities (<Acronym id="GDPR" /> Art. 26) <Cite id="gdpr" />, and data subjects must be told who is responsible. [8.2](/concepts/roles) must answer it; who chooses the type of a dataset doesn't depend on it.
 - **Tracked in:** [issue #138](https://github.com/GenomicDataInfrastructure/system-architecture/issues/138).
 
 #### Who chooses the type of a dataset {#dataset-type-choice}
 
-- **What is open:** for the access decision, the governance describes two scenarios: a decision at national level, for 1+MG compliant datasets, or by the Genome EDIC, for 1+MG cohort datasets <GovRef id="II.1" />. Who chooses between them is settled in part: each Genome EDIC Member Country decides on "a national strategy for the responsibility of downstream data disclosure" and nominates, where applicable, the 1+MG Data Holders in the country <GovRef id="VI.1.3" />. It does so before any data are included, because the choice becomes part of the consent for inclusion <GovRef id="VI.1.3" /> <GovRef id="VI.1.5" />. The governance doesn't say at which level the choice is made: for the whole country, per [1+MG Data Provider](/glossary#1mg-data-provider), or per dataset. Nor does it say whether "where applicable" lets a country nominate no 1+MG Data Holder and make all its data available as 1+MG cohort data. [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) proposes that the Member Country chooses, on the basis of VI.1.3, and leaves the level open.
+- **What is open:** for the access decision, the governance describes two scenarios: a decision at national level, for 1+MG compliant datasets, or by the Genome EDIC, for 1+MG cohort datasets <GovRef id="II.1" />. Who chooses between them is settled in part: each Genome EDIC Member Country decides on "a national strategy for the responsibility of downstream data disclosure" and nominates, where applicable, the 1+MG Data Holders in the country <GovRef id="VI.1.3" />. It does so before any data are included, because the choice becomes part of the consent for inclusion <GovRef id="VI.1.3" /> <GovRef id="VI.1.5" />. The governance doesn't say at which level the choice is made: for the whole country, per [1+MG Data Provider](/glossary#1mg-data-provider), or per dataset. Nor does it say whether "where applicable" lets a country nominate no 1+MG Data Holder and make all its data available as 1+MG cohort data. The architecture reads this as the Member Country choosing between the two 1+MG types.
 - **Why it matters:** the type decides who takes the access decision, and who is controller for it.
 - **Tracked in:** [issue #85](https://github.com/GenomicDataInfrastructure/system-architecture/issues/85).
 
 #### Who sets and checks the inclusion criteria for externally governed datasets {#external-inclusion-criteria}
 
 - **What is open:** [externally governed datasets](/concepts/dataset-types) "should meet certain inclusion criteria on quality and ELSI" to be listed in the catalogue <GovRef id="III" />. Listing a dataset is the Genome EDIC CC's decision, as it runs the catalogue <GovRef id="VII.2.1" />, but the governance doesn't define the criteria, or say who sets and checks them, or who removes a listing. Nor is it clear whether Genome of Europe data, which GDI frames as primary use <Cite id="gdi-d3.4" />, fit them.
-- **Why it matters:** in the first step of [ADR-0003](/decisions/0003-implementation-in-steps), externally governed datasets are the only ones Users can get access to.
+- **Why it matters:** until the Genome EDIC is operational, externally governed datasets are the only ones Users can get access to ([The Genome EDIC must be operational](#genome-edic-operational)).
 - **Tracked in:** [issue #139](https://github.com/GenomicDataInfrastructure/system-architecture/issues/139).
 
 ### Dependencies {#dependencies}
@@ -192,7 +192,7 @@ Work outside this architecture that it depends on.
 #### Data governance for data not related to individuals {#genome-of-europe-governance}
 
 - **What is open:** the governance doesn't cover access to data not related to individuals, such as reference genomes or pre-computed statistics (for example allele frequencies). A separate data governance is expected from the Genome of Europe project <GovRef id="II.4" />.
-- **Why it matters:** the first step of [ADR-0003](/decisions/0003-implementation-in-steps) offers such data for discovery; the rules for access to them are not known yet.
+- **Why it matters:** until the Genome EDIC is operational, the system offers such data for discovery; the rules for access to them are not known yet.
 - **Tracked in:** [issue #140](https://github.com/GenomicDataInfrastructure/system-architecture/issues/140).
 
 #### EHDS requirements for health data access applications {#ehds-access-applications}
@@ -210,7 +210,7 @@ Work outside this architecture that it depends on.
 #### The Genome EDIC must be operational {#genome-edic-operational}
 
 - **What is open:** the paths for [1+MG compliant and 1+MG cohort datasets](/concepts/dataset-types) need the Genome EDIC: the [Genome EDIC CC](/glossary#genome-edic-central-coordination-genome-edic-cc) is the one-stop shop for Users, and the [1+MG DAC](/glossary#1mg-dac) reviews access requests <GovRef id="III" />. The Genome EDIC can't be assumed to be in place before GDI ends, because of the administrative process to create an EDIC (GDI D3.4, section 1) <Cite id="gdi-d3.4" />. Until it is operational, it is not decided who runs the central User Portal and catalogue; who is controller and processor for the central services and the SPEs; and which security baseline, incident reporting line and authority to revoke access apply, since the governance gives these to the Genome EDIC CC <GovRef id="V.1.2" /> <GovRef id="VIII.2.1" /> <GovRef id="VIII.2.2" /> <GovRef id="VIII.3.2" />.
-- **Why it matters:** until then, the system offers only externally governed datasets. [ADR-0003](/decisions/0003-implementation-in-steps) proposes to add the other two types in later steps. The processing in step 1 still needs a controller and processor for each step (<Acronym id="GDPR" /> Art. 5(2), 24 and 28) <Cite id="gdpr" />.
+- **Why it matters:** until then, the system offers only externally governed datasets. [Chapter 4](/solution-strategy) describes how the system grows from there to the other two types. The processing in step 1 still needs a controller and processor for each step (<Acronym id="GDPR" /> Art. 5(2), 24 and 28) <Cite id="gdpr" />.
 - **Tracked in:** [issue #116](https://github.com/GenomicDataInfrastructure/system-architecture/issues/116).
 
 #### The Starter Kit FAIR Data Point uses its own metadata schemas {#starter-kit-fdp-schemas}
@@ -225,7 +225,7 @@ A risk is something that could go wrong and harm the system or its users: for ex
 
 #### GDI ends before the Genome EDIC is operational {#gdi-end-gap}
 
-- **What could happen:** GDI ends in March 2027 <Cite id="gdi-d4.4" />, and the Genome EDIC is not yet operational <Cite id="gdi-d3.4" />. The central User Portal and catalogue, and the step 1 services of [ADR-0003](/decisions/0003-implementation-in-steps), then have no operator, and no controller or security authority for them.
+- **What could happen:** GDI ends in March 2027 <Cite id="gdi-d4.4" />, and the Genome EDIC is not yet operational <Cite id="gdi-d3.4" />. The central User Portal and catalogue, and the other central services that serve externally governed datasets, then have no operator, and no controller or security authority for them.
 - **Probability:** medium.
 - **Impact:** high: Users lose access to the externally governed datasets offered in step 1, and the work of GDI may not carry over to the Genome EDIC.
 - **Mitigation:** agree before GDI ends who runs the central services in the gap, and on which agreements; record the roles of step 1 (see [The Genome EDIC must be operational](#genome-edic-operational)).
