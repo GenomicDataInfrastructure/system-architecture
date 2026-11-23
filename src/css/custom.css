@@ -126,3 +126,9 @@
   color: var(--gap);
   font-weight: 600;
 }
+
+/* Links to anchors that are not headings (acronym rows in the glossary, source rows, traceability rows)
+   must not end up under the sticky navbar. Docusaurus does this for headings only. */
+main [id] {
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 0.5rem);
+}

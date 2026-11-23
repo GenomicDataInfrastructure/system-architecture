@@ -39,6 +39,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Types of dataset (1+MG compliant, 1+MG cohort, externally governed) made visible: a matrix question in 3.3, a "what differs per type of dataset?" question on the pages where it matters, a heading in the building block and runtime scenario recipes, a review checklist item, and a question in the guides for policy makers and legal experts.
 - "Applies to" column on the governance traceability page: the notes in square brackets of the governance titles, with types of dataset highlighted.
 
+### Fixed
+
+- Links to anchors that are not headings (acronyms in the glossary, sources, traceability rows) no longer end up under the sticky navbar. The tooltip of a governance link gives the page of the PDF, for viewers that ignore the link's page.
+
 ### Changed
 
 - Cross-references (decision D-038): pages link terms to the glossary, claims to their sources, open points to chapter 11, and other parts of the architecture by chapter (the chapter overview), not single pages of other chapters, and not ADRs. AGENTS.md, CONTRIBUTING, the page recipes, the review checklists and the self-check follow; `npm run check` warns on links that break the rule.
