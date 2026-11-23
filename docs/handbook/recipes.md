@@ -29,7 +29,7 @@ The box with owner, reviewers, audiences and governance references is generated 
 | 1.1, 1.3 | [Requirements and stakeholders](#requirements-and-stakeholders) |
 | 1.2, 10 | [Quality goals and quality scenarios](#quality-goals-and-quality-scenarios) |
 | 2.x | [Constraints](#constraints) |
-| 3.1, 3.2, 3.3 | [Context](#context) |
+| 3.1, 3.2 | [Context](#context) |
 | 4 | [Solution strategy](#solution-strategy) |
 | 5.x.y | [Building block](#building-block) |
 | 6.x | [Runtime scenario](#runtime-scenario) |
@@ -51,9 +51,8 @@ arc42 may be customised (FAQ K-1). These departures are agreed, and don't need t
 | Every page | Only the sections | An *In short* box, and a box with owner, reviewers, status and governance references. These help readers who aren't architects, and make review and traceability visible. |
 | 1.3 | A table *role · contact · expectations* | Contacts are roles, not named people: the Genome EDIC CC and each 1+MG NCP. The site is public. What readers need from the documentation is in the reader guides. |
 | Chapter 2 | Organisational and political constraints, technical constraints, conventions (FAQ C-2-2) | Pages by source: legal (2.1), governance (2.2), organisational (2.3), technical (2.4). The conventions (terminology, diagram notation, ADRs) are in this handbook, and the chapter overview links to them. |
-| 3.1 | The system as one black box; no internal components in the context view, except for large heterogeneous systems (FAQ C-3-3) | The system is shown with its European and national parts, so that the diagram shows which responsible party handles each exchange. |
+| 3.1 | The system as one black box; no internal components in the context view, except for large heterogeneous systems (FAQ C-3-3) | The system is shown with its European and national parts, so that the diagram shows which responsible party handles each exchange. 3.1 also shows the three responsible parties (the Genome EDIC, the Member Country, the User Organisation) and who belongs to each, because responsibility in the Genome EDIC doesn't follow the system boundary (decisions D-018, D-036, D-037). |
 | 3.2 | Technical context; for information systems, often better in the deployment view (FAQ C-3-2) | Kept short: the channels and standards of each exchange. Hosting and networks are in chapter 7. |
-| 3.3 | Not an arc42 section | Added: the three responsible parties, the Genome EDIC, the Member Country and the User Organisation (decisions D-018, D-036), because responsibility in the Genome EDIC doesn't follow the system boundary. |
 | Chapter 11 | Risks and technical debt, ordered by priority | Also the register of open points and open questions (decision D-023). Open points are listed alphabetically within their group; risks and debt by priority. |
 | Chapter 12 | A table *term · definition* | One heading per term, so that each term has a stable anchor for links (decision D-022). The acronyms are a table. |
 
@@ -118,10 +117,10 @@ Example row: *"Personal data may not be downloaded by Users" · <GovRef id="II.2
 
 **Headings:**
 
-1. **Context diagram** (a C4 system context diagram, see [Diagrams](/handbook/diagrams)): the system in the middle as one box, the people, organisations and external systems around it, one arrow per exchange. For 3.3, a diagram of the responsible parties and who belongs to each.
+1. **Context diagram** (a C4 system context diagram, see [Diagrams](/handbook/diagrams)): the system in the middle as one box, the people, organisations and external systems around it, one arrow per exchange. For 3.1, also a diagram of the responsible parties and who belongs to each.
 2. **Table of partners:** *actor or external system · responsible party it talks to · what it sends · what it receives · governance section*.
 3. For 3.2 only: **channels and protocols** per interface.
-4. For 3.3 only: **which governance actor belongs to which responsible party**, and how to read chapters 5 and 7, which are split by responsible party and by level.
+4. For 3.1 only: **which governance actor belongs to which responsible party**, and where the system boundary cuts across them.
 
 **arc42:** 3.1 shows the system as a black box, and every communication partner with its domain inputs and outputs. Combine a diagram with a table, keep it at overview level, and group similar partners. 3.2 maps those exchanges to technical channels (docs.arc42.org/section-3, FAQ C-3-1 and C-3-2). Don't show internal components in the context view (FAQ C-3-3); for our agreed exception, see [Fit with arc42](#fit-with-arc42).
 
