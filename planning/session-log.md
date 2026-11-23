@@ -2,6 +2,13 @@
 
 Newest first. Keep each entry to a few lines: what was done, what is next, where things are.
 
+## 2026-11-23 — Wave 1 review round 2 answered, theme by theme (B. Pacheco with Claude)
+- Round 2 on #133 closed on 13 November with five reviewers (Griet De Clercq, Daniel Ciurea, Kjell Petersen, Dylan Spalding, Rob Hooft): 88 comments. Juan Arenas, Johan Viklund, Jack Broeren and Jacek Lebioda did not answer; each page now lists the reviewers who commented, and 2.2 (Rob Hooft, Dylan Spalding) and the glossary (Griet De Clercq, Daniel Ciurea) got new reviewers.
+- How we worked: one theme at a time, each as a draft pull request into `wave-1` with the comments it answers quoted and linked (#177, #179, #182, #183, #184, #185, #187, #189, #190, #191, #193, #194, #195, #196); one signed commit per theme, no fix-up commits, merge commits only; after each merge, a reply in every thread with its commit. Site fixes (anchors under the navbar, PDF page in governance tooltips) went to `main` (#188). Work list and drafts in `~/Documents/gdi-system-architecture/reviews/wave1-round2/`.
+- Decided on `main`: D-036 responsible parties instead of scopes, with renamed pages and diagrams (#176); D-037 page 3.3 folds into 3.1 (#178); D-038 cross-references: terms to the glossary, claims to sources, other parts by chapter, no links to ADRs, with a check warning (#186); D-039 the target state only (#192). D-034 finished on `wave-1`: ADR-0002 to ADR-0008 removed, ADR-0004 to ADR-0008 now chapter 11 open questions (#152 to #156). New open point `external-only-projects` (#181); `architecture-adoption` retired (#113 closed). Architecture pages no longer cite documentation decisions.
+- Closing comment with every comment and its outcome posted on #133; follow-up list for wave 2 posted on #150.
+- Next: open round 3 on the new `wave-1` version (Word export for reviewers without GitHub); wave 2 applies D-036 to D-039 and takes over chapter 4 and 8.12 content; Daniel Ciurea to confirm whether his Chrome opens PDFs in an external viewer.
+
 ## 2026-11-04 — Architecture taskforce action points (B. Pacheco with Claude)
 - Decided D-033 (react to review feedback only after the review date; wave 1 round 2 now closes 13 November) and D-034 (open questions and risks first; ADRs only when the architecture changes; own ADR review flow, to be defined).
 - Done: Troels Rasmussen and Regina Becker removed as reviewers in #133 and #150; Daniel Ciurea (`daniel-ciurea`) and Aleš Čep (`AlesCUMSI`) added to the review tables; ADR-0009 and ADR-0010 withdrawn in #150 (content to 8.2); ADR-0001 rewritten; handbook note on finding what changed since a review on GitHub.
