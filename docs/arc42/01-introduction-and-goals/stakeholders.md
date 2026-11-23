@@ -15,7 +15,7 @@ last_reviewed:
 
 - The countries of the 1+ Million Genomes initiative (1+MG) share genomic data under the 1+MG Data Governance. The main stakeholders are the actors of that governance. They range from the Genome EDIC Assembly of Members to Users and data subjects. Each expects something different from the architecture, because each has different roles, responsibilities and rights. The public, the European Commission, auditors and the GDI project (the Genomic Data Infrastructure project, which builds the first version of the system) are affected too.
 - This documentation has six kinds of readers: policy makers, legal experts, specialists in ethical, legal and societal implications (ELSI), security advisors, data protection officers and implementers. Each has a reader guide.
-- The Genome EDIC Assembly of Members decides on the principles for the operations, and sets the minimum requirements and the rules for making genomic and related health data available for secondary use. Which body adopts this architecture as a whole is not decided yet.
+- The Genome EDIC Assembly of Members decides on the principles for the operations, and sets the minimum requirements and the rules for making genomic and related health data available for secondary use. The Genome EDIC and its Member Countries implement the system this architecture describes.
 
 </InShort>
 
@@ -91,7 +91,6 @@ Each kind of reader has a guide that lists their usual questions, and links to t
 - **This documentation** is a working draft of the Genome EDIC system architecture taskforce, not an adopted document. The taskforce records its architecture decisions in [chapter 9](/decisions).
 
 :::caution[Open points]
-- The governance names who adopts policies, minimum requirements and data models, but no body that adopts the system architecture as a whole. How the taskforce takes and confirms its decisions is not decided yet either. See [chapter 11](/risks#architecture-adoption).
 - Who informs data subjects after an access decision: the 1+MG NCP, or another national body <GovRef id="VII.5.3" />. See [chapter 11](/risks#national-information-flow).
 - Whether the Genome EDIC is joint controller with the 1+MG Data Holder for 1+MG compliant datasets. See [chapter 11](/risks#joint-controllership).
 - When a national veto applies to 1+MG cohort datasets: the governance gives Local DACs and 1+MG Data Providers a veto, but doesn't say in which cases it applies <GovRef id="VII.4.7" /> <GovRef id="VII.5.1" />. See [chapter 11](/risks#national-veto).
