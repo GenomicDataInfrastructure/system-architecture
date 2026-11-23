@@ -20,9 +20,11 @@ last_reviewed:
 
 </InShort>
 
+This glossary follows the 1+MG Data Governance master document, version 2025-12, published as the annex of <Acronym id="GDI" /> D2.4 <Cite id="dg" />. On these pages, "the governance" means this document. The Genome EDIC Secondary Use Framework is the set of rules it defines, once the Genome EDIC Assembly of Members adopts them <GovRef id="III" />.
+
 ## Terms from the governance
 
-The definitions below are quoted word for word from the 1+MG Data Governance master document (version 2025-12), published as the annex of <Acronym id="GDI" /> D2.4 <Cite id="dg" />, <GovRef id="III" long />. Words in square brackets are in the original, except "[catalogue]", which we added where a word is missing. If the governance changes a definition, update it here. The terms are in alphabetical order, ignoring the prefixes "1+MG" and "Genome EDIC". On other pages, the first mention of each term links to its entry here.
+The definitions below are quoted word for word from the governance, <GovRef id="III" long />. Words in square brackets are in the original, except "[catalogue]", which we added where a word is missing. If the governance changes a definition, update it here. The terms are in alphabetical order, ignoring the prefixes "1+MG" and "Genome EDIC". On other pages, the first mention of each term links to its entry here.
 
 ### Genome EDIC Assembly of Members
 
@@ -156,9 +158,45 @@ Use of the data by a healthcare provider, or a service provider on its behalf, t
 
 Use of the data to support the care of a current patient, by comparing them with similar patients: through statistics, record-level data where needed, and questions to the treating healthcare professional <GovRef id="II.3" />. _Summary._
 
+## Terms the governance uses, defined here
+
+The governance uses these terms but doesn't define them in its list of definitions <GovRef id="III" />. Each entry sums up what the governance says about the term, with the sections to read. The terms are in alphabetical order, ignoring the prefix "1+MG".
+
+### Central, national and local level
+
+Where an IT environment runs, as in the definition of the 1+MG IT infrastructure provider <GovRef id="III" />. The deployment view (chapter 7) uses these levels. A level is not a responsible party: a 1+MG Data Host, for example, belongs to the Member Country and runs at local level. _Summary._
+
+### Data use agreement
+
+The agreement that sets the conditions under which a User Organisation and its Users may use the data of an approved access request. The Genome EDIC CC issues it <GovRef id="VII.5.5" />. See [6.3.1](/runtime/use/data-use-agreement). _Summary._
+
+### Incidental findings
+
+Results about a data subject's health that a User finds by chance, while working on another question. Only clinically actionable findings on a list that the Genome EDIC CC sets can be returned, and only where the data subject agreed <GovRef id="VIII.11.1" /> <GovRef id="VIII.11.2" />. They differ from **secondary findings**: a deliberate screening of the data to find people who could benefit from a treatment, which is outside the governance <GovRef id="II.4" />. See [6.3.8](/runtime/use/incidental-findings). _Summary._
+
+### Key-coded identifier
+
+The identifier that replaces a data subject's name and other direct identifiers in the data. The link back to the person is held nationally, and each Member Country enables it <GovRef id="V.2.4" />. Data with key-coded identifiers are pseudonymised data under the GDPR (Art. 4(5)), and so still personal data. This documentation uses the governance's term, "key-coded identifier", and not "pseudonym". Where the link is held is decided in [ADR-0005](/decisions/0005-identity-link-and-key-coded-identifiers); see [8.7](/concepts/identifiers-and-linkage). _Summary._
+
+### 1+MG minimum dataset
+
+A defined minimum set of data, per category of data, that 1+MG Data Providers must be able to form, as the definition of the 1+MG Data Provider requires <GovRef id="III" />. The data models are set by 1+MG Working Group 3 and adopted by the Genome EDIC Assembly of Members <GovRef id="VI.1.1" />. See [8.10](/concepts/metadata-and-interoperability). _Summary._
+
+### Pooling
+
+Bringing data from several countries together, for a time, in one secure processing environment. For research, each Member Country decides whether its data may be pooled; an SPE that pools data from other Member Countries must be certified <GovRef id="VIII.3.4" /> <GovRef id="V.1.3" />. _Summary._
+
+### Secure processing environment (SPE)
+
+A protected IT environment where Users analyse the data without being able to download personal data. A **1+MG SPE** is run by a 1+MG IT infrastructure provider and meets the minimum requirements of the Genome EDIC <GovRef id="VIII.3.3" />. The **SPE provided by the European Commission** is run by the Commission under the EHDS; 1+MG data may be processed there only "where applicable" <GovRef id="VIII.2.2" />. See [5.2.3](/building-blocks/member-country/spe). _Summary._
+
+### Subject-level data discovery
+
+A search over the individual records held in the system, which returns to the User only the number of records that match the criteria <GovRef id="VII.2.3" />. It processes personal data, under the joint controllership of the User Organisation and the controller for the disclosure <GovRef id="VII.1.3" />. See [5.2.7](/building-blocks/member-country/subject-level-discovery). _Summary._
+
 ## Architecture terms
 
-The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run, and to name ideas the pages use often. [3.1 Business context](/context/business#responsible-parties-and-the-system-boundary) explains the responsible parties in more depth, with a diagram of which actor belongs to which. Two actors are not tied to one responsible party. A 1+MG IT infrastructure provider can work for the Genome EDIC or for a Member Country, at central, national or local level. Data subjects are the people the data are about. They are other actors: they have rights, not responsibilities, in the system, and its rules exist to protect them. The responsible party, the other actor and the levels come first; the other terms follow in alphabetical order, ignoring the prefix "1+MG".
+The governance doesn't use these terms. The architecture adds them to say who is responsible for what, and to name parts of its design that the pages use often. [3.1 Business context](/context/business#responsible-parties-and-the-system-boundary) explains the responsible parties in more depth, with a diagram of which actor belongs to which. Two actors are not tied to one responsible party. A 1+MG IT infrastructure provider can work for the Genome EDIC or for a Member Country, at central, national or local level. Data subjects are the people the data are about. They are other actors: they have rights, not responsibilities, in the system, and its rules exist to protect them. The responsible party and the other actor come first; the other terms follow in alphabetical order.
 
 ### Responsible party
 
@@ -174,61 +212,21 @@ Chapter 5 has one section per responsible party. _Architecture term._
 
 An actor that takes part in the processes of the system, but is responsible for no part of it: for example data subjects, treating healthcare professionals, providers of externally governed datasets, and the supervisory bodies and European services that exchange information with the system ([3.1](/context/business)). _Architecture term._
 
-### Central, national and local level
-
-Where an IT environment runs, as in the definition of the 1+MG IT infrastructure provider. The deployment view (chapter 7) uses these levels. A level is not a responsible party: a 1+MG Data Host, for example, belongs to the Member Country and runs at local level. _Architecture term._
-
-### 1+MG Data Governance
-
-The 1+MG Data Governance master document, version 2025-12, published as the annex of GDI D2.4 <Cite id="dg" />. On these pages, "the governance" means this document. The Genome EDIC Secondary Use Framework is the set of rules it defines, once the Genome EDIC Assembly of Members adopts them <GovRef id="III" />. _Architecture note._
-
-### Data use agreement
-
-The agreement that sets the conditions under which a User Organisation and its Users may use the data of an approved access request. The Genome EDIC CC issues it <GovRef id="VII.5.5" />. See [6.3.1](/runtime/use/data-use-agreement). _Architecture term._
-
 ### Genome EDIC system
 
 What the Genome EDIC and the Genome EDIC Member Countries run, and the bodies that run it or take decisions with it. [3.1](/context/business) draws its boundary. _Architecture term._
-
-### HealthData@EU
-
-The European infrastructure under the EHDS that connects the national contact points for secondary use and the authorised participants, so that data can be accessed across borders (EHDS Art. 75) <Cite id="ehds" />. See [8.11](/concepts/ehds-integration). _Architecture term._
 
 ### Identity federation
 
 A service that connects the sign-in services of many organisations, so that Users sign in with their own organisation's account and the system receives their identity and affiliation. See [ADR-0004](/decisions/0004-identity-and-authorisation) and [8.4](/concepts/identity-and-access). _Architecture term._
 
-### Incidental findings
-
-Results about a data subject's health that a User finds by chance, while working on another question. Only clinically actionable findings on a list that the Genome EDIC CC sets can be returned, and only where the data subject agreed <GovRef id="VIII.11.1" /> <GovRef id="VIII.11.2" />. They differ from **secondary findings**: a deliberate screening of the data to find people who could benefit from a treatment, which is outside the governance <GovRef id="II.4" />. See [6.3.8](/runtime/use/incidental-findings). _Summary._
-
-### Key-coded identifier
-
-The identifier that replaces a data subject's name and other direct identifiers in the data. The link back to the person is held nationally, and each Member Country enables it <GovRef id="V.2.4" />. Data with key-coded identifiers are pseudonymised data under the GDPR (Art. 4(5)), and so still personal data. This documentation uses the governance's term, "key-coded identifier", and not "pseudonym". Where the link is held is decided in [ADR-0005](/decisions/0005-identity-link-and-key-coded-identifiers); see [8.7](/concepts/identifiers-and-linkage). _Summary._
-
-### 1+MG minimum dataset
-
-A defined minimum set of data, per category of data, that 1+MG Data Providers must be able to form, as the definition of the 1+MG Data Provider requires <GovRef id="III" />. The data models are set by 1+MG Working Group 3 and adopted by the Genome EDIC Assembly of Members <GovRef id="VI.1.1" />. See [8.10](/concepts/metadata-and-interoperability). _Architecture term._
-
 ### National implementation profile
 
 The document in which a Genome EDIC Member Country records how it implements the system: which organisation takes which national role, how it meets each common requirement, and with which evidence. See the [template](/appendix/national-profile-template). _Architecture term._
 
-### Pooling
-
-Bringing data from several countries together, for a time, in one secure processing environment. For research, each Member Country decides whether its data may be pooled; an SPE that pools data from other Member Countries must be certified <GovRef id="VIII.3.4" /> <GovRef id="V.1.3" />. _Architecture term._
-
 ### Reference implementation
 
 Software that implements a component's interfaces and that Member Countries may use: the GDI Starter Kit component for national nodes, or the GDI central service for the Genome EDIC. A Member Country may use other tools that meet the same interfaces <GovRef id="II.2" />. See [4. Solution strategy](/solution-strategy). _Architecture term._
-
-### Secure processing environment (SPE)
-
-A protected IT environment where Users analyse the data without being able to download personal data. A **1+MG SPE** is run by a 1+MG IT infrastructure provider and meets the minimum requirements of the Genome EDIC <GovRef id="VIII.3.3" />. The **SPE provided by the European Commission** is run by the Commission under the EHDS; 1+MG data may be processed there only "where applicable" <GovRef id="VIII.2.2" />. See [5.2.3](/building-blocks/member-country/spe). _Architecture term._
-
-### Subject-level data discovery
-
-A search over the individual records held in the system, which returns to the User only the number of records that match the criteria <GovRef id="VII.2.3" />. It processes personal data, under the joint controllership of the User Organisation and the controller for the disclosure <GovRef id="VII.1.3" />. See [5.2.7](/building-blocks/member-country/subject-level-discovery). _Summary._
 
 ### Trust boundary
 
@@ -265,6 +263,10 @@ The decision of a health data access body that allows a health data user to proc
 ### Health data access body
 
 A body that a Member State designates to decide on access to electronic health data for secondary use, and to issue data permits (EHDS Art. 55 and 57) <Cite id="ehds" />. The Genome EDIC is not one. _Legal term._
+
+### HealthData@EU
+
+The European infrastructure under the EHDS that connects the national contact points for secondary use and the authorised participants, so that data can be accessed across borders (EHDS Art. 75) <Cite id="ehds" />. See [8.11](/concepts/ehds-integration). _Legal term._
 
 ### Authorised participant in HealthData@EU
 
