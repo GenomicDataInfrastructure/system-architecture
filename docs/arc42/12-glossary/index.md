@@ -8,7 +8,7 @@ reviewers: ["Griet De Clercq (VIB)", "Daniel Ciurea (ICDG)"]
 status: in-review
 wave: 1
 audience: [policy, legal, elsi, security, dpo, implementer]
-governance_refs: ["I", "II.2", "II.3", "II.4", "III", "V.1.3", "V.2.4", "VI.1.1", "VI.4.6", "VII.1.3", "VII.2.1", "VII.2.3", "VII.3.1", "VII.4.6", "VII.4.7", "VII.5.4", "VII.5.5", "VIII.2.2", "VIII.3.3", "VIII.3.4", "VIII.11.1", "VIII.11.2"]
+governance_refs: ["I", "II.2", "II.3", "II.4", "III", "V.1.3", "V.2.4", "VI.1.1", "VI.4.6", "VII.1.3", "VII.2.1", "VII.2.3", "VII.3.1", "VII.4.6", "VII.4.7", "VII.5.4", "VII.5.5", "VII.5.6", "VIII.2.2", "VIII.3.3", "VIII.3.4", "VIII.11.1", "VIII.11.2"]
 last_reviewed:
 ---
 
@@ -28,7 +28,7 @@ The definitions below are quoted word for word from the 1+MG Data Governance mas
 
 The decision-making body of the Genome EDIC.
 
-_The governance also calls this body the "Genome EDIC General Assembly", for example in <GovRef id="VI.1.1" /> and in the definition of 1+MG compliant local IT infrastructure. This documentation uses "Genome EDIC Assembly of Members"._
+_The governance also calls this body the "Genome EDIC General Assembly", for example in <GovRef id="VI.1.1" />, in <GovRef id="VII.5.6" /> and in the definition of 1+MG compliant local IT infrastructure. This documentation uses "Genome EDIC Assembly of Members"._
 
 ### Genome EDIC Central Coordination (Genome EDIC CC)
 
@@ -38,7 +38,7 @@ Support staff in the Genome EDIC; the Genome EDIC CC is responsible for operatio
 
 Datasets that can be disclosed to Users by the Genome EDIC as controller in accordance with the 1+MG data governance.
 
-_In the architecture: the Genome EDIC decides on access; the Genome EDIC CC adopts and documents the decision <GovRef id="VII.5.5" />. See [8.12 Types of dataset](/concepts/dataset-types)._
+_In the architecture: the Genome EDIC CC decides on access: it adopts and documents the decision, and the Genome EDIC is controller <GovRef id="VII.5.5" />. See [8.12 Types of dataset](/concepts/dataset-types)._
 
 ### 1+MG compliant datasets
 
@@ -158,7 +158,7 @@ Use of the data to support the care of a current patient, by comparing them with
 
 ## Architecture terms
 
-The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run, and to name ideas the pages use often. [3.1 Business context](/context/business#responsible-parties-and-the-system-boundary) explains the responsible parties in more depth, with a diagram of which actor belongs to which. Two actors are not tied to one responsible party. A 1+MG IT infrastructure provider can work for the Genome EDIC or for a Member Country, at central, national or local level. Data subjects are the people the data are about. They are other actors: they have rights, not duties, in the system, and its rules exist to protect them. The responsible party, the other actor and the levels come first; the other terms follow in alphabetical order, ignoring the prefix "1+MG".
+The governance doesn't define these terms. The architecture adds them to say who is responsible for what, and where things run, and to name ideas the pages use often. [3.1 Business context](/context/business#responsible-parties-and-the-system-boundary) explains the responsible parties in more depth, with a diagram of which actor belongs to which. Two actors are not tied to one responsible party. A 1+MG IT infrastructure provider can work for the Genome EDIC or for a Member Country, at central, national or local level. Data subjects are the people the data are about. They are other actors: they have rights, not responsibilities, in the system, and its rules exist to protect them. The responsible party, the other actor and the levels come first; the other terms follow in alphabetical order, ignoring the prefix "1+MG".
 
 ### Responsible party
 
