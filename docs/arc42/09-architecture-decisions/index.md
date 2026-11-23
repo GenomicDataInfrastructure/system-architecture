@@ -31,18 +31,5 @@ last_reviewed:
 | ADR | Title | Status |
 |---|---|---|
 | [ADR-0001](/decisions/0001-record-architecture-decisions) | Record architecture decisions | Proposed |
-| [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) | Who decides on access, per type of dataset | Proposed |
 
-## Candidate decisions to record
-
-These choices are already made in the governance or in GDI. They should become ADRs so that their reasons are visible:
-
-- Consent (or a specific legislative act) as the legal basis for making data available <GovRef id="III" />.
-- Federated processing in national SPEs instead of pooling data centrally <GovRef id="II.2" />.
-- No download of personal data; only non-personal results leave the SPE <GovRef id="II.2" />.
-- "Key-coded identifier" instead of "pseudonym" <GovRef id="I" />.
-- Interfaces first: components described by function, interfaces and standards, with the GDI Starter Kit and the GDI central services as reference implementation (documentation decisions D-007, D-020).
-
-:::note[Placeholder]
-This page has no content yet. The owner replaces this note and the questions above with the content.
-:::
+ADR-0002 to ADR-0010 were withdrawn on 4 November 2026: an ADR is written only when the answer to an open question, or the mitigation of a risk, changes the architecture. Their questions are open points in [chapter 11](/risks), and their content moved to the pages concerned. Their numbers are not reused.

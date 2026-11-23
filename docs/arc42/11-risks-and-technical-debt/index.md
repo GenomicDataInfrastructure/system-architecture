@@ -9,11 +9,21 @@ status: placeholder
 wave: 6
 audience: [policy, legal, elsi, security, dpo, implementer]
 governance_refs:
+  - "I"
   - "II.1"
+  - "II.4"
   - "III"
+  - "V.1.1"
+  - "V.1.2"
   - "V.1.3"
+  - "V.2.4"
+  - "VI.1.1"
   - "VI.1.3"
   - "VI.1.5"
+  - "VI.3.1"
+  - "VI.3.2"
+  - "VI.4.4"
+  - "VII.1.3"
   - "VII.2.1"
   - "VII.2.2"
   - "VII.2.3"
@@ -24,14 +34,26 @@ governance_refs:
   - "VII.5.1"
   - "VII.5.2"
   - "VII.5.3"
+  - "VII.5.5"
+  - "VIII.2.1"
+  - "VIII.2.2"
+  - "VIII.3.1"
+  - "VIII.3.2"
+  - "VIII.3.3"
+  - "VIII.3.4"
+  - "VIII.8.1"
+  - "VIII.9.1"
   - "VIII.11.1"
+  - "VIII.11.2"
+  - "VIII.11.3"
+  - "VIII.11.4"
 last_reviewed:
 toc_max_heading_level: 4
 ---
 
 <InShort>
 
-- This page lists what is not decided yet: points the governance itself leaves open, questions it doesn't answer, and outside work the architecture depends on. It also records the risks and the technical debt of the architecture.
+- This page lists what is still open: points the governance itself leaves open, questions it doesn't answer, and outside work the architecture depends on. It also records the risks and the technical debt of the architecture.
 - Other pages mark each open point, risk or piece of technical debt in a box, and link to its entry here. Each entry says what is open, why it matters, and where it is tracked.
 - Risks and technical debt are added as they are found. This page is completed in writing wave 6.
 
@@ -39,7 +61,7 @@ toc_max_heading_level: 4
 
 ## Open points and open questions {#open-points}
 
-Every page that depends on an undecided point marks it in an *Open point* box, and links to its entry below. When a point is settled, its entry is removed and the pages that link to it are updated.
+Every page that depends on an open point marks it in an *Open point* box, and links to its entry below. When a point is settled, its entry is removed and the pages that link to it are updated.
 
 ### Open in the governance {#open-in-the-governance}
 
@@ -47,7 +69,7 @@ The governance is a "living document" <Cite id="dg" />. In these sections, it sa
 
 #### Accreditation of 1+MG IT infrastructure providers {#accreditation}
 
-- **What is open:** the IT infrastructure of a [1+MG IT infrastructure provider](/glossary#1mg-it-infrastructure-provider) must be accredited for service provision in the [Genome EDIC](/glossary#genome-edic). The details are still to be defined, jointly with 1+MG Working Group 5 and <Acronym id="GDI" /> Pillar II <GovRef id="III" />. The governance already asks for external audit and, in some cases, certification <GovRef id="V.1.3" />. How accreditation relates to them is not settled.
+- **What is open:** the IT infrastructure of a [1+MG IT infrastructure provider](/glossary#1mg-it-infrastructure-provider) must be accredited for service provision in the [Genome EDIC](/glossary#genome-edic). The details are still to be defined, jointly with 1+MG Working Group 5 and <Acronym id="GDI" /> Pillar II <GovRef id="III" />. The governance already asks that each provider is audited by an external body against the minimum requirements of the Genome EDIC CC, and/or works towards certification (ISO 27001, NIST or similar), and that an SPE that pools data from other Member Countries is certified <GovRef id="V.1.3" />. How accreditation relates to them is not settled. Nor does the governance say whether working towards certification, without an external audit, is enough.
 - **Why it matters:** trust between the nodes of the federation rests on it, and it decides which services a provider may run.
 - **Tracked in:** [issue #93](https://github.com/GenomicDataInfrastructure/system-architecture/issues/93).
 
@@ -57,10 +79,16 @@ The governance is a "living document" <Cite id="dg" />. In these sections, it sa
 - **Why it matters:** acting under professional secrecy is the main safeguard for access in healthcare <GovRef id="VII.4.3" />. The identity and access services must be able to check it.
 - **Tracked in:** [issue #99](https://github.com/GenomicDataInfrastructure/system-architecture/issues/99).
 
-#### Legal basis for returning incidental findings {#incidental-findings}
+#### Data from countries that are not members of the Genome EDIC {#non-member-country-data}
 
-- **What is open:** the legal basis for a User to return incidental findings to a [data subject](/glossary#data-subject) is "not entirely ensured yet". It is to be discussed with the data protection authorities <GovRef id="VIII.11.1" />.
-- **Why it matters:** it decides whether, and how, the system supports returning findings to data subjects.
+- **What is open:** the governance only considers 1+MG compliant and 1+MG cohort data from Genome EDIC Member Countries. Models for including data from other countries "could be considered", subject to a decision of the Member Countries <GovRef id="II.4" />. Until then, the architecture treats such data as externally governed: 1+MG Data Providers must be based in a full member country <GovRef id="III" />.
+- **Why it matters:** it decides whether data from such countries can ever follow the 1+MG paths, and so what the catalogue and access request management must support for them.
+- **Tracked in:** [issue #134](https://github.com/GenomicDataInfrastructure/system-architecture/issues/134).
+
+#### Legal basis and route for returning incidental findings {#incidental-findings}
+
+- **What is open:** the legal basis for a User to return incidental findings to a [data subject](/glossary#data-subject) is "not entirely ensured yet". It is to be discussed with the data protection authorities <GovRef id="VIII.11.1" />. The system reaches only the entity mandated nationally to inform data subjects <GovRef id="VIII.11.2" />; the governance doesn't predetermine how findings then flow to the data subject, and leaves the national communication chain to each country <GovRef id="VIII.11.3" /> <GovRef id="VIII.11.4" />.
+- **Why it matters:** it decides whether, and how, the system supports returning findings, and which national body receives them.
 - **Tracked in:** [issue #103](https://github.com/GenomicDataInfrastructure/system-architecture/issues/103).
 
 #### Repeated consent or objection for healthcare reuse and clinical trials {#repeated-consent}
@@ -69,11 +97,23 @@ The governance is a "living document" <Cite id="dg" />. In these sections, it sa
 - **Why it matters:** it decides whether these uses need an extra step with the data subject before data are disclosed.
 - **Tracked in:** [issue #102](https://github.com/GenomicDataInfrastructure/system-architecture/issues/102).
 
+#### Returning enriched or improved personal data {#enriched-data-return}
+
+- **What is open:** Users may return enriched or improved data to the 1+MG Data Providers, if the lawfulness of the transfer can be established. For personal data, the governance calls this "only a hypothetical assumption" so far <GovRef id="VIII.9.1" />.
+- **Why it matters:** it decides whether the system needs a route that brings personal data back from a User's SPE to a 1+MG Data Provider, and under which controller.
+- **Tracked in:** [issue #135](https://github.com/GenomicDataInfrastructure/system-architecture/issues/135).
+
 #### Review time for healthcare reuse {#healthcare-review-time}
 
 - **What is open:** the [1+MG DAC](/glossary#1mg-dac) should finish its first assessment of a healthcare reuse request within 1 working day, or up to 3 working days in justified cases. The governance says that this timeframe must be reviewed once there is experience with the process <GovRef id="VII.4.3" />.
 - **Why it matters:** access request management must support the deadline, and be able to change it.
 - **Tracked in:** [issue #100](https://github.com/GenomicDataInfrastructure/system-architecture/issues/100).
+
+#### Who decides on pooling for 1+MG compliant datasets {#pooling-decision}
+
+- **What is open:** for research, the governance lets each Member Country choose whether its data may be streamed or temporarily pooled with data from other countries, where the purpose can't be achieved in a federated way <GovRef id="VIII.3.4" />. For [1+MG compliant datasets](/concepts/dataset-types), it says that the decision now rests with each [1+MG Data Holder](/glossary#1mg-data-holder), and that it could be taken at country level instead, to reduce complexity <GovRef id="VIII.3.4" />. Two related questions have no answer in the governance: whether pooling is possible for uses other than research, and who judges that a purpose can't be achieved in a federated way.
+- **Why it matters:** the catalogue must show, for each dataset, whether pooling is allowed, and the secure processing environments must respect that choice.
+- **Tracked in:** [issue #91](https://github.com/GenomicDataInfrastructure/system-architecture/issues/91).
 
 #### Who informs data subjects after an access decision {#national-information-flow}
 
@@ -81,9 +121,63 @@ The governance is a "living document" <Cite id="dg" />. In these sections, it sa
 - **Why it matters:** it decides which national component informs data subjects and collects their answers, and how it connects to the Genome EDIC.
 - **Tracked in:** [issue #101](https://github.com/GenomicDataInfrastructure/system-architecture/issues/101).
 
+#### Who signs the data use agreement for 1+MG compliant datasets {#data-use-agreement-signatory}
+
+- **What is open:** the Genome EDIC CC issues the [data use agreement](/runtime/use/data-use-agreement) for each approved request, after approval by the 1+MG Data Holders for 1+MG compliant data. The governance says that it should be discussed and decided whether the Genome EDIC will be mandated to sign on behalf of the 1+MG Data Holders <GovRef id="VII.5.5" />.
+- **Why it matters:** access request management and the agreement templates <GovRef id="VIII.2.1" /> depend on who signs, and so do the User Organisation's counterparties.
+- **Tracked in:** [issue #136](https://github.com/GenomicDataInfrastructure/system-architecture/issues/136).
+
 ### Open in the architecture {#open-in-the-architecture}
 
 The governance doesn't answer these questions, but the architecture needs an answer.
+
+#### How the system connects to HealthData@EU {#healthdata-eu-connection}
+
+- **What is open:** the governance expects the Genome EDIC to take part in the European Health Data Space (<Acronym id="EHDS" />) as one authorised participant, with a central catalogue that is interoperable with the EU dataset catalogue <GovRef id="VII.2.1" />. Access applications for data made available under the EHDS go through the EU dataset catalogue <GovRef id="VII.3.1" />. It doesn't say through which part of the system these exchanges run, or whether a country's 1+MG NCP node and its national contact point for secondary use under the EHDS are the same node <Cite id="ehds" />.
+- **Why it matters:** it decides which building blocks talk to [HealthData@EU](/glossary#healthdataeu), in the European part and in each national part. The answer also depends on the draft implementing act ([The draft HealthData@EU implementing act](#healthdata-eu-act)).
+- **Tracked in:** [issue #156](https://github.com/GenomicDataInfrastructure/system-architecture/issues/156).
+
+#### How Users are authenticated and authorised {#identity-and-authorisation}
+
+- **What is open:** the User Organisation confirms that its [Users](/glossary#user) act on its behalf, and keeps that information up to date <GovRef id="VII.1.3" />. For healthcare reuse, a User's status as a healthcare professional is checked <GovRef id="VII.4.3" />. In the SPE, a User works within the rights of the [data use agreement](/glossary#data-use-agreement) <GovRef id="VIII.3.1" />. The governance doesn't say which [identity federation](/glossary#identity-federation) or federations authenticate Users, which level of assurance they must give, or how the rights in a data use agreement reach each SPE.
+- **Why it matters:** every building block that serves Users depends on it, across the three responsible parties. See also [Checking that a User is a licensed healthcare professional](#healthcare-professional-check) and the risk [All sign-in depends on one identity federation](#identity-federation-dependency).
+- **Tracked in:** [issue #152](https://github.com/GenomicDataInfrastructure/system-architecture/issues/152).
+
+#### Interfaces to the link between identity and key-coded identifiers {#identity-link-interfaces}
+
+- **What is open:** each Genome EDIC Member Country enables the link between a data subject's identity and their [key-coded identifiers](/glossary#key-coded-identifier) <GovRef id="V.2.4" />, and the Genome EDIC CC offers an identification management service <GovRef id="VII.5.5" />. Where the link is held is a national choice ([3.1](/context/business)). The interfaces between the national data subject services and the service that holds the link are not defined. Nor is who generates key-coded identifiers, or whether data are linked across countries; SPE providers must limit the risk to privacy that linkage brings <GovRef id="VIII.3.3" />.
+- **Why it matters:** data subjects' rights, reaching back to data subjects and incidental findings all need the link, in countries that hold it in different places.
+- **Tracked in:** [issue #153](https://github.com/GenomicDataInfrastructure/system-architecture/issues/153).
+
+#### Metadata standard and federation of the catalogues {#catalogue-metadata}
+
+- **What is open:** the Genome EDIC CC gives the metadata models and standards, and runs the central data catalogue <GovRef id="VI.3.1" />. 1+MG Data Providers document their data <GovRef id="VI.3.2" />, and the 1+MG NCP checks them and sends the metadata to the central catalogue <GovRef id="VI.4.4" />, which must be interoperable with the EU dataset catalogue <GovRef id="VII.2.1" />. Which standard and profile describe datasets (for example HealthDCAT-AP), how national catalogues feed the central one, and how a dataset's type is recorded in its metadata are not set yet.
+- **Why it matters:** every national catalogue must feed one central catalogue, and through it HealthData@EU. See also [The Starter Kit FAIR Data Point uses its own metadata schemas](#starter-kit-fdp-schemas).
+- **Tracked in:** [issue #155](https://github.com/GenomicDataInfrastructure/system-architecture/issues/155).
+
+#### Role of 1+MG IT infrastructure providers in the use phase {#it-provider-role}
+
+- **What is open:** in the use phase, the governance makes the Genome EDIC a processor for the User Organisation, with the SPE providers as its sub-processors <GovRef id="VIII.2.1" />. Elsewhere it calls the 1+MG IT infrastructure provider the controller for the technical and organisational measures <GovRef id="VIII.3.3" />. The wave 1 pages use "sub-processor"; [8.2](/concepts/roles) must settle the role.
+- **Why it matters:** it decides which agreements the SPE providers sign, and who answers for the security of the SPE.
+- **Tracked in:** [issue #137](https://github.com/GenomicDataInfrastructure/system-architecture/issues/137).
+
+#### SPE access for projects that use only externally governed data {#external-only-projects}
+
+- **What is open:** [externally governed datasets](/concepts/dataset-types) "will be made available to Users in the 1+MG IT infrastructure" <GovRef id="III" />, and Users may bring them into a 1+MG secure processing environment (<Acronym id="SPE" />) after a security review <GovRef id="VIII.3.1" /> <GovRef id="VIII.3.3" />. But a User gets an SPE through the data use agreement that the Genome EDIC CC issues for an approved access request <GovRef id="VII.5.5" />. The governance doesn't say on what basis a User gets a 1+MG SPE for a project that uses only externally governed data: which request, which review, which agreement.
+- **Why it matters:** until the Genome EDIC is operational, externally governed datasets are the only data the system offers ([The Genome EDIC must be operational](#genome-edic-operational)), so every project in that period is such a project. The access path to the SPE, the agreements and the controller for the processing must be defined for the first version of the system.
+- **Tracked in:** [issue #181](https://github.com/GenomicDataInfrastructure/system-architecture/issues/181).
+
+#### What each crossing of a trust boundary requires {#trust-boundary-requirements}
+
+- **What is open:** the Genome EDIC Assembly of Members sets the minimum requirements <GovRef id="V.1.1" />, the Genome EDIC CC sets the minimum requirements for audits and certification <GovRef id="V.1.2" />, and each 1+MG IT infrastructure provider is audited or certified against them <GovRef id="V.1.3" />. SPE providers take technical and organisational measures <GovRef id="VIII.3.3" />. What each crossing of a [trust boundary](/glossary#trust-boundary) between operators requires (authentication of the systems and persons involved, encryption, logging) is not set in these requirements yet.
+- **Why it matters:** each operator must know what it has to do at its borders; [chapter 5](/building-blocks) and [chapter 7](/deployment) draw the crossings.
+- **Tracked in:** [issue #154](https://github.com/GenomicDataInfrastructure/system-architecture/issues/154).
+
+#### When 1+MG data may be processed in the SPE of the European Commission {#commission-spe}
+
+- **What is open:** Users must process 1+MG data in a 1+MG SPE or, "where applicable", in the SPE provided by the European Commission under the EHDS <GovRef id="VIII.2.2" />. The governance doesn't say when that applies. It prefers federation to pooling data in the Commission's SPE <GovRef id="V.1.3" />.
+- **Why it matters:** if it applies, 1+MG data leave the system for an SPE that the Genome EDIC doesn't run, and the [data use agreement](/runtime/use/data-use-agreement), controllers and audits must cover that. Under the EHDS, whoever puts data into the Commission's SPE is joint controller with the other participants that do so, and the Commission is processor (EHDS Art. 75(9)) <Cite id="ehds" />.
+- **Tracked in:** [issue #109](https://github.com/GenomicDataInfrastructure/system-architecture/issues/109).
 
 #### When a national veto applies to 1+MG cohort datasets {#national-veto}
 
@@ -103,32 +197,56 @@ The governance doesn't answer these questions, but the architecture needs an ans
 - **Why it matters:** Beacon network clients read the list to learn what a node can be asked. A node that withholds it can't be queried without help. A node that publishes it shows the presence of a term below any count threshold its DPIA sets. The Beacon v2 reference implementation applies the same limit to the list as to the records: a node that returns counts only publishes an empty list, and fails the Beacon v2 verifier.
 - **Tracked in:** [issue #128](https://github.com/GenomicDataInfrastructure/system-architecture/issues/128).
 
+#### Whether the Genome EDIC is joint controller with the 1+MG Data Holder {#joint-controllership}
+
+- **What is open:** the governance names the [1+MG Data Holder](/glossary#1mg-data-holder) as controller for the disclosure of 1+MG compliant datasets <GovRef id="III" />. It also mentions, twice and conditionally, that the Genome EDIC may be joint controller with it: for subject-level data discovery <GovRef id="VII.2.2" />, and for the data protection impact assessment on disclosure <GovRef id="VII.5.5" />. It doesn't say when that is the case.
+- **Why it matters:** joint controllers need an arrangement that sets out their responsibilities (<Acronym id="GDPR" /> Art. 26) <Cite id="gdpr" />, and data subjects must be told who is responsible. [8.2](/concepts/roles) must answer it; who chooses the type of a dataset doesn't depend on it.
+- **Tracked in:** [issue #138](https://github.com/GenomicDataInfrastructure/system-architecture/issues/138).
+
 #### Who chooses the type of a dataset {#dataset-type-choice}
 
-- **What is open:** for the access decision, the governance describes two scenarios: a decision at national level, for [1+MG compliant datasets](/concepts/dataset-types), or by the Genome EDIC, for 1+MG cohort datasets <GovRef id="II.1" />. Who chooses between them is settled in part: each Genome EDIC Member Country decides on "a national strategy for the responsibility of downstream data disclosure" and nominates, where applicable, the 1+MG Data Holders in the country <GovRef id="VI.1.3" />. It does so before any data are included, because the choice becomes part of the consent for inclusion <GovRef id="VI.1.5" />. The governance doesn't say at which level the choice is made: for the whole country, per [1+MG Data Provider](/glossary#1mg-data-provider), or per dataset. Nor does it say whether "where applicable" lets a country nominate no 1+MG Data Holder and make all its data available as 1+MG cohort data. [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) proposes that the Member Country chooses, on the basis of VI.1.3, and leaves the level open.
+- **What is open:** for the access decision, the governance describes two scenarios: a decision at national level, for 1+MG compliant datasets, or by the Genome EDIC, for 1+MG cohort datasets <GovRef id="II.1" />. Who chooses between them is settled in part: each Genome EDIC Member Country decides on "a national strategy for the responsibility of downstream data disclosure" and nominates, where applicable, the 1+MG Data Holders in the country <GovRef id="VI.1.3" />. It does so before any data are included, because the choice becomes part of the consent for inclusion <GovRef id="VI.1.3" /> <GovRef id="VI.1.5" />. The governance doesn't say at which level the choice is made: for the whole country, per [1+MG Data Provider](/glossary#1mg-data-provider), or per dataset. Nor does it say whether "where applicable" lets a country nominate no 1+MG Data Holder and make all its data available as 1+MG cohort data. The architecture reads this as the Member Country choosing between the two 1+MG types.
 - **Why it matters:** the type decides who takes the access decision, and who is controller for it.
 - **Tracked in:** [issue #85](https://github.com/GenomicDataInfrastructure/system-architecture/issues/85).
+
+#### Who sets and checks the inclusion criteria for externally governed datasets {#external-inclusion-criteria}
+
+- **What is open:** [externally governed datasets](/concepts/dataset-types) "should meet certain inclusion criteria on quality and ELSI" to be listed in the catalogue <GovRef id="III" />. Listing a dataset is the Genome EDIC CC's decision, as it runs the catalogue <GovRef id="VII.2.1" />, but the governance doesn't define the criteria, or say who sets and checks them, or who removes a listing. Nor is it clear whether Genome of Europe data, which GDI frames as primary use <Cite id="gdi-d3.4" />, fit them.
+- **Why it matters:** until the Genome EDIC is operational, externally governed datasets are the only ones Users can get access to ([The Genome EDIC must be operational](#genome-edic-operational)).
+- **Tracked in:** [issue #139](https://github.com/GenomicDataInfrastructure/system-architecture/issues/139).
 
 ### Dependencies {#dependencies}
 
 Work outside this architecture that it depends on.
 
+#### Data and metadata models from 1+MG Working Group 3 {#data-models}
+
+- **What is open:** the governance requires minimum data and metadata models, but doesn't contain them. 1+MG Working Group 3 defines them <GovRef id="II.1" />, and the [Genome EDIC Assembly of Members](/glossary#genome-edic-assembly-of-members) adopts them, with the <Acronym id="ELSI" /> metadata models <GovRef id="VI.1.1" />. Which models exist, in which version, and where they are published is not yet known.
+- **Why it matters:** data inclusion, the central data catalogue and analysis across countries all depend on common models.
+- **Tracked in:** [issue #94](https://github.com/GenomicDataInfrastructure/system-architecture/issues/94).
+
+#### Data governance for data not related to individuals {#genome-of-europe-governance}
+
+- **What is open:** the governance doesn't cover access to data not related to individuals, such as reference genomes or pre-computed statistics (for example allele frequencies). A separate data governance is expected from the Genome of Europe project <GovRef id="II.4" />.
+- **Why it matters:** until the Genome EDIC is operational, the system offers such data for discovery; the rules for access to them are not known yet.
+- **Tracked in:** [issue #140](https://github.com/GenomicDataInfrastructure/system-architecture/issues/140).
+
 #### EHDS requirements for health data access applications {#ehds-access-applications}
 
 - **What is open:** under the European Health Data Space (<Acronym id="EHDS" />), the requirements for health data access applications are still under discussion. The European Commission will set them in implementing decisions <GovRef id="VII.3.3" />. The access request form of the [1+MG User Portal](/building-blocks/genome-edic/user-portal-and-catalogue) must integrate into the EHDS form <GovRef id="VII.3.1" />.
-- **Why it matters:** the 1+MG access request form may have to change when these requirements are set.
+- **Why it matters:** the 1+MG access request form may have to change when these requirements are set. Under the EHDS, applications for data from authorised participants in HealthData@EU are forwarded to them automatically (EHDS Art. 67(3)); this applies to the Genome EDIC only once it is an authorised participant (EHDS Art. 75(4)) <Cite id="ehds" />.
 - **Tracked in:** [issue #106](https://github.com/GenomicDataInfrastructure/system-architecture/issues/106).
 
 #### The draft HealthData@EU implementing act {#healthdata-eu-act}
 
-- **What is open:** the architecture cites the Commission's draft implementing regulation on the technical requirements for [HealthData@EU](/concepts/ehds-integration) <Cite id="hdeu-ia-draft" />. Its requirements for connecting to HealthData@EU, for secure processing environments and for security may still change before it is adopted.
+- **What is open:** the architecture cites the Commission's draft implementing regulation on the technical requirements for [HealthData@EU](/concepts/ehds-integration), under EHDS Art. 75(12) <Cite id="hdeu-ia-draft" />. Its requirements for connecting to HealthData@EU and for security may still change before it is adopted. The requirements for secure processing environments come from a separate implementing act, under EHDS Art. 73(5), which is not published yet <Cite id="ehds" />.
 - **Why it matters:** the Genome EDIC connects to HealthData@EU, and its secure processing environments should meet the EHDS rules.
 - **Tracked in:** [issue #95](https://github.com/GenomicDataInfrastructure/system-architecture/issues/95).
 
 #### The Genome EDIC must be operational {#genome-edic-operational}
 
-- **What is open:** the paths for [1+MG compliant and 1+MG cohort datasets](/concepts/dataset-types) need the Genome EDIC: the [Genome EDIC CC](/glossary#genome-edic-central-coordination-genome-edic-cc) is the one-stop shop for Users, and the [1+MG DAC](/glossary#1mg-dac) reviews access requests <GovRef id="III" />. The Genome EDIC can't be assumed to be in place before GDI ends, because of the administrative process to create an EDIC (GDI D3.4, section 1) <Cite id="gdi-d3.4" />.
-- **Why it matters:** until then, the system offers only externally governed datasets. [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) proposes to add the other two types in later steps.
+- **What is open:** the paths for [1+MG compliant and 1+MG cohort datasets](/concepts/dataset-types) need the Genome EDIC: the [Genome EDIC CC](/glossary#genome-edic-central-coordination-genome-edic-cc) is the one-stop shop for Users, and the [1+MG DAC](/glossary#1mg-dac) reviews access requests <GovRef id="III" />. The Genome EDIC can't be assumed to be in place before GDI ends, because of the administrative process to create an EDIC (GDI D3.4, section 1) <Cite id="gdi-d3.4" />. Until it is operational, it is not decided who runs the central User Portal and catalogue; who is controller and processor for the central services and the SPEs; and which security baseline, incident reporting line and authority to revoke access apply, since the governance gives these to the Genome EDIC CC <GovRef id="V.1.2" /> <GovRef id="VIII.2.1" /> <GovRef id="VIII.2.2" /> <GovRef id="VIII.3.2" />.
+- **Why it matters:** until then, the system offers only externally governed datasets. [Chapter 4](/solution-strategy) describes how the system grows from there to the other two types. The processing in step 1 still needs a controller and processor for each step (<Acronym id="GDPR" /> Art. 5(2), 24 and 28) <Cite id="gdpr" />.
 - **Tracked in:** [issue #116](https://github.com/GenomicDataInfrastructure/system-architecture/issues/116).
 
 #### The Starter Kit FAIR Data Point uses its own metadata schemas {#starter-kit-fdp-schemas}
@@ -139,7 +257,43 @@ Work outside this architecture that it depends on.
 
 ## Risks {#risks}
 
-_None recorded yet._ A risk is something that could go wrong and harm the system or its users: for example, a Member Country not ready in time. Each risk gets an entry here, in the format of the [page recipe](/handbook/recipes#risks-and-technical-debt).
+A risk is something that could go wrong and harm the system or its users: for example, a Member Country not ready in time. Each risk gets an entry here, in the format of the [page recipe](/handbook/recipes#risks-and-technical-debt), highest priority first.
+
+#### GDI ends before the Genome EDIC is operational {#gdi-end-gap}
+
+- **What could happen:** GDI ends in March 2027 <Cite id="gdi-d4.4" />, and the Genome EDIC is not yet operational <Cite id="gdi-d3.4" />. The central User Portal and catalogue, and the other central services that serve externally governed datasets, then have no operator, and no controller or security authority for them.
+- **Probability:** medium.
+- **Impact:** high: Users lose access to the externally governed datasets offered in step 1, and the work of GDI may not carry over to the Genome EDIC.
+- **Mitigation:** agree before GDI ends who runs the central services in the gap, and on which agreements; record the roles of step 1 (see [The Genome EDIC must be operational](#genome-edic-operational)).
+- **Owner:** to be named by the architecture taskforce.
+- **Tracked in:** [issue #141](https://github.com/GenomicDataInfrastructure/system-architecture/issues/141).
+
+#### Member Countries not ready in time, or finding the common requirements too costly {#national-readiness}
+
+- **What could happen:** the governance asks every Member Country for SPEs that meet common minimum requirements <GovRef id="VIII.3.3" />, external audit and/or certification of every node <GovRef id="V.1.3" />, a certified SPE if it allows pooling <GovRef id="VIII.3.4" />, and data kept available for reproducibility <GovRef id="VIII.8.1" />. A country may find this too costly, or not be ready in time ([2.2](/constraints/governance-principles#what-the-principles-cost)).
+- **Probability:** medium.
+- **Impact:** medium: the country joins late or offers fewer data, and Users see an uneven federation.
+- **Mitigation:** a reference implementation for national nodes, shared SPEs where a country allows it, and a national implementation profile that shows each country what it still needs.
+- **Owner:** to be named by the architecture taskforce.
+- **Tracked in:** [issue #161](https://github.com/GenomicDataInfrastructure/system-architecture/issues/161).
+
+#### Imports into SPEs bring in malicious code or unexpected data {#spe-imports}
+
+- **What could happen:** Users import their own data and software into an SPE, and data from health data access bodies and providers of externally governed datasets <GovRef id="VIII.3.1" />. An import may carry malicious code, or data the User may not hold or link <GovRef id="VIII.2.2" />.
+- **Probability:** medium.
+- **Impact:** high: a breach of confidentiality, or easier identification of data subjects after linkage.
+- **Mitigation:** the security review of each import by the 1+MG IT infrastructure provider <GovRef id="VIII.3.1" />; output control ([8.8](/concepts/output-control)); the requirements for crossing trust boundaries ([What each crossing of a trust boundary requires](#trust-boundary-requirements)).
+- **Owner:** to be named by the architecture taskforce.
+- **Tracked in:** [issue #162](https://github.com/GenomicDataInfrastructure/system-architecture/issues/162).
+
+#### All sign-in depends on one identity federation {#identity-federation-dependency}
+
+- **What could happen:** Users sign in through an identity federation ([3.1](/context/business)). If it is unavailable, or its assurance is too weak, no User can work in the system, or the system can't trust who a User is.
+- **Probability:** low.
+- **Impact:** high: the whole system is unavailable to Users while the federation is down.
+- **Mitigation:** availability and assurance requirements for the federation, and a fallback, to be set with [How Users are authenticated and authorised](#identity-and-authorisation).
+- **Owner:** to be named by the architecture taskforce.
+- **Tracked in:** [issue #163](https://github.com/GenomicDataInfrastructure/system-architecture/issues/163).
 
 ## Technical debt {#technical-debt}
 

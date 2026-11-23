@@ -38,7 +38,7 @@ The glossary gives the governance definitions word for word. In short:
 ## The rule
 
 1. **Every dataset must state its type** in the catalogue, and with whom the data access application is shared. For 1+MG cohort datasets, the [1+MG NCP](/glossary#1mg-national-coordination-point-1mg-ncp) provides this information <GovRef id="VI.4.4" />; for 1+MG compliant datasets, the 1+MG Data Holder does <GovRef id="VI.4.5" />.
-2. **The Member Country chooses the type** of its datasets. The governance asks each Member Country to decide on a national strategy for the responsibility of downstream data disclosure, and to nominate, where applicable, its 1+MG Data Holders <GovRef id="VI.1.3" />. The architecture decision record [ADR-0002](/decisions/0002-disclosure-paths-per-dataset) proposes to read this as the choice between the two 1+MG types. The level of the choice (country, 1+MG Data Provider or dataset) is still open (see the open points).
+2. **The Member Country chooses the type** of its datasets. The governance asks each Member Country to decide on a national strategy for the responsibility of downstream data disclosure, and to nominate, where applicable, its 1+MG Data Holders <GovRef id="VI.1.3" />. The architecture reads this as the choice between the two 1+MG types; at which level the choice is made is open ([chapter 11](/risks#dataset-type-choice)). The level of the choice (country, 1+MG Data Provider or dataset) is still open (see the open points).
 3. **The system must support both decision paths for every dataset,** and one access request may cover datasets of both types.
 4. **Users must follow one procedure, whatever the type.** The Genome EDIC CC remains their one-stop shop and tells them the outcome <GovRef id="VII.5.5" />.
 5. **Externally governed datasets must not enter the 1+MG review.** The Genome EDIC CC lets the User contact the data provider of these high value datasets directly, or sends them to the EU dataset catalogue <GovRef id="VII.3.1" />. A 1+MG secure processing environment (<Acronym id="SPE" />) must let the User import the data <GovRef id="VIII.3.3" />.
@@ -60,7 +60,7 @@ The glossary gives the governance definitions word for word. In short:
 
 These pages ask *what differs per type of dataset?* and build on this page:
 
-- **Context:** [3.3 European, national and User Organisation scopes](/context/responsible-parties).
+- **Context:** [3.1 Business context](/context/business#responsible-parties-and-the-system-boundary).
 - **Building blocks:** [5.1.1 User Portal and central data catalogue](/building-blocks/genome-edic/user-portal-and-catalogue), [5.1.2 Access request management](/building-blocks/genome-edic/access-request-management), [5.2.2 Access review and decision support](/building-blocks/member-country/access-decision-support).
 - **Runtime:** [6.1 Data inclusion](/runtime/data-inclusion), [6.2.1 Registration of the User Organisation](/runtime/access/registration), [6.2.3 Data access request](/runtime/access/request), [6.2.4 Review and decision](/runtime/access/review-and-decision), [6.3.1 Data use agreement](/runtime/use/data-use-agreement), [6.3.3 Healthcare reuse](/runtime/use/healthcare-reuse).
 - **Concepts:** [8.2 Controllers, processors and responsibilities](/concepts/roles), [8.6 Legal basis, consent and objection](/concepts/legal-basis-and-consent), [8.10 Metadata and semantic interoperability](/concepts/metadata-and-interoperability).
